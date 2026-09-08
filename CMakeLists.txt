@@ -52,7 +52,7 @@ include_directories( ${Boost_INCLUDE_DIRS} )
 # include_directories(${GUROBI_INCLUDE_DIRS})
 
 # find lemon
-find_package(LEMON REQUIRED)
+find_package(lemon CONFIG REQUIRED)
 include_directories(${LEMON_INCLUDE_DIRS})
 
 
@@ -111,6 +111,5 @@ set_directory_properties(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES
      ${CMAKE_BINARY_DIR}/build;
      ${CMAKE_BINARY_DIR}/*.so"
 )
-
 
 
