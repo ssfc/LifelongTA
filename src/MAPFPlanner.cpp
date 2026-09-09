@@ -34,8 +34,13 @@ void MAPFPlanner::plan(int time_limit,vector<Action> & actions)
     //cout<<time_limit<<" "<<std::chrono::duration_cast<milliseconds>(std::chrono::steady_clock::now() - env->plan_start_time).count()<<" "<< DefaultPlanner::PLANNER_TIMELIMIT_TOLERANCE<<endl;
     int limit = time_limit - std::chrono::duration_cast<milliseconds>(std::chrono::steady_clock::now() - env->plan_start_time).count() - DefaultPlanner::PLANNER_TIMELIMIT_TOLERANCE;
 
-    DefaultPlanner::plan(limit, actions, env, DefaultPlanner::get_guide_path());
+    DefaultPlanner::plan(limit, actions, env, DefaultPlanner::get_guide_path(), refinement_time_limit);
     return;
+}
+
+void MAPFPlanner::set_refinement_time_limit(int time_limit)
+{
+    refinement_time_limit = time_limit;
 }
 
 void MAPFPlanner::plan_pibt(int time_limit,vector<Action> & actions) 

@@ -114,7 +114,7 @@ namespace DefaultPlanner{
      * Finally, it computes the actions for the agents using PIBT that follows the guide path heuristics and returns the actions.
      * Note that the default planner ignores the turning action costs, and post-processes turning actions as additional delays on top of original plan.
      */
-    void plan(int time_limit,vector<Action> & actions, SharedEnvironment* env, unordered_map<int,list<int>> agent_guide_path)
+    void plan(int time_limit,vector<Action> & actions, SharedEnvironment* env, unordered_map<int,list<int>> agent_guide_path, int refinement_time_limit)
     {
 
         // calculate the time planner should stop optimsing traffic flows and return the plan.
@@ -228,6 +228,14 @@ namespace DefaultPlanner{
                     update_traj(trajLNS, i);
                 }
             }
+        }
+
+        // In no-timeout reproduction mode, initial guide paths use the outer
+        // budget while refinement retains an independent real-time budget.
+        if (refinement_time_limit > 0)
+        {
+            start_time = std::chrono::steady_clock::now();
+            end_time = start_time + std::chrono::milliseconds(refinement_time_limit - pibt_time - TRAFFIC_FLOW_ASSIGNMENT_END_TIME_TOLERANCE);
         }
 
         // iterate and recompute the guide path to optimise traffic flow

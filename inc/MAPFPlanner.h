@@ -19,8 +19,12 @@ public:
 
     // return next states for all agents
     virtual void plan(int time_limit, std::vector<Action> & plan);
+    void set_refinement_time_limit(int time_limit);
 
     std::vector<DefaultPlanner::Double4> get_flow();
     void plan_pibt(int time_limit,vector<Action> & actions); 
+
+private:
+    int refinement_time_limit = 0;
 
 };

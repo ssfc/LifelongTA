@@ -1,0 +1,61 @@
+OK    random           n=  400 greedy           paper= 6925 local= 6901 delta= -0.35%
+OK    random           n=  400 flow-unit        paper= 6972 local= 6992 delta= +0.29%
+OK    random           n=  400 flow-traffic     paper= 6964 local= 6940 delta= -0.34%
+OK    random           n=  400 flow-avg-waiting paper= 6975 local= 6984 delta= +0.13%
+OK    random           n=  800 greedy           paper=12660 local=12644 delta= -0.13%
+OK    random           n=  800 flow-unit        paper=12826 local=12852 delta= +0.20%
+OK    random           n=  800 flow-traffic     paper=12745 local=12611 delta= -1.05%
+OK    random           n=  800 flow-avg-waiting paper=12787 local=12809 delta= +0.17%
+OK    random           n= 1200 greedy           paper=15874 local=15884 delta= +0.06%
+OK    random           n= 1200 flow-unit        paper=16331 local=16277 delta= -0.33%
+OK    random           n= 1200 flow-traffic     paper=16205 local=16247 delta= +0.26%
+OK    random           n= 1200 flow-avg-waiting paper=16402 local=16338 delta= -0.39%
+OK    random           n= 1600 greedy           paper=16316 local=16580 delta= +1.62%
+OK    random           n= 1600 flow-unit        paper=16383 local=16840 delta= +2.79%
+OK    random           n= 1600 flow-traffic     paper=17097 local=16964 delta= -0.78%
+OK    random           n= 1600 flow-avg-waiting paper=17001 local=16224 delta= -4.57%
+OK    random           n= 2000 greedy           paper=15265 local=15480 delta= +1.41%
+OK    random           n= 2000 flow-unit        paper=16101 local=15313 delta= -4.89%
+OK    random           n= 2000 flow-traffic     paper=15939 local=15748 delta= -1.20%
+OK    random           n= 2000 flow-avg-waiting paper=16111 local=15914 delta= -1.22%
+OK    warehouse-small  n=  200 greedy           paper= 3512 local= 3528 delta= +0.46%
+OK    warehouse-small  n=  200 flow-unit        paper= 3642 local= 3686 delta= +1.21%
+OK    warehouse-small  n=  200 flow-traffic     paper= 3596 local= 3622 delta= +0.72%
+OK    warehouse-small  n=  200 flow-avg-waiting paper= 3632 local= 3585 delta= -1.29%
+OK    warehouse-small  n=  300 greedy           paper= 4779 local= 4741 delta= -0.80%
+OK    warehouse-small  n=  300 flow-unit        paper= 4919 local= 4972 delta= +1.08%
+OK    warehouse-small  n=  300 flow-traffic     paper= 4863 local= 4908 delta= +0.93%
+OK    warehouse-small  n=  300 flow-avg-waiting paper= 4816 local= 4828 delta= +0.25%
+OK    warehouse-small  n=  400 greedy           paper= 5494 local= 5499 delta= +0.09%
+OK    warehouse-small  n=  400 flow-unit        paper= 5718 local= 5777 delta= +1.03%
+OK    warehouse-small  n=  400 flow-traffic     paper= 5761 local= 5807 delta= +0.80%
+OK    warehouse-small  n=  400 flow-avg-waiting paper= 5637 local= 5650 delta= +0.23%
+OK    warehouse-small  n=  500 greedy           paper= 5894 local= 5770 delta= -2.10%
+OK    warehouse-small  n=  500 flow-unit        paper= 5829 local= 5743 delta= -1.48%
+OK    warehouse-small  n=  500 flow-traffic     paper= 6174 local= 6089 delta= -1.38%
+OK    warehouse-small  n=  500 flow-avg-waiting paper= 5819 local= 5716 delta= -1.77%
+OK    warehouse-small  n=  600 greedy           paper= 5593 local= 5537 delta= -1.00%
+OK    warehouse-small  n=  600 flow-unit        paper= 5652 local= 5699 delta= +0.83%
+OK    warehouse-small  n=  600 flow-traffic     paper= 6185 local= 6099 delta= -1.39%
+OK    warehouse-small  n=  600 flow-avg-waiting paper= 5678 local= 5711 delta= +0.58%
+OK    sortation-large  n= 4000 greedy           paper=13642 local=13783 delta= +1.03%
+OK    sortation-large  n= 4000 flow-unit        paper=13173 local=14528 delta=+10.29%
+OK    sortation-large  n= 4000 flow-traffic     paper=13449 local=13749 delta= +2.23%
+OK    sortation-large  n= 4000 flow-avg-waiting paper=14094 local=14227 delta= +0.94%
+ERROR sortation-large  n= 8000 greedy           paper=25831 local=26268 delta= +1.69%
+OK    sortation-large  n= 8000 flow-unit        paper=18507 local=26013 delta=+40.56%
+OK    sortation-large  n= 8000 flow-traffic     paper=25569 local=24327 delta= -4.86%
+OK    sortation-large  n= 8000 flow-avg-waiting paper=26177 local=26615 delta= +1.67%
+ERROR sortation-large  n=12000 greedy           paper=34414 local=33363 delta= -3.05%
+OK    sortation-large  n=12000 flow-unit        paper=23136 local=30263 delta=+30.80%
+OK    sortation-large  n=12000 flow-traffic     paper=33355 local=33856 delta= +1.50%
+OK    sortation-large  n=12000 flow-avg-waiting paper=34568 local=35275 delta= +2.05%
+ERROR sortation-large  n=16000 greedy           paper=31993 local=32043 delta= +0.16%
+OK    sortation-large  n=16000 flow-unit        paper=26490 local=32779 delta=+23.74%
+OK    sortation-large  n=16000 flow-traffic     paper=34277 local=36292 delta= +5.88%
+OK    sortation-large  n=16000 flow-avg-waiting paper=33975 local=35933 delta= +5.76%
+ERROR sortation-large  n=20000 greedy           paper=27323 local=29666 delta= +8.58%
+OK    sortation-large  n=20000 flow-unit        paper=24501 local=30378 delta=+23.99%
+OK    sortation-large  n=20000 flow-traffic     paper=31658 local=32730 delta= +3.39%
+OK    sortation-large  n=20000 flow-avg-waiting paper=29477 local=30224 delta= +2.53%
+Validated 60/60 strict Table 1 cells.

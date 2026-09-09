@@ -55,6 +55,7 @@ int main(int argc, char **argv)
         ("useTraffic,u", po::value<bool>()->default_value(false), "use of traffic in scheduling")
         ("assignNew,n", po::value<bool>()->default_value(false), "wether new agents only or allow task swapping")
         ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy")
+        ("refinementTimeLimit", po::value<int>()->default_value(0), "independent planner refinement limit in milliseconds; 0 uses planTimeLimit")
         ("commitWindow,w", po::value<int>()->default_value(1), "commit window");
     clock_t start_time = clock();
     po::store(po::parse_command_line(argc, argv, desc), vm);
@@ -142,6 +143,7 @@ int main(int argc, char **argv)
     planner->scheduler->set_use_traffic(vm["useTraffic"].as<bool>());
     planner->scheduler->set_new_only(vm["assignNew"].as<bool>());
     planner->scheduler->set_solver(vm["scheduleModel"].as<int>());
+    planner->planner->set_refinement_time_limit(vm["refinementTimeLimit"].as<int>());
     planner->commit_window = vm["commitWindow"].as<int>();
 
     ActionModel *model = new ActionModel(grid);
