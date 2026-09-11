@@ -1,0 +1,31 @@
+OK    random           n=  400 greedy    paper= 6936 local= 6925 delta= -0.16%
+OK    random           n=  400 flow-unit paper= 6980 local= 6990 delta= +0.14%
+OK    random           n=  800 greedy    paper=12688 local=12635 delta= -0.42%
+OK    random           n=  800 flow-unit paper=12871 local=12873 delta= +0.02%
+OK    random           n= 1200 greedy    paper=15839 local=15827 delta= -0.08%
+OK    random           n= 1200 flow-unit paper=16211 local=16092 delta= -0.73%
+OK    random           n= 1600 greedy    paper=16172 local=16333 delta= +1.00%
+OK    random           n= 1600 flow-unit paper=16971 local=17003 delta= +0.19%
+OK    random           n= 2000 greedy    paper=15411 local=14966 delta= -2.89%
+OK    random           n= 2000 flow-unit paper=15626 local=15409 delta= -1.39%
+OK    warehouse-small  n=  200 greedy    paper= 3508 local= 3523 delta= +0.43%
+OK    warehouse-small  n=  200 flow-unit paper= 3639 local= 3685 delta= +1.26%
+OK    warehouse-small  n=  300 greedy    paper= 4773 local= 4759 delta= -0.29%
+OK    warehouse-small  n=  300 flow-unit paper= 4954 local= 4948 delta= -0.12%
+OK    warehouse-small  n=  400 greedy    paper= 5570 local= 5507 delta= -1.13%
+OK    warehouse-small  n=  400 flow-unit paper= 5673 local= 5761 delta= +1.55%
+OK    warehouse-small  n=  500 greedy    paper= 5791 local= 5761 delta= -0.52%
+OK    warehouse-small  n=  500 flow-unit paper= 5900 local= 5904 delta= +0.07%
+OK    warehouse-small  n=  600 greedy    paper= 5585 local= 5709 delta= +2.22%
+OK    warehouse-small  n=  600 flow-unit paper= 5836 local= 5730 delta= -1.82%
+OK    sortation-large  n= 4000 greedy    paper=13776 local=13753 delta= -0.17%
+OK    sortation-large  n= 4000 flow-unit paper=14490 local=14565 delta= +0.52%
+OK    sortation-large  n= 8000 greedy    paper=26355 local=26563 delta= +0.79%
+OK    sortation-large  n= 8000 flow-unit paper=27614 local=27713 delta= +0.36%
+OK    sortation-large  n=12000 greedy    paper=33952 local=33981 delta= +0.09%
+OK    sortation-large  n=12000 flow-unit paper=35912 local=35524 delta= -1.08%
+OK    sortation-large  n=16000 greedy    paper=31428 local=31423 delta= -0.02%
+OK    sortation-large  n=16000 flow-unit paper=33960 local=34109 delta= +0.44%
+OK    sortation-large  n=20000 greedy    paper=29029 local=28989 delta= -0.14%
+OK    sortation-large  n=20000 flow-unit paper=31852 local=31165 delta= -2.16%
+Validated 30/30 no-timeout cells; mean absolute delta=0.74%, max=2.89%.

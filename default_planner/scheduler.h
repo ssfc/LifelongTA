@@ -4,6 +4,7 @@
 #include "Types.h"
 #include "SharedEnv.h"
 #include "heuristics.h"
+#include "portable_greedy_heap.h"
 #include <random>
 #include <thread>
 #include <future>

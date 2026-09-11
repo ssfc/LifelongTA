@@ -115,6 +115,86 @@ void schedule_plan_raw(int time_limit, std::vector<int> & proposed_schedule,  Sh
 
 }
 
+[[maybe_unused]] static void schedule_plan_greedy_heap_minimal_diagnostic(
+    int time_limit, std::vector<int>& proposed_schedule, SharedEnvironment* env,
+    bool new_only, float dist_weight)
+{
+    struct Candidate
+    {
+        double score;
+        int agent;
+        int task;
+        bool operator>(const Candidate& other) const { return score > other.score; }
+    };
+
+    const auto deadline = std::chrono::steady_clock::now() + std::chrono::milliseconds(time_limit);
+    proposed_schedule.assign(env->num_of_agents, -1);
+
+    // The schedule vector is authoritative. Task::agent_assigned can lag one
+    // synchronization step behind the task-manager state.
+    int max_task_id = -1;
+    for (const auto& entry : env->task_pool) max_task_id = std::max(max_task_id, entry.first);
+    vector<int> task_owner(max_task_id + 1, -1);
+    for (int agent = 0; agent < static_cast<int>(env->curr_task_schedule.size()); ++agent)
+    {
+        const int task_id = env->curr_task_schedule[agent];
+        if (task_id >= 0 && task_id <= max_task_id) task_owner[task_id] = agent;
+    }
+
+    vector<int> flexible_agents(env->new_freeagents);
+    vector<int> flexible_tasks;
+    for (const auto& entry : env->task_pool)
+    {
+        const Task& task = entry.second;
+        const int owner = entry.first <= max_task_id ? task_owner[entry.first] : -1;
+        if (task.idx_next_loc > 0)
+        {
+            if (owner >= 0) proposed_schedule[owner] = entry.first;
+        }
+        else if (new_only)
+        {
+            if (owner == -1) flexible_tasks.push_back(entry.first);
+            else proposed_schedule[owner] = entry.first;
+        }
+        else
+        {
+            flexible_tasks.push_back(entry.first);
+            if (owner != -1) flexible_agents.push_back(owner);
+        }
+    }
+
+    std::priority_queue<Candidate, vector<Candidate>, std::greater<Candidate>> heap;
+    for (int agent : flexible_agents)
+    {
+        for (int task_id : flexible_tasks)
+        {
+            if (std::chrono::steady_clock::now() >= deadline) break;
+            const Task& task = env->task_pool.at(task_id);
+            int previous = env->curr_states.at(agent).location;
+            int distance_to_pickup = DefaultPlanner::get_h(env, previous, task.locations.at(task.idx_next_loc));
+            int remaining_length = 0;
+            for (size_t i = task.idx_next_loc + 1; i < task.locations.size(); ++i)
+            {
+                remaining_length += DefaultPlanner::get_h(env, task.locations.at(i - 1), task.locations.at(i));
+            }
+            heap.push({dist_weight * distance_to_pickup + remaining_length, agent, task_id});
+        }
+        if (std::chrono::steady_clock::now() >= deadline) break;
+    }
+
+    unordered_set<int> assigned_agents;
+    unordered_set<int> assigned_tasks;
+    while (!heap.empty())
+    {
+        const Candidate candidate = heap.top();
+        heap.pop();
+        if (assigned_agents.insert(candidate.agent).second && assigned_tasks.insert(candidate.task).second)
+        {
+            proposed_schedule[candidate.agent] = candidate.task;
+        }
+    }
+}
+
 void schedule_plan_h(int time_limit, std::vector<int> & proposed_schedule,  SharedEnvironment* env, bool new_only)
 {
     auto start_time = std::chrono::high_resolution_clock::now();

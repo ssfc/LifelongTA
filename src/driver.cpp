@@ -54,7 +54,14 @@ int main(int argc, char **argv)
         ("logDetailLevel,d", po::value<int>()->default_value(1), "the minimum severity level of log messages to display, 1--showing all the messages, 2--showing warnings and fatal errors, 3--showing fatal errors only")
         ("useTraffic,u", po::value<bool>()->default_value(false), "use of traffic in scheduling")
         ("assignNew,n", po::value<bool>()->default_value(false), "wether new agents only or allow task swapping")
-        ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy")
+        ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy, 6- greedy heap")
+        ("heapDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for greedy heap")
+        ("heapReassign", po::value<bool>()->default_value(true), "enable stable unopened-task reassignment for greedy heap")
+        ("heapKeepBias", po::value<float>()->default_value(6.0f), "old-pair bias during greedy-heap reassignment")
+        ("heapProtectDist", po::value<int>()->default_value(10), "protect assignments this close to pickup")
+        ("heapRebuildPct", po::value<int>()->default_value(45), "greedy-heap candidate rebuild budget percentage")
+        ("heapLnsPct", po::value<int>()->default_value(10), "greedy-heap swap-refinement budget percentage")
+        ("heapSortK", po::value<int>()->default_value(500), "sorted candidates retained per agent")
         ("refinementTimeLimit", po::value<int>()->default_value(0), "independent planner refinement limit in milliseconds; 0 uses planTimeLimit")
         ("commitWindow,w", po::value<int>()->default_value(1), "commit window");
     clock_t start_time = clock();
@@ -143,6 +150,15 @@ int main(int argc, char **argv)
     planner->scheduler->set_use_traffic(vm["useTraffic"].as<bool>());
     planner->scheduler->set_new_only(vm["assignNew"].as<bool>());
     planner->scheduler->set_solver(vm["scheduleModel"].as<int>());
+    DefaultPlanner::PortableGreedyHeapConfig heap_config;
+    heap_config.dist_weight = vm["heapDistWeight"].as<float>();
+    heap_config.reassign_enabled = vm["heapReassign"].as<bool>();
+    heap_config.reassign_keep_bias = vm["heapKeepBias"].as<float>();
+    heap_config.reassign_min_dist = vm["heapProtectDist"].as<int>();
+    heap_config.rebuild_pct = vm["heapRebuildPct"].as<int>();
+    heap_config.lns_pct = vm["heapLnsPct"].as<int>();
+    heap_config.sort_k = vm["heapSortK"].as<int>();
+    planner->scheduler->set_heap_config(heap_config);
     planner->planner->set_refinement_time_limit(vm["refinementTimeLimit"].as<int>());
     planner->commit_window = vm["commitWindow"].as<int>();
 

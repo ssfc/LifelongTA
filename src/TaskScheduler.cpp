@@ -55,6 +55,10 @@ void TaskScheduler::plan(int time_limit, std::vector<int> & proposed_schedule)
     {
         DefaultPlanner::schedule_plan_raw(limit, proposed_schedule, env);
     }
+    else if (solver == 6)
+    {
+        DefaultPlanner::schedule_plan_portable_greedy_heap(limit, proposed_schedule, env, heap_config);
+    }
     else
     {
         std::cerr << "Invalid solver type. Please choose either 1 (matching) or 2 (flow)." << std::endl;
@@ -82,4 +86,8 @@ void TaskScheduler::set_solver(int solver)
 void TaskScheduler::set_max_matching_edges(int max_matching_edges)
 {
     this->max_matching_edges = max_matching_edges;
+}
+void TaskScheduler::set_heap_config(const DefaultPlanner::PortableGreedyHeapConfig& config)
+{
+    heap_config = config;
 }
