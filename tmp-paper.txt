@@ -1,0 +1,973 @@
+Flow-Based Task Assignment for
+Large-Scale Online Multi-Agent Pickup and Delivery
+Yue Zhang, Zhe Chen, Daniel Harabor, Pierre Le Bodic, Peter J. Stuckey
+
+arXiv:2508.05890v1 [cs.MA] 7 Aug 2025
+
+Monash University, Australia
+{Yue.Zhang, Zhe.Chen, Daniel.Harabor, Pierre.LeBodic, Peter.Stuckey}@monash.edu
+
+Abstract
+We study the problem of online Multi-Agent Pickup and Delivery (MAPD), where a team of agents must repeatedly serve
+dynamically appearing tasks on a shared map. Existing online methods either rely on simple heuristics, which result in
+poor decisions, or employ complex reasoning, which suffers
+from limited scalability under real-time constraints. In this
+work, we focus on the task assignment subproblem and formulate it as a minimum-cost flow over the environment graph.
+This eliminates the need for pairwise distance computations
+and allows agents to be simultaneously assigned to tasks and
+routed toward them. The resulting flow network also supports
+efficient guide path extraction to integrate with the planner
+and accelerates planning under real-time constraints. To improve solution quality, we introduce two congestion-aware
+edge cost models that incorporate real-time traffic estimates.
+This approach supports real-time execution and scales to over
+20000 agents and 30000 tasks within 1-second planning time,
+outperforming existing baselines in both computational efficiency and assignment quality.
+
+Introduction
+Multi-Agent Pickup and Delivery (MAPD) is a fundamental
+problem in autonomous multi-robot systems that requires a
+team of agents to continuously execute a large amount of
+tasks distributed over a shared environment while avoiding
+collisions with each other (Ma et al. 2017a). In MAPD, each
+task consists of transporting an item from a pickup location
+to a delivery location, and agents operate in an online setting
+where tasks arrive continuously and must be assigned and
+executed in real time. This problem has wide applications in
+warehouse automation, autonomous aircraft-towing vehicles
+(Morris et al. 2016), office robots (Veloso et al. 2015) and
+video games (Ma et al. 2017b).
+Solving MAPD involves two subproblems: assigning
+available tasks to agents and planning collision-free paths
+for agents to complete these tasks. A core challenge in this
+problem lies in balancing task assignment and path planning
+under strict runtime constraints, and in the presence of thousands or even tens of thousands of agents and tasks. A decision must be made at each planning window: which agent
+should be assigned to which task, and what path should they
+Copyright © 2026, Association for the Advancement of Artificial
+Intelligence (www.aaai.org). All rights reserved.
+
+follow. As a result, solvers must react quickly to task arrivals and system state changes, while also avoiding congestion and conflicts during execution. This makes the joint optimisation of task assignment and path planning especially
+difficult at scale to meet strict time constraints.
+To address the online setting, Token Passing (TP) and Token Passing with Task Swaps (TPTS) were proposed (Ma
+et al. 2017a). TP assigns tasks in a greedy manner by passing
+a token among agents, allowing them to claim tasks and plan
+paths one by one. TPTS further allows task swaps between
+agents in TP. While conceptually simple and reactive, TP
+and TPTS often produce suboptimal assignments and suffer from bottlenecks from time-dependent path planning or
+replanning, especially as the team size increases. To further
+optimise the solution quality, RMCA (Chen et al. 2021) optimise the solution by integrating and solving them as a combined problem. However, these works still suffer from computation bottlenecks when scaling to hundreds of agents.
+Similarly, some existing approaches solves the problem
+offline, where all tasks are known in advance, and try to
+compute globally optimal solutions for both agent-task assignment and path planning within a given runtime (Hönig
+et al. 2018; Lam, Stuckey, and Harabor 2025; Liu et al.
+2019). These algorithms can provide high-quality solutions.
+However, they assume all tasks are known in advance and
+enough planning time is given upfront, i.e., one hour. These
+algorithms can provide high-quality solutions. As a result,
+they are not designed for online operations, where tasks are
+not all known a priori, and solvers are required to react
+quickly to avoid agents being left waiting for new tasks. In
+addition, they also do not scale well beyond dozens of agents
+due to the high computational complexity of joint reasoning.
+This work focuses on the assignment side of MAPD.
+Once all-pair distances are computed between available
+agents and tasks, the assignment is a special case of the
+minimum-cost flow problem, hence it can be solved rather
+efficiently using the network simplex (Ahuja, Magnanti, and
+Orlin 1993), for instance. However, computing the all-pair
+distance matrix can, by itself, be prohibitive.
+Instead, we propose a new flow-based framework for
+large-scale task assignment in online MAPD. Our key idea
+is to solve the assignment without computing distances upfront, but directly on the map, as a minimum-cost flow.
+The resulting flow not only determines the assignments but
+
+also produces guide paths for agents, which can be integrated into the path planner to accelerate planning by reducing search overhead, which helps produce high-quality
+path plans within the tight time constraints. While our primary contribution is the flow-based model, we further introduce traffic-aware edge cost models that incorporate realtime congestion estimates into the flow network, encouraging the system to avoid congested areas and distribute agents
+more evenly. In the experiment, our approach outperforms
+existing baselines in terms of solution quality and runtime
+and scales to scenarios with over 20000 agents and 30000
+tasks on large maps Our method runs in real time, offers high
+throughput, and allows for flexible integration with different
+cost models and traffic estimators.
+
+Problem Setup
+A Multi-Agent Pickup and Delivery (MAPD) problem consists of n agents A = {a1 , . . . , an } on a known 2D grid
+map G = (V, E), where V is a set of vertices (grid cells)
+and E is a set of edges that connects adjacent cells. Each
+agent starts at a unique location and is responsible for repeatedly completing delivery tasks. Each task consists of a
+pair of locations, a pickup location and a delivery location.
+To complete a task, an agent must reach the pickup location and then move to the delivery location in order. Tasks
+are not known in advance. Instead, they appear dynamically
+over time. A global task pool maintains all currently available tasks. Let m be the number of tasks available. Once
+a task is completed, a new task is released into the pool to
+maintain a constant number of tasks in the pool (or according to a predefined release policy).
+The system runs in discrete time steps. At each step, the
+solver must assign tasks to available agents and update plans
+for ongoing assignments. Agents can move to adjacent free
+cells or wait in place. Collision avoidance must be enforced:
+agents cannot occupy the same cell at the same time or traverse the same edge in opposite directions simultaneously.
+The goal is to assign tasks and plan paths to free agents in a
+way that maximises overall throughput (i.e., the number of
+completed tasks over time)
+We adopt an online execution model similar to that used
+in Zhang et al. (2024) and Chan et al. (2024), where solvers
+plan while executing. In this setting, at each step, the solver
+is given a fixed planning time window, i.e., determined by
+the execution time for a single action, to compute both task
+assignments and movement decisions. If the solver does not
+return within this time limit, agents will pause and wait during that step, leading to delays in task completion.
+
+Related Work
+Path Planning Approaches
+MAPD consists of two subproblems: task assignment and
+path planning. The path planning problem is a well-studied
+problem called Multi-agent path finding (MAPF) (Stern
+et al. 2019), where a team of agents navigate from the
+given start to goal positions while avoiding collisions. In
+this problem, each agent receives only one task, and the
+tasks are assumed to be given and fixed in advance. Classical
+
+approaches include centralised solvers like Conflict-Based
+Search (CBS) (Sharon et al. 2015) and its many variants,
+which offer good solution quality, but scale poorly with the
+number of agents. More recent work explores online MAPF,
+where planning and execution are concurrent (Zhang et al.
+2024). In this online setting, solvers must return plans or
+partial plans within a fixed planning time, called committed paths, and agents act on committed paths while planners
+are planning for future paths. The path planning under this
+setting becomes more challenging, as planners should react
+quickly. Solvers that are able to produce partial solutions
+quickly become more desirable. For example, Zhang et al.
+(2024) proposes to use a fast method to compute an initial
+solution, then commit the first several actions and keep improving the uncommitted part of the solutions during execution. Similar ideas have also been proposed in Chen et al.
+(2024). At each step, the solver commits only the next action
+for each agent, and keeps improving a spatial guide path during execution time. This method scales well to 10000 agents
+on various maps.
+
+Task Assignment Approaches
+In this context, the task assignment problem consists in finding a minimum-cost set of min(n, m) disjoint edges going
+from agents to tasks. This can then be solved optimally using
+the Hungarian Method (Kuhn 1955) or network flow solvers.
+Related problems have also been widely studied in different areas, such as the multi-robot task allocation (MRTA),
+where a team of robots need to visit a set of target locations (Korsah, Stentz, and Dias 2013; Gerkey and Matarić
+2004; Lagoudakis et al. 2005), and the vehicle routing problem (VRP) where multiple vehicles need to deliver products
+to a group of customers (Laporte 2009; Lenstra and Kan
+1981). Additional variations of this problem incorporate different constraints, such as adding deadlines or precedence
+constraints for tasks (Bai et al. 2019) and introducing time
+windows to tasks and robots. (Potvin and Rousseau 1993).
+Approaches in these topics focus more on optimising under a complex model and assignment constraints from the
+problem. However, they often rely on simplified cost models to represent the travel time or distance, such as Manhattan distance or single-agent shortest path cost, and robots’
+coordination is often assumed to be optimistic, for example,
+ignoring the collision avoidance problem. This assumption
+does not hold in MAPD problems, where congestion and
+path conflicts substantially affect task completion cost.
+
+MAPD Approaches
+Several works address MAPD from an offline perspective,
+which assumes all tasks are known and the computation
+time is given upfront. In Nguyen et al. (2019), the authors
+start to generalise the combined problem of path finding and
+task assignment and solve it with answer set programming.
+They proposed a three-phase method, which scales to only
+20 agents. Liu et al. (2019) propose a two-stage approach
+that first models the task assignment problem as a TSP problem, and then computes the task sequences for each agent
+and then plans execution paths using MAPF techniques. In
+
+Hönig et al. (2018), authors introduce CBS-TA, which combines optimal task assignment with CBS-based path planning and solves this problem optimally. Lam, Stuckey, and
+Harabor (2025) also propose BCP-MAPD that uses branchand-cut-and-price to solve the combined problem optimally
+offline. These methods provide strong solution quality but do
+not support online execution, and they scale poorly beyond
+hundreds of agents due to their combinatorial complexity.
+In contrast, online MAPD methods handle dynamically
+generated tasks during execution. Token passing (TP) and
+Token Passing with Task Swaps (TPTS) (Ma et al. 2017a)
+are two decentralised methods that solve MAPD in two
+stages. In TP, agents select the closest task and plan their
+path to it one by one, and once a task is assigned to an
+agent, the assignment becomes fixed and cannot be swapped.
+While TPTS allows swapping for tasks that have not been
+picked up yet. Ma et al. (2017a) also proposed a centralised
+algorithm, CENTRAL, which uses the Hungarian Method to
+solve the task assignment problem and computes paths using
+CBS (Sharon et al. 2015). RMCA (Chen et al. 2021) is another online method that integrates task assignment and path
+planning and solves them at the same time. RMCA starts
+with an initial assignment and plan for each agent, and then
+improves the solution within the runtime available. These
+methods can handle an online environment, but they often
+only compute suboptimal solutions for fewer than hundreds
+of agents due to their computational complexity.
+
+Traffic-Guided Planner for Path Planning
+In our framework, we decouple task assignment from path
+planning and solve the task assignment problem. For path
+planning, we directly use a recent state-of-the-art online
+MAPF planner, Guided PIBT (Chen et al. 2024). This planner operates efficiently in large-scale online MAPF settings
+by reasoning about future congestion and using guide paths
+as heuristics for determining next actions. We also integrate
+its traffic-aware cost models and guide paths into our task
+assignment model (described in later sections).
+
+(a)
+
+(b)
+
+(c)
+
+Figure 1: Illustration of task assignment models. (a): the example instance, where Ai represents the agent, and Ti represents the task (pickup location). (b): the bipartite linear
+assignment model, where each agent connects to every task
+and the edge cost is the shortest path distance. (c): the flow
+model, where the map is embedded directly as a flow network and the edge cost is the unit cost.
+replanning a subset of agents based on updated congestion
+estimates. A rule-based solver, PIBT (Okumura et al. 2022),
+then uses the resulting guide path as a heuristic to determine
+the movement for each agent while avoiding collisions.
+
+Flow Network for Task Assignment
+In this section, we describe how we model the task assignment subproblem in online MAPD as a flow over a graph
+of the map. We begin with a baseline bipartite linear assignment formulation and then introduce our spatial flow-based
+approach, which provides better scalability and integrates
+naturally with path planning. We then discuss how it integrates with the planner. Finally, we analyse the time complexity of both methods.
+
+Linear Assignment Formulation
+
+Traffic-Aware Cost Models The planner first plans a
+time-independent guide path for each agent using focal
+search. During the search, two types of congestion are estimated and incorporated into edge costs. When traversing
+an edge e from vertex v1 to v2 , the planner considers:
+Vertex Congestion (pv ) This estimates the total delay that
+will occur inthe future
+ if an agent enters vertex v, calculated
+using pv = nv2−1 where nv is the total number of agents
+entering vertex v on its planned time-independent path.
+Contraflow Congestion (ce ) This estimates the potentially
+large delays caused by agents being pushed by other agents
+to avoid collisions which intend to traverse e in different directions. This is computed as ce = fv1 ,v2 ·fv2 ,v1 where fvi ,vj
+denotes the number of agents currently planned to traverse
+edge e in the direction from vi to vj .
+The planner then combines these values into edge cost
+F Cost(e) = 1 + pv2 + ce .
+
+A straightforward approach to task assignment is to model
+it as a minimum-cost bipartite assignment problem between
+available agents (agents are not delivering items) and available tasks (tasks are not picked up yet). An example of
+this formulation is shown in Figure 1(b). For each agenttask pair, the edge cost is typically the shortest path distance between the agent’s start location and the task location.
+This is typically computed by Dijkstra, in which the search
+starts from the agent’s start location and terminates when all
+tasks are reached. Then, a complete bipartite graph is constructed from all the agent-task pairs. The goal is to find a
+minimum-cost one-to-one assignment that minimises the total assignment cost. This problem can be solved optimally
+as a minimum-cost flow problem on a bipartite graph.
+While this formulation is intuitive and provides optimal
+one-shot assignments, it has several limitations. First, it requires computing all agent-task distances, which becomes
+costly as the number of agents and tasks increases.1 Second,
+the scalability of this formulation is limited in large-scale
+settings due to the quadratic number of edges. For example,
+
+Guide Path Planning and Refinement After all initial
+paths are computed, the system refines them iteratively by
+
+1
+These can be precomputed if fixed unit costs are used, but not
+for traffic costs.
+
+n = 10000 agents and m = 15000 tasks will result in 150
+million edges, and solving the problem with this model at
+this scale becomes challenging.
+
+Flow-Based Model
+Graph Construction To overcome these limitations, we
+propose a spatial flow-based formulation that operates directly on G. As shown in Figure 1(c), instead of computing
+agent-task costs explicitly, we embed both agents and tasks
+into a single flow network constructed from the map topology.
+• Each cell v ∈ V of the grid map becomes a node in
+the directed graph. Then add edges between adjacent free
+cells.
+• Add a dummy source node with edges to the current positions of agents that are not delivering, each with max flow
+one unit. Force a flow from the source of min(m, n).
+• Add a dummy sink node and edges from available pickup
+locations, each with max flow of one unit.
+• Edge costs that connect the map cells can be unitary (1)
+or an estimated cost, such as traffic estimations.
+Unlike time-expanded formulations, we do not model time
+explicitly or enforce capacity constraints to prevent collisions in the flow network. Instead, we allow multiple units
+of flow to traverse the same edge, and leave the collision
+avoidance to path planners.
+Assignment and Guide Path Retrieval from Flow This
+formulation enables the assignment to be solved as a single
+minimum-cost flow problem, from which we extract task assignments and guide paths for each agent by tracing the unit
+flow from the agent’s current location to a task node in the
+flow network. The computed flow indicates not only which
+agent should go to which task, but also suggests a spatial
+path toward the task, which is aware of traffic congestion
+and can be used as a guide path for the planners. As shown in
+Algorithm 1, for each agent, we start from its corresponding
+location node and follow the outgoing edges with positive
+flow. On each node, we select one outgoing edge with positive flow to reach the next node and subtract one unit of flow
+from the edge. We continue traversing the graph until we
+reach a task node (i.e., a node with an outgoing edge to the
+sink), and collecting the visited nodes along the way as the
+agent’s guide path. Once a task node is reached, we assign
+the corresponding task to the agent and store the constructed
+path for the downstream planner. Note that Algorithm 1 returns one of possibly many optimal assignments that can be
+derived from the input flow.
+Alternative Edge Costs The default edge cost for our flow
+model is the edge cost from the map, i.e., unit cost for grid
+maps. We also support other cost functions that incorporate
+different considerations of the problem. For example, using
+estimated traffic congestion cost helps agents avoid waiting
+at frequently blocked or delayed areas. Here, we present two
+alternative dynamic edge costs based on the traffic.
+Traffic Cost from Planner Estimations: Here we use the
+same traffic costs as the planner (Chen et al. 2024), which
+
+Algorithm 1: Retrieval from Flow Solution
+1: Input: Directed flow network G = (V, A) with flow
+
+values f : A → N ; set of agents A
+2: Output: Assigned task and guide path for each agent
+3: for all ai ∈ A do
+4:
+v ← node at agent ai ’s current location
+5:
+P ← empty list
+6:
+while v is not a task node do
+7:
+Append v to P
+8:
+Choose e = (v, v ′ ) an edge with positive flow
+9:
+10:
+11:
+12:
+
+f (e) > 0 from current node v
+f (e) ← f (e) − 1. Remove one unit of flow from e
+v ← v′
+Assign task at v to ai
+Store P as the guide path for ai
+
+uses future traffic estimations to plan paths for agents. We
+use edge costs F cost() based on the same traffic estimations
+in our flow model. That is, at each planning cycle, we use
+the guide paths of agents that are currently delivering items
+(computed by the planner) to compute F cost(e) for each
+edge in the flow model. Note that agents delivering items
+will not be reassigned a new task, so this estimate is stable.
+Avg Waiting Time from Execution: To support integration
+with other planners that do not have traffic estimation, we
+propose an alternative edge cost model that calculates the
+average waiting time up to this point of the execution (past
+traffic). We maintain a record of agent waiting times on each
+edge during execution and incorporate these traffic statistics
+into the edge cost. For each directed edge e ∈ E, we track
+two values: the total waiting time We to traverse e and the
+total number of traversals Ne of e. The cost of e is set to its
+historical average traversal time:
+(
+We
+if Ne > 0,
+P Cost(e) = 1 + Ne
+0 otherwise.
+which is the unit cost plus the average wait time. Additionally, we apply a decay factor γ ∈ (0, 1] to both We and Ne at
+each planning window. We update We and Ne at each step
+using:
+
+t if an agent traverses e after waiting t,
+We ← γWe +
+0 otherwise.
+
+1 if an agent traverses e after waiting t,
+Ne ← γNe +
+0 otherwise.
+This helps the model emphasize more recent congestion observations while discounting older traffic conditions.
+Planner Integration We integrate our flow model with the
+planner in two ways. (1) Traffic Cost Estimation from Planner to Flow: As also illustrated in previous subsections, we
+model the edge cost in flow using the edge cost estimates
+based on agents’ guide paths and expected future traffic from
+the planner (F Cost). This ensures the flow solver uses the
+same heuristic as the planner, and assigns tasks in a way
+
+that avoids regions likely to become congested. As a result, task assignments and subsequent path planning are optimised with respect to the same underlying traffic model. (2)
+Guide Path Initialisation from Flow to Planner: Although
+the planner is fast and scalable, initialising guide paths for
+thousands of agents on large maps can exceed the strict planning time limit (e.g., one second). Therefore, we warm-start
+the planner by using the path extracted from the flow solution. Once a minimum-cost flow is computed, we extract
+guide paths for each agent directly from the solution (as described in Algorithm 1). These paths indicate not only the
+task assigned to each agent but also an initial route toward
+the task. We then pass these guide paths to the planner as initial guide path. This accelerates path generation by avoiding
+redundant search and helps to start the refinement process
+more quickly.
+
+Complexity Analysis
+We analyse and compare the computational complexity of
+our flow-based task assignment model against the baseline
+assignment problem. Throughout the analysis, we use n ≤
+|V | and m ≤ |V | and the fact that on a graph of a grid
+map with |V | nodes and |E| edges, we have |E| = O(|V |).
+Note that, because the intention is to use edge costs that may
+not be integer, solving techniques that rely on cost scaling
+(Ahuja, Magnanti, and Orlin 1993, Chapter 10) are generally
+not appropriate for either approach.
+Linear Assignment In the assignment approach, there are
+two stages of computation:
+• Edge weights computation: for each agent, we perform
+a shortest path search (e.g., Dijkstra) on the map of
+|V | nodes and |E| edges: O(n(|V | + |E|) log |V |)) =
+O(n|V | log |V |)).
+• Solving
+an
+unbalanced
+assignment
+problem
+(Ramshaw and Tarjan 2012) takes, in the worst
+case: O(min(n2 , m2 )m) time, using the fact that, if
+n ≤ m, only one of the closest n tasks to an agent
+can be assigned to that agent, hence only n2 edges are
+necessary, and, similarly, m2 edges if m ≤ n.
+Thus, the total time complexity of this approach is
+O(n|V |(m + log |V |)).
+Network Flow Our flow-based model avoids explicit
+agent-task distance computation and operates on a simple
+graph representation of the map. The network is constructed
+directly from the map:
+• Nodes: |V | + 2 = O(|V |), including one node for each
+map cell plus a source node and a sink node.
+• edges: |E| + n + m = O(|V |), including one edge for
+each traversable map edge plus n edges that connects the
+source node to n agents’ current positions and m edges
+that connects the sink node to m task locations.
+Using the algorithm given by Orlin (1993), given at most |V |
+edges are capacitated, we find O(|V |2 log2 |V |). The Network Simplex, which we use in our experiments, has the
+same worst-case time complexity, supposing edge costs do
+not exceed a constant (Tarjan 1997).
+
+Unlike linear assignment, the spatial flow model scales
+primarily with the map size rather than the number of agenttask pairs. Indeed, if the number n of agents grows linearly with |V | (e.g. 50% agent density), then the worst-case
+time complexity of solving the linear assignment is O(|V |3 ),
+whereas that of the Network Flow is still O(|V |2 log2 |V |).
+This makes it more suitable for large-scale MAPD problems,
+where n × m can easily exceed |E| and |V | by orders of
+magnitude.
+
+Experiments
+We implement the whole framework in C++ on top of the
+traffic planner (Chen et al. 2024). For the linear assignment and network flow solver, we use the open-source library LEMON (Dezső, Jüttner, and Kovács 2011), which, on
+these instances, was faster than competitors such as Gurobi.
+The experiments are conducted on a cloud instance with
+32GB RAM, 16 AMD EPYC-Rome CPUs. We run one
+map from the standard grid-based Multi-Agent Path Finding
+(MAPF) benchmarks (Sturtevant 2012) and two warehousetype maps with distance-biased distributions from a recent
+MAPF/MAPD competition called League of Robot Runners
+(LoRR) (Chan et al. 2024). The maps are:
+• Random (R): a 64 × 64 map with 3270 traversable cells
+and 20% random generated obstacles. The agent team
+size are tested from 400 to 2000, increasing by 400.
+• Warehouse Small (WS): a 33 × 57 map with 1277
+traversable cells. Among the free cells, there are 40 “E”
+locations that represents the working stations in the warehouse, and 342 “S” locations that presents the items locations that needs to be picked up. The agent team size
+are tested from 200 to 600, increasing by 100.
+• Sortation Large (SL): a 140 × 500 map with 54320
+traversable cells. There are 620 “E” locations and 31540
+“S” locations. The agent team size are tested from 4000
+to 20000, increased by 4000.
+Note the range of agents is deliberately chosen so that we get
+to the point of having too many agents on the map, and hence
+throughput reduces. We keep the number of tasks in the task
+pool to 1.5 times the number of agents. For the task distributions, the tasks for Random are sampled randomly, and the
+tasks for the other maps are selected only from “E” and “S”
+locations and are generated based on a distance-based warehouse distribution model used in LoRR, where tasks with
+fewer distance to working stations will have higher probability to be selected.
+
+Experiment 1: Runtime of different methods
+We compare the runtime performance of Linear Assignment (treating the cost computation time as free), Linear
+Assignment + Dijkstra (including cost computation using
+Dijkstra), and Flow (with unit cost as the edge cost). The
+time limit for returning assignments and actions is set to 10
+minutes, and we simulate for 1000 timesteps. We use Warehouse Small and Sortation Large to illustrate runtime behaviour across scales.
+
+Map
+
+n
+
+R
+R
+R
+R
+R
+WS
+WS
+WS
+WS
+WS
+SL
+SL
+SL
+SL
+SL
+
+400
+800
+1200
+1600
+2000
+200
+300
+400
+500
+600
+4000
+8000
+12000
+16000
+20000
+
+No Timeout (% vs Greedy)
+Greedy* Flow-Unit Cost*
+6936
+6980 (↑0.63%)
+12688
+12871 (↑1.44%)
+15839
+16211 (↑2.35%)
+16172
+16971 (↑4.94%)
+15411
+15626 (↑1.40%)
+3508
+3639 (↑3.73%)
+4773
+4954 (↑3.79%)
+5570
+5673 (↑1.85%)
+5791
+5900 (↑1.88%)
+5585
+5836 (↑4.49%)
+13776
+14490 (↑5.18%)
+26355
+27614 (↑4.78%)
+33952
+35912 (↑5.77%)
+31428
+33960 (↑8.05%)
+29029
+31852 (↑11.42%)
+
+Greedy
+6925
+12660
+15874
+16316
+15265
+3512
+4779
+5494
+5894
+5593
+13642
+25831
+34414
+31993
+27323
+
+With 1s Timeout (% vs Greedy)
+Flow-Unit Cost
+Flow-Traffic
+Flow-Avg Waiting
+6972 (↑0.68%)
+6964 (↑0.56%)
+6975 (↑0.72%)
+12826 (↑1.31%)
+12745 (↑0.67%)
+12787 (↑1.00%)
+16331 (↑2.88%)
+16205 (↑2.09%)
+16402 (↑3.33%)
+16383 (↑0.41%)
+17097 (↑4.79%)
+17001 (↑4.20%)
+16101 (↑5.48%)
+15939 (↑4.42%)
+16111 (↑5.54%)
+3642 (↑3.70%)
+3596 (↑2.39%)
+3632 (↑3.42%)
+4919 (↑2.93%)
+4863 (↑1.76%)
+4816 (↑0.77%)
+5718 (↑4.08%)
+5761 (↑4.86%)
+5637 (↑2.60%)
+5829 (↓1.10%)
+6174 (↑4.76%)
+5819 (↓1.27%)
+5652 (↑1.05%)
+6185 (↑10.59%)
+5678 (↑1.52%)
+13173 (↓3.44%)
+13449 (↓1.41%)
+14094 (↑3.32%)
+18507 (↓28.37%)
+25569 (↓1.01%)
+26177 (↑1.34%)
+23136 (↓32.81%)
+33355 (↓1.72%)
+34568 (↑0.45%)
+26490 (↓17.21%)
+34277 (↑7.14%)
+33975 (↑6.19%)
+24501 (↓10.33%) 31658 (↑15.91%)
+29477 (↑7.09%)
+
+Table 1: Throughput results across different maps and team sizes. Column 1 is the map name, column 2 is the team size
+(number of agents) and column 2-7 show the throughput of different methods. Methods marked with “*” are unconstrained (no
+timeout) for task assignment and initial guide path computation, followed by 1s refinement. The remaining methods operate
+under a strict 1-second real-time limit per timestep. Percentages in parentheses indicate relative improvement over the respective
+Greedy baseline. Bold values highlight the best-performing method within each group.
+
+Experiment 2: Throughput of different methods
+We now evaluate the throughput performance of different
+task assignment methods, including our flow-based models
+and greedy, under varying team sizes and map structures.
+Throughput is defined as the number of tasks completed over
+a 1000-timestep simulation. For greedy, we refer to greedily
+assigning task to agents according to the shortest path distance, the distance is assumed to be computed and cached
+on demand, and shared by the planner. Greedy only assigns
+new free agents with tasks and does not allow task swapping, which is the best greedy version we found in our experiments.2 Table 1 summarises the results. The methods are
+grouped into two categories.
+Unconstrained Time Limit Columns 3-4 (Greedy* and
+Flow-Unit Cost*) correspond to the setting where task assignment and initial guide path computation are unconstrained in each timestep, and the path refinement has a 1s
+timeout limit. These methods benefit from sufficient time to
+2
+
+Note greedy is very fast, hence not compared in Experiment 1.
+
+100
+Solving Time (seconds)
+
+Figure 2 shows the runtime distributions of different
+methods across different timesteps. Note that during executions, the time for Linear Assignment varies during execution, because the number of available the number of agents
+and tasks varies. Overall, Flow achieves consistently low
+solving times across all team sizes. On Warehouse Small,
+flow has a consistent runtime under 0.01s regardless of the
+team size, while linear assignment and the edge computation
+both show increasing runtime as team size grows. The performance gap is more dramatic on Sortation Large. Linear
+assignment and its edge cost computation have a quadratic
+runtime growth and even fail to complete within 10 minutes
+at team sizes 16000 and 20000. In contrast, Flow maintains
+low solving times, scaling efficiently even at this scale.
+
+103
+
+Warehouse Small
+
+Sortation Large
+
+102
+
+10 1
+
+101
+
+10 2
+
+100
+
+10 3
+
+10 1
+
+200
+
+300
+
+400 500
+Team Size
+
+600
+
+4000 8000 12000 16000 20000
+Team Size
+
+Figure 2: Solving time distributions for different methods
+and team sizes on two maps. For team sizes 16000 and
+20000 on Sortation Large, Linear Assignment fails to compute even the first step within 10 minutes.
+
+compute good path plans, which reveals the potential of each
+strategy when computation is not a bottleneck.
+In this setting, we observe that flow-based assignment
+consistently outperforms Greedy, even with a unit cost
+(gains from 0.6% to over 11%). The benefits are particularly apparent in large-scale warehouse settings. This illustrates the value of global optimisation for task-to-agent assignment, particularly when the global optimisation does not
+have too much time overhead, since the flow-based method
+is fast. However, as team size increases, the challenge shifts
+from task assignment to path planning. In particular, we observe that the initial guide path computation becomes the
+primary bottleneck, i.e., taking up to 26 seconds for 20000
+agents on Sortation Large.
+Strict Real-time Constraints Columns 5–8 represent the
+strict real-time MAPD setting, where each timestep is limited to a total of 1s time limit for assignment and path planning. For our flow-based method, we test three edge costs:
+Unit Cost, Traffic (Traffic Cost from Planner Estimations)
+and Avg Waiting (Avg Waiting Time from Execution). For
+
+Avg Waiting, we set γ = 0.9. We only warm-start the planner with the flow solution when the cost model is Traffic or
+Avg Waiting, because the flow solution with unit cost is simply the shortest path, which does not avoid any congestion.
+Overall, through the available time becomes less, the
+flow-based model outperforms greedy in most cases. FlowUnit Cost performs well in smaller or less congested
+environments; the two congestion-aware variants, FlowTraffic and Flow-Edge Waiting, consistently outperform
+both Greedy and unit-cost flow in congested scenarios. In
+particular, in situations like 16000-20000 agents in Sortation
+Large and 400-600 agents in Warehouse Small, Flow-Traffic
+under a strict timeout limit has better throughput than that
+with no timeout. In addition, Flow-Avg Waiting also shows
+similar performances to traffic estimations, which demonstrates that this estimation is suitable when used with planners that does not produce traffic estimation.
+We also observe a significant decrease for Flow-Unit Cost
+on Sortation Large. This is mainly because of the overhead for computing or recomputing (due to frequent task
+swaps) the guide path in the planner. For example, across
+1000 timesteps, Flow-Unit Cost fails to find an initial solution within 1s for 997 times on Sortation Large with 20000
+agents. Since we currently reschedule tasks every timestep,
+this indicates that less frequent scheduling may be needed
+in large-scale scenarios. The other two flow-based variants,
+which can produce the initial guide path to the planners, are
+less affected by these runtime overheads. Note Greedy does
+not suffer from this issue, because it does not allow task
+swapping, hance there is no need to replan guide paths.
+
+Experiment 3: Flow vs existing MAPD approaches
+We compare our approach against RMCA (Chen et al.
+2021), the existing state-of-the-art method for online
+MAPD. We test our method on their task release policy
+and problem instances. In this setting, f ∈ 2, 5, 10 number of tasks are released per timestep, and we measure the
+makespan (timesteps to finish total tasks) for 500 tasks and
+n ∈ 50, 80, 100 number of agents. For a given f and n, we
+test 25 instances. We count the number of steps that exceed a
+1s runtime limit for RMCA as the total number of timeouts.
+Table 2 reports the average makespan for our method and
+RMCA and the average number of timesteps for RMCA
+(with standard deviations). Our flow-based approach consistently achieves lower makespan across all instances. The
+performance gap becomes larger under high task densities (e.g., f = 10), where RMCA incurs many timeouts
+due to its higher computational overhead. In contrast, our
+method maintains consistent planning times (< 1s) across
+all timesteps.
+
+Experiment 4: Flow on ultra-large maps
+We further evaluate the scalability of our flow-based assignment framework on two ultra-large maps: Orz900d (Orz),
+size 1491 × 656 with 96603 free cells from Sturtevant
+(2012), and mp 2p 01 Iron harvest (IH), 1912 × 1800
+with 6545639 free cells from Harabor, Hechenberger, and
+Jahn (2022). We simulate with different team sizes n ∈
+10000, 20000 with Greedy and Flow-Unit Cost. In such
+
+f
+
+n
+
+2
+2
+2
+5
+5
+5
+10
+10
+10
+
+50
+80
+100
+50
+80
+100
+50
+80
+100
+
+Avg Makespan
+RMCA
+Flow
+324.96 ± 6.99 299.24 ± 7.80
+288.00 ± 3.91 242.00 ± 8.99
+287.20 ± 3.7 227.20 ± 12.01
+319.72 ± 7.58 271.64 ± 8.28
+218.48 ± 5.65 197.88 ± 5.10
+185.52 ± 4.65 172.92 ± 6.51
+315.48 ± 7.85 271.16 ± 8.48
+216.24 ± 4.84 192.88 ± 5.06
+184.12 ± 4.97 166.36 ± 7.30
+
+Avg Timeouts
+RMCA
+74.88 ± 6.97
+38.00 ± 3.91
+37.20 ± 3.70
+219.68 ± 7.55
+118.48 ± 5.65
+85.48 ± 4.60
+268.36 ± 9.57
+175.52 ± 7.09
+147.04 ± 6.50
+
+Table 2: Average makespan (column 3-4) between RMCA
+and Flow and average number of timeouts for RMCA (column 5) under varying team sizes n and task frequencies f .
+Map
+
+n
+
+Orz
+Orz
+IH
+IH
+
+10000
+20000
+10000
+20000
+
+Simulate
+Steps
+2000
+2000
+5000
+5000
+
+Throughput
+Greedy Flow
+1031
+1042
+2031
+2139
+2624
+2646
+5698
+5902
+
+Avg Time(s)
+Flow
+0.367(±0.02)
+4.138(±7.24)
+19.819(±1.20)
+18.201(±1.56)
+
+Table 3: Throughput between Greedy and Flow-based methods and solving time for Flow. We simulate 2000 steps for
+Orz and 5000 steps for IH.
+massive environments, there is no practical way to compute
+or store accurate heuristics (e.g., all-pairs shortest paths).
+Thus, we use a lightweight setup: Manhattan distance as a
+heuristic and PIBT (Okumura et al. 2022), a simple rulebased solver, for path planning. To reduce the overhead of
+frequent assignment computation at this scale, we schedule
+task assignment using flow every k timesteps. That is, the
+flow solver is invoked once every k steps, and the resulting
+assignments are fixed for the window. If an agent finishes its
+task during this interval, it remains unassigned until the next
+round. We set k = 10 for Orz and k = 30 for IH.
+As shown in Table 3, the flow-based method achieves
+higher throughput while maintaining tractable runtime. On
+IH, which has over 6 million free cells, the flow solver remains stable with runtime under 20 seconds, even for 20000
+agents. An additional benefit of the flow model is that, our
+flow-based model produces globally optimal task assignments with respect to true shortest-path distances without
+explicitly computing or storing any pairwise paths, because
+the minimum-cost flow is solved over the grid itself.
+
+Conclusion
+In this work, we study the task assignment in online MAPD.
+Our primary contribution is a spatial flow-based task assignment framework that directly operates on the map and avoids
+costly pairwise distance computations. The model supports
+real-time execution, planner integration, and high scalability. We further explore two light-weight congestion-aware
+edge costs to demonstrate the flexibility of the flow model.
+These models serve as initial examples of how traffic information can be embedded into the flow to improve coordination. Experiments show that it outperforms baselines in
+
+large-scale settings, especially when combined with planner
+warm-starts and congestion estimates. Future work includes
+designing more accurate and adaptive edge cost models, improving the flow network structure, and extending the framework to support other MAPD variants.
+
+Laporte, G. 2009. Fifty years of vehicle routing. Transportation science, 43(4): 408–416.
+
+References
+
+Liu, M.; Ma, H.; Li, J.; and Koenig, S. 2019. Task and path
+planning for multi-agent pickup and delivery. In Proceedings of the International Joint Conference on Autonomous
+Agents and Multiagent Systems (AAMAS).
+
+Ahuja, R. K.; Magnanti, T. L.; and Orlin, J. B. 1993. Network Flows: Theory, Algorithms, and Applications. Prentice
+hall.
+Bai, X.; Cao, M.; Yan, W.; and Ge, S. S. 2019. Efficient
+routing for precedence-constrained package delivery for heterogeneous vehicles. IEEE Transactions on Automation Science and Engineering, 17(1): 248–260.
+Chan, S.-H.; Chen, Z.; Guo, T.; Zhang, H.; Zhang, Y.; Harabor, D.; Koenig, S.; Wu, C.; and Yu, J. 2024. The league of
+robot runners competition: Goals, designs, and implementation. In ICAPS 2024 System’s Demonstration track.
+Chen, Z.; Alonso-Mora, J.; Bai, X.; Harabor, D. D.; and
+Stuckey, P. J. 2021. Integrated task assignment and path
+planning for capacitated multi-agent pickup and delivery.
+IEEE Robotics and Automation Letters, 6(3): 5816–5823.
+Chen, Z.; Harabor, D.; Li, J.; and Stuckey, P. J. 2024. Traffic flow optimisation for lifelong multi-agent path finding.
+In Proceedings of the AAAI Conference on Artificial Intelligence, volume 38, 20674–20682.
+Dezső, B.; Jüttner, A.; and Kovács, P. 2011. LEMON–an
+open source C++ graph template library. Electronic notes in
+theoretical computer science, 264(5): 23–45.
+Gerkey, B. P.; and Matarić, M. J. 2004. A formal analysis
+and taxonomy of task allocation in multi-robot systems. The
+International journal of robotics research, 23(9): 939–954.
+Harabor, D.; Hechenberger, R.; and Jahn, T. 2022. Benchmarks for pathfinding search: Iron harvest. In Proceedings of
+the international symposium on combinatorial search, volume 15, 218–222.
+Hönig, W.; Kiesel, S.; Tinka, A.; Durham, J.; and Ayanian,
+N. 2018. Conflict-based search with optimal task assignment. In Proceedings of the International Joint Conference
+on Autonomous Agents and Multiagent Systems.
+Korsah, G. A.; Stentz, A.; and Dias, M. B. 2013. A comprehensive taxonomy for multi-robot task allocation. The
+International Journal of Robotics Research, 32(12): 1495–
+1512.
+Kuhn, H. W. 1955. The Hungarian method for the assignment problem. Naval research logistics quarterly, 2(1-2):
+83–97.
+Lagoudakis, M. G.; Markakis, E.; Kempe, D.; Keskinocak,
+P.; Kleywegt, A. J.; Koenig, S.; Tovey, C. A.; Meyerson, A.;
+and Jain, S. 2005. Auction-Based Multi-Robot Routing. In
+Robotics: Science and Systems, volume 5, 343–350. Rome,
+Italy.
+Lam, E.; Stuckey, P. J.; and Harabor, D. 2025. Optimal
+Multi-Agent Pickup and Delivery Using Branch-and-Cutand-Price Algorithms. Transportation Science, 59(1): 104–
+124.
+
+Lenstra, J. K.; and Kan, A. R. 1981. Complexity of vehicle
+routing and scheduling problems. Networks, 11(2): 221–
+227.
+
+Ma, H.; Li, J.; Kumar, T. S.; and Koenig, S. 2017a. Lifelong Multi-Agent Path Finding for Online Pickup and Delivery Tasks. In Proceedings of the 16th Conference on Autonomous Agents and MultiAgent Systems, 837–845.
+Ma, H.; Yang, J.; Cohen, L.; Kumar, T.; and Koenig, S.
+2017b. Feasibility study: Moving non-homogeneous teams
+in congested video game environments. In Proceedings of
+the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, volume 13, 270–272.
+Morris, R.; Pasareanu, C. S.; Luckow, K. S.; Malik, W.; Ma,
+H.; Kumar, T. S.; and Koenig, S. 2016. Planning, Scheduling
+and Monitoring for Airport Surface Operations. In AAAI
+Workshop: Planning for Hybrid Systems, 608–614.
+Nguyen, V.; Obermeier, P.; Son, T.; Schaub, T.; and Yeoh,
+W. 2019. Generalized target assignment and path finding
+using answer set programming. In Proceedings of the International Symposium on Combinatorial Search, volume 10,
+194–195.
+Okumura, K.; Machida, M.; Défago, X.; and Tamura, Y.
+2022. Priority inheritance with backtracking for iterative multi-agent path finding. Artificial Intelligence, 310:
+103752.
+Orlin, J. B. 1993. A Faster Strongly Polynomial Minimum
+Cost Flow Algorithm. Operations Research, 41(2): 338–
+350.
+Potvin, J.-Y.; and Rousseau, J.-M. 1993. A parallel route
+building algorithm for the vehicle routing and scheduling
+problem with time windows. European Journal of Operational Research, 66(3): 331–340.
+Ramshaw, L.; and Tarjan, R. E. 2012. On Minimum-Cost
+Assignments in Unbalanced Bipartite Graphs.
+Sharon, G.; Stern, R.; Felner, A.; and Sturtevant, N. R. 2015.
+Conflict-based search for optimal multi-agent pathfinding.
+Artificial Intelligence, 219: 40–66.
+Stern, R.; Sturtevant, N.; Felner, A.; Koenig, S.; Ma, H.;
+Walker, T.; Li, J.; Atzmon, D.; Cohen, L.; Kumar, T.; et al.
+2019. Multi-agent pathfinding: Definitions, variants, and
+benchmarks. In Proceedings of the International Symposium
+on Combinatorial Search, volume 10, 151–158.
+Sturtevant, N. R. 2012. Benchmarks for grid-based pathfinding. IEEE Transactions on Computational Intelligence and
+AI in Games, 4(2): 144–148.
+Tarjan, R. E. 1997. Dynamic trees as search trees via Euler tours, applied to the network simplex algorithm. Math.
+Program., 77: 169–177.
+
+Veloso, M. M.; Biswas, J.; Coltin, B.; and Rosenthal, S.
+2015. CoBots: Robust Symbiotic Autonomous Mobile Service Robots. In IJCAI, 4423.
+Zhang, Y.; Chen, Z.; Harabor, D.; Le Bodic, P.; and Stuckey,
+P. J. 2024. Planning and execution in multi-agent path finding: Models and algorithms. In Proceedings of the International Conference on Automated Planning and Scheduling,
+volume 34, 707–715.
+
+
