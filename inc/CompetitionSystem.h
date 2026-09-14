@@ -65,6 +65,8 @@ public:
     void set_plan_time_limit(int limit){plan_time_limit = limit;};
     void set_preprocess_time_limit(int limit){preprocess_time_limit = limit;};
     void set_log_level(int level){log_level = level;};
+    void configure_debug_trace(bool enabled, const std::string& output_path,
+                               int start_timestep, int end_timestep, int agent_limit);
     void set_logger(Logger* logger){
         this->logger = logger;
         task_manager.set_logger(logger);
@@ -114,6 +116,14 @@ protected:
     list<double> planner_times; 
     bool fast_mover_feasible = true;
 
+    bool debug_trace_enabled = false;
+    std::string debug_trace_output;
+    int debug_trace_start = 0;
+    int debug_trace_end = -1;
+    int debug_trace_agent_limit = 0;
+    vector<int> debug_previous_schedule;
+    nlohmann::ordered_json debug_trace;
+
 
     void initialize();
     bool planner_initialize();
@@ -128,6 +138,8 @@ protected:
     bool valid_moves(vector<State>& prev, vector<Action>& next);
 
     void log_preprocessing(bool succ);
+    void record_debug_trace(int timestep);
+    void save_debug_trace() const;
     // void log_event_assigned(int agent_id, int task_id, int timestep);
     // void log_event_finished(int agent_id, int task_id, int timestep);
 

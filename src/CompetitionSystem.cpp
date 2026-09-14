@@ -49,6 +49,60 @@ void BaseSystem::sync_shared_env()
     }
 }
 
+void BaseSystem::configure_debug_trace(bool enabled, const std::string& output_path,
+                                       int start_timestep, int end_timestep, int agent_limit)
+{
+    debug_trace_enabled = enabled;
+    debug_trace_output = output_path;
+    debug_trace_start = std::max(0, start_timestep);
+    debug_trace_end = end_timestep;
+    debug_trace_agent_limit = agent_limit;
+}
+
+void BaseSystem::record_debug_trace(int timestep)
+{
+    if (!debug_trace_enabled || timestep < debug_trace_start ||
+        (debug_trace_end >= 0 && timestep > debug_trace_end)) return;
+    if (debug_trace.is_null()) {
+        debug_trace["format"] = "lifelongta-debug-trace-v1";
+        debug_trace["rows"] = map.rows;
+        debug_trace["cols"] = map.cols;
+        debug_trace["map"] = map.map;
+        debug_trace["teamSize"] = num_of_agents;
+        debug_trace["frames"] = json::array();
+        debug_previous_schedule.assign(num_of_agents, -2);
+    }
+    const int agent_count = debug_trace_agent_limit > 0 ? std::min(num_of_agents, debug_trace_agent_limit) : num_of_agents;
+    json frame;
+    frame["timestep"] = timestep;
+    frame["agents"] = json::array();
+    frame["assignmentChanges"] = json::array();
+    for (int agent = 0; agent < agent_count; ++agent) {
+        const int task_id = agent < static_cast<int>(proposed_schedule.size()) ? proposed_schedule[agent] : -1;
+        frame["agents"].push_back({{"id", agent}, {"location", env->curr_states.at(agent).location}, {"task", task_id},
+            {"action", agent < static_cast<int>(proposed_actions.size()) ? static_cast<int>(proposed_actions[agent]) : static_cast<int>(Action::NA)},
+            {"goal", env->goal_locations.at(agent).empty() ? -1 : env->goal_locations.at(agent).front().first}});
+        if (debug_previous_schedule[agent] != task_id) {
+            frame["assignmentChanges"].push_back({{"agent", agent}, {"before", debug_previous_schedule[agent]}, {"after", task_id}});
+            debug_previous_schedule[agent] = task_id;
+        }
+    }
+    frame["tasks"] = json::array();
+    for (const auto& entry : env->task_pool) {
+        const Task& task = entry.second;
+        frame["tasks"].push_back({{"id", task.task_id}, {"locations", task.locations}, {"nextLocation", task.idx_next_loc},
+            {"revealed", task.t_revealed}, {"assignedAgent", task.agent_assigned}});
+    }
+    debug_trace["frames"].push_back(frame);
+}
+
+void BaseSystem::save_debug_trace() const
+{
+    if (!debug_trace_enabled || debug_trace.is_null() || debug_trace_output.empty()) return;
+    std::ofstream output(debug_trace_output, std::ios_base::trunc | std::ios_base::out);
+    output << std::setw(2) << debug_trace;
+}
+
 
 bool BaseSystem::planner_wrapper()
 {
@@ -176,6 +230,8 @@ void BaseSystem::simulate(int simulation_time)
             if (!env->goal_locations[a].empty())
                 solution_costs[a]++;
         }
+
+        record_debug_trace(simulator.get_curr_timestep());
 
         // move drives
         vector<State> curr_states = simulator.move(proposed_actions);
@@ -390,6 +446,7 @@ void BaseSystem::saveResults(const string &fileName, int screen) const
 
     std::ofstream f(fileName,std::ios_base::trunc |std::ios_base::out);
     f << std::setw(4) << js;
+    save_debug_trace();
 
 }
 

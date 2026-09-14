@@ -62,6 +62,11 @@ int main(int argc, char **argv)
         ("heapRebuildPct", po::value<int>()->default_value(45), "greedy-heap candidate rebuild budget percentage")
         ("heapLnsPct", po::value<int>()->default_value(10), "greedy-heap swap-refinement budget percentage")
         ("heapSortK", po::value<int>()->default_value(500), "sorted candidates retained per agent")
+        ("debugTrace", po::value<bool>()->default_value(false), "write a compact per-timestep visualization trace")
+        ("debugTraceOutput", po::value<std::string>()->default_value(""), "debug trace JSON output path; defaults to <output>.trace.json")
+        ("debugTraceStart", po::value<int>()->default_value(0), "first timestep captured by debug trace")
+        ("debugTraceEnd", po::value<int>()->default_value(-1), "last timestep captured by debug trace; -1 captures all")
+        ("debugTraceAgentLimit", po::value<int>()->default_value(0), "maximum leading agents captured by debug trace; 0 captures all")
         ("refinementTimeLimit", po::value<int>()->default_value(0), "independent planner refinement limit in milliseconds; 0 uses planTimeLimit")
         ("commitWindow,w", po::value<int>()->default_value(1), "commit window");
     clock_t start_time = clock();
@@ -179,6 +184,13 @@ int main(int argc, char **argv)
     system_ptr->set_preprocess_time_limit(vm["preprocessTimeLimit"].as<int>());
 
     system_ptr->set_num_tasks_reveal(read_param_json<float>(data, "numTasksReveal", 1));
+    if (vm["debugTrace"].as<bool>()) {
+        std::string trace_output = vm["debugTraceOutput"].as<std::string>();
+        if (trace_output.empty()) trace_output = vm["output"].as<std::string>() + ".trace.json";
+        system_ptr->configure_debug_trace(true, trace_output,
+            vm["debugTraceStart"].as<int>(), vm["debugTraceEnd"].as<int>(),
+            vm["debugTraceAgentLimit"].as<int>());
+    }
 
     signal(SIGINT, sigint_handler);
 
