@@ -27,6 +27,10 @@ $methods = @(
 foreach ($method in $methods) {
     $output = Join-Path $fullOutputDir ("warehouse-small_200_{0}_{1}.json" -f $method.Name, $Timesteps)
     $log = [System.IO.Path]::ChangeExtension($output, ".log")
+    if (Test-Path $output) {
+        Write-Host "Skipping completed $($method.Name)"
+        continue
+    }
     $args = @(
         "--inputFile", $input,
         "--output", $output,
