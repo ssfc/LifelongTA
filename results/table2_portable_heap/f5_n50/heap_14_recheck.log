@@ -1,0 +1,2346 @@
+[2026-09-14 09:57:45.691144] [0x00007bbf24c69740] [info]    [timestep=0] Preprocessing success
+[2026-09-14 09:57:45.691217] [0x00007bbf24c69740] [info]    Task 0 is revealed
+[2026-09-14 09:57:45.691228] [0x00007bbf24c69740] [info]    Task 1 is revealed
+[2026-09-14 09:57:45.691236] [0x00007bbf24c69740] [info]    Task 2 is revealed
+[2026-09-14 09:57:45.691244] [0x00007bbf24c69740] [info]    Task 3 is revealed
+[2026-09-14 09:57:45.691251] [0x00007bbf24c69740] [info]    Task 4 is revealed
+current timestep 0
+plan limit 500
+[2026-09-14 09:57:46.611601] [0x00007bbf24c69740] [info]    [timestep=0] planner returns
+[2026-09-14 09:57:46.611635] [0x00007bbf24c69740] [info]    [timestep=1] Agent 5 opens task 0
+[2026-09-14 09:57:46.611640] [0x00007bbf24c69740] [info]    [timestep=1] Agent 43 opens task 1
+[2026-09-14 09:57:46.611643] [0x00007bbf24c69740] [info]    Task 5 is revealed
+[2026-09-14 09:57:46.611645] [0x00007bbf24c69740] [info]    Task 6 is revealed
+[2026-09-14 09:57:46.611647] [0x00007bbf24c69740] [info]    Task 7 is revealed
+[2026-09-14 09:57:46.611649] [0x00007bbf24c69740] [info]    Task 8 is revealed
+[2026-09-14 09:57:46.611651] [0x00007bbf24c69740] [info]    Task 9 is revealed
+current timestep 1
+plan limit 500
+[2026-09-14 09:57:47.531815] [0x00007bbf24c69740] [info]    [timestep=1] planner returns
+[2026-09-14 09:57:47.531844] [0x00007bbf24c69740] [info]    [timestep=2] Agent 15 opens task 2
+[2026-09-14 09:57:47.531846] [0x00007bbf24c69740] [info]    [timestep=2] Agent 36 opens task 9
+[2026-09-14 09:57:47.531848] [0x00007bbf24c69740] [info]    [timestep=2] Agent 41 opens task 8
+[2026-09-14 09:57:47.531851] [0x00007bbf24c69740] [info]    Task 10 is revealed
+[2026-09-14 09:57:47.531853] [0x00007bbf24c69740] [info]    Task 11 is revealed
+[2026-09-14 09:57:47.531855] [0x00007bbf24c69740] [info]    Task 12 is revealed
+[2026-09-14 09:57:47.531858] [0x00007bbf24c69740] [info]    Task 13 is revealed
+[2026-09-14 09:57:47.531860] [0x00007bbf24c69740] [info]    Task 14 is revealed
+current timestep 2
+plan limit 500
+[2026-09-14 09:57:48.452096] [0x00007bbf24c69740] [info]    [timestep=2] planner returns
+[2026-09-14 09:57:48.452129] [0x00007bbf24c69740] [info]    [timestep=3] Agent 25 opens task 10
+[2026-09-14 09:57:48.452132] [0x00007bbf24c69740] [info]    [timestep=3] Agent 38 opens task 11
+[2026-09-14 09:57:48.452134] [0x00007bbf24c69740] [info]    Task 15 is revealed
+[2026-09-14 09:57:48.452141] [0x00007bbf24c69740] [info]    Task 16 is revealed
+[2026-09-14 09:57:48.452143] [0x00007bbf24c69740] [info]    Task 17 is revealed
+[2026-09-14 09:57:48.452145] [0x00007bbf24c69740] [info]    Task 18 is revealed
+[2026-09-14 09:57:48.452147] [0x00007bbf24c69740] [info]    Task 19 is revealed
+current timestep 3
+plan limit 500
+[2026-09-14 09:57:49.372367] [0x00007bbf24c69740] [info]    [timestep=3] planner returns
+[2026-09-14 09:57:49.372401] [0x00007bbf24c69740] [info]    Task 20 is revealed
+[2026-09-14 09:57:49.372403] [0x00007bbf24c69740] [info]    Task 21 is revealed
+[2026-09-14 09:57:49.372405] [0x00007bbf24c69740] [info]    Task 22 is revealed
+[2026-09-14 09:57:49.372407] [0x00007bbf24c69740] [info]    Task 23 is revealed
+[2026-09-14 09:57:49.372409] [0x00007bbf24c69740] [info]    Task 24 is revealed
+current timestep 4
+plan limit 500
+[2026-09-14 09:57:50.292648] [0x00007bbf24c69740] [info]    [timestep=4] planner returns
+[2026-09-14 09:57:50.292683] [0x00007bbf24c69740] [info]    [timestep=5] Agent 9 opens task 21
+[2026-09-14 09:57:50.292687] [0x00007bbf24c69740] [info]    Task 25 is revealed
+[2026-09-14 09:57:50.292689] [0x00007bbf24c69740] [info]    Task 26 is revealed
+[2026-09-14 09:57:50.292691] [0x00007bbf24c69740] [info]    Task 27 is revealed
+[2026-09-14 09:57:50.292693] [0x00007bbf24c69740] [info]    Task 28 is revealed
+[2026-09-14 09:57:50.292695] [0x00007bbf24c69740] [info]    Task 29 is revealed
+current timestep 5
+plan limit 500
+[2026-09-14 09:57:51.212916] [0x00007bbf24c69740] [info]    [timestep=5] planner returns
+[2026-09-14 09:57:51.212951] [0x00007bbf24c69740] [info]    [timestep=6] Agent 2 opens task 28
+[2026-09-14 09:57:51.212954] [0x00007bbf24c69740] [info]    [timestep=6] Agent 34 opens task 15
+[2026-09-14 09:57:51.212965] [0x00007bbf24c69740] [info]    [timestep=6] Agent 45 opens task 18
+[2026-09-14 09:57:51.212966] [0x00007bbf24c69740] [info]    [timestep=6] Agent 48 opens task 5
+[2026-09-14 09:57:51.212971] [0x00007bbf24c69740] [info]    Task 30 is revealed
+[2026-09-14 09:57:51.212973] [0x00007bbf24c69740] [info]    Task 31 is revealed
+[2026-09-14 09:57:51.212975] [0x00007bbf24c69740] [info]    Task 32 is revealed
+[2026-09-14 09:57:51.212976] [0x00007bbf24c69740] [info]    Task 33 is revealed
+[2026-09-14 09:57:51.212978] [0x00007bbf24c69740] [info]    Task 34 is revealed
+current timestep 6
+plan limit 500
+[2026-09-14 09:57:52.133166] [0x00007bbf24c69740] [info]    [timestep=6] planner returns
+[2026-09-14 09:57:52.133199] [0x00007bbf24c69740] [info]    [timestep=7] Agent 19 opens task 30
+[2026-09-14 09:57:52.133203] [0x00007bbf24c69740] [info]    Task 35 is revealed
+[2026-09-14 09:57:52.133205] [0x00007bbf24c69740] [info]    Task 36 is revealed
+[2026-09-14 09:57:52.133207] [0x00007bbf24c69740] [info]    Task 37 is revealed
+[2026-09-14 09:57:52.133208] [0x00007bbf24c69740] [info]    Task 38 is revealed
+[2026-09-14 09:57:52.133210] [0x00007bbf24c69740] [info]    Task 39 is revealed
+current timestep 7
+plan limit 500
+[2026-09-14 09:57:53.053387] [0x00007bbf24c69740] [info]    [timestep=7] planner returns
+[2026-09-14 09:57:53.053422] [0x00007bbf24c69740] [info]    [timestep=8] Agent 18 opens task 6
+[2026-09-14 09:57:53.053424] [0x00007bbf24c69740] [info]    [timestep=8] Agent 35 opens task 23
+[2026-09-14 09:57:53.053426] [0x00007bbf24c69740] [info]    [timestep=8] Agent 49 opens task 20
+[2026-09-14 09:57:53.053428] [0x00007bbf24c69740] [info]    Task 40 is revealed
+[2026-09-14 09:57:53.053430] [0x00007bbf24c69740] [info]    Task 41 is revealed
+[2026-09-14 09:57:53.053431] [0x00007bbf24c69740] [info]    Task 42 is revealed
+[2026-09-14 09:57:53.053433] [0x00007bbf24c69740] [info]    Task 43 is revealed
+[2026-09-14 09:57:53.053434] [0x00007bbf24c69740] [info]    Task 44 is revealed
+current timestep 8
+plan limit 500
+[2026-09-14 09:57:53.973676] [0x00007bbf24c69740] [info]    [timestep=8] planner returns
+[2026-09-14 09:57:53.973714] [0x00007bbf24c69740] [info]    Task 45 is revealed
+[2026-09-14 09:57:53.973716] [0x00007bbf24c69740] [info]    Task 46 is revealed
+[2026-09-14 09:57:53.973718] [0x00007bbf24c69740] [info]    Task 47 is revealed
+[2026-09-14 09:57:53.973720] [0x00007bbf24c69740] [info]    Task 48 is revealed
+[2026-09-14 09:57:53.973721] [0x00007bbf24c69740] [info]    Task 49 is revealed
+current timestep 9
+plan limit 500
+[2026-09-14 09:57:54.893924] [0x00007bbf24c69740] [info]    [timestep=9] planner returns
+[2026-09-14 09:57:54.893960] [0x00007bbf24c69740] [info]    [timestep=10] Agent 3 opens task 4
+[2026-09-14 09:57:54.893963] [0x00007bbf24c69740] [info]    [timestep=10] Agent 5 finishes task 0
+[2026-09-14 09:57:54.893965] [0x00007bbf24c69740] [info]    [timestep=10] Agent 10 opens task 7
+[2026-09-14 09:57:54.893967] [0x00007bbf24c69740] [info]    [timestep=10] Agent 14 opens task 22
+[2026-09-14 09:57:54.893968] [0x00007bbf24c69740] [info]    [timestep=10] Agent 22 opens task 16
+[2026-09-14 09:57:54.893970] [0x00007bbf24c69740] [info]    [timestep=10] Agent 27 opens task 41
+[2026-09-14 09:57:54.893972] [0x00007bbf24c69740] [info]    Task 50 is revealed
+[2026-09-14 09:57:54.893974] [0x00007bbf24c69740] [info]    Task 51 is revealed
+[2026-09-14 09:57:54.893975] [0x00007bbf24c69740] [info]    Task 52 is revealed
+[2026-09-14 09:57:54.893976] [0x00007bbf24c69740] [info]    Task 53 is revealed
+[2026-09-14 09:57:54.893978] [0x00007bbf24c69740] [info]    Task 54 is revealed
+current timestep 10
+plan limit 500
+[2026-09-14 09:57:55.814232] [0x00007bbf24c69740] [info]    [timestep=10] planner returns
+[2026-09-14 09:57:55.814269] [0x00007bbf24c69740] [info]    [timestep=11] Agent 15 finishes task 2
+[2026-09-14 09:57:55.814272] [0x00007bbf24c69740] [info]    Task 55 is revealed
+[2026-09-14 09:57:55.814274] [0x00007bbf24c69740] [info]    Task 56 is revealed
+[2026-09-14 09:57:55.814284] [0x00007bbf24c69740] [info]    Task 57 is revealed
+[2026-09-14 09:57:55.814285] [0x00007bbf24c69740] [info]    Task 58 is revealed
+[2026-09-14 09:57:55.814287] [0x00007bbf24c69740] [info]    Task 59 is revealed
+current timestep 11
+plan limit 500
+[2026-09-14 09:57:56.734523] [0x00007bbf24c69740] [info]    [timestep=11] planner returns
+[2026-09-14 09:57:56.734553] [0x00007bbf24c69740] [info]    [timestep=12] Agent 11 opens task 13
+[2026-09-14 09:57:56.734555] [0x00007bbf24c69740] [info]    [timestep=12] Agent 16 opens task 29
+[2026-09-14 09:57:56.734556] [0x00007bbf24c69740] [info]    [timestep=12] Agent 29 opens task 3
+[2026-09-14 09:57:56.734559] [0x00007bbf24c69740] [info]    Task 60 is revealed
+[2026-09-14 09:57:56.734567] [0x00007bbf24c69740] [info]    Task 61 is revealed
+[2026-09-14 09:57:56.734568] [0x00007bbf24c69740] [info]    Task 62 is revealed
+[2026-09-14 09:57:56.734570] [0x00007bbf24c69740] [info]    Task 63 is revealed
+[2026-09-14 09:57:56.734572] [0x00007bbf24c69740] [info]    Task 64 is revealed
+current timestep 12
+plan limit 500
+[2026-09-14 09:57:57.654824] [0x00007bbf24c69740] [info]    [timestep=12] planner returns
+[2026-09-14 09:57:57.654855] [0x00007bbf24c69740] [info]    [timestep=13] Agent 4 opens task 46
+[2026-09-14 09:57:57.654857] [0x00007bbf24c69740] [info]    [timestep=13] Agent 28 opens task 12
+[2026-09-14 09:57:57.654858] [0x00007bbf24c69740] [info]    [timestep=13] Agent 33 opens task 40
+[2026-09-14 09:57:57.654860] [0x00007bbf24c69740] [info]    [timestep=13] Agent 39 opens task 36
+[2026-09-14 09:57:57.654862] [0x00007bbf24c69740] [info]    Task 65 is revealed
+[2026-09-14 09:57:57.654864] [0x00007bbf24c69740] [info]    Task 66 is revealed
+[2026-09-14 09:57:57.654865] [0x00007bbf24c69740] [info]    Task 67 is revealed
+[2026-09-14 09:57:57.654867] [0x00007bbf24c69740] [info]    Task 68 is revealed
+[2026-09-14 09:57:57.654868] [0x00007bbf24c69740] [info]    Task 69 is revealed
+current timestep 13
+plan limit 500
+[2026-09-14 09:57:58.575094] [0x00007bbf24c69740] [info]    [timestep=13] planner returns
+[2026-09-14 09:57:58.575129] [0x00007bbf24c69740] [info]    [timestep=14] Agent 8 opens task 47
+[2026-09-14 09:57:58.575131] [0x00007bbf24c69740] [info]    [timestep=14] Agent 19 finishes task 30
+[2026-09-14 09:57:58.575134] [0x00007bbf24c69740] [info]    [timestep=14] Agent 32 opens task 17
+[2026-09-14 09:57:58.575136] [0x00007bbf24c69740] [info]    Task 70 is revealed
+[2026-09-14 09:57:58.575142] [0x00007bbf24c69740] [info]    Task 71 is revealed
+[2026-09-14 09:57:58.575144] [0x00007bbf24c69740] [info]    Task 72 is revealed
+[2026-09-14 09:57:58.575145] [0x00007bbf24c69740] [info]    Task 73 is revealed
+[2026-09-14 09:57:58.575147] [0x00007bbf24c69740] [info]    Task 74 is revealed
+current timestep 14
+plan limit 500
+[2026-09-14 09:57:59.495368] [0x00007bbf24c69740] [info]    [timestep=14] planner returns
+[2026-09-14 09:57:59.495409] [0x00007bbf24c69740] [info]    [timestep=15] Agent 0 opens task 27
+[2026-09-14 09:57:59.495413] [0x00007bbf24c69740] [info]    [timestep=15] Agent 20 opens task 42
+[2026-09-14 09:57:59.495415] [0x00007bbf24c69740] [info]    [timestep=15] Agent 21 opens task 48
+[2026-09-14 09:57:59.495418] [0x00007bbf24c69740] [info]    Task 75 is revealed
+[2026-09-14 09:57:59.495421] [0x00007bbf24c69740] [info]    Task 76 is revealed
+[2026-09-14 09:57:59.495423] [0x00007bbf24c69740] [info]    Task 77 is revealed
+[2026-09-14 09:57:59.495425] [0x00007bbf24c69740] [info]    Task 78 is revealed
+[2026-09-14 09:57:59.495428] [0x00007bbf24c69740] [info]    Task 79 is revealed
+current timestep 15
+plan limit 500
+[2026-09-14 09:58:00.415605] [0x00007bbf24c69740] [info]    [timestep=15] planner returns
+[2026-09-14 09:58:00.415638] [0x00007bbf24c69740] [info]    [timestep=16] Agent 6 opens task 26
+[2026-09-14 09:58:00.415641] [0x00007bbf24c69740] [info]    Task 80 is revealed
+[2026-09-14 09:58:00.415643] [0x00007bbf24c69740] [info]    Task 81 is revealed
+[2026-09-14 09:58:00.415644] [0x00007bbf24c69740] [info]    Task 82 is revealed
+[2026-09-14 09:58:00.415646] [0x00007bbf24c69740] [info]    Task 83 is revealed
+[2026-09-14 09:58:00.415654] [0x00007bbf24c69740] [info]    Task 84 is revealed
+current timestep 16
+plan limit 980
+[2026-09-14 09:58:01.335913] [0x00007bbf24c69740] [info]    [timestep=16] planner returns
+[2026-09-14 09:58:01.335945] [0x00007bbf24c69740] [info]    [timestep=17] Agent 17 opens task 44
+[2026-09-14 09:58:01.335947] [0x00007bbf24c69740] [info]    [timestep=17] Agent 23 opens task 32
+[2026-09-14 09:58:01.335949] [0x00007bbf24c69740] [info]    [timestep=17] Agent 31 opens task 25
+[2026-09-14 09:58:01.335950] [0x00007bbf24c69740] [info]    [timestep=17] Agent 47 opens task 14
+[2026-09-14 09:58:01.335952] [0x00007bbf24c69740] [info]    Task 85 is revealed
+[2026-09-14 09:58:01.335954] [0x00007bbf24c69740] [info]    Task 86 is revealed
+[2026-09-14 09:58:01.335956] [0x00007bbf24c69740] [info]    Task 87 is revealed
+[2026-09-14 09:58:01.335957] [0x00007bbf24c69740] [info]    Task 88 is revealed
+[2026-09-14 09:58:01.335959] [0x00007bbf24c69740] [info]    Task 89 is revealed
+current timestep 17
+plan limit 980
+[2026-09-14 09:58:02.256212] [0x00007bbf24c69740] [info]    [timestep=17] planner returns
+[2026-09-14 09:58:02.256248] [0x00007bbf24c69740] [info]    [timestep=18] Agent 15 opens task 54
+[2026-09-14 09:58:02.256251] [0x00007bbf24c69740] [info]    [timestep=18] Agent 40 opens task 45
+[2026-09-14 09:58:02.256252] [0x00007bbf24c69740] [info]    [timestep=18] Agent 46 opens task 34
+[2026-09-14 09:58:02.256254] [0x00007bbf24c69740] [info]    Task 90 is revealed
+[2026-09-14 09:58:02.256256] [0x00007bbf24c69740] [info]    Task 91 is revealed
+[2026-09-14 09:58:02.256257] [0x00007bbf24c69740] [info]    Task 92 is revealed
+[2026-09-14 09:58:02.256259] [0x00007bbf24c69740] [info]    Task 93 is revealed
+[2026-09-14 09:58:02.256260] [0x00007bbf24c69740] [info]    Task 94 is revealed
+current timestep 18
+plan limit 980
+[2026-09-14 09:58:03.176536] [0x00007bbf24c69740] [info]    [timestep=18] planner returns
+[2026-09-14 09:58:03.176578] [0x00007bbf24c69740] [info]    [timestep=19] Agent 13 opens task 35
+[2026-09-14 09:58:03.176580] [0x00007bbf24c69740] [info]    [timestep=19] Agent 19 opens task 52
+[2026-09-14 09:58:03.176582] [0x00007bbf24c69740] [info]    [timestep=19] Agent 30 opens task 39
+[2026-09-14 09:58:03.176584] [0x00007bbf24c69740] [info]    [timestep=19] Agent 37 opens task 19
+[2026-09-14 09:58:03.176586] [0x00007bbf24c69740] [info]    Task 95 is revealed
+[2026-09-14 09:58:03.176588] [0x00007bbf24c69740] [info]    Task 96 is revealed
+[2026-09-14 09:58:03.176590] [0x00007bbf24c69740] [info]    Task 97 is revealed
+[2026-09-14 09:58:03.176592] [0x00007bbf24c69740] [info]    Task 98 is revealed
+[2026-09-14 09:58:03.176593] [0x00007bbf24c69740] [info]    Task 99 is revealed
+current timestep 19
+plan limit 980
+[2026-09-14 09:58:04.096815] [0x00007bbf24c69740] [info]    [timestep=19] planner returns
+[2026-09-14 09:58:04.096853] [0x00007bbf24c69740] [info]    [timestep=20] Agent 24 opens task 37
+[2026-09-14 09:58:04.096855] [0x00007bbf24c69740] [info]    [timestep=20] Agent 42 opens task 43
+[2026-09-14 09:58:04.096858] [0x00007bbf24c69740] [info]    Task 100 is revealed
+[2026-09-14 09:58:04.096860] [0x00007bbf24c69740] [info]    Task 101 is revealed
+[2026-09-14 09:58:04.096862] [0x00007bbf24c69740] [info]    Task 102 is revealed
+[2026-09-14 09:58:04.096864] [0x00007bbf24c69740] [info]    Task 103 is revealed
+[2026-09-14 09:58:04.096865] [0x00007bbf24c69740] [info]    Task 104 is revealed
+current timestep 20
+plan limit 980
+[2026-09-14 09:58:05.017064] [0x00007bbf24c69740] [info]    [timestep=20] planner returns
+[2026-09-14 09:58:05.017099] [0x00007bbf24c69740] [info]    [timestep=21] Agent 1 opens task 31
+[2026-09-14 09:58:05.017101] [0x00007bbf24c69740] [info]    [timestep=21] Agent 44 opens task 33
+[2026-09-14 09:58:05.017103] [0x00007bbf24c69740] [info]    Task 105 is revealed
+[2026-09-14 09:58:05.017105] [0x00007bbf24c69740] [info]    Task 106 is revealed
+[2026-09-14 09:58:05.017107] [0x00007bbf24c69740] [info]    Task 107 is revealed
+[2026-09-14 09:58:05.017108] [0x00007bbf24c69740] [info]    Task 108 is revealed
+[2026-09-14 09:58:05.017113] [0x00007bbf24c69740] [info]    Task 109 is revealed
+current timestep 21
+plan limit 980
+[2026-09-14 09:58:05.937302] [0x00007bbf24c69740] [info]    [timestep=21] planner returns
+[2026-09-14 09:58:05.937334] [0x00007bbf24c69740] [info]    [timestep=22] Agent 12 opens task 38
+[2026-09-14 09:58:05.937337] [0x00007bbf24c69740] [info]    [timestep=22] Agent 26 opens task 24
+[2026-09-14 09:58:05.937338] [0x00007bbf24c69740] [info]    [timestep=22] Agent 28 finishes task 12
+[2026-09-14 09:58:05.937342] [0x00007bbf24c69740] [info]    Task 110 is revealed
+[2026-09-14 09:58:05.937343] [0x00007bbf24c69740] [info]    Task 111 is revealed
+[2026-09-14 09:58:05.937345] [0x00007bbf24c69740] [info]    Task 112 is revealed
+[2026-09-14 09:58:05.937347] [0x00007bbf24c69740] [info]    Task 113 is revealed
+[2026-09-14 09:58:05.937348] [0x00007bbf24c69740] [info]    Task 114 is revealed
+current timestep 22
+plan limit 980
+[2026-09-14 09:58:06.857825] [0x00007bbf24c69740] [info]    [timestep=22] planner returns
+[2026-09-14 09:58:06.857859] [0x00007bbf24c69740] [info]    [timestep=23] Agent 9 finishes task 21
+[2026-09-14 09:58:06.857862] [0x00007bbf24c69740] [info]    [timestep=23] Agent 10 finishes task 7
+[2026-09-14 09:58:06.857864] [0x00007bbf24c69740] [info]    [timestep=23] Agent 38 finishes task 11
+[2026-09-14 09:58:06.857866] [0x00007bbf24c69740] [info]    [timestep=23] Agent 41 finishes task 8
+[2026-09-14 09:58:06.857868] [0x00007bbf24c69740] [info]    [timestep=23] Agent 49 finishes task 20
+[2026-09-14 09:58:06.857870] [0x00007bbf24c69740] [info]    Task 115 is revealed
+[2026-09-14 09:58:06.857872] [0x00007bbf24c69740] [info]    Task 116 is revealed
+[2026-09-14 09:58:06.857874] [0x00007bbf24c69740] [info]    Task 117 is revealed
+[2026-09-14 09:58:06.857875] [0x00007bbf24c69740] [info]    Task 118 is revealed
+[2026-09-14 09:58:06.857877] [0x00007bbf24c69740] [info]    Task 119 is revealed
+current timestep 23
+plan limit 500
+[2026-09-14 09:58:07.778127] [0x00007bbf24c69740] [info]    [timestep=23] planner returns
+[2026-09-14 09:58:07.778160] [0x00007bbf24c69740] [info]    [timestep=24] Agent 9 opens task 70
+[2026-09-14 09:58:07.778163] [0x00007bbf24c69740] [info]    [timestep=24] Agent 18 finishes task 6
+[2026-09-14 09:58:07.778166] [0x00007bbf24c69740] [info]    [timestep=24] Agent 47 finishes task 14
+[2026-09-14 09:58:07.778168] [0x00007bbf24c69740] [info]    Task 120 is revealed
+[2026-09-14 09:58:07.778170] [0x00007bbf24c69740] [info]    Task 121 is revealed
+[2026-09-14 09:58:07.778173] [0x00007bbf24c69740] [info]    Task 122 is revealed
+[2026-09-14 09:58:07.778174] [0x00007bbf24c69740] [info]    Task 123 is revealed
+[2026-09-14 09:58:07.778176] [0x00007bbf24c69740] [info]    Task 124 is revealed
+current timestep 24
+plan limit 500
+[2026-09-14 09:58:08.698394] [0x00007bbf24c69740] [info]    [timestep=24] planner returns
+[2026-09-14 09:58:08.698435] [0x00007bbf24c69740] [info]    [timestep=25] Agent 7 opens task 49
+[2026-09-14 09:58:08.698438] [0x00007bbf24c69740] [info]    [timestep=25] Agent 10 opens task 112
+[2026-09-14 09:58:08.698441] [0x00007bbf24c69740] [info]    [timestep=25] Agent 11 finishes task 13
+[2026-09-14 09:58:08.698443] [0x00007bbf24c69740] [info]    [timestep=25] Agent 28 opens task 69
+[2026-09-14 09:58:08.698446] [0x00007bbf24c69740] [info]    [timestep=25] Agent 49 opens task 78
+[2026-09-14 09:58:08.698449] [0x00007bbf24c69740] [info]    Task 125 is revealed
+[2026-09-14 09:58:08.698451] [0x00007bbf24c69740] [info]    Task 126 is revealed
+[2026-09-14 09:58:08.698453] [0x00007bbf24c69740] [info]    Task 127 is revealed
+[2026-09-14 09:58:08.698456] [0x00007bbf24c69740] [info]    Task 128 is revealed
+[2026-09-14 09:58:08.698458] [0x00007bbf24c69740] [info]    Task 129 is revealed
+current timestep 25
+plan limit 980
+[2026-09-14 09:58:09.618701] [0x00007bbf24c69740] [info]    [timestep=25] planner returns
+[2026-09-14 09:58:09.618740] [0x00007bbf24c69740] [info]    [timestep=26] Agent 20 finishes task 42
+[2026-09-14 09:58:09.618743] [0x00007bbf24c69740] [info]    [timestep=26] Agent 28 finishes task 69
+[2026-09-14 09:58:09.618758] [0x00007bbf24c69740] [info]    [timestep=26] Agent 47 opens task 76
+[2026-09-14 09:58:09.618761] [0x00007bbf24c69740] [info]    Task 130 is revealed
+[2026-09-14 09:58:09.618763] [0x00007bbf24c69740] [info]    Task 131 is revealed
+[2026-09-14 09:58:09.618778] [0x00007bbf24c69740] [info]    Task 132 is revealed
+[2026-09-14 09:58:09.618779] [0x00007bbf24c69740] [info]    Task 133 is revealed
+[2026-09-14 09:58:09.618781] [0x00007bbf24c69740] [info]    Task 134 is revealed
+current timestep 26
+plan limit 500
+[2026-09-14 09:58:10.539023] [0x00007bbf24c69740] [info]    [timestep=26] planner returns
+[2026-09-14 09:58:10.539061] [0x00007bbf24c69740] [info]    [timestep=27] Agent 5 opens task 50
+[2026-09-14 09:58:10.539064] [0x00007bbf24c69740] [info]    Task 135 is revealed
+[2026-09-14 09:58:10.539066] [0x00007bbf24c69740] [info]    Task 136 is revealed
+[2026-09-14 09:58:10.539068] [0x00007bbf24c69740] [info]    Task 137 is revealed
+[2026-09-14 09:58:10.539069] [0x00007bbf24c69740] [info]    Task 138 is revealed
+[2026-09-14 09:58:10.539071] [0x00007bbf24c69740] [info]    Task 139 is revealed
+current timestep 27
+plan limit 980
+[2026-09-14 09:58:11.459292] [0x00007bbf24c69740] [info]    [timestep=27] planner returns
+[2026-09-14 09:58:11.459332] [0x00007bbf24c69740] [info]    [timestep=28] Agent 35 finishes task 23
+[2026-09-14 09:58:11.459334] [0x00007bbf24c69740] [info]    [timestep=28] Agent 38 opens task 90
+[2026-09-14 09:58:11.459337] [0x00007bbf24c69740] [info]    Task 140 is revealed
+[2026-09-14 09:58:11.459338] [0x00007bbf24c69740] [info]    Task 141 is revealed
+[2026-09-14 09:58:11.459347] [0x00007bbf24c69740] [info]    Task 142 is revealed
+[2026-09-14 09:58:11.459349] [0x00007bbf24c69740] [info]    Task 143 is revealed
+[2026-09-14 09:58:11.459350] [0x00007bbf24c69740] [info]    Task 144 is revealed
+current timestep 28
+plan limit 980
+[2026-09-14 09:58:12.379663] [0x00007bbf24c69740] [info]    [timestep=28] planner returns
+[2026-09-14 09:58:12.379705] [0x00007bbf24c69740] [info]    [timestep=29] Agent 3 finishes task 4
+[2026-09-14 09:58:12.379708] [0x00007bbf24c69740] [info]    [timestep=29] Agent 8 finishes task 47
+[2026-09-14 09:58:12.379710] [0x00007bbf24c69740] [info]    [timestep=29] Agent 11 opens task 65
+[2026-09-14 09:58:12.379711] [0x00007bbf24c69740] [info]    [timestep=29] Agent 20 opens task 100
+[2026-09-14 09:58:12.379713] [0x00007bbf24c69740] [info]    [timestep=29] Agent 35 opens task 73
+[2026-09-14 09:58:12.379715] [0x00007bbf24c69740] [info]    [timestep=29] Agent 47 finishes task 76
+[2026-09-14 09:58:12.379717] [0x00007bbf24c69740] [info]    Task 145 is revealed
+[2026-09-14 09:58:12.379719] [0x00007bbf24c69740] [info]    Task 146 is revealed
+[2026-09-14 09:58:12.379721] [0x00007bbf24c69740] [info]    Task 147 is revealed
+[2026-09-14 09:58:12.379722] [0x00007bbf24c69740] [info]    Task 148 is revealed
+[2026-09-14 09:58:12.379724] [0x00007bbf24c69740] [info]    Task 149 is revealed
+current timestep 29
+plan limit 500
+[2026-09-14 09:58:13.299927] [0x00007bbf24c69740] [info]    [timestep=29] planner returns
+[2026-09-14 09:58:13.299964] [0x00007bbf24c69740] [info]    [timestep=30] Agent 8 opens task 93
+[2026-09-14 09:58:13.299967] [0x00007bbf24c69740] [info]    [timestep=30] Agent 37 finishes task 19
+[2026-09-14 09:58:13.299970] [0x00007bbf24c69740] [info]    [timestep=30] Agent 40 finishes task 45
+[2026-09-14 09:58:13.299972] [0x00007bbf24c69740] [info]    [timestep=30] Agent 47 opens task 127
+[2026-09-14 09:58:13.299974] [0x00007bbf24c69740] [info]    Task 150 is revealed
+[2026-09-14 09:58:13.299976] [0x00007bbf24c69740] [info]    Task 151 is revealed
+[2026-09-14 09:58:13.299978] [0x00007bbf24c69740] [info]    Task 152 is revealed
+[2026-09-14 09:58:13.299980] [0x00007bbf24c69740] [info]    Task 153 is revealed
+[2026-09-14 09:58:13.299982] [0x00007bbf24c69740] [info]    Task 154 is revealed
+current timestep 30
+plan limit 500
+[2026-09-14 09:58:14.220220] [0x00007bbf24c69740] [info]    [timestep=30] planner returns
+[2026-09-14 09:58:14.220259] [0x00007bbf24c69740] [info]    [timestep=31] Agent 4 finishes task 46
+[2026-09-14 09:58:14.220269] [0x00007bbf24c69740] [info]    [timestep=31] Agent 16 finishes task 29
+[2026-09-14 09:58:14.220270] [0x00007bbf24c69740] [info]    [timestep=31] Agent 18 opens task 81
+[2026-09-14 09:58:14.220272] [0x00007bbf24c69740] [info]    [timestep=31] Agent 32 finishes task 17
+[2026-09-14 09:58:14.220274] [0x00007bbf24c69740] [info]    [timestep=31] Agent 41 opens task 95
+[2026-09-14 09:58:14.220275] [0x00007bbf24c69740] [info]    [timestep=31] Agent 42 finishes task 43
+[2026-09-14 09:58:14.220278] [0x00007bbf24c69740] [info]    Task 155 is revealed
+[2026-09-14 09:58:14.220280] [0x00007bbf24c69740] [info]    Task 156 is revealed
+[2026-09-14 09:58:14.220281] [0x00007bbf24c69740] [info]    Task 157 is revealed
+[2026-09-14 09:58:14.220283] [0x00007bbf24c69740] [info]    Task 158 is revealed
+[2026-09-14 09:58:14.220284] [0x00007bbf24c69740] [info]    Task 159 is revealed
+current timestep 31
+plan limit 500
+[2026-09-14 09:58:15.140525] [0x00007bbf24c69740] [info]    [timestep=31] planner returns
+[2026-09-14 09:58:15.140560] [0x00007bbf24c69740] [info]    [timestep=32] Agent 0 finishes task 27
+[2026-09-14 09:58:15.140563] [0x00007bbf24c69740] [info]    [timestep=32] Agent 16 opens task 96
+[2026-09-14 09:58:15.140565] [0x00007bbf24c69740] [info]    [timestep=32] Agent 28 opens task 108
+[2026-09-14 09:58:15.140566] [0x00007bbf24c69740] [info]    [timestep=32] Agent 31 finishes task 25
+[2026-09-14 09:58:15.140568] [0x00007bbf24c69740] [info]    [timestep=32] Agent 37 opens task 151
+[2026-09-14 09:58:15.140570] [0x00007bbf24c69740] [info]    Task 160 is revealed
+[2026-09-14 09:58:15.140572] [0x00007bbf24c69740] [info]    Task 161 is revealed
+[2026-09-14 09:58:15.140574] [0x00007bbf24c69740] [info]    Task 162 is revealed
+[2026-09-14 09:58:15.140575] [0x00007bbf24c69740] [info]    Task 163 is revealed
+[2026-09-14 09:58:15.140577] [0x00007bbf24c69740] [info]    Task 164 is revealed
+current timestep 32
+plan limit 500
+[2026-09-14 09:58:16.060842] [0x00007bbf24c69740] [info]    [timestep=32] planner returns
+[2026-09-14 09:58:16.060880] [0x00007bbf24c69740] [info]    [timestep=33] Agent 0 opens task 161
+[2026-09-14 09:58:16.060882] [0x00007bbf24c69740] [info]    [timestep=33] Agent 4 opens task 154
+[2026-09-14 09:58:16.060884] [0x00007bbf24c69740] [info]    [timestep=33] Agent 18 finishes task 81
+[2026-09-14 09:58:16.060886] [0x00007bbf24c69740] [info]    [timestep=33] Agent 33 finishes task 40
+[2026-09-14 09:58:16.060888] [0x00007bbf24c69740] [info]    [timestep=33] Agent 36 finishes task 9
+[2026-09-14 09:58:16.060890] [0x00007bbf24c69740] [info]    [timestep=33] Agent 42 opens task 147
+[2026-09-14 09:58:16.060892] [0x00007bbf24c69740] [info]    Task 165 is revealed
+[2026-09-14 09:58:16.060893] [0x00007bbf24c69740] [info]    Task 166 is revealed
+[2026-09-14 09:58:16.060895] [0x00007bbf24c69740] [info]    Task 167 is revealed
+[2026-09-14 09:58:16.060897] [0x00007bbf24c69740] [info]    Task 168 is revealed
+[2026-09-14 09:58:16.060898] [0x00007bbf24c69740] [info]    Task 169 is revealed
+current timestep 33
+plan limit 500
+[2026-09-14 09:58:16.981104] [0x00007bbf24c69740] [info]    [timestep=33] planner returns
+[2026-09-14 09:58:16.981140] [0x00007bbf24c69740] [info]    [timestep=34] Agent 10 finishes task 112
+[2026-09-14 09:58:16.981143] [0x00007bbf24c69740] [info]    [timestep=34] Agent 31 opens task 83
+[2026-09-14 09:58:16.981144] [0x00007bbf24c69740] [info]    [timestep=34] Agent 36 opens task 82
+[2026-09-14 09:58:16.981146] [0x00007bbf24c69740] [info]    [timestep=34] Agent 43 finishes task 1
+[2026-09-14 09:58:16.981148] [0x00007bbf24c69740] [info]    Task 170 is revealed
+[2026-09-14 09:58:16.981150] [0x00007bbf24c69740] [info]    Task 171 is revealed
+[2026-09-14 09:58:16.981152] [0x00007bbf24c69740] [info]    Task 172 is revealed
+[2026-09-14 09:58:16.981153] [0x00007bbf24c69740] [info]    Task 173 is revealed
+[2026-09-14 09:58:16.981155] [0x00007bbf24c69740] [info]    Task 174 is revealed
+current timestep 34
+plan limit 500
+[2026-09-14 09:58:17.901401] [0x00007bbf24c69740] [info]    [timestep=34] planner returns
+[2026-09-14 09:58:17.901447] [0x00007bbf24c69740] [info]    [timestep=35] Agent 3 opens task 118
+[2026-09-14 09:58:17.901449] [0x00007bbf24c69740] [info]    Task 175 is revealed
+[2026-09-14 09:58:17.901451] [0x00007bbf24c69740] [info]    Task 176 is revealed
+[2026-09-14 09:58:17.901453] [0x00007bbf24c69740] [info]    Task 177 is revealed
+[2026-09-14 09:58:17.901454] [0x00007bbf24c69740] [info]    Task 178 is revealed
+[2026-09-14 09:58:17.901456] [0x00007bbf24c69740] [info]    Task 179 is revealed
+current timestep 35
+plan limit 980
+[2026-09-14 09:58:18.821715] [0x00007bbf24c69740] [info]    [timestep=35] planner returns
+[2026-09-14 09:58:18.821760] [0x00007bbf24c69740] [info]    [timestep=36] Agent 12 finishes task 38
+[2026-09-14 09:58:18.821779] [0x00007bbf24c69740] [info]    Task 180 is revealed
+[2026-09-14 09:58:18.821782] [0x00007bbf24c69740] [info]    Task 181 is revealed
+[2026-09-14 09:58:18.821784] [0x00007bbf24c69740] [info]    Task 182 is revealed
+[2026-09-14 09:58:18.821786] [0x00007bbf24c69740] [info]    Task 183 is revealed
+[2026-09-14 09:58:18.821788] [0x00007bbf24c69740] [info]    Task 184 is revealed
+current timestep 36
+plan limit 980
+[2026-09-14 09:58:19.742108] [0x00007bbf24c69740] [info]    [timestep=36] planner returns
+[2026-09-14 09:58:19.742148] [0x00007bbf24c69740] [info]    [timestep=37] Agent 10 opens task 57
+[2026-09-14 09:58:19.742151] [0x00007bbf24c69740] [info]    [timestep=37] Agent 21 finishes task 48
+[2026-09-14 09:58:19.742154] [0x00007bbf24c69740] [info]    [timestep=37] Agent 27 finishes task 41
+[2026-09-14 09:58:19.742156] [0x00007bbf24c69740] [info]    Task 185 is revealed
+[2026-09-14 09:58:19.742158] [0x00007bbf24c69740] [info]    Task 186 is revealed
+[2026-09-14 09:58:19.742160] [0x00007bbf24c69740] [info]    Task 187 is revealed
+[2026-09-14 09:58:19.742162] [0x00007bbf24c69740] [info]    Task 188 is revealed
+[2026-09-14 09:58:19.742164] [0x00007bbf24c69740] [info]    Task 189 is revealed
+current timestep 37
+plan limit 500
+[2026-09-14 09:58:20.662399] [0x00007bbf24c69740] [info]    [timestep=37] planner returns
+[2026-09-14 09:58:20.662436] [0x00007bbf24c69740] [info]    [timestep=38] Agent 5 finishes task 50
+[2026-09-14 09:58:20.662439] [0x00007bbf24c69740] [info]    [timestep=38] Agent 10 finishes task 57
+[2026-09-14 09:58:20.662441] [0x00007bbf24c69740] [info]    [timestep=38] Agent 13 finishes task 35
+[2026-09-14 09:58:20.662444] [0x00007bbf24c69740] [info]    [timestep=38] Agent 23 finishes task 32
+[2026-09-14 09:58:20.662446] [0x00007bbf24c69740] [info]    [timestep=38] Agent 27 opens task 53
+[2026-09-14 09:58:20.662448] [0x00007bbf24c69740] [info]    [timestep=38] Agent 30 finishes task 39
+[2026-09-14 09:58:20.662450] [0x00007bbf24c69740] [info]    [timestep=38] Agent 46 finishes task 34
+[2026-09-14 09:58:20.662453] [0x00007bbf24c69740] [info]    Task 190 is revealed
+[2026-09-14 09:58:20.662455] [0x00007bbf24c69740] [info]    Task 191 is revealed
+[2026-09-14 09:58:20.662457] [0x00007bbf24c69740] [info]    Task 192 is revealed
+[2026-09-14 09:58:20.662459] [0x00007bbf24c69740] [info]    Task 193 is revealed
+[2026-09-14 09:58:20.662460] [0x00007bbf24c69740] [info]    Task 194 is revealed
+current timestep 38
+plan limit 500
+[2026-09-14 09:58:21.582678] [0x00007bbf24c69740] [info]    [timestep=38] planner returns
+[2026-09-14 09:58:21.582717] [0x00007bbf24c69740] [info]    [timestep=39] Agent 6 finishes task 26
+[2026-09-14 09:58:21.582721] [0x00007bbf24c69740] [info]    [timestep=39] Agent 10 opens task 72
+[2026-09-14 09:58:21.582723] [0x00007bbf24c69740] [info]    [timestep=39] Agent 29 finishes task 3
+[2026-09-14 09:58:21.582726] [0x00007bbf24c69740] [info]    [timestep=39] Agent 30 opens task 125
+[2026-09-14 09:58:21.582728] [0x00007bbf24c69740] [info]    [timestep=39] Agent 33 opens task 80
+[2026-09-14 09:58:21.582730] [0x00007bbf24c69740] [info]    [timestep=39] Agent 40 opens task 103
+[2026-09-14 09:58:21.582732] [0x00007bbf24c69740] [info]    [timestep=39] Agent 45 finishes task 18
+[2026-09-14 09:58:21.582734] [0x00007bbf24c69740] [info]    [timestep=39] Agent 46 opens task 134
+[2026-09-14 09:58:21.582746] [0x00007bbf24c69740] [info]    Task 195 is revealed
+[2026-09-14 09:58:21.582749] [0x00007bbf24c69740] [info]    Task 196 is revealed
+[2026-09-14 09:58:21.582751] [0x00007bbf24c69740] [info]    Task 197 is revealed
+[2026-09-14 09:58:21.582753] [0x00007bbf24c69740] [info]    Task 198 is revealed
+[2026-09-14 09:58:21.582755] [0x00007bbf24c69740] [info]    Task 199 is revealed
+current timestep 39
+plan limit 500
+[2026-09-14 09:58:22.503003] [0x00007bbf24c69740] [info]    [timestep=39] planner returns
+[2026-09-14 09:58:22.503043] [0x00007bbf24c69740] [info]    [timestep=40] Agent 2 finishes task 28
+[2026-09-14 09:58:22.503046] [0x00007bbf24c69740] [info]    [timestep=40] Agent 5 opens task 107
+[2026-09-14 09:58:22.503048] [0x00007bbf24c69740] [info]    [timestep=40] Agent 6 opens task 97
+[2026-09-14 09:58:22.503049] [0x00007bbf24c69740] [info]    [timestep=40] Agent 9 finishes task 70
+[2026-09-14 09:58:22.503051] [0x00007bbf24c69740] [info]    [timestep=40] Agent 15 finishes task 54
+[2026-09-14 09:58:22.503053] [0x00007bbf24c69740] [info]    [timestep=40] Agent 18 opens task 55
+[2026-09-14 09:58:22.503054] [0x00007bbf24c69740] [info]    [timestep=40] Agent 21 opens task 59
+[2026-09-14 09:58:22.503056] [0x00007bbf24c69740] [info]    [timestep=40] Agent 25 finishes task 10
+[2026-09-14 09:58:22.503058] [0x00007bbf24c69740] [info]    [timestep=40] Agent 45 opens task 132
+[2026-09-14 09:58:22.503060] [0x00007bbf24c69740] [info]    Task 200 is revealed
+[2026-09-14 09:58:22.503062] [0x00007bbf24c69740] [info]    Task 201 is revealed
+[2026-09-14 09:58:22.503064] [0x00007bbf24c69740] [info]    Task 202 is revealed
+[2026-09-14 09:58:22.503065] [0x00007bbf24c69740] [info]    Task 203 is revealed
+[2026-09-14 09:58:22.503067] [0x00007bbf24c69740] [info]    Task 204 is revealed
+current timestep 40
+plan limit 500
+[2026-09-14 09:58:23.423316] [0x00007bbf24c69740] [info]    [timestep=40] planner returns
+[2026-09-14 09:58:23.423358] [0x00007bbf24c69740] [info]    [timestep=41] Agent 12 opens task 89
+[2026-09-14 09:58:23.423360] [0x00007bbf24c69740] [info]    [timestep=41] Agent 15 opens task 174
+[2026-09-14 09:58:23.423362] [0x00007bbf24c69740] [info]    [timestep=41] Agent 20 finishes task 100
+[2026-09-14 09:58:23.423364] [0x00007bbf24c69740] [info]    [timestep=41] Agent 25 opens task 114
+[2026-09-14 09:58:23.423365] [0x00007bbf24c69740] [info]    [timestep=41] Agent 29 opens task 191
+[2026-09-14 09:58:23.423367] [0x00007bbf24c69740] [info]    [timestep=41] Agent 37 finishes task 151
+[2026-09-14 09:58:23.423369] [0x00007bbf24c69740] [info]    Task 205 is revealed
+[2026-09-14 09:58:23.423371] [0x00007bbf24c69740] [info]    Task 206 is revealed
+[2026-09-14 09:58:23.423376] [0x00007bbf24c69740] [info]    Task 207 is revealed
+[2026-09-14 09:58:23.423378] [0x00007bbf24c69740] [info]    Task 208 is revealed
+[2026-09-14 09:58:23.423379] [0x00007bbf24c69740] [info]    Task 209 is revealed
+current timestep 41
+plan limit 500
+[2026-09-14 09:58:24.343654] [0x00007bbf24c69740] [info]    [timestep=41] planner returns
+[2026-09-14 09:58:24.343696] [0x00007bbf24c69740] [info]    [timestep=42] Agent 11 finishes task 65
+[2026-09-14 09:58:24.343699] [0x00007bbf24c69740] [info]    [timestep=42] Agent 14 finishes task 22
+[2026-09-14 09:58:24.343701] [0x00007bbf24c69740] [info]    [timestep=42] Agent 20 opens task 122
+[2026-09-14 09:58:24.343703] [0x00007bbf24c69740] [info]    [timestep=42] Agent 24 finishes task 37
+[2026-09-14 09:58:24.343705] [0x00007bbf24c69740] [info]    [timestep=42] Agent 32 opens task 155
+[2026-09-14 09:58:24.343707] [0x00007bbf24c69740] [info]    Task 210 is revealed
+[2026-09-14 09:58:24.343709] [0x00007bbf24c69740] [info]    Task 211 is revealed
+[2026-09-14 09:58:24.343711] [0x00007bbf24c69740] [info]    Task 212 is revealed
+[2026-09-14 09:58:24.343713] [0x00007bbf24c69740] [info]    Task 213 is revealed
+[2026-09-14 09:58:24.343715] [0x00007bbf24c69740] [info]    Task 214 is revealed
+current timestep 42
+plan limit 500
+[2026-09-14 09:58:25.264014] [0x00007bbf24c69740] [info]    [timestep=42] planner returns
+[2026-09-14 09:58:25.264055] [0x00007bbf24c69740] [info]    [timestep=43] Agent 2 opens task 109
+[2026-09-14 09:58:25.264057] [0x00007bbf24c69740] [info]    [timestep=43] Agent 13 opens task 123
+[2026-09-14 09:58:25.264059] [0x00007bbf24c69740] [info]    [timestep=43] Agent 23 opens task 119
+[2026-09-14 09:58:25.264061] [0x00007bbf24c69740] [info]    [timestep=43] Agent 24 opens task 214
+[2026-09-14 09:58:25.264063] [0x00007bbf24c69740] [info]    Task 215 is revealed
+[2026-09-14 09:58:25.264066] [0x00007bbf24c69740] [info]    Task 216 is revealed
+[2026-09-14 09:58:25.264067] [0x00007bbf24c69740] [info]    Task 217 is revealed
+[2026-09-14 09:58:25.264069] [0x00007bbf24c69740] [info]    Task 218 is revealed
+[2026-09-14 09:58:25.264071] [0x00007bbf24c69740] [info]    Task 219 is revealed
+current timestep 43
+plan limit 980
+[2026-09-14 09:58:26.184325] [0x00007bbf24c69740] [info]    [timestep=43] planner returns
+[2026-09-14 09:58:26.184367] [0x00007bbf24c69740] [info]    [timestep=44] Agent 9 opens task 79
+[2026-09-14 09:58:26.184370] [0x00007bbf24c69740] [info]    [timestep=44] Agent 11 opens task 92
+[2026-09-14 09:58:26.184372] [0x00007bbf24c69740] [info]    [timestep=44] Agent 19 finishes task 52
+[2026-09-14 09:58:26.184374] [0x00007bbf24c69740] [info]    [timestep=44] Agent 22 finishes task 16
+[2026-09-14 09:58:26.184375] [0x00007bbf24c69740] [info]    [timestep=44] Agent 29 finishes task 191
+[2026-09-14 09:58:26.184377] [0x00007bbf24c69740] [info]    [timestep=44] Agent 39 finishes task 36
+[2026-09-14 09:58:26.184380] [0x00007bbf24c69740] [info]    Task 220 is revealed
+[2026-09-14 09:58:26.184382] [0x00007bbf24c69740] [info]    Task 221 is revealed
+[2026-09-14 09:58:26.184383] [0x00007bbf24c69740] [info]    Task 222 is revealed
+[2026-09-14 09:58:26.184385] [0x00007bbf24c69740] [info]    Task 223 is revealed
+[2026-09-14 09:58:26.184386] [0x00007bbf24c69740] [info]    Task 224 is revealed
+current timestep 44
+plan limit 500
+[2026-09-14 09:58:27.104635] [0x00007bbf24c69740] [info]    [timestep=44] planner returns
+[2026-09-14 09:58:27.104676] [0x00007bbf24c69740] [info]    [timestep=45] Agent 1 finishes task 31
+[2026-09-14 09:58:27.104679] [0x00007bbf24c69740] [info]    [timestep=45] Agent 22 opens task 180
+[2026-09-14 09:58:27.104681] [0x00007bbf24c69740] [info]    [timestep=45] Agent 28 finishes task 108
+[2026-09-14 09:58:27.104682] [0x00007bbf24c69740] [info]    [timestep=45] Agent 29 opens task 182
+[2026-09-14 09:58:27.104684] [0x00007bbf24c69740] [info]    [timestep=45] Agent 34 finishes task 15
+[2026-09-14 09:58:27.104685] [0x00007bbf24c69740] [info]    [timestep=45] Agent 39 opens task 63
+[2026-09-14 09:58:27.104687] [0x00007bbf24c69740] [info]    [timestep=45] Agent 43 opens task 98
+[2026-09-14 09:58:27.104689] [0x00007bbf24c69740] [info]    Task 225 is revealed
+[2026-09-14 09:58:27.104691] [0x00007bbf24c69740] [info]    Task 226 is revealed
+[2026-09-14 09:58:27.104693] [0x00007bbf24c69740] [info]    Task 227 is revealed
+[2026-09-14 09:58:27.104694] [0x00007bbf24c69740] [info]    Task 228 is revealed
+[2026-09-14 09:58:27.104696] [0x00007bbf24c69740] [info]    Task 229 is revealed
+current timestep 45
+plan limit 500
+[2026-09-14 09:58:28.024951] [0x00007bbf24c69740] [info]    [timestep=45] planner returns
+[2026-09-14 09:58:28.024987] [0x00007bbf24c69740] [info]    [timestep=46] Agent 1 opens task 121
+[2026-09-14 09:58:28.024990] [0x00007bbf24c69740] [info]    [timestep=46] Agent 26 finishes task 24
+[2026-09-14 09:58:28.024992] [0x00007bbf24c69740] [info]    [timestep=46] Agent 30 finishes task 125
+[2026-09-14 09:58:28.024994] [0x00007bbf24c69740] [info]    [timestep=46] Agent 34 opens task 221
+[2026-09-14 09:58:28.024995] [0x00007bbf24c69740] [info]    [timestep=46] Agent 35 finishes task 73
+[2026-09-14 09:58:28.024997] [0x00007bbf24c69740] [info]    [timestep=46] Agent 37 opens task 84
+[2026-09-14 09:58:28.024999] [0x00007bbf24c69740] [info]    Task 230 is revealed
+[2026-09-14 09:58:28.025001] [0x00007bbf24c69740] [info]    Task 231 is revealed
+[2026-09-14 09:58:28.025002] [0x00007bbf24c69740] [info]    Task 232 is revealed
+[2026-09-14 09:58:28.025011] [0x00007bbf24c69740] [info]    Task 233 is revealed
+[2026-09-14 09:58:28.025013] [0x00007bbf24c69740] [info]    Task 234 is revealed
+current timestep 46
+plan limit 500
+[2026-09-14 09:58:28.945266] [0x00007bbf24c69740] [info]    [timestep=46] planner returns
+[2026-09-14 09:58:28.945304] [0x00007bbf24c69740] [info]    [timestep=47] Agent 8 finishes task 93
+[2026-09-14 09:58:28.945307] [0x00007bbf24c69740] [info]    [timestep=47] Agent 14 opens task 170
+[2026-09-14 09:58:28.945309] [0x00007bbf24c69740] [info]    [timestep=47] Agent 17 finishes task 44
+[2026-09-14 09:58:28.945311] [0x00007bbf24c69740] [info]    [timestep=47] Agent 19 opens task 204
+[2026-09-14 09:58:28.945312] [0x00007bbf24c69740] [info]    [timestep=47] Agent 26 opens task 135
+[2026-09-14 09:58:28.945314] [0x00007bbf24c69740] [info]    [timestep=47] Agent 30 opens task 178
+[2026-09-14 09:58:28.945316] [0x00007bbf24c69740] [info]    [timestep=47] Agent 43 finishes task 98
+[2026-09-14 09:58:28.945318] [0x00007bbf24c69740] [info]    Task 235 is revealed
+[2026-09-14 09:58:28.945320] [0x00007bbf24c69740] [info]    Task 236 is revealed
+[2026-09-14 09:58:28.945322] [0x00007bbf24c69740] [info]    Task 237 is revealed
+[2026-09-14 09:58:28.945323] [0x00007bbf24c69740] [info]    Task 238 is revealed
+[2026-09-14 09:58:28.945325] [0x00007bbf24c69740] [info]    Task 239 is revealed
+current timestep 47
+plan limit 500
+[2026-09-14 09:58:29.865546] [0x00007bbf24c69740] [info]    [timestep=47] planner returns
+[2026-09-14 09:58:29.865586] [0x00007bbf24c69740] [info]    [timestep=48] Agent 6 finishes task 97
+[2026-09-14 09:58:29.865590] [0x00007bbf24c69740] [info]    [timestep=48] Agent 8 opens task 207
+[2026-09-14 09:58:29.865592] [0x00007bbf24c69740] [info]    [timestep=48] Agent 16 finishes task 96
+[2026-09-14 09:58:29.865595] [0x00007bbf24c69740] [info]    [timestep=48] Agent 32 finishes task 155
+[2026-09-14 09:58:29.865597] [0x00007bbf24c69740] [info]    [timestep=48] Agent 35 opens task 195
+[2026-09-14 09:58:29.865599] [0x00007bbf24c69740] [info]    [timestep=48] Agent 40 finishes task 103
+[2026-09-14 09:58:29.865602] [0x00007bbf24c69740] [info]    [timestep=48] Agent 42 finishes task 147
+[2026-09-14 09:58:29.865605] [0x00007bbf24c69740] [info]    Task 240 is revealed
+[2026-09-14 09:58:29.865607] [0x00007bbf24c69740] [info]    Task 241 is revealed
+[2026-09-14 09:58:29.865609] [0x00007bbf24c69740] [info]    Task 242 is revealed
+[2026-09-14 09:58:29.865611] [0x00007bbf24c69740] [info]    Task 243 is revealed
+[2026-09-14 09:58:29.865613] [0x00007bbf24c69740] [info]    Task 244 is revealed
+current timestep 48
+plan limit 500
+[2026-09-14 09:58:30.785843] [0x00007bbf24c69740] [info]    [timestep=48] planner returns
+[2026-09-14 09:58:30.785882] [0x00007bbf24c69740] [info]    [timestep=49] Agent 4 finishes task 154
+[2026-09-14 09:58:30.785885] [0x00007bbf24c69740] [info]    [timestep=49] Agent 16 opens task 237
+[2026-09-14 09:58:30.785887] [0x00007bbf24c69740] [info]    [timestep=49] Agent 17 opens task 167
+[2026-09-14 09:58:30.785889] [0x00007bbf24c69740] [info]    [timestep=49] Agent 28 opens task 209
+[2026-09-14 09:58:30.785891] [0x00007bbf24c69740] [info]    [timestep=49] Agent 32 opens task 77
+[2026-09-14 09:58:30.785893] [0x00007bbf24c69740] [info]    [timestep=49] Agent 36 finishes task 82
+[2026-09-14 09:58:30.785895] [0x00007bbf24c69740] [info]    [timestep=49] Agent 47 finishes task 127
+[2026-09-14 09:58:30.785897] [0x00007bbf24c69740] [info]    [timestep=49] Agent 48 finishes task 5
+[2026-09-14 09:58:30.785900] [0x00007bbf24c69740] [info]    Task 245 is revealed
+[2026-09-14 09:58:30.785902] [0x00007bbf24c69740] [info]    Task 246 is revealed
+[2026-09-14 09:58:30.785904] [0x00007bbf24c69740] [info]    Task 247 is revealed
+[2026-09-14 09:58:30.785905] [0x00007bbf24c69740] [info]    Task 248 is revealed
+[2026-09-14 09:58:30.785907] [0x00007bbf24c69740] [info]    Task 249 is revealed
+current timestep 49
+plan limit 500
+[2026-09-14 09:58:31.706167] [0x00007bbf24c69740] [info]    [timestep=49] planner returns
+[2026-09-14 09:58:31.706229] [0x00007bbf24c69740] [info]    [timestep=50] Agent 4 opens task 113
+[2026-09-14 09:58:31.706232] [0x00007bbf24c69740] [info]    [timestep=50] Agent 6 opens task 173
+[2026-09-14 09:58:31.706234] [0x00007bbf24c69740] [info]    [timestep=50] Agent 38 finishes task 90
+[2026-09-14 09:58:31.706236] [0x00007bbf24c69740] [info]    [timestep=50] Agent 42 opens task 181
+[2026-09-14 09:58:31.706238] [0x00007bbf24c69740] [info]    [timestep=50] Agent 43 opens task 211
+[2026-09-14 09:58:31.706239] [0x00007bbf24c69740] [info]    [timestep=50] Agent 45 finishes task 132
+[2026-09-14 09:58:31.706246] [0x00007bbf24c69740] [info]    Task 250 is revealed
+[2026-09-14 09:58:31.706247] [0x00007bbf24c69740] [info]    Task 251 is revealed
+[2026-09-14 09:58:31.706249] [0x00007bbf24c69740] [info]    Task 252 is revealed
+[2026-09-14 09:58:31.706251] [0x00007bbf24c69740] [info]    Task 253 is revealed
+[2026-09-14 09:58:31.706257] [0x00007bbf24c69740] [info]    Task 254 is revealed
+current timestep 50
+plan limit 500
+[2026-09-14 09:58:32.626543] [0x00007bbf24c69740] [info]    [timestep=50] planner returns
+[2026-09-14 09:58:32.626582] [0x00007bbf24c69740] [info]    [timestep=51] Agent 9 finishes task 79
+[2026-09-14 09:58:32.626586] [0x00007bbf24c69740] [info]    [timestep=51] Agent 36 opens task 239
+[2026-09-14 09:58:32.626588] [0x00007bbf24c69740] [info]    [timestep=51] Agent 38 opens task 128
+[2026-09-14 09:58:32.626589] [0x00007bbf24c69740] [info]    [timestep=51] Agent 45 opens task 215
+[2026-09-14 09:58:32.626591] [0x00007bbf24c69740] [info]    Task 255 is revealed
+[2026-09-14 09:58:32.626593] [0x00007bbf24c69740] [info]    Task 256 is revealed
+[2026-09-14 09:58:32.626595] [0x00007bbf24c69740] [info]    Task 257 is revealed
+[2026-09-14 09:58:32.626596] [0x00007bbf24c69740] [info]    Task 258 is revealed
+[2026-09-14 09:58:32.626598] [0x00007bbf24c69740] [info]    Task 259 is revealed
+current timestep 51
+plan limit 980
+[2026-09-14 09:58:33.546928] [0x00007bbf24c69740] [info]    [timestep=51] planner returns
+[2026-09-14 09:58:33.546967] [0x00007bbf24c69740] [info]    [timestep=52] Agent 40 opens task 190
+[2026-09-14 09:58:33.546970] [0x00007bbf24c69740] [info]    Task 260 is revealed
+[2026-09-14 09:58:33.546972] [0x00007bbf24c69740] [info]    Task 261 is revealed
+[2026-09-14 09:58:33.546973] [0x00007bbf24c69740] [info]    Task 262 is revealed
+[2026-09-14 09:58:33.546975] [0x00007bbf24c69740] [info]    Task 263 is revealed
+[2026-09-14 09:58:33.546976] [0x00007bbf24c69740] [info]    Task 264 is revealed
+current timestep 52
+plan limit 980
+[2026-09-14 09:58:34.467232] [0x00007bbf24c69740] [info]    [timestep=52] planner returns
+[2026-09-14 09:58:34.467273] [0x00007bbf24c69740] [info]    [timestep=53] Agent 3 finishes task 118
+[2026-09-14 09:58:34.467276] [0x00007bbf24c69740] [info]    [timestep=53] Agent 27 finishes task 53
+[2026-09-14 09:58:34.467278] [0x00007bbf24c69740] [info]    [timestep=53] Agent 44 finishes task 33
+[2026-09-14 09:58:34.467280] [0x00007bbf24c69740] [info]    [timestep=53] Agent 47 opens task 199
+[2026-09-14 09:58:34.467281] [0x00007bbf24c69740] [info]    [timestep=53] Agent 49 finishes task 78
+[2026-09-14 09:58:34.467284] [0x00007bbf24c69740] [info]    Task 265 is revealed
+[2026-09-14 09:58:34.467285] [0x00007bbf24c69740] [info]    Task 266 is revealed
+[2026-09-14 09:58:34.467287] [0x00007bbf24c69740] [info]    Task 267 is revealed
+[2026-09-14 09:58:34.467289] [0x00007bbf24c69740] [info]    Task 268 is revealed
+[2026-09-14 09:58:34.467290] [0x00007bbf24c69740] [info]    Task 269 is revealed
+current timestep 53
+plan limit 500
+[2026-09-14 09:58:35.387521] [0x00007bbf24c69740] [info]    [timestep=53] planner returns
+[2026-09-14 09:58:35.387560] [0x00007bbf24c69740] [info]    [timestep=54] Agent 1 finishes task 121
+[2026-09-14 09:58:35.387564] [0x00007bbf24c69740] [info]    [timestep=54] Agent 9 opens task 165
+[2026-09-14 09:58:35.387567] [0x00007bbf24c69740] [info]    [timestep=54] Agent 18 finishes task 55
+[2026-09-14 09:58:35.387569] [0x00007bbf24c69740] [info]    [timestep=54] Agent 30 finishes task 178
+[2026-09-14 09:58:35.387578] [0x00007bbf24c69740] [info]    [timestep=54] Agent 44 opens task 216
+[2026-09-14 09:58:35.387581] [0x00007bbf24c69740] [info]    Task 270 is revealed
+[2026-09-14 09:58:35.387582] [0x00007bbf24c69740] [info]    Task 271 is revealed
+[2026-09-14 09:58:35.387584] [0x00007bbf24c69740] [info]    Task 272 is revealed
+[2026-09-14 09:58:35.387586] [0x00007bbf24c69740] [info]    Task 273 is revealed
+[2026-09-14 09:58:35.387589] [0x00007bbf24c69740] [info]    Task 274 is revealed
+current timestep 54
+plan limit 500
+[2026-09-14 09:58:36.307863] [0x00007bbf24c69740] [info]    [timestep=54] planner returns
+[2026-09-14 09:58:36.307902] [0x00007bbf24c69740] [info]    [timestep=55] Agent 1 opens task 110
+[2026-09-14 09:58:36.307904] [0x00007bbf24c69740] [info]    [timestep=55] Agent 3 opens task 145
+[2026-09-14 09:58:36.307906] [0x00007bbf24c69740] [info]    [timestep=55] Agent 15 finishes task 174
+[2026-09-14 09:58:36.307909] [0x00007bbf24c69740] [info]    [timestep=55] Agent 21 finishes task 59
+[2026-09-14 09:58:36.307910] [0x00007bbf24c69740] [info]    [timestep=55] Agent 27 opens task 217
+[2026-09-14 09:58:36.307912] [0x00007bbf24c69740] [info]    [timestep=55] Agent 30 opens task 206
+[2026-09-14 09:58:36.307913] [0x00007bbf24c69740] [info]    [timestep=55] Agent 48 opens task 142
+[2026-09-14 09:58:36.307915] [0x00007bbf24c69740] [info]    Task 275 is revealed
+[2026-09-14 09:58:36.307917] [0x00007bbf24c69740] [info]    Task 276 is revealed
+[2026-09-14 09:58:36.307919] [0x00007bbf24c69740] [info]    Task 277 is revealed
+[2026-09-14 09:58:36.307921] [0x00007bbf24c69740] [info]    Task 278 is revealed
+[2026-09-14 09:58:36.307922] [0x00007bbf24c69740] [info]    Task 279 is revealed
+current timestep 55
+plan limit 500
+[2026-09-14 09:58:37.228154] [0x00007bbf24c69740] [info]    [timestep=55] planner returns
+[2026-09-14 09:58:37.228193] [0x00007bbf24c69740] [info]    [timestep=56] Agent 13 finishes task 123
+[2026-09-14 09:58:37.228196] [0x00007bbf24c69740] [info]    [timestep=56] Agent 15 opens task 279
+[2026-09-14 09:58:37.228198] [0x00007bbf24c69740] [info]    [timestep=56] Agent 18 opens task 270
+[2026-09-14 09:58:37.228199] [0x00007bbf24c69740] [info]    [timestep=56] Agent 21 opens task 60
+[2026-09-14 09:58:37.228201] [0x00007bbf24c69740] [info]    [timestep=56] Agent 33 finishes task 80
+[2026-09-14 09:58:37.228203] [0x00007bbf24c69740] [info]    Task 280 is revealed
+[2026-09-14 09:58:37.228205] [0x00007bbf24c69740] [info]    Task 281 is revealed
+[2026-09-14 09:58:37.228207] [0x00007bbf24c69740] [info]    Task 282 is revealed
+[2026-09-14 09:58:37.228209] [0x00007bbf24c69740] [info]    Task 283 is revealed
+[2026-09-14 09:58:37.228210] [0x00007bbf24c69740] [info]    Task 284 is revealed
+current timestep 56
+plan limit 500
+[2026-09-14 09:58:38.148403] [0x00007bbf24c69740] [info]    [timestep=56] planner returns
+[2026-09-14 09:58:38.148441] [0x00007bbf24c69740] [info]    [timestep=57] Agent 33 opens task 198
+[2026-09-14 09:58:38.148445] [0x00007bbf24c69740] [info]    Task 285 is revealed
+[2026-09-14 09:58:38.148447] [0x00007bbf24c69740] [info]    Task 286 is revealed
+[2026-09-14 09:58:38.148449] [0x00007bbf24c69740] [info]    Task 287 is revealed
+[2026-09-14 09:58:38.148450] [0x00007bbf24c69740] [info]    Task 288 is revealed
+[2026-09-14 09:58:38.148452] [0x00007bbf24c69740] [info]    Task 289 is revealed
+current timestep 57
+plan limit 980
+[2026-09-14 09:58:39.068708] [0x00007bbf24c69740] [info]    [timestep=57] planner returns
+[2026-09-14 09:58:39.068752] [0x00007bbf24c69740] [info]    [timestep=58] Agent 13 opens task 229
+[2026-09-14 09:58:39.068756] [0x00007bbf24c69740] [info]    [timestep=58] Agent 23 finishes task 119
+[2026-09-14 09:58:39.068759] [0x00007bbf24c69740] [info]    Task 290 is revealed
+[2026-09-14 09:58:39.068761] [0x00007bbf24c69740] [info]    Task 291 is revealed
+[2026-09-14 09:58:39.068763] [0x00007bbf24c69740] [info]    Task 292 is revealed
+[2026-09-14 09:58:39.068780] [0x00007bbf24c69740] [info]    Task 293 is revealed
+[2026-09-14 09:58:39.068782] [0x00007bbf24c69740] [info]    Task 294 is revealed
+current timestep 58
+plan limit 980
+[2026-09-14 09:58:39.989098] [0x00007bbf24c69740] [info]    [timestep=58] planner returns
+[2026-09-14 09:58:39.989134] [0x00007bbf24c69740] [info]    [timestep=59] Agent 10 finishes task 72
+[2026-09-14 09:58:39.989137] [0x00007bbf24c69740] [info]    [timestep=59] Agent 31 finishes task 83
+[2026-09-14 09:58:39.989139] [0x00007bbf24c69740] [info]    [timestep=59] Agent 40 finishes task 190
+[2026-09-14 09:58:39.989141] [0x00007bbf24c69740] [info]    Task 295 is revealed
+[2026-09-14 09:58:39.989143] [0x00007bbf24c69740] [info]    Task 296 is revealed
+[2026-09-14 09:58:39.989145] [0x00007bbf24c69740] [info]    Task 297 is revealed
+[2026-09-14 09:58:39.989146] [0x00007bbf24c69740] [info]    Task 298 is revealed
+[2026-09-14 09:58:39.989148] [0x00007bbf24c69740] [info]    Task 299 is revealed
+current timestep 59
+plan limit 500
+[2026-09-14 09:58:40.909416] [0x00007bbf24c69740] [info]    [timestep=59] planner returns
+[2026-09-14 09:58:40.909458] [0x00007bbf24c69740] [info]    [timestep=60] Agent 9 finishes task 165
+[2026-09-14 09:58:40.909462] [0x00007bbf24c69740] [info]    [timestep=60] Agent 35 finishes task 195
+[2026-09-14 09:58:40.909464] [0x00007bbf24c69740] [info]    [timestep=60] Agent 40 opens task 252
+[2026-09-14 09:58:40.909466] [0x00007bbf24c69740] [info]    [timestep=60] Agent 49 opens task 153
+[2026-09-14 09:58:40.909469] [0x00007bbf24c69740] [info]    Task 300 is revealed
+[2026-09-14 09:58:40.909471] [0x00007bbf24c69740] [info]    Task 301 is revealed
+[2026-09-14 09:58:40.909473] [0x00007bbf24c69740] [info]    Task 302 is revealed
+[2026-09-14 09:58:40.909475] [0x00007bbf24c69740] [info]    Task 303 is revealed
+[2026-09-14 09:58:40.909477] [0x00007bbf24c69740] [info]    Task 304 is revealed
+current timestep 60
+plan limit 500
+[2026-09-14 09:58:41.829743] [0x00007bbf24c69740] [info]    [timestep=60] planner returns
+[2026-09-14 09:58:41.829807] [0x00007bbf24c69740] [info]    [timestep=61] Agent 4 finishes task 113
+[2026-09-14 09:58:41.829810] [0x00007bbf24c69740] [info]    [timestep=61] Agent 9 opens task 213
+[2026-09-14 09:58:41.829812] [0x00007bbf24c69740] [info]    [timestep=61] Agent 31 opens task 291
+[2026-09-14 09:58:41.829815] [0x00007bbf24c69740] [info]    [timestep=61] Agent 34 finishes task 221
+[2026-09-14 09:58:41.829817] [0x00007bbf24c69740] [info]    [timestep=61] Agent 35 opens task 280
+[2026-09-14 09:58:41.829819] [0x00007bbf24c69740] [info]    Task 305 is revealed
+[2026-09-14 09:58:41.829822] [0x00007bbf24c69740] [info]    Task 306 is revealed
+[2026-09-14 09:58:41.829824] [0x00007bbf24c69740] [info]    Task 307 is revealed
+[2026-09-14 09:58:41.829826] [0x00007bbf24c69740] [info]    Task 308 is revealed
+[2026-09-14 09:58:41.829828] [0x00007bbf24c69740] [info]    Task 309 is revealed
+current timestep 61
+plan limit 500
+[2026-09-14 09:58:42.750029] [0x00007bbf24c69740] [info]    [timestep=61] planner returns
+[2026-09-14 09:58:42.750067] [0x00007bbf24c69740] [info]    [timestep=62] Agent 4 opens task 201
+[2026-09-14 09:58:42.750069] [0x00007bbf24c69740] [info]    [timestep=62] Agent 7 finishes task 49
+[2026-09-14 09:58:42.750072] [0x00007bbf24c69740] [info]    [timestep=62] Agent 16 finishes task 237
+[2026-09-14 09:58:42.750074] [0x00007bbf24c69740] [info]    [timestep=62] Agent 28 finishes task 209
+[2026-09-14 09:58:42.750076] [0x00007bbf24c69740] [info]    [timestep=62] Agent 37 finishes task 84
+[2026-09-14 09:58:42.750078] [0x00007bbf24c69740] [info]    [timestep=62] Agent 48 finishes task 142
+[2026-09-14 09:58:42.750081] [0x00007bbf24c69740] [info]    Task 310 is revealed
+[2026-09-14 09:58:42.750083] [0x00007bbf24c69740] [info]    Task 311 is revealed
+[2026-09-14 09:58:42.750085] [0x00007bbf24c69740] [info]    Task 312 is revealed
+[2026-09-14 09:58:42.750087] [0x00007bbf24c69740] [info]    Task 313 is revealed
+[2026-09-14 09:58:42.750092] [0x00007bbf24c69740] [info]    Task 314 is revealed
+current timestep 62
+plan limit 500
+[2026-09-14 09:58:43.670324] [0x00007bbf24c69740] [info]    [timestep=62] planner returns
+[2026-09-14 09:58:43.670368] [0x00007bbf24c69740] [info]    [timestep=63] Agent 2 finishes task 109
+[2026-09-14 09:58:43.670379] [0x00007bbf24c69740] [info]    [timestep=63] Agent 7 opens task 269
+[2026-09-14 09:58:43.670381] [0x00007bbf24c69740] [info]    [timestep=63] Agent 10 opens task 247
+[2026-09-14 09:58:43.670383] [0x00007bbf24c69740] [info]    [timestep=63] Agent 16 opens task 164
+[2026-09-14 09:58:43.670384] [0x00007bbf24c69740] [info]    [timestep=63] Agent 19 finishes task 204
+[2026-09-14 09:58:43.670386] [0x00007bbf24c69740] [info]    [timestep=63] Agent 28 opens task 311
+[2026-09-14 09:58:43.670388] [0x00007bbf24c69740] [info]    [timestep=63] Agent 34 opens task 260
+[2026-09-14 09:58:43.670390] [0x00007bbf24c69740] [info]    [timestep=63] Agent 37 opens task 157
+[2026-09-14 09:58:43.670391] [0x00007bbf24c69740] [info]    [timestep=63] Agent 43 finishes task 211
+[2026-09-14 09:58:43.670393] [0x00007bbf24c69740] [info]    [timestep=63] Agent 46 finishes task 134
+[2026-09-14 09:58:43.670395] [0x00007bbf24c69740] [info]    [timestep=63] Agent 48 opens task 286
+[2026-09-14 09:58:43.670397] [0x00007bbf24c69740] [info]    Task 315 is revealed
+[2026-09-14 09:58:43.670399] [0x00007bbf24c69740] [info]    Task 316 is revealed
+[2026-09-14 09:58:43.670400] [0x00007bbf24c69740] [info]    Task 317 is revealed
+[2026-09-14 09:58:43.670402] [0x00007bbf24c69740] [info]    Task 318 is revealed
+[2026-09-14 09:58:43.670404] [0x00007bbf24c69740] [info]    Task 319 is revealed
+current timestep 63
+plan limit 500
+[2026-09-14 09:58:44.590647] [0x00007bbf24c69740] [info]    [timestep=63] planner returns
+[2026-09-14 09:58:44.590687] [0x00007bbf24c69740] [info]    [timestep=64] Agent 2 opens task 68
+[2026-09-14 09:58:44.590690] [0x00007bbf24c69740] [info]    [timestep=64] Agent 11 finishes task 92
+[2026-09-14 09:58:44.590692] [0x00007bbf24c69740] [info]    [timestep=64] Agent 19 opens task 276
+[2026-09-14 09:58:44.590694] [0x00007bbf24c69740] [info]    [timestep=64] Agent 22 finishes task 180
+[2026-09-14 09:58:44.590695] [0x00007bbf24c69740] [info]    [timestep=64] Agent 23 opens task 227
+[2026-09-14 09:58:44.590697] [0x00007bbf24c69740] [info]    [timestep=64] Agent 43 opens task 189
+[2026-09-14 09:58:44.590699] [0x00007bbf24c69740] [info]    [timestep=64] Agent 46 opens task 230
+[2026-09-14 09:58:44.590701] [0x00007bbf24c69740] [info]    Task 320 is revealed
+[2026-09-14 09:58:44.590702] [0x00007bbf24c69740] [info]    Task 321 is revealed
+[2026-09-14 09:58:44.590704] [0x00007bbf24c69740] [info]    Task 322 is revealed
+[2026-09-14 09:58:44.590706] [0x00007bbf24c69740] [info]    Task 323 is revealed
+[2026-09-14 09:58:44.590707] [0x00007bbf24c69740] [info]    Task 324 is revealed
+current timestep 64
+plan limit 500
+[2026-09-14 09:58:45.510930] [0x00007bbf24c69740] [info]    [timestep=64] planner returns
+[2026-09-14 09:58:45.510969] [0x00007bbf24c69740] [info]    [timestep=65] Agent 0 finishes task 161
+[2026-09-14 09:58:45.510972] [0x00007bbf24c69740] [info]    [timestep=65] Agent 22 opens task 220
+[2026-09-14 09:58:45.510974] [0x00007bbf24c69740] [info]    [timestep=65] Agent 42 finishes task 181
+[2026-09-14 09:58:45.510976] [0x00007bbf24c69740] [info]    Task 325 is revealed
+[2026-09-14 09:58:45.510978] [0x00007bbf24c69740] [info]    Task 326 is revealed
+[2026-09-14 09:58:45.510980] [0x00007bbf24c69740] [info]    Task 327 is revealed
+[2026-09-14 09:58:45.510981] [0x00007bbf24c69740] [info]    Task 328 is revealed
+[2026-09-14 09:58:45.510983] [0x00007bbf24c69740] [info]    Task 329 is revealed
+current timestep 65
+plan limit 500
+[2026-09-14 09:58:46.431204] [0x00007bbf24c69740] [info]    [timestep=65] planner returns
+[2026-09-14 09:58:46.431244] [0x00007bbf24c69740] [info]    [timestep=66] Agent 0 opens task 248
+[2026-09-14 09:58:46.431247] [0x00007bbf24c69740] [info]    [timestep=66] Agent 3 finishes task 145
+[2026-09-14 09:58:46.431250] [0x00007bbf24c69740] [info]    [timestep=66] Agent 10 finishes task 247
+[2026-09-14 09:58:46.431252] [0x00007bbf24c69740] [info]    [timestep=66] Agent 30 finishes task 206
+[2026-09-14 09:58:46.431255] [0x00007bbf24c69740] [info]    [timestep=66] Agent 42 opens task 85
+[2026-09-14 09:58:46.431264] [0x00007bbf24c69740] [info]    Task 330 is revealed
+[2026-09-14 09:58:46.431266] [0x00007bbf24c69740] [info]    Task 331 is revealed
+[2026-09-14 09:58:46.431268] [0x00007bbf24c69740] [info]    Task 332 is revealed
+[2026-09-14 09:58:46.431270] [0x00007bbf24c69740] [info]    Task 333 is revealed
+[2026-09-14 09:58:46.431271] [0x00007bbf24c69740] [info]    Task 334 is revealed
+current timestep 66
+plan limit 500
+[2026-09-14 09:58:47.351483] [0x00007bbf24c69740] [info]    [timestep=66] planner returns
+[2026-09-14 09:58:47.351522] [0x00007bbf24c69740] [info]    [timestep=67] Agent 3 opens task 245
+[2026-09-14 09:58:47.351524] [0x00007bbf24c69740] [info]    [timestep=67] Agent 10 opens task 222
+[2026-09-14 09:58:47.351525] [0x00007bbf24c69740] [info]    [timestep=67] Agent 11 opens task 91
+[2026-09-14 09:58:47.351527] [0x00007bbf24c69740] [info]    [timestep=67] Agent 12 finishes task 89
+[2026-09-14 09:58:47.351533] [0x00007bbf24c69740] [info]    [timestep=67] Agent 14 finishes task 170
+[2026-09-14 09:58:47.351535] [0x00007bbf24c69740] [info]    [timestep=67] Agent 18 finishes task 270
+[2026-09-14 09:58:47.351537] [0x00007bbf24c69740] [info]    [timestep=67] Agent 20 finishes task 122
+[2026-09-14 09:58:47.351540] [0x00007bbf24c69740] [info]    Task 335 is revealed
+[2026-09-14 09:58:47.351542] [0x00007bbf24c69740] [info]    Task 336 is revealed
+[2026-09-14 09:58:47.351543] [0x00007bbf24c69740] [info]    Task 337 is revealed
+[2026-09-14 09:58:47.351545] [0x00007bbf24c69740] [info]    Task 338 is revealed
+[2026-09-14 09:58:47.351546] [0x00007bbf24c69740] [info]    Task 339 is revealed
+current timestep 67
+plan limit 500
+[2026-09-14 09:58:48.271806] [0x00007bbf24c69740] [info]    [timestep=67] planner returns
+[2026-09-14 09:58:48.271844] [0x00007bbf24c69740] [info]    [timestep=68] Agent 12 opens task 283
+[2026-09-14 09:58:48.271846] [0x00007bbf24c69740] [info]    [timestep=68] Agent 14 opens task 329
+[2026-09-14 09:58:48.271848] [0x00007bbf24c69740] [info]    [timestep=68] Agent 20 opens task 149
+[2026-09-14 09:58:48.271850] [0x00007bbf24c69740] [info]    [timestep=68] Agent 26 finishes task 135
+[2026-09-14 09:58:48.271852] [0x00007bbf24c69740] [info]    [timestep=68] Agent 30 opens task 243
+[2026-09-14 09:58:48.271854] [0x00007bbf24c69740] [info]    [timestep=68] Agent 33 finishes task 198
+[2026-09-14 09:58:48.271856] [0x00007bbf24c69740] [info]    [timestep=68] Agent 47 finishes task 199
+[2026-09-14 09:58:48.271858] [0x00007bbf24c69740] [info]    Task 340 is revealed
+[2026-09-14 09:58:48.271860] [0x00007bbf24c69740] [info]    Task 341 is revealed
+[2026-09-14 09:58:48.271862] [0x00007bbf24c69740] [info]    Task 342 is revealed
+[2026-09-14 09:58:48.271863] [0x00007bbf24c69740] [info]    Task 343 is revealed
+[2026-09-14 09:58:48.271865] [0x00007bbf24c69740] [info]    Task 344 is revealed
+current timestep 68
+plan limit 500
+[2026-09-14 09:58:49.192123] [0x00007bbf24c69740] [info]    [timestep=68] planner returns
+[2026-09-14 09:58:49.192165] [0x00007bbf24c69740] [info]    [timestep=69] Agent 5 finishes task 107
+[2026-09-14 09:58:49.192168] [0x00007bbf24c69740] [info]    [timestep=69] Agent 24 finishes task 214
+[2026-09-14 09:58:49.192170] [0x00007bbf24c69740] [info]    [timestep=69] Agent 47 opens task 344
+[2026-09-14 09:58:49.192172] [0x00007bbf24c69740] [info]    Task 345 is revealed
+[2026-09-14 09:58:49.192174] [0x00007bbf24c69740] [info]    Task 346 is revealed
+[2026-09-14 09:58:49.192176] [0x00007bbf24c69740] [info]    Task 347 is revealed
+[2026-09-14 09:58:49.192177] [0x00007bbf24c69740] [info]    Task 348 is revealed
+[2026-09-14 09:58:49.192179] [0x00007bbf24c69740] [info]    Task 349 is revealed
+current timestep 69
+plan limit 500
+[2026-09-14 09:58:50.112428] [0x00007bbf24c69740] [info]    [timestep=69] planner returns
+[2026-09-14 09:58:50.112469] [0x00007bbf24c69740] [info]    [timestep=70] Agent 18 opens task 284
+[2026-09-14 09:58:50.112471] [0x00007bbf24c69740] [info]    [timestep=70] Agent 21 finishes task 60
+[2026-09-14 09:58:50.112473] [0x00007bbf24c69740] [info]    [timestep=70] Agent 24 opens task 299
+[2026-09-14 09:58:50.112482] [0x00007bbf24c69740] [info]    [timestep=70] Agent 26 opens task 262
+[2026-09-14 09:58:50.112485] [0x00007bbf24c69740] [info]    Task 350 is revealed
+[2026-09-14 09:58:50.112487] [0x00007bbf24c69740] [info]    Task 351 is revealed
+[2026-09-14 09:58:50.112489] [0x00007bbf24c69740] [info]    Task 352 is revealed
+[2026-09-14 09:58:50.112490] [0x00007bbf24c69740] [info]    Task 353 is revealed
+[2026-09-14 09:58:50.112492] [0x00007bbf24c69740] [info]    Task 354 is revealed
+current timestep 70
+plan limit 980
+[2026-09-14 09:58:51.032739] [0x00007bbf24c69740] [info]    [timestep=70] planner returns
+[2026-09-14 09:58:51.032791] [0x00007bbf24c69740] [info]    [timestep=71] Agent 1 finishes task 110
+[2026-09-14 09:58:51.032794] [0x00007bbf24c69740] [info]    [timestep=71] Agent 4 finishes task 201
+[2026-09-14 09:58:51.032797] [0x00007bbf24c69740] [info]    [timestep=71] Agent 6 finishes task 173
+[2026-09-14 09:58:51.032799] [0x00007bbf24c69740] [info]    [timestep=71] Agent 23 finishes task 227
+[2026-09-14 09:58:51.032802] [0x00007bbf24c69740] [info]    [timestep=71] Agent 32 finishes task 77
+[2026-09-14 09:58:51.032803] [0x00007bbf24c69740] [info]    [timestep=71] Agent 35 finishes task 280
+[2026-09-14 09:58:51.032806] [0x00007bbf24c69740] [info]    Task 355 is revealed
+[2026-09-14 09:58:51.032809] [0x00007bbf24c69740] [info]    Task 356 is revealed
+[2026-09-14 09:58:51.032810] [0x00007bbf24c69740] [info]    Task 357 is revealed
+[2026-09-14 09:58:51.032812] [0x00007bbf24c69740] [info]    Task 358 is revealed
+[2026-09-14 09:58:51.032816] [0x00007bbf24c69740] [info]    Task 359 is revealed
+current timestep 71
+plan limit 500
+[2026-09-14 09:58:51.953072] [0x00007bbf24c69740] [info]    [timestep=71] planner returns
+[2026-09-14 09:58:51.953130] [0x00007bbf24c69740] [info]    [timestep=72] Agent 1 opens task 350
+[2026-09-14 09:58:51.953133] [0x00007bbf24c69740] [info]    [timestep=72] Agent 4 opens task 99
+[2026-09-14 09:58:51.953135] [0x00007bbf24c69740] [info]    [timestep=72] Agent 6 opens task 288
+[2026-09-14 09:58:51.953137] [0x00007bbf24c69740] [info]    [timestep=72] Agent 31 finishes task 291
+[2026-09-14 09:58:51.953140] [0x00007bbf24c69740] [info]    [timestep=72] Agent 32 opens task 188
+[2026-09-14 09:58:51.953143] [0x00007bbf24c69740] [info]    Task 360 is revealed
+[2026-09-14 09:58:51.953145] [0x00007bbf24c69740] [info]    Task 361 is revealed
+[2026-09-14 09:58:51.953147] [0x00007bbf24c69740] [info]    Task 362 is revealed
+[2026-09-14 09:58:51.953149] [0x00007bbf24c69740] [info]    Task 363 is revealed
+[2026-09-14 09:58:51.953151] [0x00007bbf24c69740] [info]    Task 364 is revealed
+current timestep 72
+plan limit 980
+[2026-09-14 09:58:52.873451] [0x00007bbf24c69740] [info]    [timestep=72] planner returns
+[2026-09-14 09:58:52.873491] [0x00007bbf24c69740] [info]    [timestep=73] Agent 33 opens task 342
+[2026-09-14 09:58:52.873495] [0x00007bbf24c69740] [info]    Task 365 is revealed
+[2026-09-14 09:58:52.873497] [0x00007bbf24c69740] [info]    Task 366 is revealed
+[2026-09-14 09:58:52.873499] [0x00007bbf24c69740] [info]    Task 367 is revealed
+[2026-09-14 09:58:52.873501] [0x00007bbf24c69740] [info]    Task 368 is revealed
+[2026-09-14 09:58:52.873502] [0x00007bbf24c69740] [info]    Task 369 is revealed
+current timestep 73
+plan limit 980
+[2026-09-14 09:58:53.793791] [0x00007bbf24c69740] [info]    [timestep=73] planner returns
+[2026-09-14 09:58:53.793841] [0x00007bbf24c69740] [info]    [timestep=74] Agent 5 opens task 348
+[2026-09-14 09:58:53.793844] [0x00007bbf24c69740] [info]    [timestep=74] Agent 11 finishes task 91
+[2026-09-14 09:58:53.793846] [0x00007bbf24c69740] [info]    [timestep=74] Agent 23 opens task 302
+[2026-09-14 09:58:53.793849] [0x00007bbf24c69740] [info]    [timestep=74] Agent 25 finishes task 114
+[2026-09-14 09:58:53.793851] [0x00007bbf24c69740] [info]    [timestep=74] Agent 41 finishes task 95
+[2026-09-14 09:58:53.793853] [0x00007bbf24c69740] [info]    [timestep=74] Agent 45 finishes task 215
+[2026-09-14 09:58:53.793856] [0x00007bbf24c69740] [info]    Task 370 is revealed
+[2026-09-14 09:58:53.793869] [0x00007bbf24c69740] [info]    Task 371 is revealed
+[2026-09-14 09:58:53.793871] [0x00007bbf24c69740] [info]    Task 372 is revealed
+[2026-09-14 09:58:53.793872] [0x00007bbf24c69740] [info]    Task 373 is revealed
+[2026-09-14 09:58:53.793874] [0x00007bbf24c69740] [info]    Task 374 is revealed
+current timestep 74
+plan limit 500
+[2026-09-14 09:58:54.714096] [0x00007bbf24c69740] [info]    [timestep=74] planner returns
+[2026-09-14 09:58:54.714131] [0x00007bbf24c69740] [info]    [timestep=75] Agent 7 finishes task 269
+[2026-09-14 09:58:54.714133] [0x00007bbf24c69740] [info]    [timestep=75] Agent 12 finishes task 283
+[2026-09-14 09:58:54.714136] [0x00007bbf24c69740] [info]    [timestep=75] Agent 21 opens task 131
+[2026-09-14 09:58:54.714137] [0x00007bbf24c69740] [info]    [timestep=75] Agent 29 finishes task 182
+[2026-09-14 09:58:54.714139] [0x00007bbf24c69740] [info]    [timestep=75] Agent 31 opens task 117
+[2026-09-14 09:58:54.714140] [0x00007bbf24c69740] [info]    [timestep=75] Agent 35 opens task 234
+[2026-09-14 09:58:54.714143] [0x00007bbf24c69740] [info]    Task 375 is revealed
+[2026-09-14 09:58:54.714145] [0x00007bbf24c69740] [info]    Task 376 is revealed
+[2026-09-14 09:58:54.714147] [0x00007bbf24c69740] [info]    Task 377 is revealed
+[2026-09-14 09:58:54.714148] [0x00007bbf24c69740] [info]    Task 378 is revealed
+[2026-09-14 09:58:54.714150] [0x00007bbf24c69740] [info]    Task 379 is revealed
+current timestep 75
+plan limit 500
+[2026-09-14 09:58:55.634373] [0x00007bbf24c69740] [info]    [timestep=75] planner returns
+[2026-09-14 09:58:55.634410] [0x00007bbf24c69740] [info]    [timestep=76] Agent 7 opens task 177
+[2026-09-14 09:58:55.634412] [0x00007bbf24c69740] [info]    [timestep=76] Agent 11 opens task 355
+[2026-09-14 09:58:55.634414] [0x00007bbf24c69740] [info]    [timestep=76] Agent 25 opens task 120
+[2026-09-14 09:58:55.634416] [0x00007bbf24c69740] [info]    [timestep=76] Agent 29 opens task 251
+[2026-09-14 09:58:55.634421] [0x00007bbf24c69740] [info]    [timestep=76] Agent 30 finishes task 243
+[2026-09-14 09:58:55.634424] [0x00007bbf24c69740] [info]    [timestep=76] Agent 41 opens task 332
+[2026-09-14 09:58:55.634425] [0x00007bbf24c69740] [info]    [timestep=76] Agent 45 opens task 326
+[2026-09-14 09:58:55.634428] [0x00007bbf24c69740] [info]    Task 380 is revealed
+[2026-09-14 09:58:55.634430] [0x00007bbf24c69740] [info]    Task 381 is revealed
+[2026-09-14 09:58:55.634431] [0x00007bbf24c69740] [info]    Task 382 is revealed
+[2026-09-14 09:58:55.634433] [0x00007bbf24c69740] [info]    Task 383 is revealed
+[2026-09-14 09:58:55.634434] [0x00007bbf24c69740] [info]    Task 384 is revealed
+current timestep 76
+plan limit 980
+[2026-09-14 09:58:56.554735] [0x00007bbf24c69740] [info]    [timestep=76] planner returns
+[2026-09-14 09:58:56.554795] [0x00007bbf24c69740] [info]    [timestep=77] Agent 9 finishes task 213
+[2026-09-14 09:58:56.554799] [0x00007bbf24c69740] [info]    [timestep=77] Agent 11 finishes task 355
+[2026-09-14 09:58:56.554801] [0x00007bbf24c69740] [info]    [timestep=77] Agent 13 finishes task 229
+[2026-09-14 09:58:56.554803] [0x00007bbf24c69740] [info]    [timestep=77] Agent 15 finishes task 279
+[2026-09-14 09:58:56.554805] [0x00007bbf24c69740] [info]    [timestep=77] Agent 28 finishes task 311
+[2026-09-14 09:58:56.554807] [0x00007bbf24c69740] [info]    [timestep=77] Agent 30 opens task 196
+[2026-09-14 09:58:56.554810] [0x00007bbf24c69740] [info]    Task 385 is revealed
+[2026-09-14 09:58:56.554813] [0x00007bbf24c69740] [info]    Task 386 is revealed
+[2026-09-14 09:58:56.554816] [0x00007bbf24c69740] [info]    Task 387 is revealed
+[2026-09-14 09:58:56.554818] [0x00007bbf24c69740] [info]    Task 388 is revealed
+[2026-09-14 09:58:56.554820] [0x00007bbf24c69740] [info]    Task 389 is revealed
+current timestep 77
+plan limit 500
+[2026-09-14 09:58:57.475066] [0x00007bbf24c69740] [info]    [timestep=77] planner returns
+[2026-09-14 09:58:57.475112] [0x00007bbf24c69740] [info]    [timestep=78] Agent 0 finishes task 248
+[2026-09-14 09:58:57.475115] [0x00007bbf24c69740] [info]    [timestep=78] Agent 11 opens task 274
+[2026-09-14 09:58:57.475128] [0x00007bbf24c69740] [info]    [timestep=78] Agent 28 opens task 364
+[2026-09-14 09:58:57.475130] [0x00007bbf24c69740] [info]    [timestep=78] Agent 38 finishes task 128
+[2026-09-14 09:58:57.475132] [0x00007bbf24c69740] [info]    [timestep=78] Agent 40 finishes task 252
+[2026-09-14 09:58:57.475134] [0x00007bbf24c69740] [info]    [timestep=78] Agent 47 finishes task 344
+[2026-09-14 09:58:57.475136] [0x00007bbf24c69740] [info]    [timestep=78] Agent 49 finishes task 153
+[2026-09-14 09:58:57.475138] [0x00007bbf24c69740] [info]    Task 390 is revealed
+[2026-09-14 09:58:57.475140] [0x00007bbf24c69740] [info]    Task 391 is revealed
+[2026-09-14 09:58:57.475142] [0x00007bbf24c69740] [info]    Task 392 is revealed
+[2026-09-14 09:58:57.475144] [0x00007bbf24c69740] [info]    Task 393 is revealed
+[2026-09-14 09:58:57.475145] [0x00007bbf24c69740] [info]    Task 394 is revealed
+current timestep 78
+plan limit 500
+[2026-09-14 09:58:58.395338] [0x00007bbf24c69740] [info]    [timestep=78] planner returns
+[2026-09-14 09:58:58.395381] [0x00007bbf24c69740] [info]    [timestep=79] Agent 8 finishes task 207
+[2026-09-14 09:58:58.395384] [0x00007bbf24c69740] [info]    [timestep=79] Agent 10 finishes task 222
+[2026-09-14 09:58:58.395386] [0x00007bbf24c69740] [info]    [timestep=79] Agent 13 opens task 56
+[2026-09-14 09:58:58.395388] [0x00007bbf24c69740] [info]    [timestep=79] Agent 37 finishes task 157
+[2026-09-14 09:58:58.395390] [0x00007bbf24c69740] [info]    [timestep=79] Agent 44 finishes task 216
+[2026-09-14 09:58:58.395391] [0x00007bbf24c69740] [info]    [timestep=79] Agent 47 opens task 339
+[2026-09-14 09:58:58.395393] [0x00007bbf24c69740] [info]    [timestep=79] Agent 49 opens task 351
+[2026-09-14 09:58:58.395395] [0x00007bbf24c69740] [info]    Task 395 is revealed
+[2026-09-14 09:58:58.395397] [0x00007bbf24c69740] [info]    Task 396 is revealed
+[2026-09-14 09:58:58.395398] [0x00007bbf24c69740] [info]    Task 397 is revealed
+[2026-09-14 09:58:58.395400] [0x00007bbf24c69740] [info]    Task 398 is revealed
+[2026-09-14 09:58:58.395401] [0x00007bbf24c69740] [info]    Task 399 is revealed
+current timestep 79
+plan limit 500
+[2026-09-14 09:58:59.315613] [0x00007bbf24c69740] [info]    [timestep=79] planner returns
+[2026-09-14 09:58:59.315652] [0x00007bbf24c69740] [info]    [timestep=80] Agent 9 opens task 381
+[2026-09-14 09:58:59.315654] [0x00007bbf24c69740] [info]    [timestep=80] Agent 10 opens task 376
+[2026-09-14 09:58:59.315657] [0x00007bbf24c69740] [info]    [timestep=80] Agent 16 finishes task 164
+[2026-09-14 09:58:59.315659] [0x00007bbf24c69740] [info]    [timestep=80] Agent 27 finishes task 217
+[2026-09-14 09:58:59.315662] [0x00007bbf24c69740] [info]    Task 400 is revealed
+[2026-09-14 09:58:59.315664] [0x00007bbf24c69740] [info]    Task 401 is revealed
+[2026-09-14 09:58:59.315665] [0x00007bbf24c69740] [info]    Task 402 is revealed
+[2026-09-14 09:58:59.315667] [0x00007bbf24c69740] [info]    Task 403 is revealed
+[2026-09-14 09:58:59.315669] [0x00007bbf24c69740] [info]    Task 404 is revealed
+current timestep 80
+plan limit 500
+[2026-09-14 09:59:00.235919] [0x00007bbf24c69740] [info]    [timestep=80] planner returns
+[2026-09-14 09:59:00.235970] [0x00007bbf24c69740] [info]    [timestep=81] Agent 0 opens task 345
+[2026-09-14 09:59:00.235972] [0x00007bbf24c69740] [info]    [timestep=81] Agent 12 opens task 371
+[2026-09-14 09:59:00.235974] [0x00007bbf24c69740] [info]    [timestep=81] Agent 22 finishes task 220
+[2026-09-14 09:59:00.235977] [0x00007bbf24c69740] [info]    [timestep=81] Agent 38 opens task 137
+[2026-09-14 09:59:00.235979] [0x00007bbf24c69740] [info]    Task 405 is revealed
+[2026-09-14 09:59:00.235981] [0x00007bbf24c69740] [info]    Task 406 is revealed
+[2026-09-14 09:59:00.235982] [0x00007bbf24c69740] [info]    Task 407 is revealed
+[2026-09-14 09:59:00.235984] [0x00007bbf24c69740] [info]    Task 408 is revealed
+[2026-09-14 09:59:00.235986] [0x00007bbf24c69740] [info]    Task 409 is revealed
+current timestep 81
+plan limit 980
+[2026-09-14 09:59:01.156234] [0x00007bbf24c69740] [info]    [timestep=81] planner returns
+[2026-09-14 09:59:01.156285] [0x00007bbf24c69740] [info]    [timestep=82] Agent 5 finishes task 348
+[2026-09-14 09:59:01.156288] [0x00007bbf24c69740] [info]    [timestep=82] Agent 15 opens task 387
+[2026-09-14 09:59:01.156290] [0x00007bbf24c69740] [info]    [timestep=82] Agent 23 finishes task 302
+[2026-09-14 09:59:01.156292] [0x00007bbf24c69740] [info]    [timestep=82] Agent 36 finishes task 239
+[2026-09-14 09:59:01.156295] [0x00007bbf24c69740] [info]    [timestep=82] Agent 39 finishes task 63
+[2026-09-14 09:59:01.156297] [0x00007bbf24c69740] [info]    [timestep=82] Agent 44 opens task 352
+[2026-09-14 09:59:01.156300] [0x00007bbf24c69740] [info]    Task 410 is revealed
+[2026-09-14 09:59:01.156302] [0x00007bbf24c69740] [info]    Task 411 is revealed
+[2026-09-14 09:59:01.156303] [0x00007bbf24c69740] [info]    Task 412 is revealed
+[2026-09-14 09:59:01.156305] [0x00007bbf24c69740] [info]    Task 413 is revealed
+[2026-09-14 09:59:01.156307] [0x00007bbf24c69740] [info]    Task 414 is revealed
+current timestep 82
+plan limit 500
+[2026-09-14 09:59:02.076522] [0x00007bbf24c69740] [info]    [timestep=82] planner returns
+[2026-09-14 09:59:02.076569] [0x00007bbf24c69740] [info]    [timestep=83] Agent 5 opens task 172
+[2026-09-14 09:59:02.076572] [0x00007bbf24c69740] [info]    [timestep=83] Agent 16 opens task 343
+[2026-09-14 09:59:02.076574] [0x00007bbf24c69740] [info]    [timestep=83] Agent 20 finishes task 149
+[2026-09-14 09:59:02.076576] [0x00007bbf24c69740] [info]    [timestep=83] Agent 23 opens task 407
+[2026-09-14 09:59:02.076579] [0x00007bbf24c69740] [info]    [timestep=83] Agent 33 finishes task 342
+[2026-09-14 09:59:02.076581] [0x00007bbf24c69740] [info]    [timestep=83] Agent 36 opens task 403
+[2026-09-14 09:59:02.076584] [0x00007bbf24c69740] [info]    Task 415 is revealed
+[2026-09-14 09:59:02.076586] [0x00007bbf24c69740] [info]    Task 416 is revealed
+[2026-09-14 09:59:02.076596] [0x00007bbf24c69740] [info]    Task 417 is revealed
+[2026-09-14 09:59:02.076598] [0x00007bbf24c69740] [info]    Task 418 is revealed
+[2026-09-14 09:59:02.076600] [0x00007bbf24c69740] [info]    Task 419 is revealed
+current timestep 83
+plan limit 500
+[2026-09-14 09:59:02.996834] [0x00007bbf24c69740] [info]    [timestep=83] planner returns
+[2026-09-14 09:59:02.996878] [0x00007bbf24c69740] [info]    [timestep=84] Agent 2 finishes task 68
+[2026-09-14 09:59:02.996882] [0x00007bbf24c69740] [info]    [timestep=84] Agent 14 finishes task 329
+[2026-09-14 09:59:02.996884] [0x00007bbf24c69740] [info]    [timestep=84] Agent 19 finishes task 276
+[2026-09-14 09:59:02.996886] [0x00007bbf24c69740] [info]    [timestep=84] Agent 39 opens task 194
+[2026-09-14 09:59:02.996888] [0x00007bbf24c69740] [info]    [timestep=84] Agent 46 finishes task 230
+[2026-09-14 09:59:02.996891] [0x00007bbf24c69740] [info]    Task 420 is revealed
+[2026-09-14 09:59:02.996893] [0x00007bbf24c69740] [info]    Task 421 is revealed
+[2026-09-14 09:59:02.996895] [0x00007bbf24c69740] [info]    Task 422 is revealed
+[2026-09-14 09:59:02.996897] [0x00007bbf24c69740] [info]    Task 423 is revealed
+[2026-09-14 09:59:02.996899] [0x00007bbf24c69740] [info]    Task 424 is revealed
+current timestep 84
+plan limit 500
+[2026-09-14 09:59:03.917106] [0x00007bbf24c69740] [info]    [timestep=84] planner returns
+[2026-09-14 09:59:03.917149] [0x00007bbf24c69740] [info]    [timestep=85] Agent 2 opens task 372
+[2026-09-14 09:59:03.917152] [0x00007bbf24c69740] [info]    [timestep=85] Agent 18 finishes task 284
+[2026-09-14 09:59:03.917154] [0x00007bbf24c69740] [info]    [timestep=85] Agent 25 finishes task 120
+[2026-09-14 09:59:03.917156] [0x00007bbf24c69740] [info]    [timestep=85] Agent 37 opens task 176
+[2026-09-14 09:59:03.917158] [0x00007bbf24c69740] [info]    [timestep=85] Agent 40 opens task 301
+[2026-09-14 09:59:03.917160] [0x00007bbf24c69740] [info]    [timestep=85] Agent 46 opens task 294
+[2026-09-14 09:59:03.917163] [0x00007bbf24c69740] [info]    Task 425 is revealed
+[2026-09-14 09:59:03.917165] [0x00007bbf24c69740] [info]    Task 426 is revealed
+[2026-09-14 09:59:03.917177] [0x00007bbf24c69740] [info]    Task 427 is revealed
+[2026-09-14 09:59:03.917179] [0x00007bbf24c69740] [info]    Task 428 is revealed
+[2026-09-14 09:59:03.917180] [0x00007bbf24c69740] [info]    Task 429 is revealed
+current timestep 85
+plan limit 500
+[2026-09-14 09:59:04.837436] [0x00007bbf24c69740] [info]    [timestep=85] planner returns
+[2026-09-14 09:59:04.837476] [0x00007bbf24c69740] [info]    [timestep=86] Agent 0 finishes task 345
+[2026-09-14 09:59:04.837480] [0x00007bbf24c69740] [info]    [timestep=86] Agent 14 opens task 417
+[2026-09-14 09:59:04.837482] [0x00007bbf24c69740] [info]    [timestep=86] Agent 15 finishes task 387
+[2026-09-14 09:59:04.837483] [0x00007bbf24c69740] [info]    [timestep=86] Agent 18 opens task 327
+[2026-09-14 09:59:04.837485] [0x00007bbf24c69740] [info]    [timestep=86] Agent 24 finishes task 299
+[2026-09-14 09:59:04.837487] [0x00007bbf24c69740] [info]    [timestep=86] Agent 27 opens task 383
+[2026-09-14 09:59:04.837488] [0x00007bbf24c69740] [info]    [timestep=86] Agent 28 finishes task 364
+[2026-09-14 09:59:04.837490] [0x00007bbf24c69740] [info]    [timestep=86] Agent 36 finishes task 403
+[2026-09-14 09:59:04.837492] [0x00007bbf24c69740] [info]    [timestep=86] Agent 48 finishes task 286
+[2026-09-14 09:59:04.837494] [0x00007bbf24c69740] [info]    Task 430 is revealed
+[2026-09-14 09:59:04.837496] [0x00007bbf24c69740] [info]    Task 431 is revealed
+[2026-09-14 09:59:04.837497] [0x00007bbf24c69740] [info]    Task 432 is revealed
+[2026-09-14 09:59:04.837499] [0x00007bbf24c69740] [info]    Task 433 is revealed
+[2026-09-14 09:59:04.837500] [0x00007bbf24c69740] [info]    Task 434 is revealed
+current timestep 86
+plan limit 500
+[2026-09-14 09:59:05.757764] [0x00007bbf24c69740] [info]    [timestep=86] planner returns
+[2026-09-14 09:59:05.757816] [0x00007bbf24c69740] [info]    [timestep=87] Agent 0 opens task 281
+[2026-09-14 09:59:05.757818] [0x00007bbf24c69740] [info]    [timestep=87] Agent 15 opens task 124
+[2026-09-14 09:59:05.757820] [0x00007bbf24c69740] [info]    [timestep=87] Agent 17 finishes task 167
+[2026-09-14 09:59:05.757822] [0x00007bbf24c69740] [info]    [timestep=87] Agent 20 opens task 159
+[2026-09-14 09:59:05.757824] [0x00007bbf24c69740] [info]    [timestep=87] Agent 22 opens task 306
+[2026-09-14 09:59:05.757825] [0x00007bbf24c69740] [info]    [timestep=87] Agent 36 opens task 413
+[2026-09-14 09:59:05.757827] [0x00007bbf24c69740] [info]    [timestep=87] Agent 45 finishes task 326
+[2026-09-14 09:59:05.757829] [0x00007bbf24c69740] [info]    [timestep=87] Agent 48 opens task 331
+[2026-09-14 09:59:05.757831] [0x00007bbf24c69740] [info]    Task 435 is revealed
+[2026-09-14 09:59:05.757833] [0x00007bbf24c69740] [info]    Task 436 is revealed
+[2026-09-14 09:59:05.757835] [0x00007bbf24c69740] [info]    Task 437 is revealed
+[2026-09-14 09:59:05.757836] [0x00007bbf24c69740] [info]    Task 438 is revealed
+[2026-09-14 09:59:05.757838] [0x00007bbf24c69740] [info]    Task 439 is revealed
+current timestep 87
+plan limit 500
+[2026-09-14 09:59:06.678076] [0x00007bbf24c69740] [info]    [timestep=87] planner returns
+[2026-09-14 09:59:06.678115] [0x00007bbf24c69740] [info]    [timestep=88] Agent 3 finishes task 245
+[2026-09-14 09:59:06.678118] [0x00007bbf24c69740] [info]    [timestep=88] Agent 7 finishes task 177
+[2026-09-14 09:59:06.678120] [0x00007bbf24c69740] [info]    [timestep=88] Agent 8 opens task 357
+[2026-09-14 09:59:06.678122] [0x00007bbf24c69740] [info]    [timestep=88] Agent 24 opens task 415
+[2026-09-14 09:59:06.678124] [0x00007bbf24c69740] [info]    [timestep=88] Agent 25 opens task 377
+[2026-09-14 09:59:06.678125] [0x00007bbf24c69740] [info]    [timestep=88] Agent 28 opens task 148
+[2026-09-14 09:59:06.678128] [0x00007bbf24c69740] [info]    Task 440 is revealed
+[2026-09-14 09:59:06.678129] [0x00007bbf24c69740] [info]    Task 441 is revealed
+[2026-09-14 09:59:06.678131] [0x00007bbf24c69740] [info]    Task 442 is revealed
+[2026-09-14 09:59:06.678133] [0x00007bbf24c69740] [info]    Task 443 is revealed
+[2026-09-14 09:59:06.678134] [0x00007bbf24c69740] [info]    Task 444 is revealed
+current timestep 88
+plan limit 500
+[2026-09-14 09:59:07.598354] [0x00007bbf24c69740] [info]    [timestep=88] planner returns
+[2026-09-14 09:59:07.598397] [0x00007bbf24c69740] [info]    [timestep=89] Agent 3 opens task 330
+[2026-09-14 09:59:07.598399] [0x00007bbf24c69740] [info]    [timestep=89] Agent 7 opens task 401
+[2026-09-14 09:59:07.598402] [0x00007bbf24c69740] [info]    [timestep=89] Agent 33 opens task 396
+[2026-09-14 09:59:07.598404] [0x00007bbf24c69740] [info]    [timestep=89] Agent 42 finishes task 85
+[2026-09-14 09:59:07.598407] [0x00007bbf24c69740] [info]    [timestep=89] Agent 44 finishes task 352
+[2026-09-14 09:59:07.598408] [0x00007bbf24c69740] [info]    [timestep=89] Agent 45 opens task 197
+[2026-09-14 09:59:07.598411] [0x00007bbf24c69740] [info]    Task 445 is revealed
+[2026-09-14 09:59:07.598413] [0x00007bbf24c69740] [info]    Task 446 is revealed
+[2026-09-14 09:59:07.598416] [0x00007bbf24c69740] [info]    Task 447 is revealed
+[2026-09-14 09:59:07.598421] [0x00007bbf24c69740] [info]    Task 448 is revealed
+[2026-09-14 09:59:07.598423] [0x00007bbf24c69740] [info]    Task 449 is revealed
+current timestep 89
+plan limit 500
+[2026-09-14 09:59:08.518682] [0x00007bbf24c69740] [info]    [timestep=89] planner returns
+[2026-09-14 09:59:08.518722] [0x00007bbf24c69740] [info]    [timestep=90] Agent 6 finishes task 288
+[2026-09-14 09:59:08.518725] [0x00007bbf24c69740] [info]    [timestep=90] Agent 17 opens task 106
+[2026-09-14 09:59:08.518728] [0x00007bbf24c69740] [info]    [timestep=90] Agent 21 finishes task 131
+[2026-09-14 09:59:08.518730] [0x00007bbf24c69740] [info]    [timestep=90] Agent 42 opens task 338
+[2026-09-14 09:59:08.518732] [0x00007bbf24c69740] [info]    Task 450 is revealed
+[2026-09-14 09:59:08.518734] [0x00007bbf24c69740] [info]    Task 451 is revealed
+[2026-09-14 09:59:08.518736] [0x00007bbf24c69740] [info]    Task 452 is revealed
+[2026-09-14 09:59:08.518738] [0x00007bbf24c69740] [info]    Task 453 is revealed
+[2026-09-14 09:59:08.518740] [0x00007bbf24c69740] [info]    Task 454 is revealed
+current timestep 90
+plan limit 500
+[2026-09-14 09:59:09.438998] [0x00007bbf24c69740] [info]    [timestep=90] planner returns
+[2026-09-14 09:59:09.439035] [0x00007bbf24c69740] [info]    [timestep=91] Agent 6 opens task 309
+[2026-09-14 09:59:09.439038] [0x00007bbf24c69740] [info]    [timestep=91] Agent 9 finishes task 381
+[2026-09-14 09:59:09.439040] [0x00007bbf24c69740] [info]    [timestep=91] Agent 26 finishes task 262
+[2026-09-14 09:59:09.439042] [0x00007bbf24c69740] [info]    [timestep=91] Agent 29 finishes task 251
+[2026-09-14 09:59:09.439046] [0x00007bbf24c69740] [info]    Task 455 is revealed
+[2026-09-14 09:59:09.439048] [0x00007bbf24c69740] [info]    Task 456 is revealed
+[2026-09-14 09:59:09.439050] [0x00007bbf24c69740] [info]    Task 457 is revealed
+[2026-09-14 09:59:09.439052] [0x00007bbf24c69740] [info]    Task 458 is revealed
+[2026-09-14 09:59:09.439054] [0x00007bbf24c69740] [info]    Task 459 is revealed
+current timestep 91
+plan limit 500
+[2026-09-14 09:59:10.359313] [0x00007bbf24c69740] [info]    [timestep=91] planner returns
+[2026-09-14 09:59:10.359357] [0x00007bbf24c69740] [info]    [timestep=92] Agent 10 finishes task 376
+[2026-09-14 09:59:10.359360] [0x00007bbf24c69740] [info]    [timestep=92] Agent 20 finishes task 159
+[2026-09-14 09:59:10.359363] [0x00007bbf24c69740] [info]    [timestep=92] Agent 29 opens task 162
+[2026-09-14 09:59:10.359365] [0x00007bbf24c69740] [info]    [timestep=92] Agent 30 finishes task 196
+[2026-09-14 09:59:10.359367] [0x00007bbf24c69740] [info]    [timestep=92] Agent 36 finishes task 413
+[2026-09-14 09:59:10.359369] [0x00007bbf24c69740] [info]    [timestep=92] Agent 40 finishes task 301
+[2026-09-14 09:59:10.359371] [0x00007bbf24c69740] [info]    [timestep=92] Agent 43 finishes task 189
+[2026-09-14 09:59:10.359373] [0x00007bbf24c69740] [info]    [timestep=92] Agent 44 opens task 445
+[2026-09-14 09:59:10.359376] [0x00007bbf24c69740] [info]    Task 460 is revealed
+[2026-09-14 09:59:10.359378] [0x00007bbf24c69740] [info]    Task 461 is revealed
+[2026-09-14 09:59:10.359391] [0x00007bbf24c69740] [info]    Task 462 is revealed
+[2026-09-14 09:59:10.359393] [0x00007bbf24c69740] [info]    Task 463 is revealed
+[2026-09-14 09:59:10.359395] [0x00007bbf24c69740] [info]    Task 464 is revealed
+current timestep 92
+plan limit 500
+[2026-09-14 09:59:11.279622] [0x00007bbf24c69740] [info]    [timestep=92] planner returns
+[2026-09-14 09:59:11.279664] [0x00007bbf24c69740] [info]    [timestep=93] Agent 10 opens task 461
+[2026-09-14 09:59:11.279666] [0x00007bbf24c69740] [info]    [timestep=93] Agent 26 opens task 441
+[2026-09-14 09:59:11.279668] [0x00007bbf24c69740] [info]    [timestep=93] Agent 36 opens task 422
+[2026-09-14 09:59:11.279670] [0x00007bbf24c69740] [info]    [timestep=93] Agent 43 opens task 51
+[2026-09-14 09:59:11.279672] [0x00007bbf24c69740] [info]    [timestep=93] Agent 47 finishes task 339
+[2026-09-14 09:59:11.279675] [0x00007bbf24c69740] [info]    Task 465 is revealed
+[2026-09-14 09:59:11.279676] [0x00007bbf24c69740] [info]    Task 466 is revealed
+[2026-09-14 09:59:11.279678] [0x00007bbf24c69740] [info]    Task 467 is revealed
+[2026-09-14 09:59:11.279680] [0x00007bbf24c69740] [info]    Task 468 is revealed
+[2026-09-14 09:59:11.279681] [0x00007bbf24c69740] [info]    Task 469 is revealed
+current timestep 93
+plan limit 980
+[2026-09-14 09:59:12.199992] [0x00007bbf24c69740] [info]    [timestep=93] planner returns
+[2026-09-14 09:59:12.200038] [0x00007bbf24c69740] [info]    [timestep=94] Agent 14 finishes task 417
+[2026-09-14 09:59:12.200042] [0x00007bbf24c69740] [info]    [timestep=94] Agent 19 opens task 367
+[2026-09-14 09:59:12.200043] [0x00007bbf24c69740] [info]    [timestep=94] Agent 20 opens task 74
+[2026-09-14 09:59:12.200045] [0x00007bbf24c69740] [info]    [timestep=94] Agent 30 opens task 362
+[2026-09-14 09:59:12.200046] [0x00007bbf24c69740] [info]    [timestep=94] Agent 34 finishes task 260
+[2026-09-14 09:59:12.200048] [0x00007bbf24c69740] [info]    [timestep=94] Agent 37 finishes task 176
+[2026-09-14 09:59:12.200050] [0x00007bbf24c69740] [info]    [timestep=94] Agent 40 opens task 141
+[2026-09-14 09:59:12.200052] [0x00007bbf24c69740] [info]    Task 470 is revealed
+[2026-09-14 09:59:12.200054] [0x00007bbf24c69740] [info]    Task 471 is revealed
+[2026-09-14 09:59:12.200056] [0x00007bbf24c69740] [info]    Task 472 is revealed
+[2026-09-14 09:59:12.200057] [0x00007bbf24c69740] [info]    Task 473 is revealed
+[2026-09-14 09:59:12.200059] [0x00007bbf24c69740] [info]    Task 474 is revealed
+current timestep 94
+plan limit 500
+[2026-09-14 09:59:13.120321] [0x00007bbf24c69740] [info]    [timestep=94] planner returns
+[2026-09-14 09:59:13.120358] [0x00007bbf24c69740] [info]    [timestep=95] Agent 14 opens task 405
+[2026-09-14 09:59:13.120360] [0x00007bbf24c69740] [info]    [timestep=95] Agent 21 opens task 442
+[2026-09-14 09:59:13.120363] [0x00007bbf24c69740] [info]    [timestep=95] Agent 24 finishes task 415
+[2026-09-14 09:59:13.120366] [0x00007bbf24c69740] [info]    [timestep=95] Agent 34 opens task 186
+[2026-09-14 09:59:13.120368] [0x00007bbf24c69740] [info]    [timestep=95] Agent 49 finishes task 351
+[2026-09-14 09:59:13.120370] [0x00007bbf24c69740] [info]    Task 475 is revealed
+[2026-09-14 09:59:13.120372] [0x00007bbf24c69740] [info]    Task 476 is revealed
+[2026-09-14 09:59:13.120374] [0x00007bbf24c69740] [info]    Task 477 is revealed
+[2026-09-14 09:59:13.120376] [0x00007bbf24c69740] [info]    Task 478 is revealed
+[2026-09-14 09:59:13.120378] [0x00007bbf24c69740] [info]    Task 479 is revealed
+current timestep 95
+plan limit 500
+[2026-09-14 09:59:14.040639] [0x00007bbf24c69740] [info]    [timestep=95] planner returns
+[2026-09-14 09:59:14.040681] [0x00007bbf24c69740] [info]    [timestep=96] Agent 1 finishes task 350
+[2026-09-14 09:59:14.040685] [0x00007bbf24c69740] [info]    [timestep=96] Agent 11 finishes task 274
+[2026-09-14 09:59:14.040687] [0x00007bbf24c69740] [info]    [timestep=96] Agent 16 finishes task 343
+[2026-09-14 09:59:14.040689] [0x00007bbf24c69740] [info]    [timestep=96] Agent 24 opens task 160
+[2026-09-14 09:59:14.040691] [0x00007bbf24c69740] [info]    [timestep=96] Agent 32 finishes task 188
+[2026-09-14 09:59:14.040701] [0x00007bbf24c69740] [info]    [timestep=96] Agent 37 opens task 67
+[2026-09-14 09:59:14.040703] [0x00007bbf24c69740] [info]    [timestep=96] Agent 41 finishes task 332
+[2026-09-14 09:59:14.040704] [0x00007bbf24c69740] [info]    [timestep=96] Agent 46 finishes task 294
+[2026-09-14 09:59:14.040707] [0x00007bbf24c69740] [info]    Task 480 is revealed
+[2026-09-14 09:59:14.040709] [0x00007bbf24c69740] [info]    Task 481 is revealed
+[2026-09-14 09:59:14.040710] [0x00007bbf24c69740] [info]    Task 482 is revealed
+[2026-09-14 09:59:14.040712] [0x00007bbf24c69740] [info]    Task 483 is revealed
+[2026-09-14 09:59:14.040713] [0x00007bbf24c69740] [info]    Task 484 is revealed
+current timestep 96
+plan limit 500
+[2026-09-14 09:59:14.960968] [0x00007bbf24c69740] [info]    [timestep=96] planner returns
+[2026-09-14 09:59:14.961008] [0x00007bbf24c69740] [info]    [timestep=97] Agent 1 opens task 454
+[2026-09-14 09:59:14.961010] [0x00007bbf24c69740] [info]    [timestep=97] Agent 9 opens task 363
+[2026-09-14 09:59:14.961012] [0x00007bbf24c69740] [info]    [timestep=97] Agent 11 opens task 476
+[2026-09-14 09:59:14.961014] [0x00007bbf24c69740] [info]    [timestep=97] Agent 13 finishes task 56
+[2026-09-14 09:59:14.961016] [0x00007bbf24c69740] [info]    [timestep=97] Agent 32 opens task 421
+[2026-09-14 09:59:14.961018] [0x00007bbf24c69740] [info]    [timestep=97] Agent 39 finishes task 194
+[2026-09-14 09:59:14.961021] [0x00007bbf24c69740] [info]    Task 485 is revealed
+[2026-09-14 09:59:14.961026] [0x00007bbf24c69740] [info]    Task 486 is revealed
+[2026-09-14 09:59:14.961027] [0x00007bbf24c69740] [info]    Task 487 is revealed
+[2026-09-14 09:59:14.961029] [0x00007bbf24c69740] [info]    Task 488 is revealed
+[2026-09-14 09:59:14.961030] [0x00007bbf24c69740] [info]    Task 489 is revealed
+current timestep 97
+plan limit 500
+[2026-09-14 09:59:15.881267] [0x00007bbf24c69740] [info]    [timestep=97] planner returns
+[2026-09-14 09:59:15.881309] [0x00007bbf24c69740] [info]    [timestep=98] Agent 7 finishes task 401
+[2026-09-14 09:59:15.881312] [0x00007bbf24c69740] [info]    [timestep=98] Agent 12 finishes task 371
+[2026-09-14 09:59:15.881314] [0x00007bbf24c69740] [info]    [timestep=98] Agent 13 opens task 481
+[2026-09-14 09:59:15.881316] [0x00007bbf24c69740] [info]    [timestep=98] Agent 18 finishes task 327
+[2026-09-14 09:59:15.881318] [0x00007bbf24c69740] [info]    [timestep=98] Agent 36 finishes task 422
+[2026-09-14 09:59:15.881320] [0x00007bbf24c69740] [info]    [timestep=98] Agent 47 opens task 303
+[2026-09-14 09:59:15.881323] [0x00007bbf24c69740] [info]    Task 490 is revealed
+[2026-09-14 09:59:15.881325] [0x00007bbf24c69740] [info]    Task 491 is revealed
+[2026-09-14 09:59:15.881326] [0x00007bbf24c69740] [info]    Task 492 is revealed
+[2026-09-14 09:59:15.881328] [0x00007bbf24c69740] [info]    Task 493 is revealed
+[2026-09-14 09:59:15.881330] [0x00007bbf24c69740] [info]    Task 494 is revealed
+current timestep 98
+plan limit 500
+[2026-09-14 09:59:16.801570] [0x00007bbf24c69740] [info]    [timestep=98] planner returns
+[2026-09-14 09:59:16.801614] [0x00007bbf24c69740] [info]    [timestep=99] Agent 16 opens task 475
+[2026-09-14 09:59:16.801616] [0x00007bbf24c69740] [info]    [timestep=99] Agent 18 opens task 448
+[2026-09-14 09:59:16.801618] [0x00007bbf24c69740] [info]    [timestep=99] Agent 31 finishes task 117
+[2026-09-14 09:59:16.801620] [0x00007bbf24c69740] [info]    [timestep=99] Agent 41 opens task 409
+[2026-09-14 09:59:16.801622] [0x00007bbf24c69740] [info]    [timestep=99] Agent 45 finishes task 197
+[2026-09-14 09:59:16.801624] [0x00007bbf24c69740] [info]    [timestep=99] Agent 48 finishes task 331
+[2026-09-14 09:59:16.801625] [0x00007bbf24c69740] [info]    [timestep=99] Agent 49 opens task 460
+[2026-09-14 09:59:16.801628] [0x00007bbf24c69740] [info]    Task 495 is revealed
+[2026-09-14 09:59:16.801630] [0x00007bbf24c69740] [info]    Task 496 is revealed
+[2026-09-14 09:59:16.801631] [0x00007bbf24c69740] [info]    Task 497 is revealed
+[2026-09-14 09:59:16.801633] [0x00007bbf24c69740] [info]    Task 498 is revealed
+[2026-09-14 09:59:16.801653] [0x00007bbf24c69740] [info]    Task 499 is revealed
+current timestep 99
+plan limit 500
+[2026-09-14 09:59:17.721890] [0x00007bbf24c69740] [info]    [timestep=99] planner returns
+[2026-09-14 09:59:17.721929] [0x00007bbf24c69740] [info]    [timestep=100] Agent 7 opens task 156
+[2026-09-14 09:59:17.721932] [0x00007bbf24c69740] [info]    [timestep=100] Agent 25 finishes task 377
+[2026-09-14 09:59:17.721934] [0x00007bbf24c69740] [info]    [timestep=100] Agent 31 opens task 88
+[2026-09-14 09:59:17.721936] [0x00007bbf24c69740] [info]    [timestep=100] Agent 36 opens task 494
+[2026-09-14 09:59:17.721937] [0x00007bbf24c69740] [info]    [timestep=100] Agent 39 opens task 473
+[2026-09-14 09:59:17.721939] [0x00007bbf24c69740] [info]    [timestep=100] Agent 42 finishes task 338
+current timestep 100
+plan limit 500
+[2026-09-14 09:59:18.642224] [0x00007bbf24c69740] [info]    [timestep=100] planner returns
+[2026-09-14 09:59:18.642268] [0x00007bbf24c69740] [info]    [timestep=101] Agent 5 finishes task 172
+[2026-09-14 09:59:18.642272] [0x00007bbf24c69740] [info]    [timestep=101] Agent 12 opens task 452
+[2026-09-14 09:59:18.642275] [0x00007bbf24c69740] [info]    [timestep=101] Agent 25 opens task 432
+[2026-09-14 09:59:18.642277] [0x00007bbf24c69740] [info]    [timestep=101] Agent 45 opens task 477
+current timestep 101
+plan limit 980
+[2026-09-14 09:59:19.562511] [0x00007bbf24c69740] [info]    [timestep=101] planner returns
+[2026-09-14 09:59:19.562551] [0x00007bbf24c69740] [info]    [timestep=102] Agent 4 finishes task 99
+[2026-09-14 09:59:19.562555] [0x00007bbf24c69740] [info]    [timestep=102] Agent 26 finishes task 441
+[2026-09-14 09:59:19.562557] [0x00007bbf24c69740] [info]    [timestep=102] Agent 44 finishes task 445
+[2026-09-14 09:59:19.562559] [0x00007bbf24c69740] [info]    [timestep=102] Agent 46 opens task 468
+current timestep 102
+plan limit 500
+[2026-09-14 09:59:20.482821] [0x00007bbf24c69740] [info]    [timestep=102] planner returns
+[2026-09-14 09:59:20.482859] [0x00007bbf24c69740] [info]    [timestep=103] Agent 2 finishes task 372
+[2026-09-14 09:59:20.482862] [0x00007bbf24c69740] [info]    [timestep=103] Agent 14 finishes task 405
+[2026-09-14 09:59:20.482864] [0x00007bbf24c69740] [info]    [timestep=103] Agent 35 finishes task 234
+[2026-09-14 09:59:20.482866] [0x00007bbf24c69740] [info]    [timestep=103] Agent 36 finishes task 494
+current timestep 103
+plan limit 500
+[2026-09-14 09:59:21.403117] [0x00007bbf24c69740] [info]    [timestep=103] planner returns
+[2026-09-14 09:59:21.403165] [0x00007bbf24c69740] [info]    [timestep=104] Agent 2 opens task 404
+[2026-09-14 09:59:21.403168] [0x00007bbf24c69740] [info]    [timestep=104] Agent 3 finishes task 330
+[2026-09-14 09:59:21.403172] [0x00007bbf24c69740] [info]    [timestep=104] Agent 14 opens task 457
+[2026-09-14 09:59:21.403174] [0x00007bbf24c69740] [info]    [timestep=104] Agent 33 finishes task 396
+[2026-09-14 09:59:21.403176] [0x00007bbf24c69740] [info]    [timestep=104] Agent 35 opens task 424
+[2026-09-14 09:59:21.403178] [0x00007bbf24c69740] [info]    [timestep=104] Agent 36 opens task 315
+[2026-09-14 09:59:21.403180] [0x00007bbf24c69740] [info]    [timestep=104] Agent 42 opens task 426
+current timestep 104
+plan limit 500
+[2026-09-14 09:59:22.323438] [0x00007bbf24c69740] [info]    [timestep=104] planner returns
+[2026-09-14 09:59:22.323478] [0x00007bbf24c69740] [info]    [timestep=105] Agent 3 opens task 474
+[2026-09-14 09:59:22.323480] [0x00007bbf24c69740] [info]    [timestep=105] Agent 4 opens task 438
+[2026-09-14 09:59:22.323483] [0x00007bbf24c69740] [info]    [timestep=105] Agent 9 finishes task 363
+[2026-09-14 09:59:22.323486] [0x00007bbf24c69740] [info]    [timestep=105] Agent 15 finishes task 124
+[2026-09-14 09:59:22.323488] [0x00007bbf24c69740] [info]    [timestep=105] Agent 26 opens task 304
+[2026-09-14 09:59:22.323489] [0x00007bbf24c69740] [info]    [timestep=105] Agent 27 finishes task 383
+[2026-09-14 09:59:22.323492] [0x00007bbf24c69740] [info]    [timestep=105] Agent 44 opens task 479
+current timestep 105
+plan limit 500
+[2026-09-14 09:59:23.243784] [0x00007bbf24c69740] [info]    [timestep=105] planner returns
+[2026-09-14 09:59:23.243833] [0x00007bbf24c69740] [info]    [timestep=106] Agent 5 opens task 478
+[2026-09-14 09:59:23.243835] [0x00007bbf24c69740] [info]    [timestep=106] Agent 23 finishes task 407
+[2026-09-14 09:59:23.243838] [0x00007bbf24c69740] [info]    [timestep=106] Agent 27 opens task 133
+[2026-09-14 09:59:23.243839] [0x00007bbf24c69740] [info]    [timestep=106] Agent 47 finishes task 303
+[2026-09-14 09:59:23.243841] [0x00007bbf24c69740] [info]    [timestep=106] Agent 48 opens task 267
+current timestep 106
+plan limit 500
+[2026-09-14 09:59:24.164078] [0x00007bbf24c69740] [info]    [timestep=106] planner returns
+[2026-09-14 09:59:24.164124] [0x00007bbf24c69740] [info]    [timestep=107] Agent 10 finishes task 461
+[2026-09-14 09:59:24.164127] [0x00007bbf24c69740] [info]    [timestep=107] Agent 11 finishes task 476
+[2026-09-14 09:59:24.164129] [0x00007bbf24c69740] [info]    [timestep=107] Agent 12 finishes task 452
+[2026-09-14 09:59:24.164131] [0x00007bbf24c69740] [info]    [timestep=107] Agent 17 finishes task 106
+[2026-09-14 09:59:24.164134] [0x00007bbf24c69740] [info]    [timestep=107] Agent 19 finishes task 367
+[2026-09-14 09:59:24.164136] [0x00007bbf24c69740] [info]    [timestep=107] Agent 23 opens task 358
+[2026-09-14 09:59:24.164138] [0x00007bbf24c69740] [info]    [timestep=107] Agent 24 finishes task 160
+[2026-09-14 09:59:24.164141] [0x00007bbf24c69740] [info]    [timestep=107] Agent 33 opens task 463
+[2026-09-14 09:59:24.164143] [0x00007bbf24c69740] [info]    [timestep=107] Agent 47 opens task 449
+current timestep 107
+plan limit 500
+[2026-09-14 09:59:25.084400] [0x00007bbf24c69740] [info]    [timestep=107] planner returns
+[2026-09-14 09:59:25.084444] [0x00007bbf24c69740] [info]    [timestep=108] Agent 9 opens task 412
+[2026-09-14 09:59:25.084446] [0x00007bbf24c69740] [info]    [timestep=108] Agent 10 opens task 316
+[2026-09-14 09:59:25.084449] [0x00007bbf24c69740] [info]    [timestep=108] Agent 12 opens task 453
+[2026-09-14 09:59:25.084451] [0x00007bbf24c69740] [info]    [timestep=108] Agent 13 finishes task 481
+[2026-09-14 09:59:25.084454] [0x00007bbf24c69740] [info]    [timestep=108] Agent 16 finishes task 475
+[2026-09-14 09:59:25.084455] [0x00007bbf24c69740] [info]    [timestep=108] Agent 19 opens task 359
+[2026-09-14 09:59:25.084457] [0x00007bbf24c69740] [info]    [timestep=108] Agent 20 finishes task 74
+[2026-09-14 09:59:25.084460] [0x00007bbf24c69740] [info]    [timestep=108] Agent 40 finishes task 141
+[2026-09-14 09:59:25.084462] [0x00007bbf24c69740] [info]    [timestep=108] Agent 41 finishes task 409
+current timestep 108
+plan limit 500
+[2026-09-14 09:59:26.004740] [0x00007bbf24c69740] [info]    [timestep=108] planner returns
+[2026-09-14 09:59:26.004787] [0x00007bbf24c69740] [info]    [timestep=109] Agent 4 finishes task 438
+[2026-09-14 09:59:26.004789] [0x00007bbf24c69740] [info]    [timestep=109] Agent 8 finishes task 357
+[2026-09-14 09:59:26.004792] [0x00007bbf24c69740] [info]    [timestep=109] Agent 17 opens task 389
+[2026-09-14 09:59:26.004794] [0x00007bbf24c69740] [info]    [timestep=109] Agent 20 opens task 264
+[2026-09-14 09:59:26.004796] [0x00007bbf24c69740] [info]    [timestep=109] Agent 31 finishes task 88
+current timestep 109
+plan limit 500
+[2026-09-14 09:59:26.925043] [0x00007bbf24c69740] [info]    [timestep=109] planner returns
+[2026-09-14 09:59:26.925085] [0x00007bbf24c69740] [info]    [timestep=110] Agent 4 opens task 380
+[2026-09-14 09:59:26.925089] [0x00007bbf24c69740] [info]    [timestep=110] Agent 6 finishes task 309
+[2026-09-14 09:59:26.925091] [0x00007bbf24c69740] [info]    [timestep=110] Agent 15 opens task 385
+[2026-09-14 09:59:26.925093] [0x00007bbf24c69740] [info]    [timestep=110] Agent 16 opens task 437
+[2026-09-14 09:59:26.925095] [0x00007bbf24c69740] [info]    [timestep=110] Agent 22 finishes task 306
+[2026-09-14 09:59:26.925097] [0x00007bbf24c69740] [info]    [timestep=110] Agent 24 opens task 58
+[2026-09-14 09:59:26.925099] [0x00007bbf24c69740] [info]    [timestep=110] Agent 31 opens task 431
+[2026-09-14 09:59:26.925110] [0x00007bbf24c69740] [info]    [timestep=110] Agent 40 opens task 425
+[2026-09-14 09:59:26.925112] [0x00007bbf24c69740] [info]    [timestep=110] Agent 41 opens task 322
+[2026-09-14 09:59:26.925113] [0x00007bbf24c69740] [info]    [timestep=110] Agent 49 finishes task 460
+current timestep 110
+plan limit 500
+[2026-09-14 09:59:27.845378] [0x00007bbf24c69740] [info]    [timestep=110] planner returns
+[2026-09-14 09:59:27.845422] [0x00007bbf24c69740] [info]    [timestep=111] Agent 0 finishes task 281
+[2026-09-14 09:59:27.845426] [0x00007bbf24c69740] [info]    [timestep=111] Agent 37 finishes task 67
+current timestep 111
+plan limit 500
+[2026-09-14 09:59:28.765697] [0x00007bbf24c69740] [info]    [timestep=111] planner returns
+[2026-09-14 09:59:28.765737] [0x00007bbf24c69740] [info]    [timestep=112] Agent 0 opens task 244
+[2026-09-14 09:59:28.765741] [0x00007bbf24c69740] [info]    [timestep=112] Agent 28 finishes task 148
+[2026-09-14 09:59:28.765743] [0x00007bbf24c69740] [info]    [timestep=112] Agent 30 finishes task 362
+[2026-09-14 09:59:28.765750] [0x00007bbf24c69740] [info]    [timestep=112] Agent 38 finishes task 137
+current timestep 112
+plan limit 500
+[2026-09-14 09:59:29.686034] [0x00007bbf24c69740] [info]    [timestep=112] planner returns
+[2026-09-14 09:59:29.686083] [0x00007bbf24c69740] [info]    [timestep=113] Agent 13 opens task 312
+[2026-09-14 09:59:29.686085] [0x00007bbf24c69740] [info]    [timestep=113] Agent 28 opens task 390
+[2026-09-14 09:59:29.686087] [0x00007bbf24c69740] [info]    [timestep=113] Agent 30 opens task 493
+[2026-09-14 09:59:29.686089] [0x00007bbf24c69740] [info]    [timestep=113] Agent 38 opens task 450
+[2026-09-14 09:59:29.686091] [0x00007bbf24c69740] [info]    [timestep=113] Agent 39 finishes task 473
+current timestep 113
+plan limit 980
+[2026-09-14 09:59:30.606388] [0x00007bbf24c69740] [info]    [timestep=113] planner returns
+[2026-09-14 09:59:30.606429] [0x00007bbf24c69740] [info]    [timestep=114] Agent 11 opens task 469
+[2026-09-14 09:59:30.606432] [0x00007bbf24c69740] [info]    [timestep=114] Agent 35 finishes task 424
+[2026-09-14 09:59:30.606435] [0x00007bbf24c69740] [info]    [timestep=114] Agent 37 opens task 456
+[2026-09-14 09:59:30.606437] [0x00007bbf24c69740] [info]    [timestep=114] Agent 39 opens task 129
+[2026-09-14 09:59:30.606439] [0x00007bbf24c69740] [info]    [timestep=114] Agent 42 finishes task 426
+[2026-09-14 09:59:30.606441] [0x00007bbf24c69740] [info]    [timestep=114] Agent 49 opens task 341
+current timestep 114
+plan limit 500
+[2026-09-14 09:59:31.526716] [0x00007bbf24c69740] [info]    [timestep=114] planner returns
+[2026-09-14 09:59:31.526769] [0x00007bbf24c69740] [info]    [timestep=115] Agent 8 opens task 163
+[2026-09-14 09:59:31.526772] [0x00007bbf24c69740] [info]    [timestep=115] Agent 25 finishes task 432
+current timestep 115
+plan limit 980
+[2026-09-14 09:59:32.447049] [0x00007bbf24c69740] [info]    [timestep=115] planner returns
+[2026-09-14 09:59:32.447090] [0x00007bbf24c69740] [info]    [timestep=116] Agent 5 finishes task 478
+[2026-09-14 09:59:32.447093] [0x00007bbf24c69740] [info]    [timestep=116] Agent 22 opens task 255
+[2026-09-14 09:59:32.447095] [0x00007bbf24c69740] [info]    [timestep=116] Agent 25 opens task 261
+[2026-09-14 09:59:32.447097] [0x00007bbf24c69740] [info]    [timestep=116] Agent 42 opens task 320
+current timestep 116
+plan limit 980
+[2026-09-14 09:59:33.367378] [0x00007bbf24c69740] [info]    [timestep=116] planner returns
+[2026-09-14 09:59:33.367423] [0x00007bbf24c69740] [info]    [timestep=117] Agent 5 opens task 370
+[2026-09-14 09:59:33.367425] [0x00007bbf24c69740] [info]    [timestep=117] Agent 6 opens task 253
+[2026-09-14 09:59:33.367428] [0x00007bbf24c69740] [info]    [timestep=117] Agent 11 finishes task 469
+[2026-09-14 09:59:33.367431] [0x00007bbf24c69740] [info]    [timestep=117] Agent 21 finishes task 442
+[2026-09-14 09:59:33.367433] [0x00007bbf24c69740] [info]    [timestep=117] Agent 48 finishes task 267
+current timestep 117
+plan limit 500
+[2026-09-14 09:59:34.287695] [0x00007bbf24c69740] [info]    [timestep=117] planner returns
+[2026-09-14 09:59:34.287750] [0x00007bbf24c69740] [info]    [timestep=118] Agent 11 opens task 187
+[2026-09-14 09:59:34.287753] [0x00007bbf24c69740] [info]    [timestep=118] Agent 21 opens task 150
+[2026-09-14 09:59:34.287756] [0x00007bbf24c69740] [info]    [timestep=118] Agent 29 finishes task 162
+[2026-09-14 09:59:34.287758] [0x00007bbf24c69740] [info]    [timestep=118] Agent 48 opens task 440
+current timestep 118
+plan limit 980
+[2026-09-14 09:59:35.208034] [0x00007bbf24c69740] [info]    [timestep=118] planner returns
+[2026-09-14 09:59:35.208084] [0x00007bbf24c69740] [info]    [timestep=119] Agent 9 finishes task 412
+[2026-09-14 09:59:35.208087] [0x00007bbf24c69740] [info]    [timestep=119] Agent 19 finishes task 359
+[2026-09-14 09:59:35.208089] [0x00007bbf24c69740] [info]    [timestep=119] Agent 27 finishes task 133
+[2026-09-14 09:59:35.208091] [0x00007bbf24c69740] [info]    [timestep=119] Agent 29 opens task 495
+[2026-09-14 09:59:35.208093] [0x00007bbf24c69740] [info]    [timestep=119] Agent 35 opens task 466
+current timestep 119
+plan limit 500
+[2026-09-14 09:59:36.128343] [0x00007bbf24c69740] [info]    [timestep=119] planner returns
+[2026-09-14 09:59:36.128387] [0x00007bbf24c69740] [info]    [timestep=120] Agent 26 finishes task 304
+[2026-09-14 09:59:36.128390] [0x00007bbf24c69740] [info]    [timestep=120] Agent 32 finishes task 421
+[2026-09-14 09:59:36.128392] [0x00007bbf24c69740] [info]    [timestep=120] Agent 34 finishes task 186
+[2026-09-14 09:59:36.128394] [0x00007bbf24c69740] [info]    [timestep=120] Agent 41 finishes task 322
+[2026-09-14 09:59:36.128396] [0x00007bbf24c69740] [info]    [timestep=120] Agent 45 finishes task 477
+[2026-09-14 09:59:36.128398] [0x00007bbf24c69740] [info]    [timestep=120] Agent 47 finishes task 449
+current timestep 120
+plan limit 500
+[2026-09-14 09:59:37.048634] [0x00007bbf24c69740] [info]    [timestep=120] planner returns
+[2026-09-14 09:59:37.048678] [0x00007bbf24c69740] [info]    [timestep=121] Agent 17 finishes task 389
+[2026-09-14 09:59:37.048681] [0x00007bbf24c69740] [info]    [timestep=121] Agent 26 opens task 75
+[2026-09-14 09:59:37.048684] [0x00007bbf24c69740] [info]    [timestep=121] Agent 45 opens task 356
+[2026-09-14 09:59:37.048686] [0x00007bbf24c69740] [info]    [timestep=121] Agent 47 opens task 297
+current timestep 121
+plan limit 980
+[2026-09-14 09:59:37.968943] [0x00007bbf24c69740] [info]    [timestep=121] planner returns
+[2026-09-14 09:59:37.968989] [0x00007bbf24c69740] [info]    [timestep=122] Agent 9 opens task 399
+[2026-09-14 09:59:37.968992] [0x00007bbf24c69740] [info]    [timestep=122] Agent 19 opens task 408
+[2026-09-14 09:59:37.968994] [0x00007bbf24c69740] [info]    [timestep=122] Agent 30 finishes task 493
+[2026-09-14 09:59:37.968997] [0x00007bbf24c69740] [info]    [timestep=122] Agent 44 finishes task 479
+[2026-09-14 09:59:37.969000] [0x00007bbf24c69740] [info]    [timestep=122] Agent 46 finishes task 468
+current timestep 122
+plan limit 500
+[2026-09-14 09:59:38.889269] [0x00007bbf24c69740] [info]    [timestep=122] planner returns
+[2026-09-14 09:59:38.889315] [0x00007bbf24c69740] [info]    [timestep=123] Agent 1 finishes task 454
+[2026-09-14 09:59:38.889318] [0x00007bbf24c69740] [info]    [timestep=123] Agent 2 finishes task 404
+[2026-09-14 09:59:38.889321] [0x00007bbf24c69740] [info]    [timestep=123] Agent 17 opens task 184
+[2026-09-14 09:59:38.889323] [0x00007bbf24c69740] [info]    [timestep=123] Agent 32 opens task 368
+[2026-09-14 09:59:38.889324] [0x00007bbf24c69740] [info]    [timestep=123] Agent 44 opens task 87
+current timestep 123
+plan limit 500
+[2026-09-14 09:59:39.809547] [0x00007bbf24c69740] [info]    [timestep=123] planner returns
+[2026-09-14 09:59:39.809586] [0x00007bbf24c69740] [info]    [timestep=124] Agent 0 finishes task 244
+[2026-09-14 09:59:39.809590] [0x00007bbf24c69740] [info]    [timestep=124] Agent 16 finishes task 437
+[2026-09-14 09:59:39.809592] [0x00007bbf24c69740] [info]    [timestep=124] Agent 27 opens task 436
+[2026-09-14 09:59:39.809594] [0x00007bbf24c69740] [info]    [timestep=124] Agent 34 opens task 71
+current timestep 124
+plan limit 500
+[2026-09-14 09:59:40.729867] [0x00007bbf24c69740] [info]    [timestep=124] planner returns
+[2026-09-14 09:59:40.729906] [0x00007bbf24c69740] [info]    [timestep=125] Agent 0 opens task 464
+[2026-09-14 09:59:40.729908] [0x00007bbf24c69740] [info]    [timestep=125] Agent 1 opens task 446
+[2026-09-14 09:59:40.729911] [0x00007bbf24c69740] [info]    [timestep=125] Agent 15 finishes task 385
+[2026-09-14 09:59:40.729914] [0x00007bbf24c69740] [info]    [timestep=125] Agent 36 finishes task 315
+[2026-09-14 09:59:40.729915] [0x00007bbf24c69740] [info]    [timestep=125] Agent 40 finishes task 425
+[2026-09-14 09:59:40.729917] [0x00007bbf24c69740] [info]    [timestep=125] Agent 46 opens task 451
+current timestep 125
+plan limit 500
+[2026-09-14 09:59:41.650179] [0x00007bbf24c69740] [info]    [timestep=125] planner returns
+[2026-09-14 09:59:41.650221] [0x00007bbf24c69740] [info]    [timestep=126] Agent 3 finishes task 474
+[2026-09-14 09:59:41.650224] [0x00007bbf24c69740] [info]    [timestep=126] Agent 4 finishes task 380
+[2026-09-14 09:59:41.650227] [0x00007bbf24c69740] [info]    [timestep=126] Agent 23 finishes task 358
+[2026-09-14 09:59:41.650229] [0x00007bbf24c69740] [info]    [timestep=126] Agent 30 opens task 319
+[2026-09-14 09:59:41.650231] [0x00007bbf24c69740] [info]    [timestep=126] Agent 41 opens task 420
+[2026-09-14 09:59:41.650233] [0x00007bbf24c69740] [info]    [timestep=126] Agent 43 finishes task 51
+current timestep 126
+plan limit 500
+[2026-09-14 09:59:42.570450] [0x00007bbf24c69740] [info]    [timestep=126] planner returns
+[2026-09-14 09:59:42.570493] [0x00007bbf24c69740] [info]    [timestep=127] Agent 3 opens task 231
+[2026-09-14 09:59:42.570496] [0x00007bbf24c69740] [info]    [timestep=127] Agent 4 opens task 375
+[2026-09-14 09:59:42.570498] [0x00007bbf24c69740] [info]    [timestep=127] Agent 15 opens task 467
+[2026-09-14 09:59:42.570501] [0x00007bbf24c69740] [info]    [timestep=127] Agent 18 finishes task 448
+[2026-09-14 09:59:42.570503] [0x00007bbf24c69740] [info]    [timestep=127] Agent 23 opens task 66
+[2026-09-14 09:59:42.570505] [0x00007bbf24c69740] [info]    [timestep=127] Agent 33 finishes task 463
+[2026-09-14 09:59:42.570507] [0x00007bbf24c69740] [info]    [timestep=127] Agent 36 opens task 298
+[2026-09-14 09:59:42.570509] [0x00007bbf24c69740] [info]    [timestep=127] Agent 43 opens task 489
+current timestep 127
+plan limit 500
+[2026-09-14 09:59:43.490778] [0x00007bbf24c69740] [info]    [timestep=127] planner returns
+[2026-09-14 09:59:43.490817] [0x00007bbf24c69740] [info]    [timestep=128] Agent 10 finishes task 316
+[2026-09-14 09:59:43.490820] [0x00007bbf24c69740] [info]    [timestep=128] Agent 12 finishes task 453
+current timestep 128
+plan limit 500
+[2026-09-14 09:59:44.411066] [0x00007bbf24c69740] [info]    [timestep=128] planner returns
+[2026-09-14 09:59:44.411113] [0x00007bbf24c69740] [info]    [timestep=129] Agent 2 opens task 223
+[2026-09-14 09:59:44.411116] [0x00007bbf24c69740] [info]    [timestep=129] Agent 10 opens task 402
+[2026-09-14 09:59:44.411117] [0x00007bbf24c69740] [info]    [timestep=129] Agent 18 opens task 111
+[2026-09-14 09:59:44.411120] [0x00007bbf24c69740] [info]    [timestep=129] Agent 20 finishes task 264
+[2026-09-14 09:59:44.411122] [0x00007bbf24c69740] [info]    [timestep=129] Agent 33 opens task 394
+[2026-09-14 09:59:44.411124] [0x00007bbf24c69740] [info]    [timestep=129] Agent 35 finishes task 466
+current timestep 129
+plan limit 500
+[2026-09-14 09:59:45.331356] [0x00007bbf24c69740] [info]    [timestep=129] planner returns
+[2026-09-14 09:59:45.331398] [0x00007bbf24c69740] [info]    [timestep=130] Agent 12 opens task 219
+[2026-09-14 09:59:45.331400] [0x00007bbf24c69740] [info]    [timestep=130] Agent 16 opens task 388
+[2026-09-14 09:59:45.331403] [0x00007bbf24c69740] [info]    [timestep=130] Agent 35 opens task 378
+current timestep 130
+plan limit 980
+[2026-09-14 09:59:46.251642] [0x00007bbf24c69740] [info]    [timestep=130] planner returns
+[2026-09-14 09:59:46.251690] [0x00007bbf24c69740] [info]    [timestep=131] Agent 37 finishes task 456
+[2026-09-14 09:59:46.251700] [0x00007bbf24c69740] [info]    [timestep=131] Agent 49 finishes task 341
+current timestep 131
+plan limit 500
+[2026-09-14 09:59:47.172000] [0x00007bbf24c69740] [info]    [timestep=131] planner returns
+[2026-09-14 09:59:47.172044] [0x00007bbf24c69740] [info]    [timestep=132] Agent 6 finishes task 253
+[2026-09-14 09:59:47.172047] [0x00007bbf24c69740] [info]    [timestep=132] Agent 37 opens task 146
+current timestep 132
+plan limit 500
+[2026-09-14 09:59:48.092318] [0x00007bbf24c69740] [info]    [timestep=132] planner returns
+[2026-09-14 09:59:48.092361] [0x00007bbf24c69740] [info]    [timestep=133] Agent 5 finishes task 370
+current timestep 133
+plan limit 500
+[2026-09-14 09:59:49.012646] [0x00007bbf24c69740] [info]    [timestep=133] planner returns
+[2026-09-14 09:59:49.012693] [0x00007bbf24c69740] [info]    [timestep=134] Agent 7 finishes task 156
+[2026-09-14 09:59:49.012695] [0x00007bbf24c69740] [info]    [timestep=134] Agent 8 finishes task 163
+[2026-09-14 09:59:49.012697] [0x00007bbf24c69740] [info]    [timestep=134] Agent 22 finishes task 255
+[2026-09-14 09:59:49.012699] [0x00007bbf24c69740] [info]    [timestep=134] Agent 31 finishes task 431
+[2026-09-14 09:59:49.012701] [0x00007bbf24c69740] [info]    [timestep=134] Agent 45 finishes task 356
+[2026-09-14 09:59:49.012703] [0x00007bbf24c69740] [info]    [timestep=134] Agent 49 opens task 393
+current timestep 134
+plan limit 500
+[2026-09-14 09:59:49.932969] [0x00007bbf24c69740] [info]    [timestep=134] planner returns
+[2026-09-14 09:59:49.933012] [0x00007bbf24c69740] [info]    [timestep=135] Agent 45 opens task 336
+current timestep 135
+plan limit 980
+[2026-09-14 09:59:50.853249] [0x00007bbf24c69740] [info]    [timestep=135] planner returns
+[2026-09-14 09:59:50.853290] [0x00007bbf24c69740] [info]    [timestep=136] Agent 8 opens task 427
+[2026-09-14 09:59:50.853294] [0x00007bbf24c69740] [info]    [timestep=136] Agent 27 finishes task 436
+[2026-09-14 09:59:50.853296] [0x00007bbf24c69740] [info]    [timestep=136] Agent 39 finishes task 129
+[2026-09-14 09:59:50.853298] [0x00007bbf24c69740] [info]    [timestep=136] Agent 48 finishes task 440
+current timestep 136
+plan limit 500
+[2026-09-14 09:59:51.773555] [0x00007bbf24c69740] [info]    [timestep=136] planner returns
+[2026-09-14 09:59:51.773597] [0x00007bbf24c69740] [info]    [timestep=137] Agent 22 opens task 366
+[2026-09-14 09:59:51.773601] [0x00007bbf24c69740] [info]    [timestep=137] Agent 28 finishes task 390
+[2026-09-14 09:59:51.773604] [0x00007bbf24c69740] [info]    [timestep=137] Agent 39 opens task 340
+current timestep 137
+plan limit 980
+[2026-09-14 09:59:52.693906] [0x00007bbf24c69740] [info]    [timestep=137] planner returns
+[2026-09-14 09:59:52.693952] [0x00007bbf24c69740] [info]    [timestep=138] Agent 6 opens task 296
+[2026-09-14 09:59:52.693955] [0x00007bbf24c69740] [info]    [timestep=138] Agent 27 opens task 410
+[2026-09-14 09:59:52.693957] [0x00007bbf24c69740] [info]    [timestep=138] Agent 41 finishes task 420
+[2026-09-14 09:59:52.693960] [0x00007bbf24c69740] [info]    [timestep=138] Agent 48 opens task 275
+current timestep 138
+plan limit 980
+[2026-09-14 09:59:53.614203] [0x00007bbf24c69740] [info]    [timestep=138] planner returns
+[2026-09-14 09:59:53.614247] [0x00007bbf24c69740] [info]    [timestep=139] Agent 11 finishes task 187
+[2026-09-14 09:59:53.614251] [0x00007bbf24c69740] [info]    [timestep=139] Agent 28 opens task 447
+current timestep 139
+plan limit 980
+[2026-09-14 09:59:54.534490] [0x00007bbf24c69740] [info]    [timestep=139] planner returns
+[2026-09-14 09:59:54.534534] [0x00007bbf24c69740] [info]    [timestep=140] Agent 11 opens task 486
+[2026-09-14 09:59:54.534537] [0x00007bbf24c69740] [info]    [timestep=140] Agent 19 finishes task 408
+[2026-09-14 09:59:54.534540] [0x00007bbf24c69740] [info]    [timestep=140] Agent 25 finishes task 261
+[2026-09-14 09:59:54.534542] [0x00007bbf24c69740] [info]    [timestep=140] Agent 31 opens task 210
+[2026-09-14 09:59:54.534544] [0x00007bbf24c69740] [info]    [timestep=140] Agent 33 finishes task 394
+[2026-09-14 09:59:54.534554] [0x00007bbf24c69740] [info]    [timestep=140] Agent 36 finishes task 298
+current timestep 140
+plan limit 500
+[2026-09-14 09:59:55.454804] [0x00007bbf24c69740] [info]    [timestep=140] planner returns
+[2026-09-14 09:59:55.454848] [0x00007bbf24c69740] [info]    [timestep=141] Agent 13 finishes task 312
+[2026-09-14 09:59:55.454850] [0x00007bbf24c69740] [info]    [timestep=141] Agent 14 finishes task 457
+[2026-09-14 09:59:55.454852] [0x00007bbf24c69740] [info]    [timestep=141] Agent 15 finishes task 467
+[2026-09-14 09:59:55.454854] [0x00007bbf24c69740] [info]    [timestep=141] Agent 20 opens task 105
+[2026-09-14 09:59:55.454855] [0x00007bbf24c69740] [info]    [timestep=141] Agent 25 opens task 482
+[2026-09-14 09:59:55.454857] [0x00007bbf24c69740] [info]    [timestep=141] Agent 29 finishes task 495
+[2026-09-14 09:59:55.454859] [0x00007bbf24c69740] [info]    [timestep=141] Agent 42 finishes task 320
+current timestep 141
+plan limit 500
+[2026-09-14 09:59:56.375130] [0x00007bbf24c69740] [info]    [timestep=141] planner returns
+[2026-09-14 09:59:56.375178] [0x00007bbf24c69740] [info]    [timestep=142] Agent 9 finishes task 399
+[2026-09-14 09:59:56.375181] [0x00007bbf24c69740] [info]    [timestep=142] Agent 13 opens task 203
+[2026-09-14 09:59:56.375183] [0x00007bbf24c69740] [info]    [timestep=142] Agent 14 opens task 61
+[2026-09-14 09:59:56.375185] [0x00007bbf24c69740] [info]    [timestep=142] Agent 36 opens task 192
+[2026-09-14 09:59:56.375186] [0x00007bbf24c69740] [info]    [timestep=142] Agent 38 finishes task 450
+[2026-09-14 09:59:56.375188] [0x00007bbf24c69740] [info]    [timestep=142] Agent 41 opens task 130
+[2026-09-14 09:59:56.375189] [0x00007bbf24c69740] [info]    [timestep=142] Agent 42 opens task 86
+current timestep 142
+plan limit 500
+[2026-09-14 09:59:57.295441] [0x00007bbf24c69740] [info]    [timestep=142] planner returns
+[2026-09-14 09:59:57.295487] [0x00007bbf24c69740] [info]    [timestep=143] Agent 2 finishes task 223
+[2026-09-14 09:59:57.295490] [0x00007bbf24c69740] [info]    [timestep=143] Agent 7 opens task 116
+[2026-09-14 09:59:57.295493] [0x00007bbf24c69740] [info]    [timestep=143] Agent 34 finishes task 71
+current timestep 143
+plan limit 500
+[2026-09-14 09:59:58.215759] [0x00007bbf24c69740] [info]    [timestep=143] planner returns
+[2026-09-14 09:59:58.215824] [0x00007bbf24c69740] [info]    [timestep=144] Agent 2 opens task 365
+[2026-09-14 09:59:58.215827] [0x00007bbf24c69740] [info]    [timestep=144] Agent 15 opens task 64
+[2026-09-14 09:59:58.215829] [0x00007bbf24c69740] [info]    [timestep=144] Agent 23 finishes task 66
+[2026-09-14 09:59:58.215832] [0x00007bbf24c69740] [info]    [timestep=144] Agent 29 opens task 484
+[2026-09-14 09:59:58.215834] [0x00007bbf24c69740] [info]    [timestep=144] Agent 34 opens task 488
+[2026-09-14 09:59:58.215836] [0x00007bbf24c69740] [info]    [timestep=144] Agent 40 opens task 257
+[2026-09-14 09:59:58.215838] [0x00007bbf24c69740] [info]    [timestep=144] Agent 47 finishes task 297
+current timestep 144
+plan limit 500
+[2026-09-14 09:59:59.136111] [0x00007bbf24c69740] [info]    [timestep=144] planner returns
+[2026-09-14 09:59:59.136154] [0x00007bbf24c69740] [info]    [timestep=145] Agent 4 finishes task 375
+[2026-09-14 09:59:59.136158] [0x00007bbf24c69740] [info]    [timestep=145] Agent 32 finishes task 368
+[2026-09-14 09:59:59.136160] [0x00007bbf24c69740] [info]    [timestep=145] Agent 47 opens task 346
+current timestep 145
+plan limit 500
+[2026-09-14 10:00:00.056424] [0x00007bbf24c69740] [info]    [timestep=145] planner returns
+[2026-09-14 10:00:00.056470] [0x00007bbf24c69740] [info]    [timestep=146] Agent 4 opens task 183
+[2026-09-14 10:00:00.056472] [0x00007bbf24c69740] [info]    [timestep=146] Agent 5 opens task 334
+[2026-09-14 10:00:00.056475] [0x00007bbf24c69740] [info]    [timestep=146] Agent 21 finishes task 150
+[2026-09-14 10:00:00.056477] [0x00007bbf24c69740] [info]    [timestep=146] Agent 26 finishes task 75
+[2026-09-14 10:00:00.056479] [0x00007bbf24c69740] [info]    [timestep=146] Agent 32 opens task 416
+[2026-09-14 10:00:00.056481] [0x00007bbf24c69740] [info]    [timestep=146] Agent 38 opens task 233
+current timestep 146
+plan limit 500
+[2026-09-14 10:00:00.976761] [0x00007bbf24c69740] [info]    [timestep=146] planner returns
+[2026-09-14 10:00:00.976824] [0x00007bbf24c69740] [info]    [timestep=147] Agent 23 opens task 353
+[2026-09-14 10:00:00.976828] [0x00007bbf24c69740] [info]    [timestep=147] Agent 43 finishes task 489
+current timestep 147
+plan limit 980
+[2026-09-14 10:00:01.897068] [0x00007bbf24c69740] [info]    [timestep=147] planner returns
+[2026-09-14 10:00:01.897112] [0x00007bbf24c69740] [info]    [timestep=148] Agent 19 opens task 492
+[2026-09-14 10:00:01.897114] [0x00007bbf24c69740] [info]    [timestep=148] Agent 26 opens task 480
+[2026-09-14 10:00:01.897117] [0x00007bbf24c69740] [info]    [timestep=148] Agent 35 finishes task 378
+[2026-09-14 10:00:01.897119] [0x00007bbf24c69740] [info]    [timestep=148] Agent 37 finishes task 146
+[2026-09-14 10:00:01.897121] [0x00007bbf24c69740] [info]    [timestep=148] Agent 43 opens task 419
+[2026-09-14 10:00:01.897122] [0x00007bbf24c69740] [info]    [timestep=148] Agent 45 finishes task 336
+current timestep 148
+plan limit 500
+[2026-09-14 10:00:02.817304] [0x00007bbf24c69740] [info]    [timestep=148] planner returns
+[2026-09-14 10:00:02.817347] [0x00007bbf24c69740] [info]    [timestep=149] Agent 3 finishes task 231
+[2026-09-14 10:00:02.817350] [0x00007bbf24c69740] [info]    [timestep=149] Agent 9 opens task 265
+[2026-09-14 10:00:02.817353] [0x00007bbf24c69740] [info]    [timestep=149] Agent 21 opens task 398
+[2026-09-14 10:00:02.817355] [0x00007bbf24c69740] [info]    [timestep=149] Agent 24 finishes task 58
+[2026-09-14 10:00:02.817357] [0x00007bbf24c69740] [info]    [timestep=149] Agent 30 finishes task 319
+[2026-09-14 10:00:02.817359] [0x00007bbf24c69740] [info]    [timestep=149] Agent 33 opens task 289
+[2026-09-14 10:00:02.817361] [0x00007bbf24c69740] [info]    [timestep=149] Agent 37 opens task 278
+current timestep 149
+plan limit 500
+[2026-09-14 10:00:03.737610] [0x00007bbf24c69740] [info]    [timestep=149] planner returns
+[2026-09-14 10:00:03.737649] [0x00007bbf24c69740] [info]    [timestep=150] Agent 1 finishes task 446
+[2026-09-14 10:00:03.737653] [0x00007bbf24c69740] [info]    [timestep=150] Agent 24 opens task 429
+[2026-09-14 10:00:03.737656] [0x00007bbf24c69740] [info]    [timestep=150] Agent 49 finishes task 393
+current timestep 150
+plan limit 500
+[2026-09-14 10:00:04.657917] [0x00007bbf24c69740] [info]    [timestep=150] planner returns
+[2026-09-14 10:00:04.657959] [0x00007bbf24c69740] [info]    [timestep=151] Agent 17 finishes task 184
+[2026-09-14 10:00:04.657962] [0x00007bbf24c69740] [info]    [timestep=151] Agent 30 opens task 277
+current timestep 151
+plan limit 980
+[2026-09-14 10:00:05.578250] [0x00007bbf24c69740] [info]    [timestep=151] planner returns
+[2026-09-14 10:00:05.578300] [0x00007bbf24c69740] [info]    [timestep=152] Agent 17 opens task 138
+[2026-09-14 10:00:05.578303] [0x00007bbf24c69740] [info]    [timestep=152] Agent 35 opens task 397
+[2026-09-14 10:00:05.578306] [0x00007bbf24c69740] [info]    [timestep=152] Agent 40 finishes task 257
+current timestep 152
+plan limit 980
+[2026-09-14 10:00:06.498567] [0x00007bbf24c69740] [info]    [timestep=152] planner returns
+[2026-09-14 10:00:06.498608] [0x00007bbf24c69740] [info]    [timestep=153] Agent 1 opens task 101
+[2026-09-14 10:00:06.498611] [0x00007bbf24c69740] [info]    [timestep=153] Agent 3 opens task 272
+[2026-09-14 10:00:06.498614] [0x00007bbf24c69740] [info]    [timestep=153] Agent 10 finishes task 402
+[2026-09-14 10:00:06.498616] [0x00007bbf24c69740] [info]    [timestep=153] Agent 11 finishes task 486
+[2026-09-14 10:00:06.498619] [0x00007bbf24c69740] [info]    [timestep=153] Agent 44 finishes task 87
+[2026-09-14 10:00:06.498622] [0x00007bbf24c69740] [info]    [timestep=153] Agent 46 finishes task 451
+current timestep 153
+plan limit 500
+[2026-09-14 10:00:07.418834] [0x00007bbf24c69740] [info]    [timestep=153] planner returns
+[2026-09-14 10:00:07.418877] [0x00007bbf24c69740] [info]    [timestep=154] Agent 10 opens task 471
+[2026-09-14 10:00:07.418888] [0x00007bbf24c69740] [info]    [timestep=154] Agent 22 finishes task 366
+[2026-09-14 10:00:07.418890] [0x00007bbf24c69740] [info]    [timestep=154] Agent 39 finishes task 340
+[2026-09-14 10:00:07.418892] [0x00007bbf24c69740] [info]    [timestep=154] Agent 46 opens task 411
+current timestep 154
+plan limit 500
+[2026-09-14 10:00:08.339151] [0x00007bbf24c69740] [info]    [timestep=154] planner returns
+[2026-09-14 10:00:08.339191] [0x00007bbf24c69740] [info]    [timestep=155] Agent 22 opens task 295
+[2026-09-14 10:00:08.339194] [0x00007bbf24c69740] [info]    [timestep=155] Agent 44 opens task 287
+[2026-09-14 10:00:08.339196] [0x00007bbf24c69740] [info]    [timestep=155] Agent 45 opens task 136
+[2026-09-14 10:00:08.339198] [0x00007bbf24c69740] [info]    [timestep=155] Agent 48 finishes task 275
+current timestep 155
+plan limit 980
+[2026-09-14 10:00:09.259446] [0x00007bbf24c69740] [info]    [timestep=155] planner returns
+current timestep 156
+plan limit 980
+[2026-09-14 10:00:10.179713] [0x00007bbf24c69740] [info]    [timestep=156] planner returns
+[2026-09-14 10:00:10.179760] [0x00007bbf24c69740] [info]    [timestep=157] Agent 8 finishes task 427
+[2026-09-14 10:00:10.179764] [0x00007bbf24c69740] [info]    [timestep=157] Agent 38 finishes task 233
+current timestep 157
+plan limit 500
+[2026-09-14 10:00:11.100026] [0x00007bbf24c69740] [info]    [timestep=157] planner returns
+[2026-09-14 10:00:11.100068] [0x00007bbf24c69740] [info]    [timestep=158] Agent 16 finishes task 388
+[2026-09-14 10:00:11.100071] [0x00007bbf24c69740] [info]    [timestep=158] Agent 32 finishes task 416
+current timestep 158
+plan limit 500
+[2026-09-14 10:00:12.020329] [0x00007bbf24c69740] [info]    [timestep=158] planner returns
+[2026-09-14 10:00:12.020381] [0x00007bbf24c69740] [info]    [timestep=159] Agent 39 opens task 391
+current timestep 159
+plan limit 980
+[2026-09-14 10:00:12.940666] [0x00007bbf24c69740] [info]    [timestep=159] planner returns
+[2026-09-14 10:00:12.940709] [0x00007bbf24c69740] [info]    [timestep=160] Agent 0 finishes task 464
+[2026-09-14 10:00:12.940712] [0x00007bbf24c69740] [info]    [timestep=160] Agent 18 finishes task 111
+[2026-09-14 10:00:12.940714] [0x00007bbf24c69740] [info]    [timestep=160] Agent 20 finishes task 105
+[2026-09-14 10:00:12.940716] [0x00007bbf24c69740] [info]    [timestep=160] Agent 23 finishes task 353
+[2026-09-14 10:00:12.940718] [0x00007bbf24c69740] [info]    [timestep=160] Agent 30 finishes task 277
+[2026-09-14 10:00:12.940720] [0x00007bbf24c69740] [info]    [timestep=160] Agent 32 opens task 491
+current timestep 160
+plan limit 500
+[2026-09-14 10:00:13.860912] [0x00007bbf24c69740] [info]    [timestep=160] planner returns
+[2026-09-14 10:00:13.860958] [0x00007bbf24c69740] [info]    [timestep=161] Agent 0 opens task 314
+[2026-09-14 10:00:13.860960] [0x00007bbf24c69740] [info]    [timestep=161] Agent 11 opens task 434
+[2026-09-14 10:00:13.860963] [0x00007bbf24c69740] [info]    [timestep=161] Agent 12 finishes task 219
+[2026-09-14 10:00:13.860966] [0x00007bbf24c69740] [info]    [timestep=161] Agent 18 opens task 321
+[2026-09-14 10:00:13.860968] [0x00007bbf24c69740] [info]    [timestep=161] Agent 19 finishes task 492
+[2026-09-14 10:00:13.860970] [0x00007bbf24c69740] [info]    [timestep=161] Agent 27 finishes task 410
+[2026-09-14 10:00:13.860972] [0x00007bbf24c69740] [info]    [timestep=161] Agent 40 opens task 310
+current timestep 161
+plan limit 500
+[2026-09-14 10:00:14.781205] [0x00007bbf24c69740] [info]    [timestep=161] planner returns
+[2026-09-14 10:00:14.781247] [0x00007bbf24c69740] [info]    [timestep=162] Agent 38 opens task 386
+[2026-09-14 10:00:14.781250] [0x00007bbf24c69740] [info]    [timestep=162] Agent 43 finishes task 419
+[2026-09-14 10:00:14.781253] [0x00007bbf24c69740] [info]    [timestep=162] Agent 49 opens task 487
+current timestep 162
+plan limit 980
+[2026-09-14 10:00:15.701489] [0x00007bbf24c69740] [info]    [timestep=162] planner returns
+[2026-09-14 10:00:15.701536] [0x00007bbf24c69740] [info]    [timestep=163] Agent 8 opens task 179
+[2026-09-14 10:00:15.701538] [0x00007bbf24c69740] [info]    [timestep=163] Agent 27 opens task 290
+[2026-09-14 10:00:15.701548] [0x00007bbf24c69740] [info]    [timestep=163] Agent 34 finishes task 488
+[2026-09-14 10:00:15.701550] [0x00007bbf24c69740] [info]    [timestep=163] Agent 43 opens task 212
+current timestep 163
+plan limit 500
+[2026-09-14 10:00:16.621804] [0x00007bbf24c69740] [info]    [timestep=163] planner returns
+current timestep 164
+plan limit 980
+[2026-09-14 10:00:17.542144] [0x00007bbf24c69740] [info]    [timestep=164] planner returns
+[2026-09-14 10:00:17.542188] [0x00007bbf24c69740] [info]    [timestep=165] Agent 5 finishes task 334
+[2026-09-14 10:00:17.542191] [0x00007bbf24c69740] [info]    [timestep=165] Agent 23 opens task 444
+[2026-09-14 10:00:17.542193] [0x00007bbf24c69740] [info]    [timestep=165] Agent 30 opens task 382
+current timestep 165
+plan limit 500
+[2026-09-14 10:00:18.462464] [0x00007bbf24c69740] [info]    [timestep=165] planner returns
+[2026-09-14 10:00:18.462507] [0x00007bbf24c69740] [info]    [timestep=166] Agent 13 finishes task 203
+[2026-09-14 10:00:18.462509] [0x00007bbf24c69740] [info]    [timestep=166] Agent 16 opens task 400
+[2026-09-14 10:00:18.462511] [0x00007bbf24c69740] [info]    [timestep=166] Agent 20 opens task 158
+[2026-09-14 10:00:18.462513] [0x00007bbf24c69740] [info]    [timestep=166] Agent 26 finishes task 480
+[2026-09-14 10:00:18.462514] [0x00007bbf24c69740] [info]    [timestep=166] Agent 36 finishes task 192
+[2026-09-14 10:00:18.462516] [0x00007bbf24c69740] [info]    [timestep=166] Agent 47 finishes task 346
+current timestep 166
+plan limit 500
+[2026-09-14 10:00:19.382784] [0x00007bbf24c69740] [info]    [timestep=166] planner returns
+[2026-09-14 10:00:19.382828] [0x00007bbf24c69740] [info]    [timestep=167] Agent 4 finishes task 183
+[2026-09-14 10:00:19.382831] [0x00007bbf24c69740] [info]    [timestep=167] Agent 6 finishes task 296
+[2026-09-14 10:00:19.382833] [0x00007bbf24c69740] [info]    [timestep=167] Agent 31 finishes task 210
+[2026-09-14 10:00:19.382835] [0x00007bbf24c69740] [info]    [timestep=167] Agent 35 finishes task 397
+current timestep 167
+plan limit 500
+[2026-09-14 10:00:20.303091] [0x00007bbf24c69740] [info]    [timestep=167] planner returns
+[2026-09-14 10:00:20.303134] [0x00007bbf24c69740] [info]    [timestep=168] Agent 4 opens task 483
+[2026-09-14 10:00:20.303136] [0x00007bbf24c69740] [info]    [timestep=168] Agent 5 opens task 328
+[2026-09-14 10:00:20.303139] [0x00007bbf24c69740] [info]    [timestep=168] Agent 17 finishes task 138
+[2026-09-14 10:00:20.303142] [0x00007bbf24c69740] [info]    [timestep=168] Agent 42 finishes task 86
+current timestep 168
+plan limit 500
+[2026-09-14 10:00:21.223405] [0x00007bbf24c69740] [info]    [timestep=168] planner returns
+[2026-09-14 10:00:21.223447] [0x00007bbf24c69740] [info]    [timestep=169] Agent 12 opens task 238
+[2026-09-14 10:00:21.223449] [0x00007bbf24c69740] [info]    [timestep=169] Agent 42 opens task 293
+current timestep 169
+plan limit 980
+[2026-09-14 10:00:22.143701] [0x00007bbf24c69740] [info]    [timestep=169] planner returns
+[2026-09-14 10:00:22.143751] [0x00007bbf24c69740] [info]    [timestep=170] Agent 2 finishes task 365
+[2026-09-14 10:00:22.143755] [0x00007bbf24c69740] [info]    [timestep=170] Agent 19 opens task 433
+current timestep 170
+plan limit 980
+[2026-09-14 10:00:23.063953] [0x00007bbf24c69740] [info]    [timestep=170] planner returns
+[2026-09-14 10:00:23.063996] [0x00007bbf24c69740] [info]    [timestep=171] Agent 2 opens task 254
+[2026-09-14 10:00:23.064000] [0x00007bbf24c69740] [info]    [timestep=171] Agent 9 finishes task 265
+[2026-09-14 10:00:23.064003] [0x00007bbf24c69740] [info]    [timestep=171] Agent 13 opens task 439
+[2026-09-14 10:00:23.064005] [0x00007bbf24c69740] [info]    [timestep=171] Agent 24 finishes task 429
+[2026-09-14 10:00:23.064007] [0x00007bbf24c69740] [info]    [timestep=171] Agent 25 finishes task 482
+[2026-09-14 10:00:23.064010] [0x00007bbf24c69740] [info]    [timestep=171] Agent 41 finishes task 130
+[2026-09-14 10:00:23.064012] [0x00007bbf24c69740] [info]    [timestep=171] Agent 47 opens task 308
+current timestep 171
+plan limit 500
+[2026-09-14 10:00:23.984220] [0x00007bbf24c69740] [info]    [timestep=171] planner returns
+[2026-09-14 10:00:23.984260] [0x00007bbf24c69740] [info]    [timestep=172] Agent 35 opens task 490
+[2026-09-14 10:00:23.984262] [0x00007bbf24c69740] [info]    [timestep=172] Agent 41 opens task 459
+current timestep 172
+plan limit 980
+[2026-09-14 10:00:24.904528] [0x00007bbf24c69740] [info]    [timestep=172] planner returns
+[2026-09-14 10:00:24.904573] [0x00007bbf24c69740] [info]    [timestep=173] Agent 6 opens task 228
+[2026-09-14 10:00:24.904575] [0x00007bbf24c69740] [info]    [timestep=173] Agent 9 opens task 470
+[2026-09-14 10:00:24.904578] [0x00007bbf24c69740] [info]    [timestep=173] Agent 10 finishes task 471
+[2026-09-14 10:00:24.904581] [0x00007bbf24c69740] [info]    [timestep=173] Agent 25 opens task 472
+[2026-09-14 10:00:24.904583] [0x00007bbf24c69740] [info]    [timestep=173] Agent 28 finishes task 447
+current timestep 173
+plan limit 500
+[2026-09-14 10:00:25.824816] [0x00007bbf24c69740] [info]    [timestep=173] planner returns
+[2026-09-14 10:00:25.824857] [0x00007bbf24c69740] [info]    [timestep=174] Agent 7 finishes task 116
+[2026-09-14 10:00:25.824861] [0x00007bbf24c69740] [info]    [timestep=174] Agent 15 finishes task 64
+[2026-09-14 10:00:25.824863] [0x00007bbf24c69740] [info]    [timestep=174] Agent 21 finishes task 398
+[2026-09-14 10:00:25.824865] [0x00007bbf24c69740] [info]    [timestep=174] Agent 28 opens task 485
+[2026-09-14 10:00:25.824867] [0x00007bbf24c69740] [info]    [timestep=174] Agent 34 opens task 458
+[2026-09-14 10:00:25.824869] [0x00007bbf24c69740] [info]    [timestep=174] Agent 44 finishes task 287
+current timestep 174
+plan limit 500
+[2026-09-14 10:00:26.745153] [0x00007bbf24c69740] [info]    [timestep=174] planner returns
+[2026-09-14 10:00:26.745198] [0x00007bbf24c69740] [info]    [timestep=175] Agent 21 opens task 428
+[2026-09-14 10:00:26.745200] [0x00007bbf24c69740] [info]    [timestep=175] Agent 24 opens task 140
+[2026-09-14 10:00:26.745202] [0x00007bbf24c69740] [info]    [timestep=175] Agent 26 opens task 333
+[2026-09-14 10:00:26.745204] [0x00007bbf24c69740] [info]    [timestep=175] Agent 36 opens task 443
+[2026-09-14 10:00:26.745206] [0x00007bbf24c69740] [info]    [timestep=175] Agent 37 finishes task 278
+[2026-09-14 10:00:26.745209] [0x00007bbf24c69740] [info]    [timestep=175] Agent 44 opens task 102
+current timestep 175
+plan limit 980
+[2026-09-14 10:00:27.665493] [0x00007bbf24c69740] [info]    [timestep=175] planner returns
+[2026-09-14 10:00:27.665536] [0x00007bbf24c69740] [info]    [timestep=176] Agent 14 finishes task 61
+[2026-09-14 10:00:27.665539] [0x00007bbf24c69740] [info]    [timestep=176] Agent 22 finishes task 295
+current timestep 176
+plan limit 500
+[2026-09-14 10:00:28.585767] [0x00007bbf24c69740] [info]    [timestep=176] planner returns
+[2026-09-14 10:00:28.585805] [0x00007bbf24c69740] [info]    [timestep=177] Agent 14 opens task 242
+[2026-09-14 10:00:28.585808] [0x00007bbf24c69740] [info]    [timestep=177] Agent 27 finishes task 290
+[2026-09-14 10:00:28.585810] [0x00007bbf24c69740] [info]    [timestep=177] Agent 31 opens task 273
+[2026-09-14 10:00:28.585812] [0x00007bbf24c69740] [info]    [timestep=177] Agent 48 opens task 435
+current timestep 177
+plan limit 980
+[2026-09-14 10:00:29.506077] [0x00007bbf24c69740] [info]    [timestep=177] planner returns
+[2026-09-14 10:00:29.506122] [0x00007bbf24c69740] [info]    [timestep=178] Agent 27 opens task 282
+current timestep 178
+plan limit 980
+[2026-09-14 10:00:30.426388] [0x00007bbf24c69740] [info]    [timestep=178] planner returns
+[2026-09-14 10:00:30.426433] [0x00007bbf24c69740] [info]    [timestep=179] Agent 17 opens task 202
+current timestep 179
+plan limit 980
+[2026-09-14 10:00:31.346664] [0x00007bbf24c69740] [info]    [timestep=179] planner returns
+[2026-09-14 10:00:31.346707] [0x00007bbf24c69740] [info]    [timestep=180] Agent 3 finishes task 272
+[2026-09-14 10:00:31.346710] [0x00007bbf24c69740] [info]    [timestep=180] Agent 7 opens task 250
+[2026-09-14 10:00:31.346713] [0x00007bbf24c69740] [info]    [timestep=180] Agent 29 finishes task 484
+current timestep 180
+plan limit 500
+[2026-09-14 10:00:32.266934] [0x00007bbf24c69740] [info]    [timestep=180] planner returns
+[2026-09-14 10:00:32.266979] [0x00007bbf24c69740] [info]    [timestep=181] Agent 3 opens task 313
+[2026-09-14 10:00:32.266981] [0x00007bbf24c69740] [info]    [timestep=181] Agent 10 opens task 335
+[2026-09-14 10:00:32.266983] [0x00007bbf24c69740] [info]    [timestep=181] Agent 37 opens task 324
+[2026-09-14 10:00:32.266986] [0x00007bbf24c69740] [info]    [timestep=181] Agent 42 finishes task 293
+current timestep 181
+plan limit 980
+[2026-09-14 10:00:33.187266] [0x00007bbf24c69740] [info]    [timestep=181] planner returns
+[2026-09-14 10:00:33.187309] [0x00007bbf24c69740] [info]    [timestep=182] Agent 15 opens task 200
+[2026-09-14 10:00:33.187311] [0x00007bbf24c69740] [info]    [timestep=182] Agent 22 opens task 224
+[2026-09-14 10:00:33.187314] [0x00007bbf24c69740] [info]    [timestep=182] Agent 32 finishes task 491
+[2026-09-14 10:00:33.187316] [0x00007bbf24c69740] [info]    [timestep=182] Agent 40 finishes task 310
+[2026-09-14 10:00:33.187317] [0x00007bbf24c69740] [info]    [timestep=182] Agent 46 finishes task 411
+current timestep 182
+plan limit 500
+[2026-09-14 10:00:34.107580] [0x00007bbf24c69740] [info]    [timestep=182] planner returns
+[2026-09-14 10:00:34.107618] [0x00007bbf24c69740] [info]    [timestep=183] Agent 8 finishes task 179
+current timestep 183
+plan limit 980
+[2026-09-14 10:00:35.027855] [0x00007bbf24c69740] [info]    [timestep=183] planner returns
+[2026-09-14 10:00:35.027901] [0x00007bbf24c69740] [info]    [timestep=184] Agent 38 finishes task 386
+[2026-09-14 10:00:35.027904] [0x00007bbf24c69740] [info]    [timestep=184] Agent 45 finishes task 136
+[2026-09-14 10:00:35.027905] [0x00007bbf24c69740] [info]    [timestep=184] Agent 48 finishes task 435
+current timestep 184
+plan limit 500
+[2026-09-14 10:00:35.948168] [0x00007bbf24c69740] [info]    [timestep=184] planner returns
+[2026-09-14 10:00:35.948214] [0x00007bbf24c69740] [info]    [timestep=185] Agent 11 finishes task 434
+[2026-09-14 10:00:35.948218] [0x00007bbf24c69740] [info]    [timestep=185] Agent 32 opens task 218
+[2026-09-14 10:00:35.948220] [0x00007bbf24c69740] [info]    [timestep=185] Agent 33 finishes task 289
+[2026-09-14 10:00:35.948221] [0x00007bbf24c69740] [info]    [timestep=185] Agent 42 opens task 347
+[2026-09-14 10:00:35.948223] [0x00007bbf24c69740] [info]    [timestep=185] Agent 45 opens task 259
+[2026-09-14 10:00:35.948225] [0x00007bbf24c69740] [info]    [timestep=185] Agent 46 opens task 384
+current timestep 185
+plan limit 500
+[2026-09-14 10:00:36.868490] [0x00007bbf24c69740] [info]    [timestep=185] planner returns
+[2026-09-14 10:00:36.868541] [0x00007bbf24c69740] [info]    [timestep=186] Agent 1 finishes task 101
+[2026-09-14 10:00:36.868545] [0x00007bbf24c69740] [info]    [timestep=186] Agent 12 finishes task 238
+[2026-09-14 10:00:36.868547] [0x00007bbf24c69740] [info]    [timestep=186] Agent 29 opens task 423
+[2026-09-14 10:00:36.868549] [0x00007bbf24c69740] [info]    [timestep=186] Agent 49 finishes task 487
+current timestep 186
+plan limit 500
+[2026-09-14 10:00:37.788845] [0x00007bbf24c69740] [info]    [timestep=186] planner returns
+[2026-09-14 10:00:37.788902] [0x00007bbf24c69740] [info]    [timestep=187] Agent 4 finishes task 483
+[2026-09-14 10:00:37.788906] [0x00007bbf24c69740] [info]    [timestep=187] Agent 33 opens task 256
+[2026-09-14 10:00:37.788909] [0x00007bbf24c69740] [info]    [timestep=187] Agent 49 opens task 465
+current timestep 187
+plan limit 500
+[2026-09-14 10:00:38.709195] [0x00007bbf24c69740] [info]    [timestep=187] planner returns
+[2026-09-14 10:00:38.709238] [0x00007bbf24c69740] [info]    [timestep=188] Agent 40 opens task 285
+current timestep 188
+plan limit 980
+[2026-09-14 10:00:39.629469] [0x00007bbf24c69740] [info]    [timestep=188] planner returns
+[2026-09-14 10:00:39.629517] [0x00007bbf24c69740] [info]    [timestep=189] Agent 1 opens task 395
+[2026-09-14 10:00:39.629522] [0x00007bbf24c69740] [info]    [timestep=189] Agent 41 finishes task 459
+[2026-09-14 10:00:39.629532] [0x00007bbf24c69740] [info]    [timestep=189] Agent 47 finishes task 308
+current timestep 189
+plan limit 500
+[2026-09-14 10:00:40.549796] [0x00007bbf24c69740] [info]    [timestep=189] planner returns
+[2026-09-14 10:00:40.549843] [0x00007bbf24c69740] [info]    [timestep=190] Agent 12 opens task 241
+[2026-09-14 10:00:40.549846] [0x00007bbf24c69740] [info]    [timestep=190] Agent 18 finishes task 321
+[2026-09-14 10:00:40.549849] [0x00007bbf24c69740] [info]    [timestep=190] Agent 41 opens task 406
+[2026-09-14 10:00:40.549850] [0x00007bbf24c69740] [info]    [timestep=190] Agent 48 opens task 232
+current timestep 190
+plan limit 980
+[2026-09-14 10:00:41.470114] [0x00007bbf24c69740] [info]    [timestep=190] planner returns
+current timestep 191
+plan limit 980
+[2026-09-14 10:00:42.390413] [0x00007bbf24c69740] [info]    [timestep=191] planner returns
+[2026-09-14 10:00:42.390457] [0x00007bbf24c69740] [info]    [timestep=192] Agent 23 finishes task 444
+current timestep 192
+plan limit 980
+[2026-09-14 10:00:43.310722] [0x00007bbf24c69740] [info]    [timestep=192] planner returns
+[2026-09-14 10:00:43.310789] [0x00007bbf24c69740] [info]    [timestep=193] Agent 8 opens task 496
+[2026-09-14 10:00:43.310792] [0x00007bbf24c69740] [info]    [timestep=193] Agent 11 opens task 266
+[2026-09-14 10:00:43.310795] [0x00007bbf24c69740] [info]    [timestep=193] Agent 24 finishes task 140
+current timestep 193
+plan limit 980
+[2026-09-14 10:00:44.231052] [0x00007bbf24c69740] [info]    [timestep=193] planner returns
+[2026-09-14 10:00:44.231096] [0x00007bbf24c69740] [info]    [timestep=194] Agent 19 finishes task 433
+[2026-09-14 10:00:44.231099] [0x00007bbf24c69740] [info]    [timestep=194] Agent 23 opens task 317
+[2026-09-14 10:00:44.231101] [0x00007bbf24c69740] [info]    [timestep=194] Agent 28 finishes task 485
+[2026-09-14 10:00:44.231103] [0x00007bbf24c69740] [info]    [timestep=194] Agent 29 finishes task 423
+[2026-09-14 10:00:44.231105] [0x00007bbf24c69740] [info]    [timestep=194] Agent 31 finishes task 273
+[2026-09-14 10:00:44.231107] [0x00007bbf24c69740] [info]    [timestep=194] Agent 39 finishes task 391
+[2026-09-14 10:00:44.231109] [0x00007bbf24c69740] [info]    [timestep=194] Agent 43 finishes task 212
+current timestep 194
+plan limit 500
+[2026-09-14 10:00:45.151362] [0x00007bbf24c69740] [info]    [timestep=194] planner returns
+[2026-09-14 10:00:45.151402] [0x00007bbf24c69740] [info]    [timestep=195] Agent 9 finishes task 470
+[2026-09-14 10:00:45.151405] [0x00007bbf24c69740] [info]    [timestep=195] Agent 47 opens task 300
+current timestep 195
+plan limit 500
+[2026-09-14 10:00:46.071650] [0x00007bbf24c69740] [info]    [timestep=195] planner returns
+[2026-09-14 10:00:46.071692] [0x00007bbf24c69740] [info]    [timestep=196] Agent 5 finishes task 328
+[2026-09-14 10:00:46.071696] [0x00007bbf24c69740] [info]    [timestep=196] Agent 9 opens task 263
+[2026-09-14 10:00:46.071698] [0x00007bbf24c69740] [info]    [timestep=196] Agent 18 opens task 208
+[2026-09-14 10:00:46.071700] [0x00007bbf24c69740] [info]    [timestep=196] Agent 43 opens task 62
+current timestep 196
+plan limit 500
+[2026-09-14 10:00:46.991945] [0x00007bbf24c69740] [info]    [timestep=196] planner returns
+[2026-09-14 10:00:46.991991] [0x00007bbf24c69740] [info]    [timestep=197] Agent 6 finishes task 228
+[2026-09-14 10:00:46.991995] [0x00007bbf24c69740] [info]    [timestep=197] Agent 38 opens task 292
+current timestep 197
+plan limit 500
+[2026-09-14 10:00:47.912242] [0x00007bbf24c69740] [info]    [timestep=197] planner returns
+[2026-09-14 10:00:47.912286] [0x00007bbf24c69740] [info]    [timestep=198] Agent 0 finishes task 314
+[2026-09-14 10:00:47.912290] [0x00007bbf24c69740] [info]    [timestep=198] Agent 14 finishes task 242
+[2026-09-14 10:00:47.912292] [0x00007bbf24c69740] [info]    [timestep=198] Agent 29 opens task 349
+current timestep 198
+plan limit 500
+[2026-09-14 10:00:48.832546] [0x00007bbf24c69740] [info]    [timestep=198] planner returns
+[2026-09-14 10:00:48.832588] [0x00007bbf24c69740] [info]    [timestep=199] Agent 0 opens task 374
+[2026-09-14 10:00:48.832591] [0x00007bbf24c69740] [info]    [timestep=199] Agent 4 opens task 354
+[2026-09-14 10:00:48.832601] [0x00007bbf24c69740] [info]    [timestep=199] Agent 30 finishes task 382
+current timestep 199
+plan limit 500
+[2026-09-14 10:00:49.752859] [0x00007bbf24c69740] [info]    [timestep=199] planner returns
+[2026-09-14 10:00:49.752901] [0x00007bbf24c69740] [info]    [timestep=200] Agent 6 opens task 268
+[2026-09-14 10:00:49.752903] [0x00007bbf24c69740] [info]    [timestep=200] Agent 20 finishes task 158
+current timestep 200
+plan limit 500
+[2026-09-14 10:00:50.673153] [0x00007bbf24c69740] [info]    [timestep=200] planner returns
+[2026-09-14 10:00:50.673201] [0x00007bbf24c69740] [info]    [timestep=201] Agent 13 finishes task 439
+[2026-09-14 10:00:50.673203] [0x00007bbf24c69740] [info]    [timestep=201] Agent 16 finishes task 400
+[2026-09-14 10:00:50.673205] [0x00007bbf24c69740] [info]    [timestep=201] Agent 17 finishes task 202
+[2026-09-14 10:00:50.673207] [0x00007bbf24c69740] [info]    [timestep=201] Agent 26 finishes task 333
+current timestep 201
+plan limit 500
+[2026-09-14 10:00:51.593414] [0x00007bbf24c69740] [info]    [timestep=201] planner returns
+[2026-09-14 10:00:51.593472] [0x00007bbf24c69740] [info]    [timestep=202] Agent 3 finishes task 313
+[2026-09-14 10:00:51.593475] [0x00007bbf24c69740] [info]    [timestep=202] Agent 17 opens task 144
+current timestep 202
+plan limit 500
+[2026-09-14 10:00:52.513739] [0x00007bbf24c69740] [info]    [timestep=202] planner returns
+[2026-09-14 10:00:52.513786] [0x00007bbf24c69740] [info]    [timestep=203] Agent 16 opens task 143
+[2026-09-14 10:00:52.513790] [0x00007bbf24c69740] [info]    [timestep=203] Agent 24 opens task 152
+[2026-09-14 10:00:52.513792] [0x00007bbf24c69740] [info]    [timestep=203] Agent 30 opens task 115
+current timestep 203
+plan limit 500
+[2026-09-14 10:00:53.434038] [0x00007bbf24c69740] [info]    [timestep=203] planner returns
+[2026-09-14 10:00:53.434085] [0x00007bbf24c69740] [info]    [timestep=204] Agent 21 finishes task 428
+[2026-09-14 10:00:53.434088] [0x00007bbf24c69740] [info]    [timestep=204] Agent 34 finishes task 458
+[2026-09-14 10:00:53.434090] [0x00007bbf24c69740] [info]    [timestep=204] Agent 35 finishes task 490
+current timestep 204
+plan limit 500
+[2026-09-14 10:00:54.354362] [0x00007bbf24c69740] [info]    [timestep=204] planner returns
+[2026-09-14 10:00:54.354404] [0x00007bbf24c69740] [info]    [timestep=205] Agent 19 opens task 430
+[2026-09-14 10:00:54.354407] [0x00007bbf24c69740] [info]    [timestep=205] Agent 28 opens task 246
+current timestep 205
+plan limit 500
+[2026-09-14 10:00:55.274661] [0x00007bbf24c69740] [info]    [timestep=205] planner returns
+[2026-09-14 10:00:55.274707] [0x00007bbf24c69740] [info]    [timestep=206] Agent 5 opens task 498
+[2026-09-14 10:00:55.274710] [0x00007bbf24c69740] [info]    [timestep=206] Agent 20 opens task 361
+[2026-09-14 10:00:55.274713] [0x00007bbf24c69740] [info]    [timestep=206] Agent 44 finishes task 102
+current timestep 206
+plan limit 500
+[2026-09-14 10:00:56.194961] [0x00007bbf24c69740] [info]    [timestep=206] planner returns
+[2026-09-14 10:00:56.195009] [0x00007bbf24c69740] [info]    [timestep=207] Agent 10 finishes task 335
+[2026-09-14 10:00:56.195012] [0x00007bbf24c69740] [info]    [timestep=207] Agent 26 opens task 462
+current timestep 207
+plan limit 500
+[2026-09-14 10:00:57.115228] [0x00007bbf24c69740] [info]    [timestep=207] planner returns
+[2026-09-14 10:00:57.115270] [0x00007bbf24c69740] [info]    [timestep=208] Agent 25 finishes task 472
+current timestep 208
+plan limit 500
+[2026-09-14 10:00:58.035516] [0x00007bbf24c69740] [info]    [timestep=208] planner returns
+[2026-09-14 10:00:58.035561] [0x00007bbf24c69740] [info]    [timestep=209] Agent 14 opens task 258
+current timestep 209
+plan limit 500
+[2026-09-14 10:00:58.955807] [0x00007bbf24c69740] [info]    [timestep=209] planner returns
+[2026-09-14 10:00:58.955853] [0x00007bbf24c69740] [info]    [timestep=210] Agent 2 finishes task 254
+[2026-09-14 10:00:58.955856] [0x00007bbf24c69740] [info]    [timestep=210] Agent 7 finishes task 250
+[2026-09-14 10:00:58.955867] [0x00007bbf24c69740] [info]    [timestep=210] Agent 22 finishes task 224
+[2026-09-14 10:00:58.955868] [0x00007bbf24c69740] [info]    [timestep=210] Agent 27 finishes task 282
+[2026-09-14 10:00:58.955870] [0x00007bbf24c69740] [info]    [timestep=210] Agent 31 opens task 240
+[2026-09-14 10:00:58.955872] [0x00007bbf24c69740] [info]    [timestep=210] Agent 39 opens task 455
+current timestep 210
+plan limit 500
+[2026-09-14 10:00:59.876134] [0x00007bbf24c69740] [info]    [timestep=210] planner returns
+current timestep 211
+plan limit 500
+[2026-09-14 10:01:00.796398] [0x00007bbf24c69740] [info]    [timestep=211] planner returns
+[2026-09-14 10:01:00.796440] [0x00007bbf24c69740] [info]    [timestep=212] Agent 4 finishes task 354
+[2026-09-14 10:01:00.796443] [0x00007bbf24c69740] [info]    [timestep=212] Agent 36 finishes task 443
+current timestep 212
+plan limit 500
+[2026-09-14 10:01:01.716642] [0x00007bbf24c69740] [info]    [timestep=212] planner returns
+[2026-09-14 10:01:01.716684] [0x00007bbf24c69740] [info]    [timestep=213] Agent 18 finishes task 208
+[2026-09-14 10:01:01.716687] [0x00007bbf24c69740] [info]    [timestep=213] Agent 44 opens task 104
+current timestep 213
+plan limit 500
+[2026-09-14 10:01:02.636922] [0x00007bbf24c69740] [info]    [timestep=213] planner returns
+[2026-09-14 10:01:02.636963] [0x00007bbf24c69740] [info]    [timestep=214] Agent 41 finishes task 406
+current timestep 214
+plan limit 500
+[2026-09-14 10:01:03.557168] [0x00007bbf24c69740] [info]    [timestep=214] planner returns
+[2026-09-14 10:01:03.557215] [0x00007bbf24c69740] [info]    [timestep=215] Agent 8 finishes task 496
+[2026-09-14 10:01:03.557218] [0x00007bbf24c69740] [info]    [timestep=215] Agent 13 opens task 418
+[2026-09-14 10:01:03.557221] [0x00007bbf24c69740] [info]    [timestep=215] Agent 27 opens task 360
+current timestep 215
+plan limit 500
+[2026-09-14 10:01:04.477464] [0x00007bbf24c69740] [info]    [timestep=215] planner returns
+[2026-09-14 10:01:04.477506] [0x00007bbf24c69740] [info]    [timestep=216] Agent 18 opens task 185
+[2026-09-14 10:01:04.477509] [0x00007bbf24c69740] [info]    [timestep=216] Agent 35 opens task 307
+[2026-09-14 10:01:04.477511] [0x00007bbf24c69740] [info]    [timestep=216] Agent 37 finishes task 324
+[2026-09-14 10:01:04.477514] [0x00007bbf24c69740] [info]    [timestep=216] Agent 46 finishes task 384
+current timestep 216
+plan limit 500
+[2026-09-14 10:01:05.397719] [0x00007bbf24c69740] [info]    [timestep=216] planner returns
+[2026-09-14 10:01:05.397780] [0x00007bbf24c69740] [info]    [timestep=217] Agent 11 finishes task 266
+[2026-09-14 10:01:05.397783] [0x00007bbf24c69740] [info]    [timestep=217] Agent 36 opens task 499
+current timestep 217
+plan limit 500
+[2026-09-14 10:01:06.318036] [0x00007bbf24c69740] [info]    [timestep=217] planner returns
+[2026-09-14 10:01:06.318082] [0x00007bbf24c69740] [info]    [timestep=218] Agent 33 finishes task 256
+[2026-09-14 10:01:06.318086] [0x00007bbf24c69740] [info]    [timestep=218] Agent 47 finishes task 300
+current timestep 218
+plan limit 500
+[2026-09-14 10:01:07.238355] [0x00007bbf24c69740] [info]    [timestep=218] planner returns
+[2026-09-14 10:01:07.238401] [0x00007bbf24c69740] [info]    [timestep=219] Agent 8 opens task 379
+[2026-09-14 10:01:07.238404] [0x00007bbf24c69740] [info]    [timestep=219] Agent 19 finishes task 430
+[2026-09-14 10:01:07.238406] [0x00007bbf24c69740] [info]    [timestep=219] Agent 33 opens task 392
+[2026-09-14 10:01:07.238408] [0x00007bbf24c69740] [info]    [timestep=219] Agent 42 finishes task 347
+current timestep 219
+plan limit 500
+[2026-09-14 10:01:08.158646] [0x00007bbf24c69740] [info]    [timestep=219] planner returns
+[2026-09-14 10:01:08.158694] [0x00007bbf24c69740] [info]    [timestep=220] Agent 42 opens task 139
+current timestep 220
+plan limit 500
+[2026-09-14 10:01:09.078912] [0x00007bbf24c69740] [info]    [timestep=220] planner returns
+[2026-09-14 10:01:09.078954] [0x00007bbf24c69740] [info]    [timestep=221] Agent 15 finishes task 200
+[2026-09-14 10:01:09.078958] [0x00007bbf24c69740] [info]    [timestep=221] Agent 25 opens task 171
+[2026-09-14 10:01:09.078969] [0x00007bbf24c69740] [info]    [timestep=221] Agent 34 opens task 226
+[2026-09-14 10:01:09.078971] [0x00007bbf24c69740] [info]    [timestep=221] Agent 45 finishes task 259
+current timestep 221
+plan limit 500
+[2026-09-14 10:01:09.999193] [0x00007bbf24c69740] [info]    [timestep=221] planner returns
+[2026-09-14 10:01:09.999234] [0x00007bbf24c69740] [info]    [timestep=222] Agent 3 opens task 414
+[2026-09-14 10:01:09.999236] [0x00007bbf24c69740] [info]    [timestep=222] Agent 29 finishes task 349
+[2026-09-14 10:01:09.999239] [0x00007bbf24c69740] [info]    [timestep=222] Agent 38 finishes task 292
+current timestep 222
+plan limit 500
+[2026-09-14 10:01:10.919496] [0x00007bbf24c69740] [info]    [timestep=222] planner returns
+[2026-09-14 10:01:10.919538] [0x00007bbf24c69740] [info]    [timestep=223] Agent 1 finishes task 395
+[2026-09-14 10:01:10.919541] [0x00007bbf24c69740] [info]    [timestep=223] Agent 22 opens task 236
+current timestep 223
+plan limit 500
+[2026-09-14 10:01:11.839803] [0x00007bbf24c69740] [info]    [timestep=223] planner returns
+[2026-09-14 10:01:11.839853] [0x00007bbf24c69740] [info]    [timestep=224] Agent 32 finishes task 218
+[2026-09-14 10:01:11.839856] [0x00007bbf24c69740] [info]    [timestep=224] Agent 49 finishes task 465
+current timestep 224
+plan limit 500
+[2026-09-14 10:01:12.760125] [0x00007bbf24c69740] [info]    [timestep=224] planner returns
+[2026-09-14 10:01:12.760172] [0x00007bbf24c69740] [info]    [timestep=225] Agent 28 finishes task 246
+[2026-09-14 10:01:12.760175] [0x00007bbf24c69740] [info]    [timestep=225] Agent 29 opens task 235
+current timestep 225
+plan limit 500
+[2026-09-14 10:01:13.680430] [0x00007bbf24c69740] [info]    [timestep=225] planner returns
+[2026-09-14 10:01:13.680469] [0x00007bbf24c69740] [info]    [timestep=226] Agent 43 finishes task 62
+current timestep 226
+plan limit 500
+[2026-09-14 10:01:14.600710] [0x00007bbf24c69740] [info]    [timestep=226] planner returns
+[2026-09-14 10:01:14.600755] [0x00007bbf24c69740] [info]    [timestep=227] Agent 10 opens task 305
+[2026-09-14 10:01:14.600758] [0x00007bbf24c69740] [info]    [timestep=227] Agent 21 opens task 318
+[2026-09-14 10:01:14.600761] [0x00007bbf24c69740] [info]    [timestep=227] Agent 37 opens task 323
+[2026-09-14 10:01:14.600763] [0x00007bbf24c69740] [info]    [timestep=227] Agent 48 finishes task 232
+current timestep 227
+plan limit 500
+[2026-09-14 10:01:15.520972] [0x00007bbf24c69740] [info]    [timestep=227] planner returns
+[2026-09-14 10:01:15.521014] [0x00007bbf24c69740] [info]    [timestep=228] Agent 0 finishes task 374
+[2026-09-14 10:01:15.521017] [0x00007bbf24c69740] [info]    [timestep=228] Agent 4 opens task 126
+[2026-09-14 10:01:15.521019] [0x00007bbf24c69740] [info]    [timestep=228] Agent 12 finishes task 241
+[2026-09-14 10:01:15.521021] [0x00007bbf24c69740] [info]    [timestep=228] Agent 16 finishes task 143
+[2026-09-14 10:01:15.521023] [0x00007bbf24c69740] [info]    [timestep=228] Agent 17 finishes task 144
+[2026-09-14 10:01:15.521025] [0x00007bbf24c69740] [info]    [timestep=228] Agent 23 finishes task 317
+[2026-09-14 10:01:15.521027] [0x00007bbf24c69740] [info]    [timestep=228] Agent 46 opens task 175
+current timestep 228
+plan limit 500
+[2026-09-14 10:01:16.441289] [0x00007bbf24c69740] [info]    [timestep=228] planner returns
+[2026-09-14 10:01:16.441346] [0x00007bbf24c69740] [info]    [timestep=229] Agent 2 opens task 168
+[2026-09-14 10:01:16.441349] [0x00007bbf24c69740] [info]    [timestep=229] Agent 15 opens task 373
+current timestep 229
+plan limit 500
+[2026-09-14 10:01:17.361592] [0x00007bbf24c69740] [info]    [timestep=229] planner returns
+[2026-09-14 10:01:17.361637] [0x00007bbf24c69740] [info]    [timestep=230] Agent 40 finishes task 285
+current timestep 230
+plan limit 500
+[2026-09-14 10:01:18.281857] [0x00007bbf24c69740] [info]    [timestep=230] planner returns
+[2026-09-14 10:01:18.281898] [0x00007bbf24c69740] [info]    [timestep=231] Agent 47 opens task 94
+current timestep 231
+plan limit 500
+[2026-09-14 10:01:19.202162] [0x00007bbf24c69740] [info]    [timestep=231] planner returns
+current timestep 232
+plan limit 500
+[2026-09-14 10:01:20.122458] [0x00007bbf24c69740] [info]    [timestep=232] planner returns
+[2026-09-14 10:01:20.122505] [0x00007bbf24c69740] [info]    [timestep=233] Agent 30 finishes task 115
+[2026-09-14 10:01:20.122508] [0x00007bbf24c69740] [info]    [timestep=233] Agent 32 opens task 169
+current timestep 233
+plan limit 500
+[2026-09-14 10:01:21.042725] [0x00007bbf24c69740] [info]    [timestep=233] planner returns
+[2026-09-14 10:01:21.042779] [0x00007bbf24c69740] [info]    [timestep=234] Agent 6 finishes task 268
+[2026-09-14 10:01:21.042783] [0x00007bbf24c69740] [info]    [timestep=234] Agent 11 opens task 369
+[2026-09-14 10:01:21.042785] [0x00007bbf24c69740] [info]    [timestep=234] Agent 20 finishes task 361
+current timestep 234
+plan limit 500
+[2026-09-14 10:01:21.963013] [0x00007bbf24c69740] [info]    [timestep=234] planner returns
+[2026-09-14 10:01:21.963055] [0x00007bbf24c69740] [info]    [timestep=235] Agent 26 finishes task 462
+current timestep 235
+plan limit 500
+[2026-09-14 10:01:22.883311] [0x00007bbf24c69740] [info]    [timestep=235] planner returns
+[2026-09-14 10:01:22.883356] [0x00007bbf24c69740] [info]    [timestep=236] Agent 19 opens task 497
+[2026-09-14 10:01:22.883359] [0x00007bbf24c69740] [info]    [timestep=236] Agent 43 opens task 166
+current timestep 236
+plan limit 500
+[2026-09-14 10:01:23.803597] [0x00007bbf24c69740] [info]    [timestep=236] planner returns
+[2026-09-14 10:01:23.803638] [0x00007bbf24c69740] [info]    [timestep=237] Agent 27 finishes task 360
+[2026-09-14 10:01:23.803642] [0x00007bbf24c69740] [info]    [timestep=237] Agent 49 opens task 337
+current timestep 237
+plan limit 500
+[2026-09-14 10:01:24.723929] [0x00007bbf24c69740] [info]    [timestep=237] planner returns
+[2026-09-14 10:01:24.723985] [0x00007bbf24c69740] [info]    [timestep=238] Agent 1 opens task 271
+[2026-09-14 10:01:24.724139] [0x00007bbf24c69740] [info]    [timestep=238] Agent 24 finishes task 152
+current timestep 238
+plan limit 500
+[2026-09-14 10:01:25.644367] [0x00007bbf24c69740] [info]    [timestep=238] planner returns
+[2026-09-14 10:01:25.644407] [0x00007bbf24c69740] [info]    [timestep=239] Agent 7 opens task 225
+[2026-09-14 10:01:25.644410] [0x00007bbf24c69740] [info]    [timestep=239] Agent 9 finishes task 263
+[2026-09-14 10:01:25.644413] [0x00007bbf24c69740] [info]    [timestep=239] Agent 35 finishes task 307
+current timestep 239
+plan limit 500
+[2026-09-14 10:01:26.564621] [0x00007bbf24c69740] [info]    [timestep=239] planner returns
+current timestep 240
+plan limit 500
+[2026-09-14 10:01:27.484929] [0x00007bbf24c69740] [info]    [timestep=240] planner returns
+[2026-09-14 10:01:27.484971] [0x00007bbf24c69740] [info]    [timestep=241] Agent 39 finishes task 455
+current timestep 241
+plan limit 500
+[2026-09-14 10:01:28.405212] [0x00007bbf24c69740] [info]    [timestep=241] planner returns
+current timestep 242
+plan limit 500
+[2026-09-14 10:01:29.325490] [0x00007bbf24c69740] [info]    [timestep=242] planner returns
+[2026-09-14 10:01:29.325532] [0x00007bbf24c69740] [info]    [timestep=243] Agent 5 finishes task 498
+[2026-09-14 10:01:29.325535] [0x00007bbf24c69740] [info]    [timestep=243] Agent 13 finishes task 418
+[2026-09-14 10:01:29.325537] [0x00007bbf24c69740] [info]    [timestep=243] Agent 18 finishes task 185
+current timestep 243
+plan limit 980
+[2026-09-14 10:01:30.245768] [0x00007bbf24c69740] [info]    [timestep=243] planner returns
+current timestep 244
+plan limit 980
+[2026-09-14 10:01:31.166048] [0x00007bbf24c69740] [info]    [timestep=244] planner returns
+[2026-09-14 10:01:31.166100] [0x00007bbf24c69740] [info]    [timestep=245] Agent 31 finishes task 240
+current timestep 245
+plan limit 980
+[2026-09-14 10:01:32.086303] [0x00007bbf24c69740] [info]    [timestep=245] planner returns
+[2026-09-14 10:01:32.086345] [0x00007bbf24c69740] [info]    [timestep=246] Agent 44 finishes task 104
+current timestep 246
+plan limit 980
+[2026-09-14 10:01:33.006576] [0x00007bbf24c69740] [info]    [timestep=246] planner returns
+[2026-09-14 10:01:33.006619] [0x00007bbf24c69740] [info]    [timestep=247] Agent 14 finishes task 258
+current timestep 247
+plan limit 980
+[2026-09-14 10:01:33.926827] [0x00007bbf24c69740] [info]    [timestep=247] planner returns
+[2026-09-14 10:01:33.926865] [0x00007bbf24c69740] [info]    [timestep=248] Agent 3 finishes task 414
+current timestep 248
+plan limit 980
+[2026-09-14 10:01:34.847048] [0x00007bbf24c69740] [info]    [timestep=248] planner returns
+current timestep 249
+plan limit 980
+[2026-09-14 10:01:35.767322] [0x00007bbf24c69740] [info]    [timestep=249] planner returns
+[2026-09-14 10:01:35.767367] [0x00007bbf24c69740] [info]    [timestep=250] Agent 28 opens task 193
+[2026-09-14 10:01:35.767370] [0x00007bbf24c69740] [info]    [timestep=250] Agent 36 finishes task 499
+[2026-09-14 10:01:35.767372] [0x00007bbf24c69740] [info]    [timestep=250] Agent 42 finishes task 139
+current timestep 250
+plan limit 980
+[2026-09-14 10:01:36.687610] [0x00007bbf24c69740] [info]    [timestep=250] planner returns
+[2026-09-14 10:01:36.687655] [0x00007bbf24c69740] [info]    [timestep=251] Agent 33 finishes task 392
+[2026-09-14 10:01:36.687658] [0x00007bbf24c69740] [info]    [timestep=251] Agent 41 opens task 205
+current timestep 251
+plan limit 980
+[2026-09-14 10:01:37.607901] [0x00007bbf24c69740] [info]    [timestep=251] planner returns
+[2026-09-14 10:01:37.607943] [0x00007bbf24c69740] [info]    [timestep=252] Agent 34 finishes task 226
+[2026-09-14 10:01:37.607946] [0x00007bbf24c69740] [info]    [timestep=252] Agent 38 opens task 249
+current timestep 252
+plan limit 980
+[2026-09-14 10:01:38.528140] [0x00007bbf24c69740] [info]    [timestep=252] planner returns
+[2026-09-14 10:01:38.528181] [0x00007bbf24c69740] [info]    [timestep=253] Agent 25 finishes task 171
+current timestep 253
+plan limit 980
+[2026-09-14 10:01:39.448374] [0x00007bbf24c69740] [info]    [timestep=253] planner returns
+[2026-09-14 10:01:39.448413] [0x00007bbf24c69740] [info]    [timestep=254] Agent 22 finishes task 236
+current timestep 254
+plan limit 980
+[2026-09-14 10:01:40.368642] [0x00007bbf24c69740] [info]    [timestep=254] planner returns
+[2026-09-14 10:01:40.368683] [0x00007bbf24c69740] [info]    [timestep=255] Agent 8 finishes task 379
+[2026-09-14 10:01:40.368686] [0x00007bbf24c69740] [info]    [timestep=255] Agent 21 finishes task 318
+[2026-09-14 10:01:40.368688] [0x00007bbf24c69740] [info]    [timestep=255] Agent 29 finishes task 235
+current timestep 255
+plan limit 980
+[2026-09-14 10:01:41.288938] [0x00007bbf24c69740] [info]    [timestep=255] planner returns
+current timestep 256
+plan limit 980
+[2026-09-14 10:01:42.209200] [0x00007bbf24c69740] [info]    [timestep=256] planner returns
+[2026-09-14 10:01:42.209241] [0x00007bbf24c69740] [info]    [timestep=257] Agent 10 finishes task 305
+current timestep 257
+plan limit 980
+[2026-09-14 10:01:43.129489] [0x00007bbf24c69740] [info]    [timestep=257] planner returns
+[2026-09-14 10:01:43.129532] [0x00007bbf24c69740] [info]    [timestep=258] Agent 15 finishes task 373
+[2026-09-14 10:01:43.129536] [0x00007bbf24c69740] [info]    [timestep=258] Agent 45 opens task 325
+current timestep 258
+plan limit 980
+[2026-09-14 10:01:44.049717] [0x00007bbf24c69740] [info]    [timestep=258] planner returns
+current timestep 259
+plan limit 980
+[2026-09-14 10:01:44.969954] [0x00007bbf24c69740] [info]    [timestep=259] planner returns
+current timestep 260
+plan limit 980
+[2026-09-14 10:01:45.890199] [0x00007bbf24c69740] [info]    [timestep=260] planner returns
+current timestep 261
+plan limit 980
+[2026-09-14 10:01:46.810424] [0x00007bbf24c69740] [info]    [timestep=261] planner returns
+[2026-09-14 10:01:46.810466] [0x00007bbf24c69740] [info]    [timestep=262] Agent 2 finishes task 168
+[2026-09-14 10:01:46.810469] [0x00007bbf24c69740] [info]    [timestep=262] Agent 37 finishes task 323
+current timestep 262
+plan limit 980
+[2026-09-14 10:01:47.730643] [0x00007bbf24c69740] [info]    [timestep=262] planner returns
+current timestep 263
+plan limit 980
+[2026-09-14 10:01:48.650885] [0x00007bbf24c69740] [info]    [timestep=263] planner returns
+[2026-09-14 10:01:48.650925] [0x00007bbf24c69740] [info]    [timestep=264] Agent 28 finishes task 193
+current timestep 264
+plan limit 980
+[2026-09-14 10:01:49.571138] [0x00007bbf24c69740] [info]    [timestep=264] planner returns
+[2026-09-14 10:01:49.571177] [0x00007bbf24c69740] [info]    [timestep=265] Agent 32 finishes task 169
+current timestep 265
+plan limit 980
+[2026-09-14 10:01:50.491391] [0x00007bbf24c69740] [info]    [timestep=265] planner returns
+current timestep 266
+plan limit 980
+[2026-09-14 10:01:51.411635] [0x00007bbf24c69740] [info]    [timestep=266] planner returns
+[2026-09-14 10:01:51.411675] [0x00007bbf24c69740] [info]    [timestep=267] Agent 46 finishes task 175
+[2026-09-14 10:01:51.411678] [0x00007bbf24c69740] [info]    [timestep=267] Agent 47 finishes task 94
+current timestep 267
+plan limit 980
+[2026-09-14 10:01:52.331900] [0x00007bbf24c69740] [info]    [timestep=267] planner returns
+[2026-09-14 10:01:52.331933] [0x00007bbf24c69740] [info]    [timestep=268] Agent 19 finishes task 497
+current timestep 268
+plan limit 980
+[2026-09-14 10:01:53.252143] [0x00007bbf24c69740] [info]    [timestep=268] planner returns
+[2026-09-14 10:01:53.252180] [0x00007bbf24c69740] [info]    [timestep=269] Agent 4 finishes task 126
+[2026-09-14 10:01:53.252183] [0x00007bbf24c69740] [info]    [timestep=269] Agent 11 finishes task 369
+current timestep 269
+plan limit 980
+[2026-09-14 10:01:54.172408] [0x00007bbf24c69740] [info]    [timestep=269] planner returns
+[2026-09-14 10:01:54.172449] [0x00007bbf24c69740] [info]    [timestep=270] Agent 1 finishes task 271
+current timestep 270
+plan limit 980
+[2026-09-14 10:01:55.092645] [0x00007bbf24c69740] [info]    [timestep=270] planner returns
+[2026-09-14 10:01:55.092681] [0x00007bbf24c69740] [info]    [timestep=271] Agent 43 finishes task 166
+current timestep 271
+plan limit 980
+[2026-09-14 10:01:56.012849] [0x00007bbf24c69740] [info]    [timestep=271] planner returns
+current timestep 272
+plan limit 980
+[2026-09-14 10:01:56.933100] [0x00007bbf24c69740] [info]    [timestep=272] planner returns
+[2026-09-14 10:01:56.933138] [0x00007bbf24c69740] [info]    [timestep=273] Agent 7 finishes task 225
+[2026-09-14 10:01:56.933141] [0x00007bbf24c69740] [info]    [timestep=273] Agent 41 finishes task 205
+[2026-09-14 10:01:56.933142] [0x00007bbf24c69740] [info]    [timestep=273] Agent 49 finishes task 337
+current timestep 273
+plan limit 980
+[2026-09-14 10:01:57.853351] [0x00007bbf24c69740] [info]    [timestep=273] planner returns
+current timestep 274
+plan limit 980
+[2026-09-14 10:01:58.773555] [0x00007bbf24c69740] [info]    [timestep=274] planner returns
+current timestep 275
+plan limit 980
+[2026-09-14 10:01:59.693799] [0x00007bbf24c69740] [info]    [timestep=275] planner returns
+current timestep 276
+plan limit 980
+[2026-09-14 10:02:00.614012] [0x00007bbf24c69740] [info]    [timestep=276] planner returns
+current timestep 277
+plan limit 980
+[2026-09-14 10:02:01.534200] [0x00007bbf24c69740] [info]    [timestep=277] planner returns
+[2026-09-14 10:02:01.534238] [0x00007bbf24c69740] [info]    [timestep=278] Agent 45 finishes task 325
+current timestep 278
+plan limit 980
+[2026-09-14 10:02:02.454436] [0x00007bbf24c69740] [info]    [timestep=278] planner returns
+current timestep 279
+plan limit 980
+[2026-09-14 10:02:03.374666] [0x00007bbf24c69740] [info]    [timestep=279] planner returns
+current timestep 280
+plan limit 980
+[2026-09-14 10:02:04.294895] [0x00007bbf24c69740] [info]    [timestep=280] planner returns
+[2026-09-14 10:02:04.294932] [0x00007bbf24c69740] [info]    [timestep=281] Agent 38 finishes task 249
+[2026-09-14 10:02:04.294935] [0x00007bbf24c69740] [info]    All tasks are finished at timestep 281
+All tasks finished at timestep 281

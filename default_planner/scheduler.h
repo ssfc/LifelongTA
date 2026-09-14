@@ -4,6 +4,7 @@
 #include "Types.h"
 #include "SharedEnv.h"
 #include "heuristics.h"
+#include "portable_greedy_heap.h"
 #include <random>
 #include <thread>
 #include <future>
@@ -17,6 +18,8 @@ namespace DefaultPlanner{
 void schedule_initialize(int preprocess_time_limit, SharedEnvironment* env);
 
 void schedule_plan_raw(int time_limit, std::vector<int> & proposed_schedule,  SharedEnvironment* env);
+void schedule_plan_greedy_heap(int time_limit, std::vector<int> & proposed_schedule,
+                               SharedEnvironment* env, bool new_only, float dist_weight);
 void schedule_plan_matching(int time_limit, std::vector<int> & proposed_schedule,  SharedEnvironment* env, std::vector<Double4> background_flow, bool use_traffic, bool new_only, int maximum_edges);
 void schedule_plan_flow(int time_limit, std::vector<int> & proposed_schedule,  SharedEnvironment* env, std::vector<Double4> background_flow, bool use_traffic, bool new_only);
 void schedule_plan_h(int time_limit, std::vector<int> & proposed_schedule,  SharedEnvironment* env, bool new_only);

@@ -21,6 +21,7 @@ class TaskScheduler
         void set_new_only(bool new_only);
         void set_solver(int solver);
         void set_max_matching_edges(int max_matching_edges);
+        void set_heap_config(const DefaultPlanner::PortableGreedyHeapConfig& config);
 
         std::vector<DefaultPlanner::Double4> background_flow;
 
@@ -28,5 +29,6 @@ class TaskScheduler
         bool new_only = false;
         int solver = 1; //1 matching, 2 flow
         int max_matching_edges = INT_MAX;
+        DefaultPlanner::PortableGreedyHeapConfig heap_config;
 
 };
