@@ -1,4 +1,9 @@
 build
+build-ucrt/
+results/lab/raw/
+results/lab/**/*.log
+results/lab/**/*.bin
+results/lab/**/*.pt
 .vscode
 Dockerfile
 local
