@@ -2,6 +2,7 @@
 #include "Tasks.h"
 #include "SharedEnv.h"
 #include "scheduler.h"
+#include "portable_assignment.h"
 
 
 class TaskScheduler
@@ -22,6 +23,8 @@ class TaskScheduler
         void set_solver(int solver);
         void set_max_matching_edges(int max_matching_edges);
         void set_heap_config(const DefaultPlanner::PortableGreedyHeapConfig& config);
+        void set_task_matcher_config(const DefaultPlanner::PortableTaskMatcherConfig& config);
+        void set_capped_hungarian_config(const DefaultPlanner::PortableCappedHungarianConfig& config);
 
         std::vector<DefaultPlanner::Double4> background_flow;
 
@@ -30,5 +33,7 @@ class TaskScheduler
         int solver = 1; //1 matching, 2 flow
         int max_matching_edges = INT_MAX;
         DefaultPlanner::PortableGreedyHeapConfig heap_config;
+        DefaultPlanner::PortableTaskMatcherConfig task_matcher_config;
+        DefaultPlanner::PortableCappedHungarianConfig capped_hungarian_config;
 
 };

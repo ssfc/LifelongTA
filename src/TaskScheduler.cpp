@@ -47,17 +47,27 @@ void TaskScheduler::plan(int time_limit, std::vector<int> & proposed_schedule)
     {
         DefaultPlanner::schedule_plan_matching(limit, proposed_schedule, env, background_flow, use_traffic, new_only, max_matching_edges);
     }
-    else  if (solver == 4 && !use_traffic)
+    else  if (solver == 4)
     {
         DefaultPlanner::schedule_plan_h(limit, proposed_schedule, env, new_only);
     }
-    else  if (solver == 5 && !use_traffic)
+    else  if (solver == 5)
     {
         DefaultPlanner::schedule_plan_raw(limit, proposed_schedule, env);
     }
     else if (solver == 6)
     {
         DefaultPlanner::schedule_plan_portable_greedy_heap(limit, proposed_schedule, env, heap_config);
+    }
+    else if (solver == 7)
+    {
+        DefaultPlanner::schedule_plan_portable_task_matcher(limit, proposed_schedule, env,
+                                                            task_matcher_config);
+    }
+    else if (solver == 8)
+    {
+        DefaultPlanner::schedule_plan_portable_capped_hungarian(limit, proposed_schedule, env,
+                                                                 capped_hungarian_config);
     }
     else
     {
@@ -87,8 +97,18 @@ void TaskScheduler::set_max_matching_edges(int max_matching_edges)
 {
     this->max_matching_edges = max_matching_edges;
 }
-
 void TaskScheduler::set_heap_config(const DefaultPlanner::PortableGreedyHeapConfig& config)
 {
     heap_config = config;
+}
+
+void TaskScheduler::set_task_matcher_config(const DefaultPlanner::PortableTaskMatcherConfig& config)
+{
+    task_matcher_config = config;
+}
+
+void TaskScheduler::set_capped_hungarian_config(
+    const DefaultPlanner::PortableCappedHungarianConfig& config)
+{
+    capped_hungarian_config = config;
 }
