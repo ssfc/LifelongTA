@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Five-seed screen before committing compute to the full 25-seed matrix.
 ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 BIN="$ROOT/build/lifelong"
 OUT_ROOT="$ROOT/results/table2_portable_taskmatcher"
@@ -16,7 +17,7 @@ run_one() {
   if [[ -s "$output" ]] && [[ $(jq -r '.numTaskFinished // 0' "$output") -eq 500 ]]; then
     return
   fi
-  echo "Running TaskMatcher f=$f n=$n seed=$seed"
+  echo "Running TaskMatcher screen f=$f n=$n seed=$seed"
   "$BIN" --inputFile "$input" --output "$output" --outputScreen 3 \
     --simulationTime 400 --planTimeLimit 1000 --preprocessTimeLimit 30000 \
     --scheduleModel 7 --useTraffic false --assignNew false --commitWindow 1 \
@@ -27,16 +28,16 @@ run_one() {
 
 for f in 2 5 10; do
   for n in 50 80 100; do
-    for seed in $(seq 0 24); do
+    for seed in $(seq 0 4); do
       run_one "$f" "$n" "$seed"
     done
   done
 done
 
-printf '\n\a========== TaskMatcher Table 2 full campaign complete ==========\n'
+printf '\n\a========== TaskMatcher Table 2 screening complete ==========\n'
 date '+Completed at %F %T %Z'
-wall 'TaskMatcher Table 2 25-seed campaign has completed.' 2>/dev/null || true
+wall 'TaskMatcher Table 2 five-seed screening has completed.' 2>/dev/null || true
 if command -v notify-send >/dev/null 2>&1; then
   notify-send --urgency=normal 'TaskMatcher experiment complete' \
-    'The 25-seed Table 2 campaign has finished.' || true
+    'The five-seed Table 2 screening has finished.' || true
 fi
