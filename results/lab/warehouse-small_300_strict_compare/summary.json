@@ -1,0 +1,37 @@
+[
+    {
+        "Method":  "greedy",
+        "FinishedTasks":  4771,
+        "EntryTimeouts":  0,
+        "PlannerMeanSeconds":  0.918102,
+        "PlannerMaxSeconds":  0.934996
+    },
+    {
+        "Method":  "flow-unit",
+        "FinishedTasks":  5000,
+        "EntryTimeouts":  0,
+        "PlannerMeanSeconds":  0.918391,
+        "PlannerMaxSeconds":  0.925698
+    },
+    {
+        "Method":  "flow-traffic",
+        "FinishedTasks":  4864,
+        "EntryTimeouts":  0,
+        "PlannerMeanSeconds":  0.918523,
+        "PlannerMaxSeconds":  0.935866
+    },
+    {
+        "Method":  "flow-avg-waiting",
+        "FinishedTasks":  4865,
+        "EntryTimeouts":  0,
+        "PlannerMeanSeconds":  0.918452,
+        "PlannerMaxSeconds":  0.926681
+    },
+    {
+        "Method":  "portable-greedy-heap",
+        "FinishedTasks":  5017,
+        "EntryTimeouts":  0,
+        "PlannerMeanSeconds":  0.918158,
+        "PlannerMaxSeconds":  0.931687
+    }
+]
