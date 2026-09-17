@@ -1,3 +1,5 @@
+## 2026-09-14
+
 了解这个repo
 
 你说的对。这个是C:\gitcloud\lorr2026-task-assignment-paper\ref中这篇文章的代码2025 Flow-Based Task Assignment for Large-Scale Online Multi-Agent Pickup and Delivery.pdf
@@ -53,6 +55,8 @@ tick 23后，agent 57为什么不动了
 好。接下来我们做什么？
 
 好的。做吧。
+
+## 2026-09-17
 
 实验进度如何了？
 
