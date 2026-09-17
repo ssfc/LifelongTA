@@ -1,0 +1,8 @@
+Running taskmatcher_dw10_k100 on warehouse-small n=200 for 1000 timesteps
+Running cappedhungarian_dw5_lw0.5 on warehouse-small n=200 for 1000 timesteps
+Running taskmatcher_dw10_k100 on warehouse-small n=400 for 1000 timesteps
+Running cappedhungarian_dw5_lw0.5 on warehouse-small n=400 for 1000 timesteps
+Running taskmatcher_dw10_k100 on random n=400 for 1000 timesteps
+Running cappedhungarian_dw5_lw0.5 on random n=400 for 1000 timesteps
+Running taskmatcher_dw10_k100 on random n=800 for 1000 timesteps
+Running cappedhungarian_dw5_lw0.5 on random n=800 for 1000 timesteps

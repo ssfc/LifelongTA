@@ -59,6 +59,16 @@ void TaskScheduler::plan(int time_limit, std::vector<int> & proposed_schedule)
     {
         DefaultPlanner::schedule_plan_portable_greedy_heap(limit, proposed_schedule, env, heap_config);
     }
+    else if (solver == 7)
+    {
+        DefaultPlanner::schedule_plan_portable_task_matcher(limit, proposed_schedule, env,
+                                                            task_matcher_config);
+    }
+    else if (solver == 8)
+    {
+        DefaultPlanner::schedule_plan_portable_capped_hungarian(limit, proposed_schedule, env,
+                                                                 capped_hungarian_config);
+    }
     else
     {
         std::cerr << "Invalid solver type. Please choose either 1 (matching) or 2 (flow)." << std::endl;
@@ -90,4 +100,15 @@ void TaskScheduler::set_max_matching_edges(int max_matching_edges)
 void TaskScheduler::set_heap_config(const DefaultPlanner::PortableGreedyHeapConfig& config)
 {
     heap_config = config;
+}
+
+void TaskScheduler::set_task_matcher_config(const DefaultPlanner::PortableTaskMatcherConfig& config)
+{
+    task_matcher_config = config;
+}
+
+void TaskScheduler::set_capped_hungarian_config(
+    const DefaultPlanner::PortableCappedHungarianConfig& config)
+{
+    capped_hungarian_config = config;
 }

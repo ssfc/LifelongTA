@@ -54,14 +54,23 @@ int main(int argc, char **argv)
         ("logDetailLevel,d", po::value<int>()->default_value(1), "the minimum severity level of log messages to display, 1--showing all the messages, 2--showing warnings and fatal errors, 3--showing fatal errors only")
         ("useTraffic,u", po::value<bool>()->default_value(false), "use of traffic in scheduling")
         ("assignNew,n", po::value<bool>()->default_value(false), "wether new agents only or allow task swapping")
-        ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy, 6- greedy heap")
+        ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy, 6- greedy heap, 7- contest task matcher, 8- capped Hungarian")
         ("heapDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for greedy heap")
+        ("heapMaxAssign", po::value<float>()->default_value(1.0f), "maximum fraction of agents carrying a task in greedy heap")
         ("heapReassign", po::value<bool>()->default_value(true), "enable stable unopened-task reassignment for greedy heap")
         ("heapKeepBias", po::value<float>()->default_value(6.0f), "old-pair bias during greedy-heap reassignment")
         ("heapProtectDist", po::value<int>()->default_value(10), "protect assignments this close to pickup")
         ("heapRebuildPct", po::value<int>()->default_value(45), "greedy-heap candidate rebuild budget percentage")
         ("heapLnsPct", po::value<int>()->default_value(10), "greedy-heap swap-refinement budget percentage")
         ("heapSortK", po::value<int>()->default_value(500), "sorted candidates retained per agent")
+        ("matcherDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for contest task matcher")
+        ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
+        ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
+        ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
+        ("hungarianMaxAgents", po::value<int>()->default_value(256), "capped Hungarian candidate-agent limit")
+        ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
+        ("hungarianDistWeight", po::value<float>()->default_value(1.0f), "agent-to-pickup distance weight for capped Hungarian")
+        ("hungarianTaskLengthWeight", po::value<float>()->default_value(1.0f), "task-internal path-length weight for capped Hungarian")
         ("debugTrace", po::value<bool>()->default_value(false), "write a compact per-timestep visualization trace")
         ("debugTraceOutput", po::value<std::string>()->default_value(""), "debug trace JSON output path; defaults to <output>.trace.json")
         ("debugTraceStart", po::value<int>()->default_value(0), "first timestep captured by debug trace")
@@ -157,6 +166,7 @@ int main(int argc, char **argv)
     planner->scheduler->set_solver(vm["scheduleModel"].as<int>());
     DefaultPlanner::PortableGreedyHeapConfig heap_config;
     heap_config.dist_weight = vm["heapDistWeight"].as<float>();
+    heap_config.max_assign_ratio = vm["heapMaxAssign"].as<float>();
     heap_config.reassign_enabled = vm["heapReassign"].as<bool>();
     heap_config.reassign_keep_bias = vm["heapKeepBias"].as<float>();
     heap_config.reassign_min_dist = vm["heapProtectDist"].as<int>();
@@ -164,6 +174,20 @@ int main(int argc, char **argv)
     heap_config.lns_pct = vm["heapLnsPct"].as<int>();
     heap_config.sort_k = vm["heapSortK"].as<int>();
     planner->scheduler->set_heap_config(heap_config);
+    DefaultPlanner::PortableTaskMatcherConfig matcher_config;
+    matcher_config.dist_weight = vm["matcherDistWeight"].as<float>();
+    matcher_config.candidate_top_k = vm["matcherTopK"].as<int>();
+    matcher_config.max_matrix_elements = vm["matcherMaxMatrix"].as<int>();
+    matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();
+    matcher_config.reassign_keep_bias = heap_config.reassign_keep_bias;
+    matcher_config.reassign_min_dist = heap_config.reassign_min_dist;
+    planner->scheduler->set_task_matcher_config(matcher_config);
+    DefaultPlanner::PortableCappedHungarianConfig hungarian_config;
+    hungarian_config.max_agents = vm["hungarianMaxAgents"].as<int>();
+    hungarian_config.max_tasks = vm["hungarianMaxTasks"].as<int>();
+    hungarian_config.dist_weight = vm["hungarianDistWeight"].as<float>();
+    hungarian_config.task_length_weight = vm["hungarianTaskLengthWeight"].as<float>();
+    planner->scheduler->set_capped_hungarian_config(hungarian_config);
     planner->planner->set_refinement_time_limit(vm["refinementTimeLimit"].as<int>());
     planner->commit_window = vm["commitWindow"].as<int>();
 

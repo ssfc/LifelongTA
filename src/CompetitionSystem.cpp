@@ -449,5 +449,3 @@ void BaseSystem::saveResults(const string &fileName, int screen) const
     save_debug_trace();
 
 }
-
-

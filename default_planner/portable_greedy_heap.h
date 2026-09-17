@@ -11,6 +11,7 @@ namespace DefaultPlanner {
 
 struct PortableGreedyHeapConfig {
     float dist_weight = 5.0f;
+    float max_assign_ratio = 1.0f;
     bool reassign_enabled = true;
     float reassign_keep_bias = 6.0f;
     int reassign_min_dist = 10;

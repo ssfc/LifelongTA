@@ -241,6 +241,19 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
                                                task.locations.end())});
     }
 
+    // Preserve active and stable assignments, then cap only newly assigned
+    // agents. This mirrors the contest GreedyHeap throttling semantics.
+    const float max_assign_ratio = std::clamp(config.max_assign_ratio, 0.0f, 1.0f);
+    if (max_assign_ratio < 0.999f) {
+        const int max_total = std::max(1, static_cast<int>(max_assign_ratio * agent_count));
+        const int already_assigned = static_cast<int>(std::count_if(
+            local.begin(), local.end(), [](int task_id) { return task_id >= 0; }));
+        const int max_new = std::max(0, max_total - already_assigned);
+        if (static_cast<int>(free_agents.size()) > max_new) {
+            free_agents.resize(max_new);
+        }
+    }
+
     const int rebuild_ms = std::max(0, time_limit_ms) * std::clamp(config.rebuild_pct, 0, 100) / 100;
     const int lns_ms = std::max(0, time_limit_ms) * std::clamp(config.lns_pct, 0, 100) / 100;
     const auto rebuild_deadline = std::min(deadline, start + std::chrono::milliseconds(rebuild_ms));
