@@ -1,0 +1,47 @@
+[
+    {
+        "Agents":  500,
+        "TrafficTopK":  10,
+        "AssignRatio":  "1.0",
+        "FinishedTasks":  1394,
+        "EntryTimeouts":  0,
+        "PlannerErrors":  0,
+        "ScheduleErrors":  0
+    },
+    {
+        "Agents":  500,
+        "TrafficTopK":  15,
+        "AssignRatio":  "1.0",
+        "FinishedTasks":  1491,
+        "EntryTimeouts":  0,
+        "PlannerErrors":  0,
+        "ScheduleErrors":  0
+    },
+    {
+        "Agents":  500,
+        "TrafficTopK":  25,
+        "AssignRatio":  "1.0",
+        "FinishedTasks":  1425,
+        "EntryTimeouts":  0,
+        "PlannerErrors":  0,
+        "ScheduleErrors":  0
+    },
+    {
+        "Agents":  500,
+        "TrafficTopK":  35,
+        "AssignRatio":  "1.0",
+        "FinishedTasks":  1438,
+        "EntryTimeouts":  0,
+        "PlannerErrors":  0,
+        "ScheduleErrors":  0
+    },
+    {
+        "Agents":  500,
+        "TrafficTopK":  50,
+        "AssignRatio":  "1.0",
+        "FinishedTasks":  1541,
+        "EntryTimeouts":  0,
+        "PlannerErrors":  0,
+        "ScheduleErrors":  0
+    }
+]
