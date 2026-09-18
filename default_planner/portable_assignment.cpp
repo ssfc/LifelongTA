@@ -193,11 +193,21 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
     std::unordered_set<int> locked_tasks;
     std::unordered_map<int, int> old_assignment;
     std::vector<AgentInfo> candidates;
+    const float max_assign_ratio = std::clamp(config.max_assign_ratio, 0.0F, 1.0F);
+    const int currently_assigned = static_cast<int>(std::count_if(
+        local.begin(), local.end(), [](int task_id) { return task_id >= 0; }));
+    const int max_total = std::max(1, static_cast<int>(max_assign_ratio * env->num_of_agents));
+    const int max_new = max_assign_ratio < 0.999F ?
+        std::max(0, max_total - currently_assigned) : env->num_of_agents;
+    int admitted_free_agents = 0;
 
     for (int agent = 0; agent < env->num_of_agents; ++agent) {
         const int task_id = local[agent];
         if (task_id < 0) {
-            candidates.push_back({agent, env->curr_states.at(agent).location});
+            if (admitted_free_agents < max_new) {
+                candidates.push_back({agent, env->curr_states.at(agent).location});
+                ++admitted_free_agents;
+            }
             continue;
         }
         const auto task_it = env->task_pool.find(task_id);

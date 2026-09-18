@@ -64,6 +64,7 @@ int main(int argc, char **argv)
         ("heapLnsPct", po::value<int>()->default_value(10), "greedy-heap swap-refinement budget percentage")
         ("heapSortK", po::value<int>()->default_value(500), "sorted candidates retained per agent")
         ("matcherDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for contest task matcher")
+        ("matcherMaxAssign", po::value<float>()->default_value(1.0f), "maximum fraction of agents carrying a task in contest task matcher")
         ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
         ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
         ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
@@ -176,6 +177,7 @@ int main(int argc, char **argv)
     planner->scheduler->set_heap_config(heap_config);
     DefaultPlanner::PortableTaskMatcherConfig matcher_config;
     matcher_config.dist_weight = vm["matcherDistWeight"].as<float>();
+    matcher_config.max_assign_ratio = vm["matcherMaxAssign"].as<float>();
     matcher_config.candidate_top_k = vm["matcherTopK"].as<int>();
     matcher_config.max_matrix_elements = vm["matcherMaxMatrix"].as<int>();
     matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();
