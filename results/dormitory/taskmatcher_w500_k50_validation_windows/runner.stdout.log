@@ -1,0 +1,28 @@
+Running w500_traffic-k50_ratio100_t1000_trial1
+Running w500_traffic-k50_ratio100_t1000_trial2
+Running w500_traffic-k50_ratio100_t1000_trial3
+
+
+Trial              : 1
+FinishedTasks      : 6114
+EntryTimeouts      : 0
+PlannerErrors      : 0
+ScheduleErrors     : 0
+DeltaToFlowTraffic : 25
+
+Trial              : 2
+FinishedTasks      : 6160
+EntryTimeouts      : 0
+PlannerErrors      : 0
+ScheduleErrors     : 0
+DeltaToFlowTraffic : 71
+
+Trial              : 3
+FinishedTasks      : 5991
+EntryTimeouts      : 0
+PlannerErrors      : 0
+ScheduleErrors     : 0
+DeltaToFlowTraffic : -98
+
+
+
