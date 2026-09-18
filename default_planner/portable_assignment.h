@@ -15,6 +15,7 @@ struct PortableTaskMatcherConfig {
     int reassign_min_dist = 10;
     int candidate_top_k = 50;
     int max_matrix_elements = 2000000;
+    float max_assign_ratio = 1.0F;
 };
 
 struct PortableCappedHungarianConfig {

@@ -268,6 +268,39 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
         // A scheduler timeout must not discard a still-valid unopened task.
         for (const auto& entry : old_assignment) local[entry.first] = entry.second;
     } else {
+        const int max_assignments = std::max(
+            1, static_cast<int>(std::ceil(std::clamp(config.max_assign_ratio, 0.0F, 1.0F) *
+                                           static_cast<float>(candidates.size()))));
+        const bool is_partial = static_cast<int>(matches.size()) > max_assignments;
+        if (is_partial) {
+            std::unordered_map<int, int> agent_locations;
+            std::unordered_map<int, const TaskInfo*> tasks_by_id;
+            for (const AgentInfo& candidate : candidates) agent_locations[candidate.id] = candidate.location;
+            for (const TaskInfo& task : tasks) tasks_by_id[task.id] = &task;
+
+            std::vector<std::pair<float, std::pair<int, int>>> scored_matches;
+            scored_matches.reserve(matches.size());
+            for (const auto& match : matches) {
+                float value = task_score(env, agent_locations.at(match.first),
+                                         *tasks_by_id.at(match.second), config.dist_weight);
+                const auto old = old_assignment.find(match.first);
+                if (old != old_assignment.end() && old->second == match.second) {
+                    value -= config.reassign_keep_bias;
+                }
+                scored_matches.emplace_back(value, match);
+            }
+            std::sort(scored_matches.begin(), scored_matches.end());
+            matches.clear();
+            matches.reserve(max_assignments);
+            for (int i = 0; i < max_assignments; ++i) matches.push_back(scored_matches[i].second);
+        }
+        if (is_partial) {
+            std::unordered_set<int> retained_tasks;
+            for (const auto& match : matches) retained_tasks.insert(match.second);
+            for (const auto& entry : old_assignment) {
+                if (!retained_tasks.count(entry.second)) local[entry.first] = entry.second;
+            }
+        }
         for (const auto& match : matches) local[match.first] = match.second;
     }
     proposed_schedule = std::move(local);
