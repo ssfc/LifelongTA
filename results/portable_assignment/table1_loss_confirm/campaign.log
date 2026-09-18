@@ -1,0 +1,10 @@
+Running free_reassign on warehouse-small n=500 for 1000 timesteps
+Running free_reassign on warehouse-small n=600 for 1000 timesteps
+Running free_reassign on random n=400 for 1000 timesteps
+Running free_reassign on random n=800 for 1000 timesteps
+Running free_reassign on random n=1200 for 1000 timesteps
+Running free_reassign on random n=2000 for 1000 timesteps
+Running stable_reassign on random n=2000 for 1000 timesteps
+
+========== TaskMatcher Table 1 loss confirmation complete ==========
+Completed at 2026-09-17 20:17:03 CST

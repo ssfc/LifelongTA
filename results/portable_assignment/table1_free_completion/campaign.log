@@ -1,0 +1,7 @@
+Running free_reassign on warehouse-small n=200 for 1000 timesteps
+Running free_reassign on warehouse-small n=300 for 1000 timesteps
+Running free_reassign on warehouse-small n=400 for 1000 timesteps
+Running free_reassign on random n=1600 for 1000 timesteps
+
+========== TaskMatcher Table 1 free-reassignment completion complete ==========
+Completed at 2026-09-17 22:44:06 CST
