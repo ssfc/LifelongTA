@@ -327,4 +327,114 @@ void schedule_plan_portable_capped_hungarian(
     proposed_schedule = std::move(local);
 }
 
+void schedule_plan_portable_stable_snatch_hungarian(
+    int time_limit_ms, std::vector<int>& proposed_schedule, SharedEnvironment* env,
+    const PortableStableSnatchHungarianConfig& config)
+{
+    const auto deadline = std::chrono::steady_clock::now() +
+                          std::chrono::milliseconds(std::max(0, time_limit_ms));
+    std::vector<int> local = env->curr_task_schedule;
+    local.resize(env->num_of_agents, -1);
+    std::unordered_set<int> locked_tasks;
+    std::unordered_map<int, int> incumbent_tasks;
+    std::vector<AgentInfo> candidates;
+
+    for (int agent = 0; agent < env->num_of_agents; ++agent) {
+        const int task_id = local[agent];
+        if (task_id < 0) {
+            candidates.push_back({agent, env->curr_states.at(agent).location});
+            continue;
+        }
+        const auto task_it = env->task_pool.find(task_id);
+        if (task_it == env->task_pool.end() || task_it->second.idx_next_loc != 0 ||
+            task_it->second.locations.empty()) {
+            locked_tasks.insert(task_id);
+            continue;
+        }
+        const int pickup_distance = get_h(env, env->curr_states.at(agent).location,
+                                          task_it->second.locations.front());
+        if (pickup_distance <= config.snatch_min_pickup_distance ||
+            pickup_distance >= std::numeric_limits<int>::max() / 8) {
+            locked_tasks.insert(task_id);
+            continue;
+        }
+        candidates.push_back({agent, env->curr_states.at(agent).location});
+        incumbent_tasks[agent] = task_id;
+    }
+
+    std::vector<TaskInfo> tasks;
+    tasks.reserve(env->task_pool.size());
+    for (const auto& entry : env->task_pool) {
+        const Task& task = entry.second;
+        if (locked_tasks.count(entry.first) || task.idx_next_loc < 0 ||
+            task.idx_next_loc >= static_cast<int>(task.locations.size())) continue;
+        tasks.push_back(make_task_info(entry.first, task));
+    }
+    std::sort(candidates.begin(), candidates.end(), [](const AgentInfo& lhs, const AgentInfo& rhs) {
+        return lhs.id < rhs.id;
+    });
+    // Truncating this candidate set could duplicate an incumbent task: an
+    // excluded incumbent would retain its assignment while its task remained
+    // eligible for another candidate. Refuse the call instead.
+    if (static_cast<int>(candidates.size()) > config.max_agents ||
+        static_cast<int>(tasks.size()) > config.max_tasks) {
+        proposed_schedule = std::move(local);
+        return;
+    }
+    if (candidates.empty() || tasks.empty() || std::chrono::steady_clock::now() >= deadline) {
+        proposed_schedule = std::move(local);
+        return;
+    }
+
+    std::unordered_map<int, int> task_index;
+    task_index.reserve(tasks.size());
+    for (int j = 0; j < static_cast<int>(tasks.size()); ++j) task_index[tasks[j].id] = j;
+
+    std::vector<std::vector<float>> cost(candidates.size(),
+                                         std::vector<float>(tasks.size(), kInvalidCost));
+    for (int i = 0; i < static_cast<int>(candidates.size()); ++i) {
+        for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
+            if (std::chrono::steady_clock::now() >= deadline) {
+                proposed_schedule = std::move(local);
+                return;
+            }
+            cost[i][j] = task_score(env, candidates[i].location, tasks[j], config.dist_weight,
+                                    config.task_length_weight);
+        }
+    }
+
+    // A different agent can take an unopened incumbent task only after a
+    // material individual-cost reduction, matching the contest stable-snatch rule.
+    for (int i = 0; i < static_cast<int>(candidates.size()); ++i) {
+        const auto incumbent = incumbent_tasks.find(candidates[i].id);
+        if (incumbent == incumbent_tasks.end()) continue;
+        const auto task_it = task_index.find(incumbent->second);
+        if (task_it == task_index.end()) continue;
+        const int incumbent_task_index = task_it->second;
+        const float incumbent_cost = cost[i][incumbent_task_index];
+        if (incumbent_cost >= kInvalidCost / 2.0F) continue;
+        const float required_improvement = std::max(
+            config.snatch_min_abs_improve,
+            std::abs(incumbent_cost) * config.snatch_min_rel_improve);
+        const float max_snatch_cost = incumbent_cost - required_improvement;
+        for (int other = 0; other < static_cast<int>(candidates.size()); ++other) {
+            if (other != i && cost[other][incumbent_task_index] > max_snatch_cost)
+                cost[other][incumbent_task_index] = kInvalidCost;
+        }
+    }
+    if (std::chrono::steady_clock::now() >= deadline) {
+        proposed_schedule = std::move(local);
+        return;
+    }
+
+    const std::vector<int> assignment = hungarian(cost);
+    for (const AgentInfo& candidate : candidates) local[candidate.id] = -1;
+    for (int i = 0; i < static_cast<int>(candidates.size()); ++i) {
+        const int j = i < static_cast<int>(assignment.size()) ? assignment[i] : -1;
+        if (j >= 0 && j < static_cast<int>(tasks.size()) && cost[i][j] < kInvalidCost / 2.0F)
+            local[candidates[i].id] = tasks[j].id;
+    }
+    proposed_schedule = std::move(local);
+}
+
 }  // namespace DefaultPlanner

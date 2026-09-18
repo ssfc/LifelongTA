@@ -54,7 +54,7 @@ int main(int argc, char **argv)
         ("logDetailLevel,d", po::value<int>()->default_value(1), "the minimum severity level of log messages to display, 1--showing all the messages, 2--showing warnings and fatal errors, 3--showing fatal errors only")
         ("useTraffic,u", po::value<bool>()->default_value(false), "use of traffic in scheduling")
         ("assignNew,n", po::value<bool>()->default_value(false), "wether new agents only or allow task swapping")
-        ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy, 6- greedy heap, 7- contest task matcher, 8- capped Hungarian")
+        ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy, 6- greedy heap, 7- contest task matcher, 8- capped Hungarian, 9- stable-snatch Hungarian")
         ("heapDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for greedy heap")
         ("heapReassign", po::value<bool>()->default_value(true), "enable stable unopened-task reassignment for greedy heap")
         ("heapKeepBias", po::value<float>()->default_value(6.0f), "old-pair bias during greedy-heap reassignment")
@@ -70,6 +70,9 @@ int main(int argc, char **argv)
         ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
         ("hungarianDistWeight", po::value<float>()->default_value(1.0f), "agent-to-pickup distance weight for capped Hungarian")
         ("hungarianTaskLengthWeight", po::value<float>()->default_value(1.0f), "task-internal path-length weight for capped Hungarian")
+        ("snatchMinPickupDistance", po::value<int>()->default_value(10), "minimum pickup distance before an unopened task may be snatched")
+        ("snatchMinAbsImprove", po::value<float>()->default_value(6.0f), "minimum absolute cost improvement required for a snatch")
+        ("snatchMinRelImprove", po::value<float>()->default_value(0.10f), "minimum relative cost improvement required for a snatch")
         ("commitWindow,w", po::value<int>()->default_value(1), "commit window");
     clock_t start_time = clock();
     po::store(po::parse_command_line(argc, argv, desc), vm);
@@ -180,6 +183,15 @@ int main(int argc, char **argv)
     hungarian_config.dist_weight = vm["hungarianDistWeight"].as<float>();
     hungarian_config.task_length_weight = vm["hungarianTaskLengthWeight"].as<float>();
     planner->scheduler->set_capped_hungarian_config(hungarian_config);
+    DefaultPlanner::PortableStableSnatchHungarianConfig stable_snatch_config;
+    stable_snatch_config.max_agents = vm["hungarianMaxAgents"].as<int>();
+    stable_snatch_config.max_tasks = vm["hungarianMaxTasks"].as<int>();
+    stable_snatch_config.dist_weight = vm["hungarianDistWeight"].as<float>();
+    stable_snatch_config.task_length_weight = vm["hungarianTaskLengthWeight"].as<float>();
+    stable_snatch_config.snatch_min_pickup_distance = vm["snatchMinPickupDistance"].as<int>();
+    stable_snatch_config.snatch_min_abs_improve = vm["snatchMinAbsImprove"].as<float>();
+    stable_snatch_config.snatch_min_rel_improve = vm["snatchMinRelImprove"].as<float>();
+    planner->scheduler->set_stable_snatch_hungarian_config(stable_snatch_config);
     planner->commit_window = vm["commitWindow"].as<int>();
 
     ActionModel *model = new ActionModel(grid);

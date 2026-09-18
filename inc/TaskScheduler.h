@@ -25,6 +25,8 @@ class TaskScheduler
         void set_heap_config(const DefaultPlanner::PortableGreedyHeapConfig& config);
         void set_task_matcher_config(const DefaultPlanner::PortableTaskMatcherConfig& config);
         void set_capped_hungarian_config(const DefaultPlanner::PortableCappedHungarianConfig& config);
+        void set_stable_snatch_hungarian_config(
+            const DefaultPlanner::PortableStableSnatchHungarianConfig& config);
 
         std::vector<DefaultPlanner::Double4> background_flow;
 
@@ -35,5 +37,6 @@ class TaskScheduler
         DefaultPlanner::PortableGreedyHeapConfig heap_config;
         DefaultPlanner::PortableTaskMatcherConfig task_matcher_config;
         DefaultPlanner::PortableCappedHungarianConfig capped_hungarian_config;
+        DefaultPlanner::PortableStableSnatchHungarianConfig stable_snatch_hungarian_config;
 
 };

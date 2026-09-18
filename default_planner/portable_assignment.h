@@ -24,6 +24,16 @@ struct PortableCappedHungarianConfig {
     float task_length_weight = 1.0f;
 };
 
+struct PortableStableSnatchHungarianConfig {
+    int max_agents = 256;
+    int max_tasks = 512;
+    float dist_weight = 1.0f;
+    float task_length_weight = 1.0f;
+    int snatch_min_pickup_distance = 10;
+    float snatch_min_abs_improve = 6.0f;
+    float snatch_min_rel_improve = 0.10f;
+};
+
 void schedule_plan_portable_task_matcher(int time_limit_ms,
                                          std::vector<int>& proposed_schedule,
                                          SharedEnvironment* env,
@@ -32,5 +42,9 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
 void schedule_plan_portable_capped_hungarian(
     int time_limit_ms, std::vector<int>& proposed_schedule, SharedEnvironment* env,
     const PortableCappedHungarianConfig& config);
+
+void schedule_plan_portable_stable_snatch_hungarian(
+    int time_limit_ms, std::vector<int>& proposed_schedule, SharedEnvironment* env,
+    const PortableStableSnatchHungarianConfig& config);
 
 }  // namespace DefaultPlanner

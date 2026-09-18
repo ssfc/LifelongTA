@@ -69,6 +69,11 @@ void TaskScheduler::plan(int time_limit, std::vector<int> & proposed_schedule)
         DefaultPlanner::schedule_plan_portable_capped_hungarian(limit, proposed_schedule, env,
                                                                  capped_hungarian_config);
     }
+    else if (solver == 9)
+    {
+        DefaultPlanner::schedule_plan_portable_stable_snatch_hungarian(
+            limit, proposed_schedule, env, stable_snatch_hungarian_config);
+    }
     else
     {
         std::cerr << "Invalid solver type. Please choose either 1 (matching) or 2 (flow)." << std::endl;
@@ -111,4 +116,10 @@ void TaskScheduler::set_capped_hungarian_config(
     const DefaultPlanner::PortableCappedHungarianConfig& config)
 {
     capped_hungarian_config = config;
+}
+
+void TaskScheduler::set_stable_snatch_hungarian_config(
+    const DefaultPlanner::PortableStableSnatchHungarianConfig& config)
+{
+    stable_snatch_hungarian_config = config;
 }
