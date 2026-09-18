@@ -1,2 +1,18 @@
 Running TaskMatcher throttle n=400 ratio=0.2 for 250 timesteps
 Running TaskMatcher throttle n=400 ratio=0.4 for 250 timesteps
+Running TaskMatcher throttle n=400 ratio=0.6 for 250 timesteps
+Running TaskMatcher throttle n=400 ratio=0.8 for 250 timesteps
+Running TaskMatcher throttle n=400 ratio=1.0 for 250 timesteps
+Running TaskMatcher throttle n=500 ratio=0.2 for 250 timesteps
+Running TaskMatcher throttle n=500 ratio=0.4 for 250 timesteps
+Running TaskMatcher throttle n=500 ratio=0.6 for 250 timesteps
+Running TaskMatcher throttle n=500 ratio=0.8 for 250 timesteps
+Running TaskMatcher throttle n=500 ratio=1.0 for 250 timesteps
+Running TaskMatcher throttle n=600 ratio=0.2 for 250 timesteps
+Running TaskMatcher throttle n=600 ratio=0.4 for 250 timesteps
+Running TaskMatcher throttle n=600 ratio=0.6 for 250 timesteps
+Running TaskMatcher throttle n=600 ratio=0.8 for 250 timesteps
+Running TaskMatcher throttle n=600 ratio=1.0 for 250 timesteps
+
+========== Table 1 TaskMatcher throttling screen complete ==========
+Completed at 2026-09-18 21:38:02 CST
