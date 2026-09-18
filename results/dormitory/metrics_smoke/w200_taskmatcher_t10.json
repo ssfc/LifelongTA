@@ -1,0 +1,21 @@
+{
+    "actionModel": "MAPF",
+    "teamSize": 200,
+    "numTaskFinished": 0,
+    "makespan": 10,
+    "numPlannerErrors": 0,
+    "numScheduleErrors": 0,
+    "numEntryTimeouts": 0,
+    "plannerTimes": [
+        0.9184179,
+        0.9188847,
+        0.9188033,
+        0.9190733,
+        0.9187882,
+        0.9187032,
+        0.919391,
+        0.9185593,
+        0.9186759,
+        0.9195403
+    ]
+}
