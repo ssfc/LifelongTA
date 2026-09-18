@@ -6,6 +6,7 @@
 #include <chrono>
 #include <cmath>
 #include <limits>
+#include <queue>
 #include <unordered_map>
 #include <unordered_set>
 
@@ -40,6 +41,93 @@ float task_score(SharedEnvironment* env, int agent_location, const TaskInfo& tas
     }
     return dist_weight * static_cast<float>(distance) +
            task_length_weight * static_cast<float>(length);
+}
+
+int task_length(SharedEnvironment* env, const TaskInfo& task)
+{
+    int length = 0;
+    for (size_t i = 1; i < task.locations.size(); ++i) {
+        const int segment = get_h(env, task.locations[i - 1], task.locations[i]);
+        if (segment >= std::numeric_limits<int>::max() / 8) return -1;
+        length += segment;
+    }
+    return length;
+}
+
+float flow_traffic_edge_cost(SharedEnvironment* env, const std::vector<Double4>& background_flow,
+                             int location, int next, float congestion_weight)
+{
+    if (background_flow.size() != env->map.size()) return 1;
+    const int direction = get_d(location - next, env);
+    const int contraflow = (background_flow[location].d[direction] + 1) *
+                           background_flow[next].d[(direction + 2) % 4];
+    int incoming = 0;
+    for (int d = 0; d < 4; ++d) incoming += background_flow[next].d[d];
+    return 1.0F + std::max(0.0F, congestion_weight) *
+        static_cast<float>(contraflow + incoming / 2);
+}
+
+std::vector<std::vector<float>> traffic_cost_matrix(
+    SharedEnvironment* env, const std::vector<AgentInfo>& agents,
+    const std::vector<TaskInfo>& tasks, const PortableTaskMatcherConfig& config,
+    const std::vector<Double4>& background_flow, std::chrono::steady_clock::time_point deadline)
+{
+    std::vector<std::vector<float>> cost(agents.size(),
+                                         std::vector<float>(tasks.size(), kInvalidCost));
+    const int keep = std::min(std::max(1, config.traffic_top_k), static_cast<int>(tasks.size()));
+    std::vector<int> lengths(tasks.size(), -2);
+
+    for (int i = 0; i < static_cast<int>(agents.size()) &&
+                    std::chrono::steady_clock::now() < deadline; ++i) {
+        std::vector<std::pair<int, int>> nearest;
+        nearest.reserve(tasks.size());
+        for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
+            const int distance = get_h(env, agents[i].location, tasks[j].pickup);
+            if (distance < std::numeric_limits<int>::max() / 8) nearest.emplace_back(distance, j);
+        }
+        if (nearest.empty()) continue;
+        const int selected = std::min(keep, static_cast<int>(nearest.size()));
+        std::partial_sort(nearest.begin(), nearest.begin() + selected, nearest.end());
+
+        std::unordered_map<int, std::vector<int>> task_indices_at_location;
+        for (int k = 0; k < selected; ++k) {
+            task_indices_at_location[tasks[nearest[k].second].pickup].push_back(nearest[k].second);
+        }
+        int remaining_goals = static_cast<int>(task_indices_at_location.size());
+        std::vector<float> distance(env->map.size(), std::numeric_limits<float>::infinity());
+        std::priority_queue<std::pair<float, int>, std::vector<std::pair<float, int>>,
+                            std::greater<std::pair<float, int>>> open;
+        distance[agents[i].location] = 0.0F;
+        open.emplace(0.0F, agents[i].location);
+
+        while (!open.empty() && remaining_goals > 0 &&
+               std::chrono::steady_clock::now() < deadline) {
+            const auto [current_cost, location] = open.top();
+            open.pop();
+            if (current_cost > distance[location]) continue;
+            const auto goal = task_indices_at_location.find(location);
+            if (goal != task_indices_at_location.end()) {
+                for (const int task_index : goal->second) {
+                    if (lengths[task_index] == -2) lengths[task_index] = task_length(env, tasks[task_index]);
+                    if (lengths[task_index] >= 0) {
+                        cost[i][task_index] = config.dist_weight * static_cast<float>(current_cost) +
+                                              static_cast<float>(lengths[task_index]);
+                    }
+                }
+                task_indices_at_location.erase(goal);
+                --remaining_goals;
+            }
+            for (const int next : global_neighbors.at(location)) {
+                const float next_cost = current_cost + flow_traffic_edge_cost(
+                    env, background_flow, location, next, config.traffic_congestion_weight);
+                if (next_cost < distance[next]) {
+                    distance[next] = next_cost;
+                    open.emplace(next_cost, next);
+                }
+            }
+        }
+    }
+    return cost;
 }
 
 // Minimum-cost rectangular assignment. The implementation supports either
@@ -182,9 +270,10 @@ TaskInfo make_task_info(int id, const Task& task)
 }  // namespace
 
 void schedule_plan_portable_task_matcher(int time_limit_ms,
-                                         std::vector<int>& proposed_schedule,
-                                         SharedEnvironment* env,
-                                         const PortableTaskMatcherConfig& config)
+                                          std::vector<int>& proposed_schedule,
+                                          SharedEnvironment* env,
+                                          const PortableTaskMatcherConfig& config,
+                                          const std::vector<Double4>& background_flow)
 {
     const auto deadline = std::chrono::steady_clock::now() +
                           std::chrono::milliseconds(std::max(0, time_limit_ms));
@@ -237,17 +326,25 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
     const long long matrix_size = static_cast<long long>(candidates.size()) * tasks.size();
     if (matrix_size <= std::max(1, config.max_matrix_elements) &&
         std::chrono::steady_clock::now() < deadline) {
-        std::vector<std::vector<float>> cost(candidates.size(),
-                                             std::vector<float>(tasks.size(), kInvalidCost));
-        for (int i = 0; i < static_cast<int>(candidates.size()) &&
-                        std::chrono::steady_clock::now() < deadline; ++i) {
-            for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
-                float value = task_score(env, candidates[i].location, tasks[j], config.dist_weight);
-                const auto old = old_assignment.find(candidates[i].id);
-                if (old != old_assignment.end() && old->second == tasks[j].id) {
-                    value -= config.reassign_keep_bias;
+        std::vector<std::vector<float>> cost;
+        if (config.use_traffic_cost) {
+            cost = traffic_cost_matrix(env, candidates, tasks, config, background_flow, deadline);
+        } else {
+            cost.assign(candidates.size(), std::vector<float>(tasks.size(), kInvalidCost));
+            for (int i = 0; i < static_cast<int>(candidates.size()) &&
+                            std::chrono::steady_clock::now() < deadline; ++i) {
+                for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
+                    cost[i][j] = task_score(env, candidates[i].location, tasks[j], config.dist_weight);
                 }
-                cost[i][j] = value;
+            }
+        }
+        for (int i = 0; i < static_cast<int>(candidates.size()); ++i) {
+            for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
+                const auto old = old_assignment.find(candidates[i].id);
+                if (old != old_assignment.end() && old->second == tasks[j].id &&
+                    cost[i][j] < kInvalidCost / 2.0F) {
+                    cost[i][j] -= config.reassign_keep_bias;
+                }
             }
         }
         if (std::chrono::steady_clock::now() < deadline) {
