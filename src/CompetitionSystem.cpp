@@ -233,8 +233,10 @@ void BaseSystem::simulate(int simulation_time)
 
         record_debug_trace(simulator.get_curr_timestep());
 
-        // move drives
+        // Record movement against the assignment active during this tick.
+        const vector<State> previous_states = simulator.get_current_state();
         vector<State> curr_states = simulator.move(proposed_actions);
+        task_manager.record_agent_step(previous_states, curr_states);
         int timestep = simulator.get_curr_timestep();
         // agents do not move
 
@@ -244,6 +246,7 @@ void BaseSystem::simulate(int simulation_time)
 
         // update tasks
         task_manager.update_tasks(curr_states, proposed_schedule, simulator.get_curr_timestep());
+        task_manager.record_timeline(timestep, std::chrono::duration<double>(diff).count());
     }
 }
 
@@ -446,6 +449,7 @@ void BaseSystem::saveResults(const string &fileName, int screen) const
 
     std::ofstream f(fileName,std::ios_base::trunc |std::ios_base::out);
     f << std::setw(4) << js;
+    task_manager.save_metrics(fileName);
     save_debug_trace();
 
 }
