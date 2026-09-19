@@ -242,7 +242,8 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
         for (int i = 0; i < static_cast<int>(candidates.size()) &&
                         std::chrono::steady_clock::now() < deadline; ++i) {
             for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
-                float value = task_score(env, candidates[i].location, tasks[j], config.dist_weight);
+                float value = task_score(env, candidates[i].location, tasks[j], config.dist_weight,
+                                         config.task_length_weight);
                 const auto old = old_assignment.find(candidates[i].id);
                 if (old != old_assignment.end() && old->second == tasks[j].id) {
                     value -= config.reassign_keep_bias;
@@ -261,7 +262,7 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
         }
     }
     if (matches.empty() && std::chrono::steady_clock::now() < deadline) {
-        matches = top_k_match(env, candidates, tasks, config.dist_weight, 1.0F,
+        matches = top_k_match(env, candidates, tasks, config.dist_weight, config.task_length_weight,
                               config.candidate_top_k, deadline);
     }
     if (matches.empty()) {
