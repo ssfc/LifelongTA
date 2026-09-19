@@ -1,0 +1,3597 @@
+current timestep 0
+num of flexible agents: 80
+num of flexible tasks: 2
+Dijkstra time: 0.00405865
+No optimal solution found.
+plan limit 976
+current timestep 1
+num of flexible agents: 0
+num of flexible tasks: 4
+Dijkstra time: 1.474e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.913e-05 seconds
+plan limit 980
+current timestep 2
+num of flexible agents: 0
+num of flexible tasks: 6
+Dijkstra time: 1.3071e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.211e-06 seconds
+plan limit 980
+current timestep 3
+num of flexible agents: 0
+num of flexible tasks: 8
+Dijkstra time: 2.9744e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 7.429e-06 seconds
+plan limit 980
+current timestep 4
+num of flexible agents: 0
+num of flexible tasks: 10
+Dijkstra time: 1.8127e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.207e-06 seconds
+plan limit 980
+current timestep 5
+num of flexible agents: 0
+num of flexible tasks: 12
+Dijkstra time: 2.215e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.9273e-05 seconds
+plan limit 980
+current timestep 6
+num of flexible agents: 0
+num of flexible tasks: 14
+Dijkstra time: 2.0481e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 7.512e-06 seconds
+plan limit 980
+current timestep 7
+num of flexible agents: 0
+num of flexible tasks: 16
+Dijkstra time: 1.7378e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.419e-06 seconds
+plan limit 980
+current timestep 8
+num of flexible agents: 0
+num of flexible tasks: 18
+Dijkstra time: 2.0328e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 9.684e-06 seconds
+plan limit 980
+current timestep 9
+num of flexible agents: 0
+num of flexible tasks: 20
+Dijkstra time: 1.7234e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 7.999e-06 seconds
+plan limit 980
+current timestep 10
+num of flexible agents: 0
+num of flexible tasks: 22
+Dijkstra time: 1.9335e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.0554e-05 seconds
+plan limit 980
+current timestep 11
+num of flexible agents: 0
+num of flexible tasks: 24
+Dijkstra time: 2.1532e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.027e-05 seconds
+plan limit 980
+current timestep 12
+num of flexible agents: 0
+num of flexible tasks: 26
+Dijkstra time: 2.2595e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.1243e-05 seconds
+plan limit 980
+current timestep 13
+num of flexible agents: 0
+num of flexible tasks: 28
+Dijkstra time: 1.7104e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 8.651e-06 seconds
+plan limit 980
+current timestep 14
+num of flexible agents: 0
+num of flexible tasks: 30
+Dijkstra time: 2.2261e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 9.342e-06 seconds
+plan limit 980
+current timestep 15
+num of flexible agents: 0
+num of flexible tasks: 32
+Dijkstra time: 1.8541e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 9.487e-06 seconds
+plan limit 980
+current timestep 16
+num of flexible agents: 0
+num of flexible tasks: 34
+Dijkstra time: 3.1776e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 9.054e-06 seconds
+plan limit 980
+current timestep 17
+num of flexible agents: 0
+num of flexible tasks: 36
+Dijkstra time: 2.4028e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 9.867e-06 seconds
+plan limit 980
+current timestep 18
+num of flexible agents: 0
+num of flexible tasks: 38
+Dijkstra time: 2.3225e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.0487e-05 seconds
+plan limit 980
+current timestep 19
+num of flexible agents: 0
+num of flexible tasks: 40
+Dijkstra time: 2.2037e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 9.334e-06 seconds
+plan limit 980
+current timestep 20
+num of flexible agents: 0
+num of flexible tasks: 42
+Dijkstra time: 1.6596e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.3029e-05 seconds
+plan limit 980
+current timestep 21
+num of flexible agents: 0
+num of flexible tasks: 44
+Dijkstra time: 1.7913e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 9.375e-06 seconds
+plan limit 980
+current timestep 22
+num of flexible agents: 0
+num of flexible tasks: 46
+Dijkstra time: 2.039e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 9.852e-06 seconds
+plan limit 980
+current timestep 23
+num of flexible agents: 0
+num of flexible tasks: 48
+Dijkstra time: 3.3236e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.0595e-05 seconds
+plan limit 980
+current timestep 24
+num of flexible agents: 0
+num of flexible tasks: 50
+Dijkstra time: 2.2344e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 9.8e-06 seconds
+plan limit 980
+current timestep 25
+num of flexible agents: 0
+num of flexible tasks: 52
+Dijkstra time: 4.9468e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.1904e-05 seconds
+plan limit 980
+current timestep 26
+num of flexible agents: 0
+num of flexible tasks: 54
+Dijkstra time: 2.3561e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.046e-05 seconds
+plan limit 980
+current timestep 27
+num of flexible agents: 0
+num of flexible tasks: 56
+Dijkstra time: 3.4604e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.473e-05 seconds
+plan limit 980
+current timestep 28
+num of flexible agents: 0
+num of flexible tasks: 58
+Dijkstra time: 2.5322e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.2332e-05 seconds
+plan limit 980
+current timestep 29
+num of flexible agents: 0
+num of flexible tasks: 60
+Dijkstra time: 4.0171e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.2053e-05 seconds
+plan limit 980
+current timestep 30
+num of flexible agents: 0
+num of flexible tasks: 62
+Dijkstra time: 2.9043e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.445e-05 seconds
+plan limit 980
+current timestep 31
+num of flexible agents: 0
+num of flexible tasks: 64
+Dijkstra time: 2.6722e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.1618e-05 seconds
+plan limit 980
+current timestep 32
+num of flexible agents: 0
+num of flexible tasks: 66
+Dijkstra time: 4.0217e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.4863e-05 seconds
+plan limit 980
+current timestep 33
+num of flexible agents: 0
+num of flexible tasks: 68
+Dijkstra time: 2.6181e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.1645e-05 seconds
+plan limit 980
+current timestep 34
+num of flexible agents: 0
+num of flexible tasks: 70
+Dijkstra time: 2.5548e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.289e-05 seconds
+plan limit 980
+current timestep 35
+num of flexible agents: 0
+num of flexible tasks: 72
+Dijkstra time: 2.451e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.696e-05 seconds
+plan limit 980
+current timestep 36
+num of flexible agents: 0
+num of flexible tasks: 74
+Dijkstra time: 2.3348e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.2623e-05 seconds
+plan limit 980
+current timestep 37
+num of flexible agents: 0
+num of flexible tasks: 76
+Dijkstra time: 2.5214e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.2458e-05 seconds
+plan limit 980
+current timestep 38
+num of flexible agents: 0
+num of flexible tasks: 78
+Dijkstra time: 3.7441e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.6844e-05 seconds
+plan limit 980
+current timestep 39
+num of flexible agents: 0
+num of flexible tasks: 80
+Dijkstra time: 2.1747e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.4321e-05 seconds
+plan limit 980
+current timestep 40
+num of flexible agents: 0
+num of flexible tasks: 82
+Dijkstra time: 3.4159e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.4229e-05 seconds
+plan limit 980
+current timestep 41
+num of flexible agents: 0
+num of flexible tasks: 84
+Dijkstra time: 2.393e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.3978e-05 seconds
+plan limit 980
+current timestep 42
+num of flexible agents: 0
+num of flexible tasks: 86
+Dijkstra time: 3.0541e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.4005e-05 seconds
+plan limit 980
+current timestep 43
+num of flexible agents: 0
+num of flexible tasks: 88
+Dijkstra time: 2.7502e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.4238e-05 seconds
+plan limit 980
+current timestep 44
+num of flexible agents: 0
+num of flexible tasks: 90
+Dijkstra time: 2.8277e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.9833e-05 seconds
+plan limit 980
+current timestep 45
+num of flexible agents: 0
+num of flexible tasks: 92
+Dijkstra time: 3.0499e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.3967e-05 seconds
+plan limit 980
+current timestep 46
+num of flexible agents: 0
+num of flexible tasks: 94
+Dijkstra time: 2.7718e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.3052e-05 seconds
+plan limit 980
+current timestep 47
+num of flexible agents: 0
+num of flexible tasks: 96
+Dijkstra time: 2.6398e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.5469e-05 seconds
+plan limit 980
+current timestep 48
+num of flexible agents: 0
+num of flexible tasks: 98
+Dijkstra time: 2.7056e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.5329e-05 seconds
+plan limit 980
+current timestep 49
+num of flexible agents: 0
+num of flexible tasks: 100
+Dijkstra time: 4.2843e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.4031e-05 seconds
+plan limit 980
+current timestep 50
+num of flexible agents: 0
+num of flexible tasks: 102
+Dijkstra time: 2.5312e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.4194e-05 seconds
+plan limit 980
+current timestep 51
+num of flexible agents: 0
+num of flexible tasks: 104
+Dijkstra time: 2.6632e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.8003e-05 seconds
+plan limit 980
+current timestep 52
+num of flexible agents: 0
+num of flexible tasks: 106
+Dijkstra time: 4.4178e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.4096e-05 seconds
+plan limit 980
+current timestep 53
+num of flexible agents: 0
+num of flexible tasks: 108
+Dijkstra time: 2.7811e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.8377e-05 seconds
+plan limit 980
+current timestep 54
+num of flexible agents: 0
+num of flexible tasks: 110
+Dijkstra time: 2.7041e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.6332e-05 seconds
+plan limit 980
+current timestep 55
+num of flexible agents: 0
+num of flexible tasks: 112
+Dijkstra time: 2.8193e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.5338e-05 seconds
+plan limit 980
+current timestep 56
+num of flexible agents: 0
+num of flexible tasks: 114
+Dijkstra time: 2.6874e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.5887e-05 seconds
+plan limit 980
+current timestep 57
+num of flexible agents: 0
+num of flexible tasks: 116
+Dijkstra time: 2.7922e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.6536e-05 seconds
+plan limit 980
+current timestep 58
+num of flexible agents: 0
+num of flexible tasks: 118
+Dijkstra time: 2.9378e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.643e-05 seconds
+plan limit 980
+current timestep 59
+num of flexible agents: 0
+num of flexible tasks: 120
+Dijkstra time: 2.551e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.5382e-05 seconds
+plan limit 980
+current timestep 60
+num of flexible agents: 0
+num of flexible tasks: 122
+Dijkstra time: 2.9829e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.0172e-05 seconds
+plan limit 980
+current timestep 61
+num of flexible agents: 0
+num of flexible tasks: 124
+Dijkstra time: 4.2611e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.576e-05 seconds
+plan limit 980
+current timestep 62
+num of flexible agents: 0
+num of flexible tasks: 126
+Dijkstra time: 2.947e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.9177e-05 seconds
+plan limit 980
+current timestep 63
+num of flexible agents: 0
+num of flexible tasks: 128
+Dijkstra time: 2.7757e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.5191e-05 seconds
+plan limit 980
+current timestep 64
+num of flexible agents: 0
+num of flexible tasks: 130
+Dijkstra time: 4.1494e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.7767e-05 seconds
+plan limit 980
+current timestep 65
+num of flexible agents: 0
+num of flexible tasks: 132
+Dijkstra time: 2.8643e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.9633e-05 seconds
+plan limit 980
+current timestep 66
+num of flexible agents: 0
+num of flexible tasks: 134
+Dijkstra time: 3.2373e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.9549e-05 seconds
+plan limit 980
+current timestep 67
+num of flexible agents: 0
+num of flexible tasks: 136
+Dijkstra time: 4.2841e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.657e-05 seconds
+plan limit 980
+current timestep 68
+num of flexible agents: 0
+num of flexible tasks: 138
+Dijkstra time: 2.9242e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.7666e-05 seconds
+plan limit 980
+current timestep 69
+num of flexible agents: 0
+num of flexible tasks: 140
+Dijkstra time: 3.3278e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.9102e-05 seconds
+plan limit 980
+current timestep 70
+num of flexible agents: 0
+num of flexible tasks: 142
+Dijkstra time: 3.0561e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.849e-05 seconds
+plan limit 980
+current timestep 71
+num of flexible agents: 0
+num of flexible tasks: 144
+Dijkstra time: 3.585e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.0512e-05 seconds
+plan limit 980
+current timestep 72
+num of flexible agents: 0
+num of flexible tasks: 146
+Dijkstra time: 3.1978e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.1007e-05 seconds
+plan limit 980
+current timestep 73
+num of flexible agents: 0
+num of flexible tasks: 148
+Dijkstra time: 3.2355e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.9401e-05 seconds
+plan limit 980
+current timestep 74
+num of flexible agents: 0
+num of flexible tasks: 150
+Dijkstra time: 2.714e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.9747e-05 seconds
+plan limit 980
+current timestep 75
+num of flexible agents: 0
+num of flexible tasks: 152
+Dijkstra time: 3.1044e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.0235e-05 seconds
+plan limit 980
+current timestep 76
+num of flexible agents: 0
+num of flexible tasks: 154
+Dijkstra time: 2.7375e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.0257e-05 seconds
+plan limit 980
+current timestep 77
+num of flexible agents: 0
+num of flexible tasks: 156
+Dijkstra time: 3.8912e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.1139e-05 seconds
+plan limit 980
+current timestep 78
+num of flexible agents: 0
+num of flexible tasks: 158
+Dijkstra time: 3.0365e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.9019e-05 seconds
+plan limit 980
+current timestep 79
+num of flexible agents: 0
+num of flexible tasks: 160
+Dijkstra time: 4.6358e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.5792e-05 seconds
+plan limit 980
+current timestep 80
+num of flexible agents: 0
+num of flexible tasks: 162
+Dijkstra time: 4.4484e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.9959e-05 seconds
+plan limit 980
+current timestep 81
+num of flexible agents: 0
+num of flexible tasks: 164
+Dijkstra time: 3.3167e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.9667e-05 seconds
+plan limit 980
+current timestep 82
+num of flexible agents: 0
+num of flexible tasks: 166
+Dijkstra time: 3.6594e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.8506e-05 seconds
+plan limit 980
+current timestep 83
+num of flexible agents: 0
+num of flexible tasks: 168
+Dijkstra time: 3.9268e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.4123e-05 seconds
+plan limit 980
+current timestep 84
+num of flexible agents: 0
+num of flexible tasks: 170
+Dijkstra time: 3.5078e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.999e-05 seconds
+plan limit 980
+current timestep 85
+num of flexible agents: 0
+num of flexible tasks: 172
+Dijkstra time: 3.4965e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.0377e-05 seconds
+plan limit 980
+current timestep 86
+num of flexible agents: 0
+num of flexible tasks: 174
+Dijkstra time: 3.3267e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 1.9217e-05 seconds
+plan limit 980
+current timestep 87
+num of flexible agents: 0
+num of flexible tasks: 176
+Dijkstra time: 3.6364e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.431e-05 seconds
+plan limit 980
+current timestep 88
+num of flexible agents: 0
+num of flexible tasks: 178
+Dijkstra time: 3.6347e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.9424e-05 seconds
+plan limit 980
+current timestep 89
+num of flexible agents: 0
+num of flexible tasks: 180
+Dijkstra time: 3.246e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.1703e-05 seconds
+plan limit 980
+current timestep 90
+num of flexible agents: 0
+num of flexible tasks: 182
+Dijkstra time: 3.3929e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.0298e-05 seconds
+plan limit 980
+current timestep 91
+num of flexible agents: 0
+num of flexible tasks: 184
+Dijkstra time: 3.1292e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.0641e-05 seconds
+plan limit 980
+current timestep 92
+num of flexible agents: 0
+num of flexible tasks: 186
+Dijkstra time: 3.2947e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.3813e-05 seconds
+plan limit 980
+current timestep 93
+num of flexible agents: 0
+num of flexible tasks: 188
+Dijkstra time: 3.3882e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.2072e-05 seconds
+plan limit 980
+current timestep 94
+num of flexible agents: 0
+num of flexible tasks: 190
+Dijkstra time: 4.0584e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.5057e-05 seconds
+plan limit 980
+current timestep 95
+num of flexible agents: 0
+num of flexible tasks: 192
+Dijkstra time: 4.5953e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.1412e-05 seconds
+plan limit 980
+current timestep 96
+num of flexible agents: 0
+num of flexible tasks: 194
+Dijkstra time: 3.6202e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.3393e-05 seconds
+plan limit 980
+current timestep 97
+num of flexible agents: 0
+num of flexible tasks: 196
+Dijkstra time: 3.5141e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.2073e-05 seconds
+plan limit 980
+current timestep 98
+num of flexible agents: 0
+num of flexible tasks: 198
+Dijkstra time: 3.4085e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.2006e-05 seconds
+plan limit 980
+current timestep 99
+num of flexible agents: 0
+num of flexible tasks: 200
+Dijkstra time: 3.4698e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.1113e-05 seconds
+plan limit 980
+current timestep 100
+num of flexible agents: 0
+num of flexible tasks: 202
+Dijkstra time: 4.6751e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.6635e-05 seconds
+plan limit 980
+current timestep 101
+num of flexible agents: 0
+num of flexible tasks: 204
+Dijkstra time: 3.4407e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.2571e-05 seconds
+plan limit 980
+current timestep 102
+num of flexible agents: 0
+num of flexible tasks: 206
+Dijkstra time: 3.5811e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.4455e-05 seconds
+plan limit 980
+current timestep 103
+num of flexible agents: 0
+num of flexible tasks: 208
+Dijkstra time: 3.6794e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.5341e-05 seconds
+plan limit 980
+current timestep 104
+num of flexible agents: 0
+num of flexible tasks: 210
+Dijkstra time: 3.5403e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.1911e-05 seconds
+plan limit 980
+current timestep 105
+num of flexible agents: 0
+num of flexible tasks: 212
+Dijkstra time: 4.5327e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.3563e-05 seconds
+plan limit 980
+current timestep 106
+num of flexible agents: 0
+num of flexible tasks: 214
+Dijkstra time: 3.9282e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.5079e-05 seconds
+plan limit 980
+current timestep 107
+num of flexible agents: 0
+num of flexible tasks: 216
+Dijkstra time: 4.7594e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.348e-05 seconds
+plan limit 980
+current timestep 108
+num of flexible agents: 0
+num of flexible tasks: 218
+Dijkstra time: 3.713e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.2211e-05 seconds
+plan limit 980
+current timestep 109
+num of flexible agents: 0
+num of flexible tasks: 220
+Dijkstra time: 3.6083e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.624e-05 seconds
+plan limit 980
+current timestep 110
+num of flexible agents: 0
+num of flexible tasks: 222
+Dijkstra time: 3.2968e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5113e-05 seconds
+plan limit 980
+current timestep 111
+num of flexible agents: 0
+num of flexible tasks: 224
+Dijkstra time: 3.5551e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.496e-05 seconds
+plan limit 980
+current timestep 112
+num of flexible agents: 0
+num of flexible tasks: 226
+Dijkstra time: 4.5382e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.9472e-05 seconds
+plan limit 980
+current timestep 113
+num of flexible agents: 0
+num of flexible tasks: 228
+Dijkstra time: 3.6043e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.3193e-05 seconds
+plan limit 980
+current timestep 114
+num of flexible agents: 0
+num of flexible tasks: 230
+Dijkstra time: 3.9808e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.3947e-05 seconds
+plan limit 980
+current timestep 115
+num of flexible agents: 0
+num of flexible tasks: 232
+Dijkstra time: 3.6304e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.748e-05 seconds
+plan limit 980
+current timestep 116
+num of flexible agents: 0
+num of flexible tasks: 234
+Dijkstra time: 4.4431e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.0327e-05 seconds
+plan limit 980
+current timestep 117
+num of flexible agents: 0
+num of flexible tasks: 236
+Dijkstra time: 3.9687e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.503e-05 seconds
+plan limit 980
+current timestep 118
+num of flexible agents: 0
+num of flexible tasks: 238
+Dijkstra time: 3.6433e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.4691e-05 seconds
+plan limit 980
+current timestep 119
+num of flexible agents: 0
+num of flexible tasks: 240
+Dijkstra time: 4.0745e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.8658e-05 seconds
+plan limit 980
+current timestep 120
+num of flexible agents: 0
+num of flexible tasks: 242
+Dijkstra time: 4.0995e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.6651e-05 seconds
+plan limit 980
+current timestep 121
+num of flexible agents: 0
+num of flexible tasks: 244
+Dijkstra time: 3.7725e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.6457e-05 seconds
+plan limit 980
+current timestep 122
+num of flexible agents: 0
+num of flexible tasks: 246
+Dijkstra time: 4.1415e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.0477e-05 seconds
+plan limit 980
+current timestep 123
+num of flexible agents: 0
+num of flexible tasks: 248
+Dijkstra time: 5.8253e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.7115e-05 seconds
+plan limit 980
+current timestep 124
+num of flexible agents: 0
+num of flexible tasks: 250
+Dijkstra time: 3.9433e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.7717e-05 seconds
+plan limit 980
+current timestep 125
+num of flexible agents: 0
+num of flexible tasks: 252
+Dijkstra time: 3.6719e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.5329e-05 seconds
+plan limit 980
+current timestep 126
+num of flexible agents: 0
+num of flexible tasks: 254
+Dijkstra time: 3.8301e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.722e-05 seconds
+plan limit 980
+current timestep 127
+num of flexible agents: 0
+num of flexible tasks: 256
+Dijkstra time: 3.9719e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.9949e-05 seconds
+plan limit 980
+current timestep 128
+num of flexible agents: 0
+num of flexible tasks: 258
+Dijkstra time: 3.6303e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.8957e-05 seconds
+plan limit 980
+current timestep 129
+num of flexible agents: 0
+num of flexible tasks: 260
+Dijkstra time: 3.8275e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.3064e-05 seconds
+plan limit 980
+current timestep 130
+num of flexible agents: 0
+num of flexible tasks: 262
+Dijkstra time: 6.0919e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.0746e-05 seconds
+plan limit 980
+current timestep 131
+num of flexible agents: 0
+num of flexible tasks: 264
+Dijkstra time: 5.2981e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.7723e-05 seconds
+plan limit 980
+current timestep 132
+num of flexible agents: 0
+num of flexible tasks: 266
+Dijkstra time: 5.2779e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.1e-05 seconds
+plan limit 980
+current timestep 133
+num of flexible agents: 0
+num of flexible tasks: 268
+Dijkstra time: 3.544e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.6376e-05 seconds
+plan limit 980
+current timestep 134
+num of flexible agents: 0
+num of flexible tasks: 270
+Dijkstra time: 6.1119e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.6313e-05 seconds
+plan limit 980
+current timestep 135
+num of flexible agents: 0
+num of flexible tasks: 272
+Dijkstra time: 6.1091e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.9649e-05 seconds
+plan limit 980
+current timestep 136
+num of flexible agents: 0
+num of flexible tasks: 274
+Dijkstra time: 4.2544e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.0441e-05 seconds
+plan limit 980
+current timestep 137
+num of flexible agents: 0
+num of flexible tasks: 276
+Dijkstra time: 5.0597e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 2.8842e-05 seconds
+plan limit 980
+current timestep 138
+num of flexible agents: 0
+num of flexible tasks: 278
+Dijkstra time: 3.817e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.1311e-05 seconds
+plan limit 980
+current timestep 139
+num of flexible agents: 0
+num of flexible tasks: 280
+Dijkstra time: 4.6752e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.3409e-05 seconds
+plan limit 980
+current timestep 140
+num of flexible agents: 0
+num of flexible tasks: 282
+Dijkstra time: 4.3984e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.8481e-05 seconds
+plan limit 980
+current timestep 141
+num of flexible agents: 0
+num of flexible tasks: 284
+Dijkstra time: 3.9733e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.846e-05 seconds
+plan limit 980
+current timestep 142
+num of flexible agents: 0
+num of flexible tasks: 286
+Dijkstra time: 4.8131e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5705e-05 seconds
+plan limit 980
+current timestep 143
+num of flexible agents: 0
+num of flexible tasks: 288
+Dijkstra time: 4.0898e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.8422e-05 seconds
+plan limit 980
+current timestep 144
+num of flexible agents: 0
+num of flexible tasks: 290
+Dijkstra time: 5.0225e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.5854e-05 seconds
+plan limit 980
+current timestep 145
+num of flexible agents: 0
+num of flexible tasks: 292
+Dijkstra time: 4.0718e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.4298e-05 seconds
+plan limit 980
+current timestep 146
+num of flexible agents: 0
+num of flexible tasks: 294
+Dijkstra time: 3.8616e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.3292e-05 seconds
+plan limit 980
+current timestep 147
+num of flexible agents: 0
+num of flexible tasks: 296
+Dijkstra time: 4.6111e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.5511e-05 seconds
+plan limit 980
+current timestep 148
+num of flexible agents: 0
+num of flexible tasks: 298
+Dijkstra time: 4.3237e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.1002e-05 seconds
+plan limit 980
+current timestep 149
+num of flexible agents: 0
+num of flexible tasks: 300
+Dijkstra time: 4.2491e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.0344e-05 seconds
+plan limit 980
+current timestep 150
+num of flexible agents: 0
+num of flexible tasks: 302
+Dijkstra time: 4.3282e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.0979e-05 seconds
+plan limit 980
+current timestep 151
+num of flexible agents: 0
+num of flexible tasks: 304
+Dijkstra time: 5.0339e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.2952e-05 seconds
+plan limit 980
+current timestep 152
+num of flexible agents: 0
+num of flexible tasks: 306
+Dijkstra time: 5.8073e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.3919e-05 seconds
+plan limit 980
+current timestep 153
+num of flexible agents: 0
+num of flexible tasks: 308
+Dijkstra time: 4.2874e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.0585e-05 seconds
+plan limit 980
+current timestep 154
+num of flexible agents: 0
+num of flexible tasks: 310
+Dijkstra time: 5.8754e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.1479e-05 seconds
+plan limit 980
+current timestep 155
+num of flexible agents: 0
+num of flexible tasks: 312
+Dijkstra time: 5.4227e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.3817e-05 seconds
+plan limit 980
+current timestep 156
+num of flexible agents: 0
+num of flexible tasks: 314
+Dijkstra time: 5.5453e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.4084e-05 seconds
+plan limit 980
+current timestep 157
+num of flexible agents: 0
+num of flexible tasks: 316
+Dijkstra time: 5.4502e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.1066e-05 seconds
+plan limit 980
+current timestep 158
+num of flexible agents: 0
+num of flexible tasks: 318
+Dijkstra time: 5.2579e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.2818e-05 seconds
+plan limit 980
+current timestep 159
+num of flexible agents: 0
+num of flexible tasks: 320
+Dijkstra time: 5.0456e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.2264e-05 seconds
+plan limit 980
+current timestep 160
+num of flexible agents: 0
+num of flexible tasks: 322
+Dijkstra time: 4.8451e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.3216e-05 seconds
+plan limit 980
+current timestep 161
+num of flexible agents: 0
+num of flexible tasks: 324
+Dijkstra time: 5.9375e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.2669e-05 seconds
+plan limit 980
+current timestep 162
+num of flexible agents: 0
+num of flexible tasks: 326
+Dijkstra time: 6.4299e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.1235e-05 seconds
+plan limit 980
+current timestep 163
+num of flexible agents: 0
+num of flexible tasks: 328
+Dijkstra time: 6.1246e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.2272e-05 seconds
+plan limit 980
+current timestep 164
+num of flexible agents: 0
+num of flexible tasks: 330
+Dijkstra time: 4.3364e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.5414e-05 seconds
+plan limit 980
+current timestep 165
+num of flexible agents: 0
+num of flexible tasks: 332
+Dijkstra time: 4.2293e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.3445e-05 seconds
+plan limit 980
+current timestep 166
+num of flexible agents: 0
+num of flexible tasks: 334
+Dijkstra time: 4.2842e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9798e-05 seconds
+plan limit 980
+current timestep 167
+num of flexible agents: 0
+num of flexible tasks: 336
+Dijkstra time: 4.8168e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.5756e-05 seconds
+plan limit 980
+current timestep 168
+num of flexible agents: 0
+num of flexible tasks: 338
+Dijkstra time: 6.5464e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6688e-05 seconds
+plan limit 980
+current timestep 169
+num of flexible agents: 0
+num of flexible tasks: 340
+Dijkstra time: 4.6498e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6981e-05 seconds
+plan limit 980
+current timestep 170
+num of flexible agents: 0
+num of flexible tasks: 342
+Dijkstra time: 7.2038e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.6478e-05 seconds
+plan limit 980
+current timestep 171
+num of flexible agents: 0
+num of flexible tasks: 344
+Dijkstra time: 5.6357e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.3526e-05 seconds
+plan limit 980
+current timestep 172
+num of flexible agents: 0
+num of flexible tasks: 346
+Dijkstra time: 7.2165e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.512e-05 seconds
+plan limit 980
+current timestep 173
+num of flexible agents: 0
+num of flexible tasks: 348
+Dijkstra time: 5.3497e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9596e-05 seconds
+plan limit 980
+current timestep 174
+num of flexible agents: 0
+num of flexible tasks: 350
+Dijkstra time: 4.7132e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4245e-05 seconds
+plan limit 980
+current timestep 175
+num of flexible agents: 0
+num of flexible tasks: 352
+Dijkstra time: 5.9862e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6972e-05 seconds
+plan limit 980
+current timestep 176
+num of flexible agents: 0
+num of flexible tasks: 354
+Dijkstra time: 5.7161e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.3968e-05 seconds
+plan limit 980
+current timestep 177
+num of flexible agents: 0
+num of flexible tasks: 356
+Dijkstra time: 5.6535e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.0576e-05 seconds
+plan limit 980
+current timestep 178
+num of flexible agents: 0
+num of flexible tasks: 358
+Dijkstra time: 6.4031e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.701e-05 seconds
+plan limit 980
+current timestep 179
+num of flexible agents: 0
+num of flexible tasks: 360
+Dijkstra time: 5.7707e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.8737e-05 seconds
+plan limit 980
+current timestep 180
+num of flexible agents: 0
+num of flexible tasks: 362
+Dijkstra time: 8.134e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.6932e-05 seconds
+plan limit 980
+current timestep 181
+num of flexible agents: 0
+num of flexible tasks: 364
+Dijkstra time: 5.4188e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.4017e-05 seconds
+plan limit 980
+current timestep 182
+num of flexible agents: 0
+num of flexible tasks: 366
+Dijkstra time: 4.8829e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.7921e-05 seconds
+plan limit 980
+current timestep 183
+num of flexible agents: 0
+num of flexible tasks: 368
+Dijkstra time: 4.3237e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.6308e-05 seconds
+plan limit 980
+current timestep 184
+num of flexible agents: 0
+num of flexible tasks: 370
+Dijkstra time: 6.9178e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.7513e-05 seconds
+plan limit 980
+current timestep 185
+num of flexible agents: 0
+num of flexible tasks: 372
+Dijkstra time: 4.6408e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9446e-05 seconds
+plan limit 980
+current timestep 186
+num of flexible agents: 0
+num of flexible tasks: 374
+Dijkstra time: 5.1344e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.953e-05 seconds
+plan limit 980
+current timestep 187
+num of flexible agents: 0
+num of flexible tasks: 376
+Dijkstra time: 4.9766e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.1333e-05 seconds
+plan limit 980
+current timestep 188
+num of flexible agents: 0
+num of flexible tasks: 378
+Dijkstra time: 5.1066e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.2971e-05 seconds
+plan limit 980
+current timestep 189
+num of flexible agents: 0
+num of flexible tasks: 380
+Dijkstra time: 5.0529e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.874e-05 seconds
+plan limit 980
+current timestep 190
+num of flexible agents: 0
+num of flexible tasks: 382
+Dijkstra time: 4.4858e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.7545e-05 seconds
+plan limit 980
+current timestep 191
+num of flexible agents: 0
+num of flexible tasks: 384
+Dijkstra time: 6.1768e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7807e-05 seconds
+plan limit 980
+current timestep 192
+num of flexible agents: 0
+num of flexible tasks: 386
+Dijkstra time: 4.7761e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.5311e-05 seconds
+plan limit 980
+current timestep 193
+num of flexible agents: 0
+num of flexible tasks: 388
+Dijkstra time: 6.4227e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.5926e-05 seconds
+plan limit 980
+current timestep 194
+num of flexible agents: 0
+num of flexible tasks: 390
+Dijkstra time: 5.711e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.9677e-05 seconds
+plan limit 980
+current timestep 195
+num of flexible agents: 0
+num of flexible tasks: 392
+Dijkstra time: 6.019e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9567e-05 seconds
+plan limit 980
+current timestep 196
+num of flexible agents: 0
+num of flexible tasks: 394
+Dijkstra time: 4.9181e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.0391e-05 seconds
+plan limit 980
+current timestep 197
+num of flexible agents: 0
+num of flexible tasks: 396
+Dijkstra time: 6.0813e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.7394e-05 seconds
+plan limit 980
+current timestep 198
+num of flexible agents: 0
+num of flexible tasks: 398
+Dijkstra time: 5.4892e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.6833e-05 seconds
+plan limit 980
+current timestep 199
+num of flexible agents: 0
+num of flexible tasks: 400
+Dijkstra time: 7.3602e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.2081e-05 seconds
+plan limit 980
+current timestep 200
+num of flexible agents: 0
+num of flexible tasks: 402
+Dijkstra time: 7.556e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.8616e-05 seconds
+plan limit 980
+current timestep 201
+num of flexible agents: 0
+num of flexible tasks: 404
+Dijkstra time: 4.4027e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.7058e-05 seconds
+plan limit 980
+current timestep 202
+num of flexible agents: 0
+num of flexible tasks: 406
+Dijkstra time: 5.7943e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5404e-05 seconds
+plan limit 980
+current timestep 203
+num of flexible agents: 0
+num of flexible tasks: 408
+Dijkstra time: 5.787e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.854e-05 seconds
+plan limit 980
+current timestep 204
+num of flexible agents: 0
+num of flexible tasks: 410
+Dijkstra time: 6.7574e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.2262e-05 seconds
+plan limit 980
+current timestep 205
+num of flexible agents: 0
+num of flexible tasks: 412
+Dijkstra time: 5.8385e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.762e-05 seconds
+plan limit 980
+current timestep 206
+num of flexible agents: 0
+num of flexible tasks: 414
+Dijkstra time: 4.6629e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.1601e-05 seconds
+plan limit 980
+current timestep 207
+num of flexible agents: 0
+num of flexible tasks: 416
+Dijkstra time: 5.0005e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.8366e-05 seconds
+plan limit 980
+current timestep 208
+num of flexible agents: 0
+num of flexible tasks: 418
+Dijkstra time: 5.666e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4539e-05 seconds
+plan limit 980
+current timestep 209
+num of flexible agents: 0
+num of flexible tasks: 420
+Dijkstra time: 6.5495e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4476e-05 seconds
+plan limit 980
+current timestep 210
+num of flexible agents: 0
+num of flexible tasks: 422
+Dijkstra time: 4.805e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.8276e-05 seconds
+plan limit 980
+current timestep 211
+num of flexible agents: 0
+num of flexible tasks: 424
+Dijkstra time: 7.4847e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.1967e-05 seconds
+plan limit 980
+current timestep 212
+num of flexible agents: 0
+num of flexible tasks: 426
+Dijkstra time: 7.2319e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.343e-05 seconds
+plan limit 980
+current timestep 213
+num of flexible agents: 0
+num of flexible tasks: 428
+Dijkstra time: 7.2317e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.8535e-05 seconds
+plan limit 980
+current timestep 214
+num of flexible agents: 0
+num of flexible tasks: 430
+Dijkstra time: 6.2662e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8955e-05 seconds
+plan limit 980
+current timestep 215
+num of flexible agents: 0
+num of flexible tasks: 432
+Dijkstra time: 5.9746e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.2197e-05 seconds
+plan limit 980
+current timestep 216
+num of flexible agents: 0
+num of flexible tasks: 434
+Dijkstra time: 6.589e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.0315e-05 seconds
+plan limit 980
+current timestep 217
+num of flexible agents: 0
+num of flexible tasks: 436
+Dijkstra time: 7.0461e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.93e-05 seconds
+plan limit 980
+current timestep 218
+num of flexible agents: 0
+num of flexible tasks: 438
+Dijkstra time: 6.0748e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7064e-05 seconds
+plan limit 980
+current timestep 219
+num of flexible agents: 0
+num of flexible tasks: 440
+Dijkstra time: 5.6595e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 3.893e-05 seconds
+plan limit 980
+current timestep 220
+num of flexible agents: 0
+num of flexible tasks: 442
+Dijkstra time: 6.9755e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.09e-05 seconds
+plan limit 980
+current timestep 221
+num of flexible agents: 0
+num of flexible tasks: 444
+Dijkstra time: 6.4984e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4585e-05 seconds
+plan limit 980
+current timestep 222
+num of flexible agents: 0
+num of flexible tasks: 446
+Dijkstra time: 6.1665e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.1592e-05 seconds
+plan limit 980
+current timestep 223
+num of flexible agents: 0
+num of flexible tasks: 448
+Dijkstra time: 5.5142e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.118e-05 seconds
+plan limit 980
+current timestep 224
+num of flexible agents: 0
+num of flexible tasks: 450
+Dijkstra time: 5.8451e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.119e-05 seconds
+plan limit 980
+current timestep 225
+num of flexible agents: 0
+num of flexible tasks: 452
+Dijkstra time: 6.9797e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.078e-05 seconds
+plan limit 980
+current timestep 226
+num of flexible agents: 0
+num of flexible tasks: 454
+Dijkstra time: 6.5426e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4495e-05 seconds
+plan limit 980
+current timestep 227
+num of flexible agents: 0
+num of flexible tasks: 456
+Dijkstra time: 8.626e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.1642e-05 seconds
+plan limit 980
+current timestep 228
+num of flexible agents: 0
+num of flexible tasks: 458
+Dijkstra time: 6.3309e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.2043e-05 seconds
+plan limit 980
+current timestep 229
+num of flexible agents: 0
+num of flexible tasks: 460
+Dijkstra time: 7.0538e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.1142e-05 seconds
+plan limit 980
+current timestep 230
+num of flexible agents: 0
+num of flexible tasks: 462
+Dijkstra time: 6.4125e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7164e-05 seconds
+plan limit 980
+current timestep 231
+num of flexible agents: 0
+num of flexible tasks: 464
+Dijkstra time: 6.567e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.2362e-05 seconds
+plan limit 980
+current timestep 232
+num of flexible agents: 0
+num of flexible tasks: 466
+Dijkstra time: 5.25e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.3854e-05 seconds
+plan limit 980
+current timestep 233
+num of flexible agents: 0
+num of flexible tasks: 468
+Dijkstra time: 5.0288e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.3091e-05 seconds
+plan limit 980
+current timestep 234
+num of flexible agents: 0
+num of flexible tasks: 470
+Dijkstra time: 6.5361e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.8518e-05 seconds
+plan limit 980
+current timestep 235
+num of flexible agents: 0
+num of flexible tasks: 472
+Dijkstra time: 7.3359e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9934e-05 seconds
+plan limit 980
+current timestep 236
+num of flexible agents: 0
+num of flexible tasks: 474
+Dijkstra time: 4.9104e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.1996e-05 seconds
+plan limit 980
+current timestep 237
+num of flexible agents: 0
+num of flexible tasks: 476
+Dijkstra time: 6.3529e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.2181e-05 seconds
+plan limit 980
+current timestep 238
+num of flexible agents: 0
+num of flexible tasks: 478
+Dijkstra time: 4.8919e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.6984e-05 seconds
+plan limit 980
+current timestep 239
+num of flexible agents: 0
+num of flexible tasks: 480
+Dijkstra time: 6.5587e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.1044e-05 seconds
+plan limit 980
+current timestep 240
+num of flexible agents: 0
+num of flexible tasks: 482
+Dijkstra time: 6.217e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.0636e-05 seconds
+plan limit 980
+current timestep 241
+num of flexible agents: 0
+num of flexible tasks: 484
+Dijkstra time: 6.079e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6105e-05 seconds
+plan limit 980
+current timestep 242
+num of flexible agents: 0
+num of flexible tasks: 486
+Dijkstra time: 5.3289e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.3077e-05 seconds
+plan limit 980
+current timestep 243
+num of flexible agents: 0
+num of flexible tasks: 488
+Dijkstra time: 5.879e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.4983e-05 seconds
+plan limit 980
+current timestep 244
+num of flexible agents: 0
+num of flexible tasks: 490
+Dijkstra time: 6.5182e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.288e-05 seconds
+plan limit 980
+current timestep 245
+num of flexible agents: 0
+num of flexible tasks: 492
+Dijkstra time: 7.5508e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4909e-05 seconds
+plan limit 980
+current timestep 246
+num of flexible agents: 0
+num of flexible tasks: 494
+Dijkstra time: 5.2589e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.3456e-05 seconds
+plan limit 980
+current timestep 247
+num of flexible agents: 0
+num of flexible tasks: 496
+Dijkstra time: 6.8141e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.2373e-05 seconds
+plan limit 980
+current timestep 248
+num of flexible agents: 0
+num of flexible tasks: 498
+Dijkstra time: 6.8932e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4266e-05 seconds
+plan limit 980
+current timestep 249
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.7792e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8291e-05 seconds
+plan limit 980
+current timestep 250
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.6485e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6625e-05 seconds
+plan limit 980
+current timestep 251
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.9121e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7186e-05 seconds
+plan limit 980
+current timestep 252
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.6756e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5893e-05 seconds
+plan limit 980
+current timestep 253
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.1746e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.9025e-05 seconds
+plan limit 980
+current timestep 254
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 4.6995e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.2409e-05 seconds
+plan limit 980
+current timestep 255
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.6116e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.2172e-05 seconds
+plan limit 980
+current timestep 256
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.4245e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5771e-05 seconds
+plan limit 980
+current timestep 257
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.7415e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4903e-05 seconds
+plan limit 980
+current timestep 258
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.2492e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4368e-05 seconds
+plan limit 980
+current timestep 259
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.6538e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6326e-05 seconds
+plan limit 980
+current timestep 260
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.3768e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.1558e-05 seconds
+plan limit 980
+current timestep 261
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.3379e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4597e-05 seconds
+plan limit 980
+current timestep 262
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.5979e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.1545e-05 seconds
+plan limit 980
+current timestep 263
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.7524e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9074e-05 seconds
+plan limit 980
+current timestep 264
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.7623e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8311e-05 seconds
+plan limit 980
+current timestep 265
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.0661e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.5682e-05 seconds
+plan limit 980
+current timestep 266
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.8283e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4672e-05 seconds
+plan limit 980
+current timestep 267
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.0241e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.0753e-05 seconds
+plan limit 980
+current timestep 268
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.9704e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8457e-05 seconds
+plan limit 980
+current timestep 269
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.1037e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.2422e-05 seconds
+plan limit 980
+current timestep 270
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.5424e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9021e-05 seconds
+plan limit 980
+current timestep 271
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.5845e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.4351e-05 seconds
+plan limit 980
+current timestep 272
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.4889e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.6894e-05 seconds
+plan limit 980
+current timestep 273
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 8.2155e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.5887e-05 seconds
+plan limit 980
+current timestep 274
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.9187e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5359e-05 seconds
+plan limit 980
+current timestep 275
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.4392e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4243e-05 seconds
+plan limit 980
+current timestep 276
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.3363e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.6305e-05 seconds
+plan limit 980
+current timestep 277
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.9071e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8289e-05 seconds
+plan limit 980
+current timestep 278
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.9774e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8514e-05 seconds
+plan limit 980
+current timestep 279
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.4855e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6768e-05 seconds
+plan limit 980
+current timestep 280
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.258e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.2661e-05 seconds
+plan limit 980
+current timestep 281
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.1001e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.1765e-05 seconds
+plan limit 980
+current timestep 282
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.4939e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.3867e-05 seconds
+plan limit 980
+current timestep 283
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.934e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4068e-05 seconds
+plan limit 980
+current timestep 284
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 8.4372e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9882e-05 seconds
+plan limit 980
+current timestep 285
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.9808e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4366e-05 seconds
+plan limit 980
+current timestep 286
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.8345e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8494e-05 seconds
+plan limit 980
+current timestep 287
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.332e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.6765e-05 seconds
+plan limit 980
+current timestep 288
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.1219e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8548e-05 seconds
+plan limit 980
+current timestep 289
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.9134e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4578e-05 seconds
+plan limit 980
+current timestep 290
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.4148e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7184e-05 seconds
+plan limit 980
+current timestep 291
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.581e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.0208e-05 seconds
+plan limit 980
+current timestep 292
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.563e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.466e-05 seconds
+plan limit 980
+current timestep 293
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.8497e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.2245e-05 seconds
+plan limit 980
+current timestep 294
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.9017e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.1886e-05 seconds
+plan limit 980
+current timestep 295
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.2689e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.1315e-05 seconds
+plan limit 980
+current timestep 296
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.6176e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5105e-05 seconds
+plan limit 980
+current timestep 297
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.7956e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.3151e-05 seconds
+plan limit 980
+current timestep 298
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.3817e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4278e-05 seconds
+plan limit 980
+current timestep 299
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.2431e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8359e-05 seconds
+plan limit 980
+current timestep 300
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.4426e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4112e-05 seconds
+plan limit 980
+current timestep 301
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 8.3668e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8854e-05 seconds
+plan limit 980
+current timestep 302
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.1763e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.1347e-05 seconds
+plan limit 980
+current timestep 303
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.7524e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5432e-05 seconds
+plan limit 980
+current timestep 304
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.3036e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.3831e-05 seconds
+plan limit 980
+current timestep 305
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.5943e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4224e-05 seconds
+plan limit 980
+current timestep 306
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.6908e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.6241e-05 seconds
+plan limit 980
+current timestep 307
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.8362e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9562e-05 seconds
+plan limit 980
+current timestep 308
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.7397e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.175e-05 seconds
+plan limit 980
+current timestep 309
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.0136e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5804e-05 seconds
+plan limit 980
+current timestep 310
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.2397e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6088e-05 seconds
+plan limit 980
+current timestep 311
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.4031e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7722e-05 seconds
+plan limit 980
+current timestep 312
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.1383e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8763e-05 seconds
+plan limit 980
+current timestep 313
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.0759e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.4873e-05 seconds
+plan limit 980
+current timestep 314
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.4771e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.1391e-05 seconds
+plan limit 980
+current timestep 315
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.5059e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9577e-05 seconds
+plan limit 980
+current timestep 316
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.2789e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.5639e-05 seconds
+plan limit 980
+current timestep 317
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.8441e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.4273e-05 seconds
+plan limit 980
+current timestep 318
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.1618e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.8372e-05 seconds
+plan limit 980
+current timestep 319
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.3858e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.0512e-05 seconds
+plan limit 980
+current timestep 320
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.835e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5868e-05 seconds
+plan limit 980
+current timestep 321
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.3555e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6213e-05 seconds
+plan limit 980
+current timestep 322
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.6521e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.1025e-05 seconds
+plan limit 980
+current timestep 323
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.4848e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4444e-05 seconds
+plan limit 980
+current timestep 324
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.1815e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.1549e-05 seconds
+plan limit 980
+current timestep 325
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.3565e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7234e-05 seconds
+plan limit 980
+current timestep 326
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.5532e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6138e-05 seconds
+plan limit 980
+current timestep 327
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.374e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.0839e-05 seconds
+plan limit 980
+current timestep 328
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.0444e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.0774e-05 seconds
+plan limit 980
+current timestep 329
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.3508e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4765e-05 seconds
+plan limit 980
+current timestep 330
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.2682e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4863e-05 seconds
+plan limit 980
+current timestep 331
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.6663e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.403e-05 seconds
+plan limit 980
+current timestep 332
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.6807e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4069e-05 seconds
+plan limit 980
+current timestep 333
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.645e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8631e-05 seconds
+plan limit 980
+current timestep 334
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 4.9062e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.1477e-05 seconds
+plan limit 980
+current timestep 335
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.2164e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.0627e-05 seconds
+plan limit 980
+current timestep 336
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.4264e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5557e-05 seconds
+plan limit 980
+current timestep 337
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.9893e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.2154e-05 seconds
+plan limit 980
+current timestep 338
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.2372e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8765e-05 seconds
+plan limit 980
+current timestep 339
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.2766e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.049e-05 seconds
+plan limit 980
+current timestep 340
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 4.9563e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.2427e-05 seconds
+plan limit 980
+current timestep 341
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.4061e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.5711e-05 seconds
+plan limit 980
+current timestep 342
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.261e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7591e-05 seconds
+plan limit 980
+current timestep 343
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.1415e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7155e-05 seconds
+plan limit 980
+current timestep 344
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.1911e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9638e-05 seconds
+plan limit 980
+current timestep 345
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.1993e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.5353e-05 seconds
+plan limit 980
+current timestep 346
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.5539e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.3482e-05 seconds
+plan limit 980
+current timestep 347
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.8932e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.1146e-05 seconds
+plan limit 980
+current timestep 348
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.0551e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9119e-05 seconds
+plan limit 980
+current timestep 349
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.2061e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5904e-05 seconds
+plan limit 980
+current timestep 350
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.9666e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.5761e-05 seconds
+plan limit 980
+current timestep 351
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.0595e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.1124e-05 seconds
+plan limit 980
+current timestep 352
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.5334e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.7955e-05 seconds
+plan limit 980
+current timestep 353
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.9208e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5811e-05 seconds
+plan limit 980
+current timestep 354
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.2017e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7672e-05 seconds
+plan limit 980
+current timestep 355
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.5596e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5287e-05 seconds
+plan limit 980
+current timestep 356
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.1037e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4919e-05 seconds
+plan limit 980
+current timestep 357
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.7695e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5346e-05 seconds
+plan limit 980
+current timestep 358
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.809e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4112e-05 seconds
+plan limit 980
+current timestep 359
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.5353e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5113e-05 seconds
+plan limit 980
+current timestep 360
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.4364e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.0004e-05 seconds
+plan limit 980
+current timestep 361
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.9232e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.9665e-05 seconds
+plan limit 980
+current timestep 362
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.258e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.563e-05 seconds
+plan limit 980
+current timestep 363
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.6351e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5154e-05 seconds
+plan limit 980
+current timestep 364
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.0324e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4639e-05 seconds
+plan limit 980
+current timestep 365
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.6863e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7706e-05 seconds
+plan limit 980
+current timestep 366
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.7218e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.4408e-05 seconds
+plan limit 980
+current timestep 367
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.1141e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.3252e-05 seconds
+plan limit 980
+current timestep 368
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.3174e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9875e-05 seconds
+plan limit 980
+current timestep 369
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.8911e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.9978e-05 seconds
+plan limit 980
+current timestep 370
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.3196e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4422e-05 seconds
+plan limit 980
+current timestep 371
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.3443e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6427e-05 seconds
+plan limit 980
+current timestep 372
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.0608e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5376e-05 seconds
+plan limit 980
+current timestep 373
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.9992e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.172e-05 seconds
+plan limit 980
+current timestep 374
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.9985e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.3641e-05 seconds
+plan limit 980
+current timestep 375
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.4571e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.4566e-05 seconds
+plan limit 980
+current timestep 376
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.519e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5711e-05 seconds
+plan limit 980
+current timestep 377
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.7311e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.4496e-05 seconds
+plan limit 980
+current timestep 378
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.6204e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5525e-05 seconds
+plan limit 980
+current timestep 379
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.976e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9794e-05 seconds
+plan limit 980
+current timestep 380
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.4351e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.3208e-05 seconds
+plan limit 980
+current timestep 381
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.5314e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6782e-05 seconds
+plan limit 980
+current timestep 382
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.8668e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.92e-05 seconds
+plan limit 980
+current timestep 383
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.5722e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.3946e-05 seconds
+plan limit 980
+current timestep 384
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.2149e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6288e-05 seconds
+plan limit 980
+current timestep 385
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.2549e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 6.2835e-05 seconds
+plan limit 980
+current timestep 386
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.5137e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9193e-05 seconds
+plan limit 980
+current timestep 387
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.2754e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.508e-05 seconds
+plan limit 980
+current timestep 388
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 4.7825e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5021e-05 seconds
+plan limit 980
+current timestep 389
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.9291e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.1784e-05 seconds
+plan limit 980
+current timestep 390
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.2696e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.645e-05 seconds
+plan limit 980
+current timestep 391
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.21e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9498e-05 seconds
+plan limit 980
+current timestep 392
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 7.771e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.9492e-05 seconds
+plan limit 980
+current timestep 393
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5.3618e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.8762e-05 seconds
+plan limit 980
+current timestep 394
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.0044e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.6569e-05 seconds
+plan limit 980
+current timestep 395
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 4.9112e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.6921e-05 seconds
+plan limit 980
+current timestep 396
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 4.968e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.5864e-05 seconds
+plan limit 980
+current timestep 397
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 5e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.8025e-05 seconds
+plan limit 980
+current timestep 398
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 8.0969e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 4.7213e-05 seconds
+plan limit 980
+current timestep 399
+num of flexible agents: 0
+num of flexible tasks: 500
+Dijkstra time: 6.9398e-05
+Optimal assignment with minimum cost:
+Total assignment: 0
+Total minimum cost: 0
+Solving time: 5.251e-05 seconds
+plan limit 980

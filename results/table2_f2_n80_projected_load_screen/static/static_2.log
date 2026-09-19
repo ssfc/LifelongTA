@@ -71,7 +71,7 @@ plan limit 980
 current timestep 35
 plan limit 980
 current timestep 36
-plan limit 979
+plan limit 980
 current timestep 37
 plan limit 980
 current timestep 38
@@ -81,7 +81,7 @@ plan limit 980
 current timestep 40
 plan limit 980
 current timestep 41
-plan limit 979
+plan limit 980
 current timestep 42
 plan limit 980
 current timestep 43
@@ -568,4 +568,8 @@ current timestep 283
 plan limit 980
 current timestep 284
 plan limit 980
-All tasks finished at timestep 285
+current timestep 285
+plan limit 980
+current timestep 286
+plan limit 980
+All tasks finished at timestep 287
