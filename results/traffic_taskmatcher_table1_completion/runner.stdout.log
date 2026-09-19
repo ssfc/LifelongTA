@@ -1,0 +1,10 @@
+Running traffic TaskMatcher on warehouse-small n=200 for 1000 timesteps
+Running traffic TaskMatcher on warehouse-small n=300 for 1000 timesteps
+Running traffic TaskMatcher on random n=400 for 1000 timesteps
+Running traffic TaskMatcher on random n=800 for 1000 timesteps
+Running traffic TaskMatcher on random n=1200 for 1000 timesteps
+Running traffic TaskMatcher on random n=1600 for 1000 timesteps
+Running traffic TaskMatcher on random n=2000 for 1000 timesteps
+
+========== TrafficAware TaskMatcher Table 1 completion complete ==========
+Completed at 2026-09-19 14:59:52 CST
