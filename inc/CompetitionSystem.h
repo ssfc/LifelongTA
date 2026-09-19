@@ -62,6 +62,7 @@ public:
     };
 
     void set_num_tasks_reveal(float num){task_manager.set_num_tasks_reveal(num);};
+    void set_finite_task_stream(bool enabled){task_manager.set_finite_task_stream(enabled);};
     void set_plan_time_limit(int limit){plan_time_limit = limit;};
     void set_preprocess_time_limit(int limit){preprocess_time_limit = limit;};
     void set_log_level(int level){log_level = level;};

@@ -1,0 +1,29 @@
+[1/23] Building CXX object CMakeFiles/lifelong.dir/default_planner/search.cpp.obj
+[2/23] Building CXX object CMakeFiles/lifelong.dir/default_planner/flow.cpp.obj
+[3/23] Building CXX object CMakeFiles/lifelong.dir/default_planner/heuristics.cpp.obj
+[4/23] Building CXX object CMakeFiles/lifelong.dir/default_planner/pibt.cpp.obj
+[5/23] Building CXX object CMakeFiles/lifelong.dir/default_planner/planner.cpp.obj
+[6/23] Building CXX object CMakeFiles/lifelong.dir/default_planner/portable_greedy_heap.cpp.obj
+[7/23] Building CXX object CMakeFiles/lifelong.dir/default_planner/portable_assignment.cpp.obj
+[8/23] Building CXX object CMakeFiles/lifelong.dir/src/Grid.cpp.obj
+[9/23] Building CXX object CMakeFiles/lifelong.dir/default_planner/utils.cpp.obj
+[10/23] Building CXX object CMakeFiles/lifelong.dir/default_planner/scheduler.cpp.obj
+[11/23] Building CXX object CMakeFiles/lifelong.dir/src/ActionModel.cpp.obj
+[12/23] Building CXX object CMakeFiles/lifelong.dir/src/Entry.cpp.obj
+[13/23] Building CXX object CMakeFiles/lifelong.dir/src/Logger.cpp.obj
+[14/23] Building CXX object CMakeFiles/lifelong.dir/src/Evaluation.cpp.obj
+[15/23] Building CXX object CMakeFiles/lifelong.dir/src/States.cpp.obj
+[16/23] Building CXX object CMakeFiles/lifelong.dir/src/CompetitionSystem.cpp.obj
+[17/23] Building CXX object CMakeFiles/lifelong.dir/src/MAPFPlanner.cpp.obj
+[18/23] Building CXX object CMakeFiles/lifelong.dir/src/common.cpp.obj
+[19/23] Building CXX object CMakeFiles/lifelong.dir/src/Simulator.cpp.obj
+[20/23] Building CXX object CMakeFiles/lifelong.dir/src/TaskScheduler.cpp.obj
+[21/23] Building CXX object CMakeFiles/lifelong.dir/src/driver.cpp.obj
+FAILED: [code=1] CMakeFiles/lifelong.dir/src/driver.cpp.obj 
+C:\msys64\ucrt64\bin\c++.exe -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_CHRONO_NO_LIB -DBOOST_CONTAINER_DYN_LINK -DBOOST_CONTAINER_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK=1 -DBOOST_FILESYSTEM_NO_LIB -DBOOST_LOG_DYN_LINK -DBOOST_LOG_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_THREAD_USE_DLL -DPYTHON=0 -D_WIN32_WINNT=0x0A00 -IC:/gitcloud/LifelongTA/inc -IC:/gitcloud/LifelongTA/default_planner -IC:/gitcloud/_builddeps/lemon/install-vcpkg/include -O3 -DNDEBUG -std=gnu++17 -MD -MT CMakeFiles/lifelong.dir/src/driver.cpp.obj -MF CMakeFiles\lifelong.dir\src\driver.cpp.obj.d -o CMakeFiles/lifelong.dir/src/driver.cpp.obj -c C:/gitcloud/LifelongTA/src/driver.cpp
+C:/gitcloud/LifelongTA/src/driver.cpp: In function 'int main(int, char**)':
+C:/gitcloud/LifelongTA/src/driver.cpp:219:17: error: 'class BaseSystem' has no member named 'set_finite_task_stream'
+  219 |     system_ptr->set_finite_task_stream(vm["finiteTaskStream"].as<bool>());
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+[22/23] Building CXX object CMakeFiles/lifelong.dir/src/TaskManager.cpp.obj
+ninja: build stopped: subcommand failed.

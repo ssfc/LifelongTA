@@ -71,7 +71,11 @@ public:
 
     void sync_shared_env(SharedEnvironment* env);
 
-    void set_num_tasks_reveal(float num){num_tasks_reveal = num*num_of_agents;};
+    void set_num_tasks_reveal(float num){
+        num_tasks_reveal = finite_task_stream ? static_cast<int>(num) : static_cast<int>(num*num_of_agents);
+    };
+    void set_finite_task_stream(bool enabled){finite_task_stream = enabled;};
+    bool finished_all_tasks() const {return finish_all_tasks;};
     void set_logger(Logger* logger){this->logger = logger;}
 
     bool validate_task_assignment(vector<int>& assignment); // validate the task assignment
@@ -119,6 +123,8 @@ private:
 
     int num_tasks_reveal = 1;
     int num_of_agents;
+    bool finite_task_stream = false;
+    bool finish_all_tasks = false;
 
     std::vector<std::list<Task* > > finished_tasks; // location + finish time
 

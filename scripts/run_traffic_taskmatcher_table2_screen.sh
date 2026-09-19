@@ -26,7 +26,7 @@ run_one() {
   echo "Running TrafficAware TaskMatcher f=$f n=$n seed=$seed"
   "$BIN" --inputFile "$input" --output "$output" --outputScreen 3 \
     --simulationTime "$TIMESTEPS" --planTimeLimit 1000 --preprocessTimeLimit 30000 \
-    --scheduleModel 7 --useTraffic false --assignNew false --commitWindow 1 \
+    --scheduleModel 7 --useTraffic false --assignNew false --finiteTaskStream true --commitWindow 1 \
     --logDetailLevel 2 --matcherDistWeight 10 --matcherTopK 100 \
     --matcherMaxMatrix 2000000 --matcherReassign true \
     --heapKeepBias 0 --heapProtectDist 0 --matcherUseTraffic true \

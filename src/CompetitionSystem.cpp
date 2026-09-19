@@ -247,6 +247,8 @@ void BaseSystem::simulate(int simulation_time)
         // update tasks
         task_manager.update_tasks(curr_states, proposed_schedule, simulator.get_curr_timestep());
         task_manager.record_timeline(timestep, std::chrono::duration<double>(diff).count());
+        if (task_manager.finished_all_tasks())
+            break;
     }
 }
 

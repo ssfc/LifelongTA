@@ -71,6 +71,7 @@ int main(int argc, char **argv)
         ("matcherTrafficTopK", po::value<int>()->default_value(50), "static nearest pickups rescored with traffic-aware Dijkstra per agent")
         ("matcherTrafficCongestionWeight", po::value<float>()->default_value(1.0f), "multiplier for TaskMatcher traffic congestion penalties")
         ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
+        ("finiteTaskStream", po::value<bool>()->default_value(false), "release the finite input task stream without recycling it")
         ("hungarianMaxAgents", po::value<int>()->default_value(256), "capped Hungarian candidate-agent limit")
         ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
         ("hungarianDistWeight", po::value<float>()->default_value(1.0f), "agent-to-pickup distance weight for capped Hungarian")
@@ -215,6 +216,7 @@ int main(int argc, char **argv)
     system_ptr->set_plan_time_limit(vm["planTimeLimit"].as<int>()*vm["commitWindow"].as<int>());//times commit window
     system_ptr->set_preprocess_time_limit(vm["preprocessTimeLimit"].as<int>());
 
+    system_ptr->set_finite_task_stream(vm["finiteTaskStream"].as<bool>());
     system_ptr->set_num_tasks_reveal(read_param_json<float>(data, "numTasksReveal", 1));
     if (vm["debugTrace"].as<bool>()) {
         std::string trace_output = vm["debugTraceOutput"].as<std::string>();
