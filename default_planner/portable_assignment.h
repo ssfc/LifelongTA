@@ -1,6 +1,7 @@
 #pragma once
 
 #include "SharedEnv.h"
+#include "Types.h"
 
 #include <vector>
 
@@ -16,6 +17,13 @@ struct PortableTaskMatcherConfig {
     int reassign_min_dist = 10;
     int candidate_top_k = 50;
     int max_matrix_elements = 2000000;
+    bool use_traffic_cost = false;
+    int traffic_top_k = 50;
+    float traffic_congestion_weight = 1.0f;
+    bool use_projected_load = false;
+    int projected_top_k = 100;
+    float projected_load_weight = 0.25f;
+    int projected_iterations = 2;
 };
 
 struct PortableCappedHungarianConfig {
@@ -38,7 +46,8 @@ struct PortableStableSnatchHungarianConfig {
 void schedule_plan_portable_task_matcher(int time_limit_ms,
                                          std::vector<int>& proposed_schedule,
                                          SharedEnvironment* env,
-                                         const PortableTaskMatcherConfig& config);
+                                         const PortableTaskMatcherConfig& config,
+                                         const std::vector<Double4>& background_flow);
 
 void schedule_plan_portable_capped_hungarian(
     int time_limit_ms, std::vector<int>& proposed_schedule, SharedEnvironment* env,

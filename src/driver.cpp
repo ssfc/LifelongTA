@@ -66,6 +66,13 @@ int main(int argc, char **argv)
         ("matcherTaskLengthWeight", po::value<float>()->default_value(1.0f), "task-internal path-length weight for contest task matcher")
         ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
         ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
+        ("matcherUseTraffic", po::value<bool>()->default_value(false), "use traffic-aware pickup costs in TaskMatcher")
+        ("matcherTrafficTopK", po::value<int>()->default_value(50), "nearest pickups rescored with traffic-aware Dijkstra per agent")
+        ("matcherTrafficCongestionWeight", po::value<float>()->default_value(1.0f), "traffic congestion penalty multiplier")
+        ("matcherUseProjectedLoad", po::value<bool>()->default_value(false), "iteratively penalize overlap among TaskMatcher assignments")
+        ("matcherProjectedTopK", po::value<int>()->default_value(100), "per-agent candidates retained for projected-load matching")
+        ("matcherProjectedLoadWeight", po::value<float>()->default_value(0.25f), "projected route-overlap penalty multiplier")
+        ("matcherProjectedIterations", po::value<int>()->default_value(2), "projected-load Hungarian refinement rounds")
         ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
         ("hungarianMaxAgents", po::value<int>()->default_value(256), "capped Hungarian candidate-agent limit")
         ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
@@ -175,6 +182,13 @@ int main(int argc, char **argv)
     matcher_config.task_length_weight = vm["matcherTaskLengthWeight"].as<float>();
     matcher_config.candidate_top_k = vm["matcherTopK"].as<int>();
     matcher_config.max_matrix_elements = vm["matcherMaxMatrix"].as<int>();
+    matcher_config.use_traffic_cost = vm["matcherUseTraffic"].as<bool>();
+    matcher_config.traffic_top_k = vm["matcherTrafficTopK"].as<int>();
+    matcher_config.traffic_congestion_weight = vm["matcherTrafficCongestionWeight"].as<float>();
+    matcher_config.use_projected_load = vm["matcherUseProjectedLoad"].as<bool>();
+    matcher_config.projected_top_k = vm["matcherProjectedTopK"].as<int>();
+    matcher_config.projected_load_weight = vm["matcherProjectedLoadWeight"].as<float>();
+    matcher_config.projected_iterations = vm["matcherProjectedIterations"].as<int>();
     matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();
     matcher_config.reassign_keep_bias = heap_config.reassign_keep_bias;
     matcher_config.reassign_min_dist = heap_config.reassign_min_dist;

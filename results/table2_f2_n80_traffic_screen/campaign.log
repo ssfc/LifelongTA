@@ -1,0 +1,17 @@
+[2026-09-19 15:21:23 CST] flow_unit seed=0
+[2026-09-19 15:25:53 CST] taskmatcher_static seed=0
+[2026-09-19 15:30:20 CST] taskmatcher_traffic seed=0
+[2026-09-19 15:34:48 CST] flow_unit seed=1
+[2026-09-19 15:39:12 CST] taskmatcher_static seed=1
+[2026-09-19 15:43:43 CST] taskmatcher_traffic seed=1
+[2026-09-19 15:48:07 CST] flow_unit seed=2
+[2026-09-19 15:52:29 CST] taskmatcher_static seed=2
+[2026-09-19 15:56:52 CST] taskmatcher_traffic seed=2
+[2026-09-19 16:01:18 CST] flow_unit seed=3
+[2026-09-19 16:05:45 CST] taskmatcher_static seed=3
+[2026-09-19 16:10:09 CST] taskmatcher_traffic seed=3
+[2026-09-19 16:14:34 CST] flow_unit seed=4
+[2026-09-19 16:18:59 CST] taskmatcher_static seed=4
+[2026-09-19 16:23:24 CST] taskmatcher_traffic seed=4
+========== Table 2 f=2,n=80 traffic screen complete ==========
+Completed at 2026-09-19 16:27:49 CST
