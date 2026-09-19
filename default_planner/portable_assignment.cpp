@@ -67,6 +67,28 @@ float flow_traffic_edge_cost(SharedEnvironment* env, const std::vector<Double4>&
         static_cast<float>(contraflow + incoming / 2);
 }
 
+float task_service_congestion_proxy(SharedEnvironment* env, const TaskInfo& task,
+                                    const std::vector<Double4>& background_flow)
+{
+    if (background_flow.size() != env->map.size() || task.locations.size() < 2) return 0.0F;
+    float penalty = 0.0F;
+    for (size_t i = 1; i < task.locations.size(); ++i) {
+        const int segment = get_h(env, task.locations[i - 1], task.locations[i]);
+        if (segment <= 0 || segment >= std::numeric_limits<int>::max() / 8) continue;
+        float endpoint_flow = 0.0F;
+        for (int direction = 0; direction < 4; ++direction) {
+            endpoint_flow += static_cast<float>(background_flow[task.locations[i - 1]].d[direction]);
+            endpoint_flow += static_cast<float>(background_flow[task.locations[i]].d[direction]);
+        }
+        // A delivery leg through busy endpoints is more likely to create the
+        // loaded waiting seen in the W500 diagnostics.  This is deliberately
+        // a cheap proxy: unlike a second Dijkstra per task, it stays usable
+        // under the 1 s online scheduling budget.
+        penalty += static_cast<float>(segment) * endpoint_flow * 0.5F;
+    }
+    return penalty;
+}
+
 std::vector<std::vector<float>> traffic_cost_matrix(
     SharedEnvironment* env, const std::vector<AgentInfo>& agents,
     const std::vector<TaskInfo>& tasks, const PortableTaskMatcherConfig& config,
@@ -76,6 +98,7 @@ std::vector<std::vector<float>> traffic_cost_matrix(
                                          std::vector<float>(tasks.size(), kInvalidCost));
     const int keep = std::min(std::max(1, config.traffic_top_k), static_cast<int>(tasks.size()));
     std::vector<int> lengths(tasks.size(), -2);
+    std::vector<float> service_penalties(tasks.size(), -1.0F);
 
     for (int i = 0; i < static_cast<int>(agents.size()) &&
                     std::chrono::steady_clock::now() < deadline; ++i) {
@@ -110,8 +133,13 @@ std::vector<std::vector<float>> traffic_cost_matrix(
                 for (const int task_index : goal->second) {
                     if (lengths[task_index] == -2) lengths[task_index] = task_length(env, tasks[task_index]);
                     if (lengths[task_index] >= 0) {
+                        if (service_penalties[task_index] < 0.0F)
+                            service_penalties[task_index] = task_service_congestion_proxy(
+                                env, tasks[task_index], background_flow);
                         cost[i][task_index] = config.dist_weight * static_cast<float>(current_cost) +
-                                              static_cast<float>(lengths[task_index]);
+                                              static_cast<float>(lengths[task_index]) +
+                                              std::max(0.0F, config.traffic_service_weight) *
+                                                  service_penalties[task_index];
                     }
                 }
                 task_indices_at_location.erase(goal);

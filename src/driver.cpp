@@ -70,6 +70,7 @@ int main(int argc, char **argv)
         ("matcherUseTraffic", po::value<bool>()->default_value(false), "use Flow-Traffic edge costs in task matcher")
         ("matcherTrafficTopK", po::value<int>()->default_value(50), "static nearest pickups rescored with traffic-aware Dijkstra per agent")
         ("matcherTrafficCongestionWeight", po::value<float>()->default_value(1.0f), "multiplier for TaskMatcher traffic congestion penalties")
+        ("matcherTrafficServiceWeight", po::value<float>()->default_value(0.0f), "weight of delivery-leg congestion proxy in TaskMatcher traffic cost")
         ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
         ("hungarianMaxAgents", po::value<int>()->default_value(256), "capped Hungarian candidate-agent limit")
         ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
@@ -186,6 +187,7 @@ int main(int argc, char **argv)
     matcher_config.use_traffic_cost = vm["matcherUseTraffic"].as<bool>();
     matcher_config.traffic_top_k = vm["matcherTrafficTopK"].as<int>();
     matcher_config.traffic_congestion_weight = vm["matcherTrafficCongestionWeight"].as<float>();
+    matcher_config.traffic_service_weight = vm["matcherTrafficServiceWeight"].as<float>();
     matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();
     matcher_config.reassign_keep_bias = heap_config.reassign_keep_bias;
     matcher_config.reassign_min_dist = heap_config.reassign_min_dist;

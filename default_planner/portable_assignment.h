@@ -20,6 +20,10 @@ struct PortableTaskMatcherConfig {
     bool use_traffic_cost = false;
     int traffic_top_k = 50;
     float traffic_congestion_weight = 1.0F;
+    // Adds a low-cost congestion proxy for pickup-to-delivery service legs.
+    // Zero preserves the original traffic matcher, which only scores the
+    // agent-to-pickup path with traffic.
+    float traffic_service_weight = 0.0F;
 };
 
 struct PortableCappedHungarianConfig {
