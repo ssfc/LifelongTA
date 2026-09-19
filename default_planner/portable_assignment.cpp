@@ -1,6 +1,7 @@
 #include "portable_assignment.h"
 
 #include "heuristics.h"
+#include "scheduler.h"
 
 #include <algorithm>
 #include <chrono>
@@ -365,6 +366,15 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
 {
     const auto deadline = std::chrono::steady_clock::now() +
                           std::chrono::milliseconds(std::max(0, time_limit_ms));
+    std::vector<int> flow_seed;
+    if (config.flow_seed_bias > 0.0F && std::chrono::steady_clock::now() < deadline) {
+        const auto remaining = std::chrono::duration_cast<std::chrono::milliseconds>(
+            deadline - std::chrono::steady_clock::now()).count();
+        const int flow_budget = std::min(std::max(0, config.flow_seed_budget_ms),
+                                         static_cast<int>(std::max<long long>(0, remaining)));
+        if (flow_budget > 0)
+            schedule_plan_flow(flow_budget, flow_seed, env, background_flow, false, false);
+    }
     std::vector<int> local = env->curr_task_schedule;
     local.resize(env->num_of_agents, -1);
     std::unordered_set<int> locked_tasks;
@@ -434,6 +444,9 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
                 if (old != old_assignment.end() && old->second == tasks[j].id &&
                     cost[i][j] < kInvalidCost / 2.0F)
                     cost[i][j] -= config.reassign_keep_bias;
+                if (candidates[i].id < static_cast<int>(flow_seed.size()) &&
+                    flow_seed[candidates[i].id] == tasks[j].id && cost[i][j] < kInvalidCost / 2.0F)
+                    cost[i][j] -= config.flow_seed_bias;
             }
         }
         if (std::chrono::steady_clock::now() < deadline) {

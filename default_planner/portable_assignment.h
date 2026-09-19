@@ -24,6 +24,8 @@ struct PortableTaskMatcherConfig {
     int projected_top_k = 100;
     float projected_load_weight = 0.25f;
     int projected_iterations = 2;
+    float flow_seed_bias = 0.0f;
+    int flow_seed_budget_ms = 100;
 };
 
 struct PortableCappedHungarianConfig {
