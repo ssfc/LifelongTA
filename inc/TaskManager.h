@@ -39,7 +39,8 @@ public:
     struct TimelineMetric {
         int timestep = 0;
         int finished_tasks = 0;
-        int backlog = 0;
+        int active_tasks = 0;
+        int unassigned_backlog = 0;
         int assigned_agents = 0;
         int idle_agents = 0;
         int empty_agents = 0;

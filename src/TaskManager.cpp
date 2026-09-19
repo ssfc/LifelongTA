@@ -314,7 +314,9 @@ void TaskManager::record_timeline(int timestep, double planner_seconds)
     TimelineMetric metric;
     metric.timestep = timestep;
     metric.finished_tasks = num_of_task_finish;
-    metric.backlog = static_cast<int>(ongoing_tasks.size());
+    metric.active_tasks = static_cast<int>(ongoing_tasks.size());
+    for (const auto& task : ongoing_tasks)
+        if (task.second->agent_assigned < 0) ++metric.unassigned_backlog;
     metric.planner_seconds = planner_seconds;
     for (int agent = 0; agent < num_of_agents; ++agent)
     {
@@ -396,9 +398,10 @@ void TaskManager::save_metrics(const std::string& result_file) const
     }
 
     std::ofstream timeline_out(base + ".timeline_metrics.csv", std::ios::trunc);
-    timeline_out << "timestep,finished_tasks,backlog,assigned_agents,idle_agents,empty_agents,loaded_agents,active_wait_steps_cumulative,planner_seconds\n";
+    timeline_out << "timestep,finished_tasks,active_tasks,unassigned_backlog,assigned_agents,idle_agents,empty_agents,loaded_agents,active_wait_steps_cumulative,planner_seconds\n";
     for (const TimelineMetric& metric : timeline_metrics)
-        timeline_out << metric.timestep << ',' << metric.finished_tasks << ',' << metric.backlog << ','
+        timeline_out << metric.timestep << ',' << metric.finished_tasks << ',' << metric.active_tasks << ','
+                     << metric.unassigned_backlog << ','
                      << metric.assigned_agents << ',' << metric.idle_agents << ',' << metric.empty_agents << ','
                      << metric.loaded_agents << ',' << metric.active_wait_steps << ',' << std::setprecision(9)
                      << metric.planner_seconds << '\n';
@@ -437,7 +440,11 @@ void TaskManager::save_metrics(const std::string& result_file) const
     summary["format"] = "lifelongta-metrics-v1";
     summary["tasksRevealed"] = ordered_tasks.size();
     summary["tasksCompleted"] = num_of_task_finish;
-    summary["backlogAtEnd"] = ongoing_tasks.size();
+    int unassigned_backlog = 0;
+    for (const auto& task : ongoing_tasks)
+        if (task.second->agent_assigned < 0) ++unassigned_backlog;
+    summary["activeTasksAtEnd"] = ongoing_tasks.size();
+    summary["unassignedBacklogAtEnd"] = unassigned_backlog;
     summary["taskLatency"] = {
         {"arrivalToAssignment", summarize(assignment_waits)},
         {"arrivalToPickup", summarize(pickup_waits)},

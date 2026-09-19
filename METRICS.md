@@ -23,11 +23,11 @@ Latency fields (`assignment_wait`, `pickup_wait`, `completion_time`) are measure
 
 For a Flow versus TaskMatcher comparison, report at least:
 
-1. `tasksCompleted` and `backlogAtEnd`.
+1. `tasksCompleted`, `unassignedBacklogAtEnd`, and `activeTasksAtEnd`.
 2. `arrivalToCompletion` p50/p95/p99, not only its mean.
 3. `pickupDistanceAtAssignment` and `emptyDistance`.
 4. `loadedDetourRatio` and `productiveMovementRatio`.
 5. `activeWait`, plus the distribution of per-agent completed tasks from `agent_metrics.csv`.
 6. `plannerSeconds` and all error counters in `result.json`.
 
-`productiveMovementRatio` is completed tasks' service shortest-path distance divided by all measured agent movement. It is a system-level utilization measure; it does not replace throughput or latency.
+`productiveMovementRatio` is completed tasks' service shortest-path distance divided by all measured agent movement. It is a system-level utilization measure; it does not replace throughput or latency. `activeTasksAtEnd` includes both assigned and unassigned tasks; use `unassignedBacklogAtEnd` for queue pressure.

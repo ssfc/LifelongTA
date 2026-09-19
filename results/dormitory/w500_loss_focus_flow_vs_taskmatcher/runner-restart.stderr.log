@@ -1,0 +1,9 @@
+Get-Content : 找不到路径“C:\gitcloud\LifelongTA\results\dormitory\w500_loss_focus_flow_vs_taskmatcher\w500_flow-traffi
+c_t1000_trial1.metrics_summary.metrics_summary.json”，因为该路径不存在。
+所在位置 C:\gitcloud\LifelongTA\scripts\run_w500_loss_focus_windows.ps1:64 字符: 20
++         $metrics = Get-Content -LiteralPath $metricsPath -Raw | Conve ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\gitcloud\Lif...cs_summary.json:String) [Get-Content], ItemNotFoundEx 
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 

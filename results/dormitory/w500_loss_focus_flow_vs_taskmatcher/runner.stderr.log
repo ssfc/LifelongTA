@@ -1,0 +1,7 @@
+lifelong.exe : Failed to load --output
+ËùÔÚÎ»ÖÃ C:\gitcloud\LifelongTA\scripts\run_w500_loss_focus_windows.ps1:49 ×Ö·û: 5
++     & $exe @args 2>&1 | Tee-Object -FilePath ([System.IO.Path]::Chang ...
++     ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to load --output:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
