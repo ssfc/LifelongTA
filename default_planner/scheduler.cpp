@@ -683,9 +683,15 @@ void schedule_plan_flow(int time_limit, std::vector<int> & proposed_schedule,  S
 
     proposed_schedule.resize(env->num_of_agents, -1);
 
-    vector<int>flexible_agent_ids(env->new_freeagents); //storing the agents not doing a opened task
+    vector<int>flexible_agent_ids; //storing agents not currently assigned to an opened task
     vector<int>flexible_task_ids; //storing the tasks we consider to swap/assign
     unordered_map<int,list<int>> task_loc_ids;
+
+    for (int agent = 0; agent < env->num_of_agents; ++agent)
+    {
+        if (env->curr_task_schedule[agent] == -1)
+            flexible_agent_ids.push_back(agent);
+    }
 
     for (auto task: env->task_pool)
     {
@@ -746,9 +752,11 @@ void schedule_plan_flow(int time_limit, std::vector<int> & proposed_schedule,  S
         maploc_to_node[i] = id;
     } 
 
-    // Set supply/demand values
-    supply[source] = num_workers; // Source supplies workers
-    supply[sink] = -num_workers;  // Sink absorbs tasks
+    // Set supply/demand values. A finite workload can temporarily expose
+    // fewer tasks than free agents, so the network only carries matchable flow.
+    const int matching_capacity = std::min(num_workers, num_tasks);
+    supply[source] = matching_capacity;
+    supply[sink] = -matching_capacity;
 
     for (int i = 0; i < num_workers; ++i) supply[map_nodes[i]] = 0;
 
@@ -883,7 +891,10 @@ void schedule_plan_flow(int time_limit, std::vector<int> & proposed_schedule,  S
             }
             else 
             {
-                cout << "No solution found." << endl;
+                // This worker did not receive one of the limited flow units.
+                // The schedule vector is reused between timesteps, so clear
+                // any prior unopened-task assignment explicitly.
+                proposed_schedule[flexible_agent_ids[i]] = -1;
             }
         }
     }

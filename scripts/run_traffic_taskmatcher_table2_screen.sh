@@ -4,7 +4,7 @@ set -euo pipefail
 # Five paired public task-stream seeds per Table 2 cell. This preserves the
 # finite-workload protocol and only replaces the assignment scheduler.
 ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
-INPUT_ROOT=${INPUT_ROOT:-"/c/gitcloud/flow-compare"}
+INPUT_ROOT=${INPUT_ROOT:-"$ROOT/instances/table2"}
 BIN=${BIN:-"$ROOT/build/lifelong"}
 OUT_DIR="$ROOT/results/traffic_taskmatcher_table2_screen"
 TIMESTEPS=${1:-400}

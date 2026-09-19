@@ -1,36 +1,71 @@
 {
   "format": "lifelongta-metrics-v1",
   "tasksRevealed": 500,
-  "tasksCompleted": 0,
-  "activeTasksAtEnd": 500,
-  "unassignedBacklogAtEnd": 500,
+  "tasksCompleted": 500,
+  "activeTasksAtEnd": 0,
+  "unassignedBacklogAtEnd": 0,
   "taskLatency": {
-    "arrivalToAssignment": null,
-    "arrivalToPickup": null,
-    "arrivalToCompletion": null
+    "arrivalToAssignment": {
+      "count": 500,
+      "mean": 7.776,
+      "p50": 1.0,
+      "p95": 35.0,
+      "p99": 63.0,
+      "max": 102.0
+    },
+    "arrivalToPickup": {
+      "count": 500,
+      "mean": 14.37,
+      "p50": 9.0,
+      "p95": 47.0,
+      "p99": 82.0,
+      "max": 104.0
+    },
+    "arrivalToCompletion": {
+      "count": 500,
+      "mean": 35.036,
+      "p50": 31.0,
+      "p95": 69.0,
+      "p99": 106.0,
+      "max": 138.0
+    }
   },
   "matchingQuality": {
-    "pickupDistanceAtAssignment": null
+    "pickupDistanceAtAssignment": {
+      "count": 500,
+      "mean": 5.318,
+      "p50": 4.0,
+      "p95": 19.0,
+      "p99": 31.0,
+      "max": 34.0
+    }
   },
   "movement": {
-    "emptyDistance": 0,
-    "loadedDistance": 0,
-    "completedTaskServiceShortestDistance": 0,
-    "loadedDetourRatio": null,
-    "productiveMovementRatio": 0.0
+    "emptyDistance": 2243,
+    "loadedDistance": 10203,
+    "completedTaskServiceShortestDistance": 9429,
+    "loadedDetourRatio": {
+      "count": 500,
+      "mean": 1.0838345638568452,
+      "p50": 1.0,
+      "p95": 1.3636363636363635,
+      "p99": 1.7,
+      "max": 2.0
+    },
+    "productiveMovementRatio": 0.7575928008998876
   },
   "agentStateSteps": {
-    "idle": 20000,
-    "empty": 0,
-    "loaded": 0,
-    "activeWait": 0
+    "idle": 2654,
+    "empty": 2313,
+    "loaded": 10333,
+    "activeWait": 200
   },
   "plannerSeconds": {
-    "count": 400,
-    "mean": 0.9207445527500007,
-    "p50": 0.9209099,
-    "p95": 0.9211194,
-    "p99": 0.921161,
-    "max": 0.92155
+    "count": 306,
+    "mean": 0.9208011055555554,
+    "p50": 0.9207879,
+    "p95": 0.9211186,
+    "p99": 0.9212542,
+    "max": 0.92139
   }
 }
