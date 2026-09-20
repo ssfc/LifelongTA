@@ -67,6 +67,7 @@ int main(int argc, char **argv)
         ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
         ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
         ("matcherMaxAssign", po::value<float>()->default_value(1.0f), "maximum fraction of task-matcher candidates assigned per tick")
+        ("matcherAdaptiveAssign", po::value<bool>()->default_value(false), "increase task-matcher assignment capacity when unpicked-task pressure is high")
         ("matcherUseTraffic", po::value<bool>()->default_value(false), "use Flow-Traffic edge costs in task matcher")
         ("matcherTrafficTopK", po::value<int>()->default_value(50), "static nearest pickups rescored with traffic-aware Dijkstra per agent")
         ("matcherTrafficCongestionWeight", po::value<float>()->default_value(1.0f), "multiplier for TaskMatcher traffic congestion penalties")
@@ -184,6 +185,7 @@ int main(int argc, char **argv)
     matcher_config.candidate_top_k = vm["matcherTopK"].as<int>();
     matcher_config.max_matrix_elements = vm["matcherMaxMatrix"].as<int>();
     matcher_config.max_assign_ratio = vm["matcherMaxAssign"].as<float>();
+    matcher_config.adaptive_assign_ratio = vm["matcherAdaptiveAssign"].as<bool>();
     matcher_config.use_traffic_cost = vm["matcherUseTraffic"].as<bool>();
     matcher_config.traffic_top_k = vm["matcherTrafficTopK"].as<int>();
     matcher_config.traffic_congestion_weight = vm["matcherTrafficCongestionWeight"].as<float>();

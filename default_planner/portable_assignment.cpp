@@ -365,8 +365,18 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
         // A scheduler timeout must not discard a still-valid unopened task.
         for (const auto& entry : old_assignment) local[entry.first] = entry.second;
     } else {
+        float assign_ratio = std::clamp(config.max_assign_ratio, 0.0F, 1.0F);
+        if (config.adaptive_assign_ratio && !candidates.empty()) {
+            // Keep the partial matcher under normal load. When unpicked work
+            // exceeds candidate capacity, progressively remove the throttle
+            // so old assignments can be corrected before a backlog persists.
+            const float task_pressure = static_cast<float>(tasks.size()) /
+                                        static_cast<float>(candidates.size());
+            const float overload = std::clamp(task_pressure - 1.0F, 0.0F, 1.0F);
+            assign_ratio += (1.0F - assign_ratio) * overload;
+        }
         const int max_assignments = std::max(
-            1, static_cast<int>(std::ceil(std::clamp(config.max_assign_ratio, 0.0F, 1.0F) *
+            1, static_cast<int>(std::ceil(assign_ratio *
                                            static_cast<float>(candidates.size()))));
         const bool is_partial = static_cast<int>(matches.size()) > max_assignments;
         if (is_partial) {

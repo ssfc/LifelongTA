@@ -17,6 +17,7 @@ struct PortableTaskMatcherConfig {
     int candidate_top_k = 50;
     int max_matrix_elements = 2000000;
     float max_assign_ratio = 1.0F;
+    bool adaptive_assign_ratio = false;
     bool use_traffic_cost = false;
     int traffic_top_k = 50;
     float traffic_congestion_weight = 1.0F;
