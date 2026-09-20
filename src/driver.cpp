@@ -71,6 +71,7 @@ int main(int argc, char **argv)
         ("matcherWaitPriorityWeight", po::value<float>()->default_value(0.0f), "per-timestep TaskMatcher cost bonus for tasks waiting past matcherWaitPriorityThreshold")
         ("matcherWaitPriorityThreshold", po::value<int>()->default_value(0), "waiting time before TaskMatcher wait priority starts")
         ("matcherUseTraffic", po::value<bool>()->default_value(false), "use Flow-Traffic edge costs in task matcher")
+        ("matcherTrafficPressure", po::value<float>()->default_value(0.0f), "minimum task-to-candidate pressure before TaskMatcher uses traffic-aware costs; 0 disables the gate")
         ("matcherUseWaitHeat", po::value<bool>()->default_value(false), "add recent MAPF waiting heat to traffic-aware TaskMatcher costs under task pressure")
         ("matcherWaitHeatWeight", po::value<float>()->default_value(0.0f), "weight of recent MAPF waiting heat in traffic-aware TaskMatcher costs")
         ("matcherWaitHeatPressure", po::value<float>()->default_value(1.0f), "minimum task-to-candidate pressure for waiting-heat costs")
@@ -194,6 +195,7 @@ int main(int argc, char **argv)
     matcher_config.wait_priority_weight = vm["matcherWaitPriorityWeight"].as<float>();
     matcher_config.wait_priority_threshold = vm["matcherWaitPriorityThreshold"].as<int>();
     matcher_config.use_traffic_cost = vm["matcherUseTraffic"].as<bool>();
+    matcher_config.traffic_pressure_threshold = vm["matcherTrafficPressure"].as<float>();
     matcher_config.use_wait_heat = vm["matcherUseWaitHeat"].as<bool>();
     matcher_config.wait_heat_weight = vm["matcherWaitHeatWeight"].as<float>();
     matcher_config.wait_heat_pressure_threshold = vm["matcherWaitHeatPressure"].as<float>();

@@ -368,7 +368,12 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
     if (matrix_size <= std::max(1, config.max_matrix_elements) &&
         std::chrono::steady_clock::now() < deadline) {
         std::vector<std::vector<float>> cost;
-        if (config.use_traffic_cost) {
+        const float task_pressure = candidates.empty() ? 0.0F :
+            static_cast<float>(tasks.size()) / static_cast<float>(candidates.size());
+        const bool use_traffic_cost = config.use_traffic_cost &&
+            (config.traffic_pressure_threshold <= 0.0F ||
+             task_pressure >= config.traffic_pressure_threshold);
+        if (use_traffic_cost) {
             cost = traffic_cost_matrix(env, candidates, tasks, config, background_flow, deadline);
         } else {
             cost.assign(candidates.size(), std::vector<float>(tasks.size(), kInvalidCost));
