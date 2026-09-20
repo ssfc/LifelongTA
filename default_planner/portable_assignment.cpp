@@ -23,6 +23,7 @@ struct AgentInfo {
 struct TaskInfo {
     int id;
     int pickup;
+    int revealed_at;
     std::vector<int> locations;
 };
 
@@ -43,6 +44,16 @@ float task_score(SharedEnvironment* env, int agent_location, const TaskInfo& tas
            task_length_weight * static_cast<float>(length);
 }
 
+float matcher_score(SharedEnvironment* env, int agent_location, const TaskInfo& task,
+                    const PortableTaskMatcherConfig& config)
+{
+    const float base = task_score(env, agent_location, task, config.dist_weight);
+    if (base >= kInvalidCost / 2.0F || config.wait_priority_weight <= 0.0F) return base;
+    const int waited = std::max(0, env->curr_timestep - task.revealed_at -
+                                    std::max(0, config.wait_priority_threshold));
+    return base - config.wait_priority_weight * static_cast<float>(waited);
+}
+
 int task_length(SharedEnvironment* env, const TaskInfo& task)
 {
     int length = 0;
@@ -54,8 +65,24 @@ int task_length(SharedEnvironment* env, const TaskInfo& task)
     return length;
 }
 
+float recent_wait_heat(const SharedEnvironment* env, int location)
+{
+    if (location < 0 || location >= env->map.size() ||
+        env->past_waitings.size() < static_cast<size_t>((location + 1) * 5)) return 0.0F;
+    double total = 0.0;
+    int observed = 0;
+    for (int action = 1; action <= 4; ++action) {
+        const auto& waiting = env->past_waitings[location * 5 + action];
+        if (waiting.second <= 0.0) continue;
+        total += waiting.first / waiting.second;
+        ++observed;
+    }
+    return observed == 0 ? 0.0F : static_cast<float>(total / observed);
+}
+
 float flow_traffic_edge_cost(SharedEnvironment* env, const std::vector<Double4>& background_flow,
-                             int location, int next, float congestion_weight)
+                             int location, int next, float congestion_weight,
+                             bool use_wait_heat, float wait_heat_weight)
 {
     if (background_flow.size() != env->map.size()) return 1;
     const int direction = get_d(location - next, env);
@@ -63,8 +90,13 @@ float flow_traffic_edge_cost(SharedEnvironment* env, const std::vector<Double4>&
                            background_flow[next].d[(direction + 2) % 4];
     int incoming = 0;
     for (int d = 0; d < 4; ++d) incoming += background_flow[next].d[d];
-    return 1.0F + std::max(0.0F, congestion_weight) *
+    float cost = 1.0F + std::max(0.0F, congestion_weight) *
         static_cast<float>(contraflow + incoming / 2);
+    if (use_wait_heat && wait_heat_weight > 0.0F) {
+        cost += wait_heat_weight * (recent_wait_heat(env, location) +
+                                    0.5F * recent_wait_heat(env, next));
+    }
+    return cost;
 }
 
 std::vector<std::vector<float>> traffic_cost_matrix(
@@ -74,6 +106,10 @@ std::vector<std::vector<float>> traffic_cost_matrix(
 {
     std::vector<std::vector<float>> cost(agents.size(),
                                          std::vector<float>(tasks.size(), kInvalidCost));
+    const float task_pressure = agents.empty() ? 0.0F :
+        static_cast<float>(tasks.size()) / static_cast<float>(agents.size());
+    const bool use_wait_heat = config.use_wait_heat &&
+        task_pressure >= std::max(0.0F, config.wait_heat_pressure_threshold);
     const int keep = std::min(std::max(1, config.traffic_top_k), static_cast<int>(tasks.size()));
     std::vector<int> lengths(tasks.size(), -2);
 
@@ -111,7 +147,11 @@ std::vector<std::vector<float>> traffic_cost_matrix(
                     if (lengths[task_index] == -2) lengths[task_index] = task_length(env, tasks[task_index]);
                     if (lengths[task_index] >= 0) {
                         cost[i][task_index] = config.dist_weight * static_cast<float>(current_cost) +
-                                              static_cast<float>(lengths[task_index]);
+                                              static_cast<float>(lengths[task_index]) -
+                                              std::max(0.0F, config.wait_priority_weight) *
+                                              static_cast<float>(std::max(0, env->curr_timestep -
+                                                  tasks[task_index].revealed_at -
+                                                  std::max(0, config.wait_priority_threshold)));
                     }
                 }
                 task_indices_at_location.erase(goal);
@@ -119,7 +159,8 @@ std::vector<std::vector<float>> traffic_cost_matrix(
             }
             for (const int next : global_neighbors.at(location)) {
                 const float next_cost = current_cost + flow_traffic_edge_cost(
-                    env, background_flow, location, next, config.traffic_congestion_weight);
+                    env, background_flow, location, next, config.traffic_congestion_weight,
+                    use_wait_heat, config.wait_heat_weight);
                 if (next_cost < distance[next]) {
                     distance[next] = next_cost;
                     open.emplace(next_cost, next);
@@ -263,7 +304,7 @@ std::vector<std::pair<int, int>> top_k_match(
 TaskInfo make_task_info(int id, const Task& task)
 {
     const int index = std::max(0, task.idx_next_loc);
-    return {id, task.locations.at(index),
+    return {id, task.locations.at(index), task.t_revealed,
             std::vector<int>(task.locations.begin() + index, task.locations.end())};
 }
 
@@ -334,7 +375,7 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
             for (int i = 0; i < static_cast<int>(candidates.size()) &&
                             std::chrono::steady_clock::now() < deadline; ++i) {
                 for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
-                    cost[i][j] = task_score(env, candidates[i].location, tasks[j], config.dist_weight);
+                    cost[i][j] = matcher_score(env, candidates[i].location, tasks[j], config);
                 }
             }
         }
@@ -388,8 +429,8 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
             std::vector<std::pair<float, std::pair<int, int>>> scored_matches;
             scored_matches.reserve(matches.size());
             for (const auto& match : matches) {
-                float value = task_score(env, agent_locations.at(match.first),
-                                         *tasks_by_id.at(match.second), config.dist_weight);
+                float value = matcher_score(env, agent_locations.at(match.first),
+                                            *tasks_by_id.at(match.second), config);
                 const auto old = old_assignment.find(match.first);
                 if (old != old_assignment.end() && old->second == match.second) {
                     value -= config.reassign_keep_bias;

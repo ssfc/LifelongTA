@@ -18,7 +18,12 @@ struct PortableTaskMatcherConfig {
     int max_matrix_elements = 2000000;
     float max_assign_ratio = 1.0F;
     bool adaptive_assign_ratio = false;
+    float wait_priority_weight = 0.0F;
+    int wait_priority_threshold = 0;
     bool use_traffic_cost = false;
+    bool use_wait_heat = false;
+    float wait_heat_weight = 0.0F;
+    float wait_heat_pressure_threshold = 1.0F;
     int traffic_top_k = 50;
     float traffic_congestion_weight = 1.0F;
 };
