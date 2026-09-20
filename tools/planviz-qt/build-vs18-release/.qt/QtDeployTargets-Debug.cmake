@@ -1,0 +1,6 @@
+set(__QT_DEPLOY_TARGET_planviz-qt_FILE C:/gitcloud/LifelongTA/tools/planviz-qt/build-vs18-release/Debug/planviz-qt.exe)
+set(__QT_DEPLOY_TARGET_planviz-qt_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_planviz-qt_RUNTIME_DLLS C:/vcpkg/installed/x64-windows/debug/bin/Qt6Widgetsd.dll;C:/vcpkg/installed/x64-windows/debug/bin/Qt6Guid.dll;C:/vcpkg/installed/x64-windows/debug/bin/Qt6Cored.dll)
+set(__QT_DEPLOY_TARGET_highway-editor-qt_FILE C:/gitcloud/LifelongTA/tools/planviz-qt/build-vs18-release/Debug/highway-editor-qt.exe)
+set(__QT_DEPLOY_TARGET_highway-editor-qt_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_highway-editor-qt_RUNTIME_DLLS C:/vcpkg/installed/x64-windows/debug/bin/Qt6Widgetsd.dll;C:/vcpkg/installed/x64-windows/debug/bin/Qt6Guid.dll;C:/vcpkg/installed/x64-windows/debug/bin/Qt6Cored.dll)

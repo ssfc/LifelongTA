@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\gitcloud\LifelongTA\tools\planviz-qt\build-vs18-release\planviz-qt_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\gitcloud\LifelongTA\tools\planviz-qt\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\gitcloud\LifelongTA\tools\planviz-qt\src\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\gitcloud\LifelongTA\tools\planviz-qt\src\PlanData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\gitcloud\LifelongTA\tools\planviz-qt\src\MapView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\gitcloud\LifelongTA\tools\planviz-qt\build-vs18-release\planviz-qt_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\gitcloud\LifelongTA\tools\planviz-qt\build-vs18-release\planviz-qt_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\gitcloud\LifelongTA\tools\planviz-qt\build-vs18-release\planviz-qt_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\gitcloud\LifelongTA\tools\planviz-qt\src\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\gitcloud\LifelongTA\tools\planviz-qt\src\PlanData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\gitcloud\LifelongTA\tools\planviz-qt\src\MapView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\gitcloud\LifelongTA\tools\planviz-qt\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{72A12D31-4DB5-3172-9C94-462B9DA7E38B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{AC59A143-E60E-30A5-8F9F-F3B3E47EC3AD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
