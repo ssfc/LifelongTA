@@ -1,0 +1,1446 @@
+current timestep 0
+num of flexible agents: 80
+num of flexible tasks: 2
+Solving time: 0.000304293 seconds
+plan limit 980
+current timestep 1
+num of flexible agents: 80
+num of flexible tasks: 4
+Solving time: 0.000303517 seconds
+plan limit 980
+current timestep 2
+num of flexible agents: 80
+num of flexible tasks: 6
+Solving time: 0.000316998 seconds
+plan limit 980
+current timestep 3
+num of flexible agents: 78
+num of flexible tasks: 6
+Solving time: 0.00025947 seconds
+plan limit 980
+current timestep 4
+num of flexible agents: 77
+num of flexible tasks: 7
+Solving time: 0.000286843 seconds
+plan limit 980
+current timestep 5
+num of flexible agents: 75
+num of flexible tasks: 7
+Solving time: 0.000302917 seconds
+plan limit 980
+current timestep 6
+num of flexible agents: 74
+num of flexible tasks: 8
+Solving time: 0.000274356 seconds
+plan limit 980
+current timestep 7
+num of flexible agents: 73
+num of flexible tasks: 9
+Solving time: 0.00030924 seconds
+plan limit 980
+current timestep 8
+num of flexible agents: 71
+num of flexible tasks: 9
+Solving time: 0.000341784 seconds
+plan limit 980
+current timestep 9
+num of flexible agents: 71
+num of flexible tasks: 10
+Solving time: 0.000310517 seconds
+plan limit 980
+current timestep 10
+num of flexible agents: 68
+num of flexible tasks: 9
+Solving time: 0.000340481 seconds
+plan limit 980
+current timestep 11
+num of flexible agents: 68
+num of flexible tasks: 11
+Solving time: 0.000343648 seconds
+plan limit 980
+current timestep 12
+num of flexible agents: 68
+num of flexible tasks: 13
+Solving time: 0.000374682 seconds
+plan limit 980
+current timestep 13
+num of flexible agents: 66
+num of flexible tasks: 13
+Solving time: 0.00033967 seconds
+plan limit 980
+current timestep 14
+num of flexible agents: 64
+num of flexible tasks: 12
+Solving time: 0.000343347 seconds
+plan limit 980
+current timestep 15
+num of flexible agents: 62
+num of flexible tasks: 12
+Solving time: 0.000386861 seconds
+plan limit 980
+current timestep 16
+num of flexible agents: 63
+num of flexible tasks: 14
+Solving time: 0.000324549 seconds
+plan limit 980
+current timestep 17
+num of flexible agents: 63
+num of flexible tasks: 16
+Solving time: 0.000416166 seconds
+plan limit 980
+current timestep 18
+num of flexible agents: 58
+num of flexible tasks: 13
+Solving time: 0.000393627 seconds
+plan limit 980
+current timestep 19
+num of flexible agents: 57
+num of flexible tasks: 14
+Solving time: 0.000382689 seconds
+plan limit 980
+current timestep 20
+num of flexible agents: 57
+num of flexible tasks: 15
+Solving time: 0.000412503 seconds
+plan limit 980
+current timestep 21
+num of flexible agents: 56
+num of flexible tasks: 16
+Solving time: 0.000409238 seconds
+plan limit 980
+current timestep 22
+num of flexible agents: 53
+num of flexible tasks: 14
+Solving time: 0.000310823 seconds
+plan limit 980
+current timestep 23
+num of flexible agents: 52
+num of flexible tasks: 14
+Solving time: 0.000339007 seconds
+plan limit 980
+current timestep 24
+num of flexible agents: 50
+num of flexible tasks: 13
+Solving time: 0.000338548 seconds
+plan limit 980
+current timestep 25
+num of flexible agents: 47
+num of flexible tasks: 12
+Solving time: 0.000323921 seconds
+plan limit 980
+current timestep 26
+num of flexible agents: 46
+num of flexible tasks: 12
+Solving time: 0.000342692 seconds
+plan limit 980
+current timestep 27
+num of flexible agents: 43
+num of flexible tasks: 10
+Solving time: 0.000333817 seconds
+plan limit 980
+current timestep 28
+num of flexible agents: 41
+num of flexible tasks: 10
+Solving time: 0.000361364 seconds
+plan limit 980
+current timestep 29
+num of flexible agents: 45
+num of flexible tasks: 12
+Solving time: 0.000276637 seconds
+plan limit 980
+current timestep 30
+num of flexible agents: 41
+num of flexible tasks: 10
+Solving time: 0.000348303 seconds
+plan limit 980
+current timestep 31
+num of flexible agents: 41
+num of flexible tasks: 12
+Solving time: 0.000341598 seconds
+plan limit 980
+current timestep 32
+num of flexible agents: 45
+num of flexible tasks: 13
+Solving time: 0.000307276 seconds
+plan limit 980
+current timestep 33
+num of flexible agents: 43
+num of flexible tasks: 12
+Solving time: 0.000328744 seconds
+plan limit 980
+current timestep 34
+num of flexible agents: 41
+num of flexible tasks: 11
+Solving time: 0.000315335 seconds
+plan limit 980
+current timestep 35
+num of flexible agents: 40
+num of flexible tasks: 12
+Solving time: 0.000393105 seconds
+plan limit 980
+current timestep 36
+num of flexible agents: 41
+num of flexible tasks: 14
+Solving time: 0.00035986 seconds
+plan limit 980
+current timestep 37
+num of flexible agents: 40
+num of flexible tasks: 13
+Solving time: 0.000328279 seconds
+plan limit 980
+current timestep 38
+num of flexible agents: 40
+num of flexible tasks: 13
+Solving time: 0.000322591 seconds
+plan limit 980
+current timestep 39
+num of flexible agents: 40
+num of flexible tasks: 12
+Solving time: 0.000363233 seconds
+plan limit 980
+current timestep 40
+num of flexible agents: 41
+num of flexible tasks: 13
+Solving time: 0.000316778 seconds
+plan limit 980
+current timestep 41
+num of flexible agents: 40
+num of flexible tasks: 13
+Solving time: 0.000330234 seconds
+plan limit 980
+current timestep 42
+num of flexible agents: 41
+num of flexible tasks: 13
+Solving time: 0.000364557 seconds
+plan limit 980
+current timestep 43
+num of flexible agents: 42
+num of flexible tasks: 13
+Solving time: 0.000353386 seconds
+plan limit 980
+current timestep 44
+num of flexible agents: 37
+num of flexible tasks: 10
+Solving time: 0.000347027 seconds
+plan limit 980
+current timestep 45
+num of flexible agents: 40
+num of flexible tasks: 11
+Solving time: 0.000329454 seconds
+plan limit 980
+current timestep 46
+num of flexible agents: 42
+num of flexible tasks: 11
+Solving time: 0.000284235 seconds
+plan limit 980
+current timestep 47
+num of flexible agents: 42
+num of flexible tasks: 11
+Solving time: 0.000269162 seconds
+plan limit 980
+current timestep 48
+num of flexible agents: 38
+num of flexible tasks: 9
+Solving time: 0.000285468 seconds
+plan limit 980
+current timestep 49
+num of flexible agents: 42
+num of flexible tasks: 11
+Solving time: 0.000264083 seconds
+plan limit 980
+current timestep 50
+num of flexible agents: 41
+num of flexible tasks: 10
+Solving time: 0.000269486 seconds
+plan limit 980
+current timestep 51
+num of flexible agents: 38
+num of flexible tasks: 9
+Solving time: 0.000288899 seconds
+plan limit 980
+current timestep 52
+num of flexible agents: 40
+num of flexible tasks: 10
+Solving time: 0.000250137 seconds
+plan limit 980
+current timestep 53
+num of flexible agents: 41
+num of flexible tasks: 10
+Solving time: 0.000314304 seconds
+plan limit 980
+current timestep 54
+num of flexible agents: 38
+num of flexible tasks: 7
+Solving time: 0.000245787 seconds
+plan limit 980
+current timestep 55
+num of flexible agents: 39
+num of flexible tasks: 9
+Solving time: 0.000261187 seconds
+plan limit 980
+current timestep 56
+num of flexible agents: 36
+num of flexible tasks: 8
+Solving time: 0.000276735 seconds
+plan limit 980
+current timestep 57
+num of flexible agents: 37
+num of flexible tasks: 8
+Solving time: 0.000336435 seconds
+plan limit 980
+current timestep 58
+num of flexible agents: 38
+num of flexible tasks: 10
+Solving time: 0.000281605 seconds
+plan limit 980
+current timestep 59
+num of flexible agents: 38
+num of flexible tasks: 10
+Solving time: 0.000323128 seconds
+plan limit 980
+current timestep 60
+num of flexible agents: 37
+num of flexible tasks: 11
+Solving time: 0.000367889 seconds
+plan limit 980
+current timestep 61
+num of flexible agents: 39
+num of flexible tasks: 12
+Solving time: 0.000315421 seconds
+plan limit 980
+current timestep 62
+num of flexible agents: 39
+num of flexible tasks: 11
+Solving time: 0.000343073 seconds
+plan limit 980
+current timestep 63
+num of flexible agents: 41
+num of flexible tasks: 12
+Solving time: 0.000344457 seconds
+plan limit 980
+current timestep 64
+num of flexible agents: 40
+num of flexible tasks: 11
+Solving time: 0.00033089 seconds
+plan limit 980
+current timestep 65
+num of flexible agents: 42
+num of flexible tasks: 12
+Solving time: 0.000329354 seconds
+plan limit 980
+current timestep 66
+num of flexible agents: 43
+num of flexible tasks: 13
+Solving time: 0.000326623 seconds
+plan limit 980
+current timestep 67
+num of flexible agents: 43
+num of flexible tasks: 12
+Solving time: 0.000277671 seconds
+plan limit 980
+current timestep 68
+num of flexible agents: 44
+num of flexible tasks: 12
+Solving time: 0.000299258 seconds
+plan limit 980
+current timestep 69
+num of flexible agents: 44
+num of flexible tasks: 12
+Solving time: 0.00030573 seconds
+plan limit 980
+current timestep 70
+num of flexible agents: 42
+num of flexible tasks: 11
+Solving time: 0.00029243 seconds
+plan limit 980
+current timestep 71
+num of flexible agents: 40
+num of flexible tasks: 10
+Solving time: 0.000322295 seconds
+plan limit 980
+current timestep 72
+num of flexible agents: 40
+num of flexible tasks: 12
+Solving time: 0.000296102 seconds
+plan limit 980
+current timestep 73
+num of flexible agents: 36
+num of flexible tasks: 9
+Solving time: 0.000260747 seconds
+plan limit 980
+current timestep 74
+num of flexible agents: 39
+num of flexible tasks: 10
+Solving time: 0.000327091 seconds
+plan limit 980
+current timestep 75
+num of flexible agents: 38
+num of flexible tasks: 9
+Solving time: 0.000268941 seconds
+plan limit 980
+current timestep 76
+num of flexible agents: 37
+num of flexible tasks: 9
+Solving time: 0.000289758 seconds
+plan limit 980
+current timestep 77
+num of flexible agents: 35
+num of flexible tasks: 6
+Solving time: 0.000270583 seconds
+plan limit 980
+current timestep 78
+num of flexible agents: 38
+num of flexible tasks: 7
+Solving time: 0.000277001 seconds
+plan limit 980
+current timestep 79
+num of flexible agents: 38
+num of flexible tasks: 9
+Solving time: 0.000326409 seconds
+plan limit 980
+current timestep 80
+num of flexible agents: 38
+num of flexible tasks: 10
+Solving time: 0.000334611 seconds
+plan limit 980
+current timestep 81
+num of flexible agents: 35
+num of flexible tasks: 9
+Solving time: 0.000284488 seconds
+plan limit 980
+current timestep 82
+num of flexible agents: 35
+num of flexible tasks: 9
+Solving time: 0.000306405 seconds
+plan limit 980
+current timestep 83
+num of flexible agents: 36
+num of flexible tasks: 10
+Solving time: 0.000285447 seconds
+plan limit 980
+current timestep 84
+num of flexible agents: 38
+num of flexible tasks: 11
+Solving time: 0.000308437 seconds
+plan limit 980
+current timestep 85
+num of flexible agents: 37
+num of flexible tasks: 10
+Solving time: 0.000311095 seconds
+plan limit 980
+current timestep 86
+num of flexible agents: 39
+num of flexible tasks: 11
+Solving time: 0.000270898 seconds
+plan limit 980
+current timestep 87
+num of flexible agents: 36
+num of flexible tasks: 9
+Solving time: 0.000260853 seconds
+plan limit 980
+current timestep 88
+num of flexible agents: 37
+num of flexible tasks: 9
+Solving time: 0.000295128 seconds
+plan limit 980
+current timestep 89
+num of flexible agents: 34
+num of flexible tasks: 8
+Solving time: 0.000276049 seconds
+plan limit 980
+current timestep 90
+num of flexible agents: 38
+num of flexible tasks: 8
+Solving time: 0.000269504 seconds
+plan limit 980
+current timestep 91
+num of flexible agents: 40
+num of flexible tasks: 7
+Solving time: 0.000287069 seconds
+plan limit 980
+current timestep 92
+num of flexible agents: 41
+num of flexible tasks: 9
+Solving time: 0.000256898 seconds
+plan limit 980
+current timestep 93
+num of flexible agents: 39
+num of flexible tasks: 8
+Solving time: 0.000238176 seconds
+plan limit 980
+current timestep 94
+num of flexible agents: 35
+num of flexible tasks: 6
+Solving time: 0.000257142 seconds
+plan limit 980
+current timestep 95
+num of flexible agents: 33
+num of flexible tasks: 6
+Solving time: 0.000289296 seconds
+plan limit 980
+current timestep 96
+num of flexible agents: 32
+num of flexible tasks: 6
+Solving time: 0.000275404 seconds
+plan limit 980
+current timestep 97
+num of flexible agents: 32
+num of flexible tasks: 7
+Solving time: 0.000276191 seconds
+plan limit 980
+current timestep 98
+num of flexible agents: 33
+num of flexible tasks: 8
+Solving time: 0.000281332 seconds
+plan limit 980
+current timestep 99
+num of flexible agents: 33
+num of flexible tasks: 7
+Solving time: 0.000261678 seconds
+plan limit 980
+current timestep 100
+num of flexible agents: 37
+num of flexible tasks: 9
+Solving time: 0.000262318 seconds
+plan limit 980
+current timestep 101
+num of flexible agents: 38
+num of flexible tasks: 11
+Solving time: 0.000307734 seconds
+plan limit 980
+current timestep 102
+num of flexible agents: 39
+num of flexible tasks: 11
+Solving time: 0.000313667 seconds
+plan limit 980
+current timestep 103
+num of flexible agents: 36
+num of flexible tasks: 9
+Solving time: 0.000274056 seconds
+plan limit 980
+current timestep 104
+num of flexible agents: 35
+num of flexible tasks: 8
+Solving time: 0.000285194 seconds
+plan limit 980
+current timestep 105
+num of flexible agents: 34
+num of flexible tasks: 7
+Solving time: 0.000282319 seconds
+plan limit 980
+current timestep 106
+num of flexible agents: 39
+num of flexible tasks: 9
+Solving time: 0.000253748 seconds
+plan limit 980
+current timestep 107
+num of flexible agents: 40
+num of flexible tasks: 7
+Solving time: 0.00029069 seconds
+plan limit 980
+current timestep 108
+num of flexible agents: 41
+num of flexible tasks: 6
+Solving time: 0.000255796 seconds
+plan limit 980
+current timestep 109
+num of flexible agents: 38
+num of flexible tasks: 5
+Solving time: 0.000251895 seconds
+plan limit 980
+current timestep 110
+num of flexible agents: 40
+num of flexible tasks: 6
+Solving time: 0.000249884 seconds
+plan limit 980
+current timestep 111
+num of flexible agents: 40
+num of flexible tasks: 7
+Solving time: 0.00025106 seconds
+plan limit 980
+current timestep 112
+num of flexible agents: 38
+num of flexible tasks: 6
+Solving time: 0.000241672 seconds
+plan limit 980
+current timestep 113
+num of flexible agents: 38
+num of flexible tasks: 7
+Solving time: 0.000250497 seconds
+plan limit 980
+current timestep 114
+num of flexible agents: 38
+num of flexible tasks: 7
+Solving time: 0.000314075 seconds
+plan limit 980
+current timestep 115
+num of flexible agents: 38
+num of flexible tasks: 8
+Solving time: 0.000302819 seconds
+plan limit 980
+current timestep 116
+num of flexible agents: 38
+num of flexible tasks: 10
+Solving time: 0.000307448 seconds
+plan limit 980
+current timestep 117
+num of flexible agents: 38
+num of flexible tasks: 11
+Solving time: 0.000318534 seconds
+plan limit 980
+current timestep 118
+num of flexible agents: 38
+num of flexible tasks: 12
+Solving time: 0.000260363 seconds
+plan limit 980
+current timestep 119
+num of flexible agents: 37
+num of flexible tasks: 11
+Solving time: 0.000295753 seconds
+plan limit 980
+current timestep 120
+num of flexible agents: 35
+num of flexible tasks: 10
+Solving time: 0.000310075 seconds
+plan limit 980
+current timestep 121
+num of flexible agents: 37
+num of flexible tasks: 12
+Solving time: 0.000332217 seconds
+plan limit 980
+current timestep 122
+num of flexible agents: 41
+num of flexible tasks: 13
+Solving time: 0.000280185 seconds
+plan limit 980
+current timestep 123
+num of flexible agents: 38
+num of flexible tasks: 10
+Solving time: 0.000284112 seconds
+plan limit 980
+current timestep 124
+num of flexible agents: 35
+num of flexible tasks: 8
+Solving time: 0.000274715 seconds
+plan limit 980
+current timestep 125
+num of flexible agents: 34
+num of flexible tasks: 6
+Solving time: 0.000284777 seconds
+plan limit 980
+current timestep 126
+num of flexible agents: 38
+num of flexible tasks: 7
+Solving time: 0.000263567 seconds
+plan limit 980
+current timestep 127
+num of flexible agents: 36
+num of flexible tasks: 7
+Solving time: 0.000263689 seconds
+plan limit 980
+current timestep 128
+num of flexible agents: 36
+num of flexible tasks: 7
+Solving time: 0.000272463 seconds
+plan limit 980
+current timestep 129
+num of flexible agents: 38
+num of flexible tasks: 8
+Solving time: 0.000254616 seconds
+plan limit 980
+current timestep 130
+num of flexible agents: 37
+num of flexible tasks: 7
+Solving time: 0.00024947 seconds
+plan limit 980
+current timestep 131
+num of flexible agents: 37
+num of flexible tasks: 7
+Solving time: 0.000268325 seconds
+plan limit 980
+current timestep 132
+num of flexible agents: 39
+num of flexible tasks: 8
+Solving time: 0.000238554 seconds
+plan limit 980
+current timestep 133
+num of flexible agents: 37
+num of flexible tasks: 6
+Solving time: 0.000248245 seconds
+plan limit 980
+current timestep 134
+num of flexible agents: 36
+num of flexible tasks: 6
+Solving time: 0.000281519 seconds
+plan limit 980
+current timestep 135
+num of flexible agents: 35
+num of flexible tasks: 6
+Solving time: 0.000255981 seconds
+plan limit 980
+current timestep 136
+num of flexible agents: 37
+num of flexible tasks: 7
+Solving time: 0.000283667 seconds
+plan limit 980
+current timestep 137
+num of flexible agents: 37
+num of flexible tasks: 8
+Solving time: 0.000283273 seconds
+plan limit 980
+current timestep 138
+num of flexible agents: 39
+num of flexible tasks: 9
+Solving time: 0.000264276 seconds
+plan limit 980
+current timestep 139
+num of flexible agents: 38
+num of flexible tasks: 7
+Solving time: 0.000272975 seconds
+plan limit 980
+current timestep 140
+num of flexible agents: 39
+num of flexible tasks: 9
+Solving time: 0.000310485 seconds
+plan limit 980
+current timestep 141
+num of flexible agents: 38
+num of flexible tasks: 8
+Solving time: 0.000262973 seconds
+plan limit 980
+current timestep 142
+num of flexible agents: 37
+num of flexible tasks: 8
+Solving time: 0.00028403 seconds
+plan limit 980
+current timestep 143
+num of flexible agents: 40
+num of flexible tasks: 10
+Solving time: 0.000312376 seconds
+plan limit 980
+current timestep 144
+num of flexible agents: 38
+num of flexible tasks: 9
+Solving time: 0.000257379 seconds
+plan limit 980
+current timestep 145
+num of flexible agents: 37
+num of flexible tasks: 9
+Solving time: 0.000252797 seconds
+plan limit 980
+current timestep 146
+num of flexible agents: 34
+num of flexible tasks: 7
+Solving time: 0.000250912 seconds
+plan limit 980
+current timestep 147
+num of flexible agents: 32
+num of flexible tasks: 6
+Solving time: 0.000278421 seconds
+plan limit 980
+current timestep 148
+num of flexible agents: 33
+num of flexible tasks: 7
+Solving time: 0.000288731 seconds
+plan limit 980
+current timestep 149
+num of flexible agents: 31
+num of flexible tasks: 6
+Solving time: 0.000271439 seconds
+plan limit 980
+current timestep 150
+num of flexible agents: 30
+num of flexible tasks: 6
+Solving time: 0.00026028 seconds
+plan limit 980
+current timestep 151
+num of flexible agents: 31
+num of flexible tasks: 8
+Solving time: 0.000291733 seconds
+plan limit 980
+current timestep 152
+num of flexible agents: 37
+num of flexible tasks: 10
+Solving time: 0.000317131 seconds
+plan limit 980
+current timestep 153
+num of flexible agents: 40
+num of flexible tasks: 12
+Solving time: 0.000288902 seconds
+plan limit 980
+current timestep 154
+num of flexible agents: 39
+num of flexible tasks: 10
+Solving time: 0.000277248 seconds
+plan limit 980
+current timestep 155
+num of flexible agents: 39
+num of flexible tasks: 12
+Solving time: 0.000263718 seconds
+plan limit 980
+current timestep 156
+num of flexible agents: 38
+num of flexible tasks: 11
+Solving time: 0.00026273 seconds
+plan limit 980
+current timestep 157
+num of flexible agents: 36
+num of flexible tasks: 10
+Solving time: 0.000305968 seconds
+plan limit 980
+current timestep 158
+num of flexible agents: 43
+num of flexible tasks: 12
+Solving time: 0.000294983 seconds
+plan limit 980
+current timestep 159
+num of flexible agents: 39
+num of flexible tasks: 10
+Solving time: 0.000291542 seconds
+plan limit 980
+current timestep 160
+num of flexible agents: 39
+num of flexible tasks: 11
+Solving time: 0.000286535 seconds
+plan limit 980
+current timestep 161
+num of flexible agents: 40
+num of flexible tasks: 12
+Solving time: 0.000260111 seconds
+plan limit 980
+current timestep 162
+num of flexible agents: 40
+num of flexible tasks: 13
+Solving time: 0.000296887 seconds
+plan limit 980
+current timestep 163
+num of flexible agents: 41
+num of flexible tasks: 14
+Solving time: 0.000356278 seconds
+plan limit 980
+current timestep 164
+num of flexible agents: 39
+num of flexible tasks: 13
+Solving time: 0.000297015 seconds
+plan limit 980
+current timestep 165
+num of flexible agents: 37
+num of flexible tasks: 12
+Solving time: 0.000307202 seconds
+plan limit 980
+current timestep 166
+num of flexible agents: 39
+num of flexible tasks: 13
+Solving time: 0.000297798 seconds
+plan limit 980
+current timestep 167
+num of flexible agents: 39
+num of flexible tasks: 13
+Solving time: 0.000284732 seconds
+plan limit 980
+current timestep 168
+num of flexible agents: 38
+num of flexible tasks: 12
+Solving time: 0.000291691 seconds
+plan limit 980
+current timestep 169
+num of flexible agents: 39
+num of flexible tasks: 13
+Solving time: 0.000293512 seconds
+plan limit 980
+current timestep 170
+num of flexible agents: 41
+num of flexible tasks: 12
+Solving time: 0.000313037 seconds
+plan limit 980
+current timestep 171
+num of flexible agents: 37
+num of flexible tasks: 7
+Solving time: 0.000281549 seconds
+plan limit 980
+current timestep 172
+num of flexible agents: 36
+num of flexible tasks: 8
+Solving time: 0.000259207 seconds
+plan limit 980
+current timestep 173
+num of flexible agents: 35
+num of flexible tasks: 9
+Solving time: 0.000251783 seconds
+plan limit 980
+current timestep 174
+num of flexible agents: 33
+num of flexible tasks: 8
+Solving time: 0.000245277 seconds
+plan limit 980
+current timestep 175
+num of flexible agents: 36
+num of flexible tasks: 8
+Solving time: 0.000240607 seconds
+plan limit 980
+current timestep 176
+num of flexible agents: 37
+num of flexible tasks: 7
+Solving time: 0.00022753 seconds
+plan limit 980
+current timestep 177
+num of flexible agents: 36
+num of flexible tasks: 5
+Solving time: 0.000258426 seconds
+plan limit 980
+current timestep 178
+num of flexible agents: 38
+num of flexible tasks: 7
+Solving time: 0.00027258 seconds
+plan limit 980
+current timestep 179
+num of flexible agents: 39
+num of flexible tasks: 7
+Solving time: 0.000311334 seconds
+plan limit 980
+current timestep 180
+num of flexible agents: 40
+num of flexible tasks: 9
+Solving time: 0.000294595 seconds
+plan limit 980
+current timestep 181
+num of flexible agents: 38
+num of flexible tasks: 9
+Solving time: 0.000269974 seconds
+plan limit 980
+current timestep 182
+num of flexible agents: 38
+num of flexible tasks: 11
+Solving time: 0.000264343 seconds
+plan limit 980
+current timestep 183
+num of flexible agents: 38
+num of flexible tasks: 11
+Solving time: 0.000279699 seconds
+plan limit 980
+current timestep 184
+num of flexible agents: 38
+num of flexible tasks: 11
+Solving time: 0.000265564 seconds
+plan limit 980
+current timestep 185
+num of flexible agents: 39
+num of flexible tasks: 10
+Solving time: 0.000314311 seconds
+plan limit 980
+current timestep 186
+num of flexible agents: 42
+num of flexible tasks: 10
+Solving time: 0.000269137 seconds
+plan limit 980
+current timestep 187
+num of flexible agents: 41
+num of flexible tasks: 9
+Solving time: 0.000292024 seconds
+plan limit 980
+current timestep 188
+num of flexible agents: 40
+num of flexible tasks: 10
+Solving time: 0.000288503 seconds
+plan limit 980
+current timestep 189
+num of flexible agents: 43
+num of flexible tasks: 11
+Solving time: 0.00027482 seconds
+plan limit 980
+current timestep 190
+num of flexible agents: 41
+num of flexible tasks: 11
+Solving time: 0.000307993 seconds
+plan limit 980
+current timestep 191
+num of flexible agents: 42
+num of flexible tasks: 12
+Solving time: 0.000292109 seconds
+plan limit 980
+current timestep 192
+num of flexible agents: 41
+num of flexible tasks: 11
+Solving time: 0.000294513 seconds
+plan limit 980
+current timestep 193
+num of flexible agents: 45
+num of flexible tasks: 12
+Solving time: 0.000288857 seconds
+plan limit 980
+current timestep 194
+num of flexible agents: 42
+num of flexible tasks: 11
+Solving time: 0.000345946 seconds
+plan limit 980
+current timestep 195
+num of flexible agents: 41
+num of flexible tasks: 12
+Solving time: 0.00030124 seconds
+plan limit 980
+current timestep 196
+num of flexible agents: 41
+num of flexible tasks: 13
+Solving time: 0.00033295 seconds
+plan limit 980
+current timestep 197
+num of flexible agents: 42
+num of flexible tasks: 14
+Solving time: 0.00033306 seconds
+plan limit 980
+current timestep 198
+num of flexible agents: 42
+num of flexible tasks: 13
+Solving time: 0.000301452 seconds
+plan limit 980
+current timestep 199
+num of flexible agents: 44
+num of flexible tasks: 13
+Solving time: 0.000300762 seconds
+plan limit 980
+current timestep 200
+num of flexible agents: 42
+num of flexible tasks: 12
+Solving time: 0.000292457 seconds
+plan limit 980
+current timestep 201
+num of flexible agents: 41
+num of flexible tasks: 11
+Solving time: 0.000285203 seconds
+plan limit 980
+current timestep 202
+num of flexible agents: 40
+num of flexible tasks: 11
+Solving time: 0.00030172 seconds
+plan limit 980
+current timestep 203
+num of flexible agents: 40
+num of flexible tasks: 12
+Solving time: 0.000303931 seconds
+plan limit 980
+current timestep 204
+num of flexible agents: 42
+num of flexible tasks: 12
+Solving time: 0.000270819 seconds
+plan limit 980
+current timestep 205
+num of flexible agents: 40
+num of flexible tasks: 10
+Solving time: 0.000323131 seconds
+plan limit 980
+current timestep 206
+num of flexible agents: 39
+num of flexible tasks: 10
+Solving time: 0.000308061 seconds
+plan limit 980
+current timestep 207
+num of flexible agents: 41
+num of flexible tasks: 11
+Solving time: 0.000292899 seconds
+plan limit 980
+current timestep 208
+num of flexible agents: 39
+num of flexible tasks: 11
+Solving time: 0.000300458 seconds
+plan limit 980
+current timestep 209
+num of flexible agents: 39
+num of flexible tasks: 10
+Solving time: 0.000286846 seconds
+plan limit 980
+current timestep 210
+num of flexible agents: 39
+num of flexible tasks: 10
+Solving time: 0.000267643 seconds
+plan limit 980
+current timestep 211
+num of flexible agents: 39
+num of flexible tasks: 10
+Solving time: 0.000284279 seconds
+plan limit 980
+current timestep 212
+num of flexible agents: 37
+num of flexible tasks: 10
+Solving time: 0.000337027 seconds
+plan limit 980
+current timestep 213
+num of flexible agents: 38
+num of flexible tasks: 9
+Solving time: 0.000354778 seconds
+plan limit 980
+current timestep 214
+num of flexible agents: 37
+num of flexible tasks: 9
+Solving time: 0.000351607 seconds
+plan limit 980
+current timestep 215
+num of flexible agents: 36
+num of flexible tasks: 10
+Solving time: 0.000403885 seconds
+plan limit 980
+current timestep 216
+num of flexible agents: 40
+num of flexible tasks: 12
+Solving time: 0.000336569 seconds
+plan limit 980
+current timestep 217
+num of flexible agents: 40
+num of flexible tasks: 14
+Solving time: 0.000342373 seconds
+plan limit 980
+current timestep 218
+num of flexible agents: 39
+num of flexible tasks: 14
+Solving time: 0.000311339 seconds
+plan limit 980
+current timestep 219
+num of flexible agents: 38
+num of flexible tasks: 14
+Solving time: 0.000359087 seconds
+plan limit 980
+current timestep 220
+num of flexible agents: 36
+num of flexible tasks: 13
+Solving time: 0.000286604 seconds
+plan limit 980
+current timestep 221
+num of flexible agents: 37
+num of flexible tasks: 14
+Solving time: 0.000277867 seconds
+plan limit 980
+current timestep 222
+num of flexible agents: 37
+num of flexible tasks: 14
+Solving time: 0.000324704 seconds
+plan limit 980
+current timestep 223
+num of flexible agents: 37
+num of flexible tasks: 15
+Solving time: 0.00030282 seconds
+plan limit 980
+current timestep 224
+num of flexible agents: 35
+num of flexible tasks: 14
+Solving time: 0.000378409 seconds
+plan limit 980
+current timestep 225
+num of flexible agents: 33
+num of flexible tasks: 13
+Solving time: 0.00031794 seconds
+plan limit 980
+current timestep 226
+num of flexible agents: 33
+num of flexible tasks: 12
+Solving time: 0.000299994 seconds
+plan limit 980
+current timestep 227
+num of flexible agents: 32
+num of flexible tasks: 11
+Solving time: 0.000332536 seconds
+plan limit 980
+current timestep 228
+num of flexible agents: 29
+num of flexible tasks: 8
+Solving time: 0.000340946 seconds
+plan limit 980
+current timestep 229
+num of flexible agents: 29
+num of flexible tasks: 8
+Solving time: 0.000258888 seconds
+plan limit 980
+current timestep 230
+num of flexible agents: 29
+num of flexible tasks: 8
+Solving time: 0.000254376 seconds
+plan limit 980
+current timestep 231
+num of flexible agents: 30
+num of flexible tasks: 9
+Solving time: 0.000301647 seconds
+plan limit 980
+current timestep 232
+num of flexible agents: 32
+num of flexible tasks: 10
+Solving time: 0.000321784 seconds
+plan limit 980
+current timestep 233
+num of flexible agents: 33
+num of flexible tasks: 10
+Solving time: 0.00032319 seconds
+plan limit 980
+current timestep 234
+num of flexible agents: 34
+num of flexible tasks: 11
+Solving time: 0.000337079 seconds
+plan limit 980
+current timestep 235
+num of flexible agents: 33
+num of flexible tasks: 10
+Solving time: 0.000315377 seconds
+plan limit 980
+current timestep 236
+num of flexible agents: 34
+num of flexible tasks: 11
+Solving time: 0.000310475 seconds
+plan limit 980
+current timestep 237
+num of flexible agents: 34
+num of flexible tasks: 10
+Solving time: 0.000332714 seconds
+plan limit 980
+current timestep 238
+num of flexible agents: 36
+num of flexible tasks: 12
+Solving time: 0.000326768 seconds
+plan limit 980
+current timestep 239
+num of flexible agents: 37
+num of flexible tasks: 12
+Solving time: 0.000323594 seconds
+plan limit 980
+current timestep 240
+num of flexible agents: 40
+num of flexible tasks: 11
+Solving time: 0.000333342 seconds
+plan limit 980
+current timestep 241
+num of flexible agents: 39
+num of flexible tasks: 11
+Solving time: 0.000376419 seconds
+plan limit 980
+current timestep 242
+num of flexible agents: 42
+num of flexible tasks: 13
+Solving time: 0.000390768 seconds
+plan limit 980
+current timestep 243
+num of flexible agents: 45
+num of flexible tasks: 14
+Solving time: 0.000326731 seconds
+plan limit 980
+current timestep 244
+num of flexible agents: 43
+num of flexible tasks: 14
+Solving time: 0.000325719 seconds
+plan limit 980
+current timestep 245
+num of flexible agents: 39
+num of flexible tasks: 11
+Solving time: 0.000379345 seconds
+plan limit 980
+current timestep 246
+num of flexible agents: 41
+num of flexible tasks: 12
+Solving time: 0.000372088 seconds
+plan limit 980
+current timestep 247
+num of flexible agents: 40
+num of flexible tasks: 13
+Solving time: 0.000339969 seconds
+plan limit 980
+current timestep 248
+num of flexible agents: 39
+num of flexible tasks: 13
+Solving time: 0.000352497 seconds
+plan limit 980
+current timestep 249
+num of flexible agents: 37
+num of flexible tasks: 11
+Solving time: 0.000331174 seconds
+plan limit 980
+current timestep 250
+num of flexible agents: 37
+num of flexible tasks: 10
+Solving time: 0.00030404 seconds
+plan limit 980
+current timestep 251
+num of flexible agents: 37
+num of flexible tasks: 8
+Solving time: 0.000280831 seconds
+plan limit 980
+current timestep 252
+num of flexible agents: 36
+num of flexible tasks: 5
+Solving time: 0.000284314 seconds
+plan limit 980
+current timestep 253
+num of flexible agents: 35
+num of flexible tasks: 3
+Solving time: 0.000255693 seconds
+plan limit 980
+current timestep 254
+num of flexible agents: 40
+num of flexible tasks: 3
+Solving time: 0.000244915 seconds
+plan limit 980
+current timestep 255
+num of flexible agents: 42
+num of flexible tasks: 2
+Solving time: 0.00023123 seconds
+plan limit 980
+current timestep 256
+num of flexible agents: 44
+num of flexible tasks: 2
+Solving time: 0.000230115 seconds
+plan limit 980
+current timestep 257
+num of flexible agents: 45
+num of flexible tasks: 2
+Solving time: 0.000235359 seconds
+plan limit 980
+current timestep 258
+num of flexible agents: 47
+num of flexible tasks: 2
+Solving time: 0.000217154 seconds
+plan limit 980
+current timestep 259
+num of flexible agents: 50
+num of flexible tasks: 1
+Solving time: 0.000244871 seconds
+plan limit 980
+current timestep 260
+num of flexible agents: 50
+num of flexible tasks: 0
+Solving time: 0.000214572 seconds
+plan limit 980
+current timestep 261
+num of flexible agents: 53
+num of flexible tasks: 0
+Solving time: 0.000217855 seconds
+plan limit 980
+current timestep 262
+num of flexible agents: 57
+num of flexible tasks: 0
+Solving time: 0.000209235 seconds
+plan limit 980
+current timestep 263
+num of flexible agents: 57
+num of flexible tasks: 0
+Solving time: 0.000216145 seconds
+plan limit 980
+current timestep 264
+num of flexible agents: 59
+num of flexible tasks: 0
+Solving time: 0.000209893 seconds
+plan limit 980
+current timestep 265
+num of flexible agents: 59
+num of flexible tasks: 0
+Solving time: 0.000214904 seconds
+plan limit 980
+current timestep 266
+num of flexible agents: 62
+num of flexible tasks: 0
+Solving time: 0.000222928 seconds
+plan limit 980
+current timestep 267
+num of flexible agents: 63
+num of flexible tasks: 0
+Solving time: 0.000208519 seconds
+plan limit 980
+current timestep 268
+num of flexible agents: 63
+num of flexible tasks: 0
+Solving time: 0.000217993 seconds
+plan limit 980
+current timestep 269
+num of flexible agents: 63
+num of flexible tasks: 0
+Solving time: 0.000216148 seconds
+plan limit 980
+current timestep 270
+num of flexible agents: 66
+num of flexible tasks: 0
+Solving time: 0.000222008 seconds
+plan limit 980
+current timestep 271
+num of flexible agents: 66
+num of flexible tasks: 0
+Solving time: 0.000237754 seconds
+plan limit 980
+current timestep 272
+num of flexible agents: 69
+num of flexible tasks: 0
+Solving time: 0.000205026 seconds
+plan limit 980
+current timestep 273
+num of flexible agents: 69
+num of flexible tasks: 0
+Solving time: 0.000210139 seconds
+plan limit 980
+current timestep 274
+num of flexible agents: 70
+num of flexible tasks: 0
+Solving time: 0.000208711 seconds
+plan limit 980
+current timestep 275
+num of flexible agents: 70
+num of flexible tasks: 0
+Solving time: 0.000227485 seconds
+plan limit 980
+current timestep 276
+num of flexible agents: 70
+num of flexible tasks: 0
+Solving time: 0.000210796 seconds
+plan limit 980
+current timestep 277
+num of flexible agents: 71
+num of flexible tasks: 0
+Solving time: 0.000241192 seconds
+plan limit 980
+current timestep 278
+num of flexible agents: 75
+num of flexible tasks: 0
+Solving time: 0.000221655 seconds
+plan limit 980
+current timestep 279
+num of flexible agents: 76
+num of flexible tasks: 0
+Solving time: 0.00022119 seconds
+plan limit 980
+current timestep 280
+num of flexible agents: 76
+num of flexible tasks: 0
+Solving time: 0.000206991 seconds
+plan limit 980
+current timestep 281
+num of flexible agents: 76
+num of flexible tasks: 0
+Solving time: 0.000203031 seconds
+plan limit 980
+current timestep 282
+num of flexible agents: 76
+num of flexible tasks: 0
+Solving time: 0.000252717 seconds
+plan limit 980
+current timestep 283
+num of flexible agents: 76
+num of flexible tasks: 0
+Solving time: 0.00022613 seconds
+plan limit 980
+current timestep 284
+num of flexible agents: 77
+num of flexible tasks: 0
+Solving time: 0.000258945 seconds
+plan limit 980
+current timestep 285
+num of flexible agents: 77
+num of flexible tasks: 0
+Solving time: 0.000206731 seconds
+plan limit 980
+current timestep 286
+num of flexible agents: 77
+num of flexible tasks: 0
+Solving time: 0.000223619 seconds
+plan limit 980
+current timestep 287
+num of flexible agents: 78
+num of flexible tasks: 0
+Solving time: 0.000209837 seconds
+plan limit 980
+current timestep 288
+num of flexible agents: 79
+num of flexible tasks: 0
+Solving time: 0.000227805 seconds
+plan limit 980
+All tasks finished at timestep 289

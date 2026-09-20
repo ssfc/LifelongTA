@@ -27,6 +27,13 @@ struct TaskInfo {
     std::vector<int> locations;
 };
 
+struct AssignmentProgress {
+    int task_id = -1;
+    int initial_pickup_distance = std::numeric_limits<int>::max();
+};
+
+std::unordered_map<int, AssignmentProgress> assignment_progress;
+
 int task_length(SharedEnvironment* env, const TaskInfo& task);
 
 float task_score(SharedEnvironment* env, int agent_location, const TaskInfo& task,
@@ -398,12 +405,14 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
     for (int agent = 0; agent < env->num_of_agents; ++agent) {
         const int task_id = local[agent];
         if (task_id < 0) {
+            assignment_progress.erase(agent);
             candidates.push_back({agent, env->curr_states.at(agent).location});
             continue;
         }
         const auto task_it = env->task_pool.find(task_id);
         if (task_it == env->task_pool.end() || task_it->second.idx_next_loc < 0 ||
             task_it->second.idx_next_loc >= static_cast<int>(task_it->second.locations.size())) {
+            assignment_progress.erase(agent);
             local[agent] = -1;
             candidates.push_back({agent, env->curr_states.at(agent).location});
             continue;
@@ -411,7 +420,14 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
         const Task& task = task_it->second;
         const int pickup = task.locations.at(task.idx_next_loc);
         const int distance = get_h(env, env->curr_states.at(agent).location, pickup);
+        auto progress = assignment_progress.find(agent);
+        if (progress == assignment_progress.end() || progress->second.task_id != task_id) {
+            progress = assignment_progress.insert_or_assign(
+                agent, AssignmentProgress{task_id, distance}).first;
+        }
+        const bool made_pickup_progress = distance < progress->second.initial_pickup_distance;
         if (!config.reassign_enabled || task.idx_next_loc > 0 ||
+            (config.lock_after_pickup_progress && made_pickup_progress) ||
             (config.reassign_min_dist > 0 && distance < config.reassign_min_dist)) {
             locked_tasks.insert(task_id);
             continue;

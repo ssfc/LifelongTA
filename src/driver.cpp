@@ -77,6 +77,7 @@ int main(int argc, char **argv)
         ("matcherFlowSeedBudgetMs", po::value<int>()->default_value(100), "maximum scheduler milliseconds spent generating Flow-Unit suggestions")
         ("matcherNewTaskDelay", po::value<int>()->default_value(0), "timesteps a newly revealed task waits before its first TaskMatcher eligibility")
         ("matcherLexicographicPickup", po::value<bool>()->default_value(false), "minimize total pickup distance before delivery length in TaskMatcher")
+        ("matcherLockAfterPickupProgress", po::value<bool>()->default_value(false), "keep an unopened assignment after its agent has moved closer to pickup")
         ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
         ("hungarianMaxAgents", po::value<int>()->default_value(256), "capped Hungarian candidate-agent limit")
         ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
@@ -197,6 +198,7 @@ int main(int argc, char **argv)
     matcher_config.flow_seed_budget_ms = vm["matcherFlowSeedBudgetMs"].as<int>();
     matcher_config.new_task_delay_steps = vm["matcherNewTaskDelay"].as<int>();
     matcher_config.lexicographic_pickup_first = vm["matcherLexicographicPickup"].as<bool>();
+    matcher_config.lock_after_pickup_progress = vm["matcherLockAfterPickupProgress"].as<bool>();
     matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();
     matcher_config.reassign_keep_bias = heap_config.reassign_keep_bias;
     matcher_config.reassign_min_dist = heap_config.reassign_min_dist;

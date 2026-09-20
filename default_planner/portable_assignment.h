@@ -28,6 +28,7 @@ struct PortableTaskMatcherConfig {
     int flow_seed_budget_ms = 100;
     int new_task_delay_steps = 0;
     bool lexicographic_pickup_first = false;
+    bool lock_after_pickup_progress = false;
 };
 
 struct PortableCappedHungarianConfig {
