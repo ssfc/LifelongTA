@@ -27,6 +27,8 @@ struct TaskInfo {
     std::vector<int> locations;
 };
 
+int task_length(SharedEnvironment* env, const TaskInfo& task);
+
 float task_score(SharedEnvironment* env, int agent_location, const TaskInfo& task,
                  float dist_weight, float task_length_weight = 1.0F)
 {
@@ -42,6 +44,17 @@ float task_score(SharedEnvironment* env, int agent_location, const TaskInfo& tas
     }
     return dist_weight * static_cast<float>(distance) +
            task_length_weight * static_cast<float>(length);
+}
+
+float pickup_first_task_score(SharedEnvironment* env, int agent_location, const TaskInfo& task,
+                              int pickup_multiplier)
+{
+    const int distance = get_h(env, agent_location, task.pickup);
+    const int length = task_length(env, task);
+    if (distance >= std::numeric_limits<int>::max() / 8 || length < 0) return kInvalidCost;
+    // The multiplier exceeds every feasible delivery length. Consequently an
+    // extra pickup step can never be traded for a shorter delivery segment.
+    return static_cast<float>(pickup_multiplier * distance + length);
 }
 
 int task_length(SharedEnvironment* env, const TaskInfo& task)
@@ -378,6 +391,7 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
     std::vector<int> local = env->curr_task_schedule;
     local.resize(env->num_of_agents, -1);
     std::unordered_set<int> locked_tasks;
+    std::unordered_set<int> reassignable_tasks;
     std::unordered_map<int, int> old_assignment;
     std::vector<AgentInfo> candidates;
 
@@ -404,6 +418,7 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
         }
         candidates.push_back({agent, env->curr_states.at(agent).location});
         old_assignment[agent] = task_id;
+        reassignable_tasks.insert(task_id);
         local[agent] = -1;
     }
 
@@ -413,6 +428,12 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
         const Task& task = entry.second;
         if (locked_tasks.count(entry.first) || task.idx_next_loc < 0 ||
             task.idx_next_loc >= static_cast<int>(task.locations.size())) continue;
+        // Delay only an unassigned task's first eligibility. Existing assignments
+        // remain eligible for reassignment under the normal TaskMatcher rules.
+        const bool was_assigned = reassignable_tasks.count(entry.first) > 0;
+        if (!was_assigned && config.new_task_delay_steps > 0 &&
+            env->curr_timestep - task.t_revealed < config.new_task_delay_steps)
+            continue;
         tasks.push_back(make_task_info(entry.first, task));
     }
     if (candidates.empty() || tasks.empty() || std::chrono::steady_clock::now() >= deadline) {
@@ -432,11 +453,20 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
         else
             cost.assign(candidates.size(), std::vector<float>(tasks.size(), kInvalidCost));
         if (!config.use_traffic_cost && !config.use_projected_load) {
+            int pickup_multiplier = 1;
+            if (config.lexicographic_pickup_first) {
+                for (const TaskInfo& task : tasks) {
+                    const int length = task_length(env, task);
+                    if (length >= pickup_multiplier) pickup_multiplier = length + 1;
+                }
+            }
             for (int i = 0; i < static_cast<int>(candidates.size()) &&
                             std::chrono::steady_clock::now() < deadline; ++i)
                 for (int j = 0; j < static_cast<int>(tasks.size()); ++j)
-                    cost[i][j] = task_score(env, candidates[i].location, tasks[j], config.dist_weight,
-                                            config.task_length_weight);
+                    cost[i][j] = config.lexicographic_pickup_first
+                        ? pickup_first_task_score(env, candidates[i].location, tasks[j], pickup_multiplier)
+                        : task_score(env, candidates[i].location, tasks[j], config.dist_weight,
+                                     config.task_length_weight);
         }
         for (int i = 0; i < static_cast<int>(candidates.size()); ++i) {
             for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
