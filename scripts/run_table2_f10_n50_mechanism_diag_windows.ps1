@@ -1,5 +1,6 @@
 param(
     [int]$Trials = 5,
+    [int]$StartSeed = 0,
     [string]$SourceRoot = "C:\Users\34288\.codex\worktrees\table2-diagnose\LifelongTA",
     [string]$OutputDir = "results/dormitory/table2_f10_n50_mechanism_diag_exact"
 )
@@ -42,7 +43,7 @@ function Invoke-Case([string]$Method, [int]$Seed) {
     if ($LASTEXITCODE -ne 0) { throw "$label failed with exit code $LASTEXITCODE" }
 }
 
-for ($seed = 0; $seed -lt $Trials; ++$seed) {
+for ($seed = $StartSeed; $seed -lt ($StartSeed + $Trials); ++$seed) {
     Invoke-Case 'flow-unit' $seed
     Invoke-Case 'taskmatcher-free' $seed
 }
