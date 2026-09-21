@@ -75,6 +75,11 @@ int main(int argc, char **argv)
         ("matcherUseWaitHeat", po::value<bool>()->default_value(false), "add recent MAPF waiting heat to traffic-aware TaskMatcher costs under task pressure")
         ("matcherWaitHeatWeight", po::value<float>()->default_value(0.0f), "weight of recent MAPF waiting heat in traffic-aware TaskMatcher costs")
         ("matcherWaitHeatPressure", po::value<float>()->default_value(1.0f), "minimum task-to-candidate pressure for waiting-heat costs")
+        ("matcherGuideRegretWeight", po::value<float>()->default_value(0.0f), "per-guide-step keep bias for reassigning a TaskMatcher agent")
+        ("matcherGuideRegretCap", po::value<int>()->default_value(20), "maximum guide-path steps counted by TaskMatcher reassignment regret")
+        ("matcherTailRescueWeight", po::value<float>()->default_value(0.0f), "per-timestep capped priority for overdue TaskMatcher tasks")
+        ("matcherTailRescueThreshold", po::value<int>()->default_value(60), "task age before capped TaskMatcher tail rescue begins")
+        ("matcherTailRescueCap", po::value<int>()->default_value(20), "maximum overdue timesteps counted by TaskMatcher tail rescue")
         ("matcherTrafficTopK", po::value<int>()->default_value(50), "static nearest pickups rescored with traffic-aware Dijkstra per agent")
         ("matcherTrafficCongestionWeight", po::value<float>()->default_value(1.0f), "multiplier for TaskMatcher traffic congestion penalties")
         ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
@@ -199,6 +204,11 @@ int main(int argc, char **argv)
     matcher_config.use_wait_heat = vm["matcherUseWaitHeat"].as<bool>();
     matcher_config.wait_heat_weight = vm["matcherWaitHeatWeight"].as<float>();
     matcher_config.wait_heat_pressure_threshold = vm["matcherWaitHeatPressure"].as<float>();
+    matcher_config.guide_regret_weight = vm["matcherGuideRegretWeight"].as<float>();
+    matcher_config.guide_regret_cap = vm["matcherGuideRegretCap"].as<int>();
+    matcher_config.tail_rescue_weight = vm["matcherTailRescueWeight"].as<float>();
+    matcher_config.tail_rescue_threshold = vm["matcherTailRescueThreshold"].as<int>();
+    matcher_config.tail_rescue_cap = vm["matcherTailRescueCap"].as<int>();
     matcher_config.traffic_top_k = vm["matcherTrafficTopK"].as<int>();
     matcher_config.traffic_congestion_weight = vm["matcherTrafficCongestionWeight"].as<float>();
     matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();

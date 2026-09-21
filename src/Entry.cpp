@@ -28,6 +28,8 @@ void Entry::compute(int time_limit, std::vector<Action> & plan, std::vector<int>
          //first call task schedule
 
         scheduler->set_flow(planner->get_flow());
+        if (scheduler->uses_guide_path_regret())
+            scheduler->set_guide_path_remaining(planner->get_guide_path_remaining());
         scheduler->plan(time_limit,proposed_schedule);
 
         //then update the first unfinished errand/location of tasks for planner reference

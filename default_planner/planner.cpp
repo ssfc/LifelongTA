@@ -59,6 +59,22 @@ namespace DefaultPlanner{
         return background_flow;
     }
 
+    std::vector<int> get_guide_path_remaining(SharedEnvironment* env)
+    {
+        std::vector<int> remaining(env->num_of_agents, 0);
+        for (int agent = 0; agent < env->num_of_agents; ++agent)
+        {
+            if (trajLNS.trajs[agent].empty() || trajLNS.traj_dists[agent].empty())
+                continue;
+            const std::pair<int, int> distance = get_source_2_path(
+                trajLNS.traj_dists[agent], env, env->curr_states[agent].location,
+                &(trajLNS.neighbors));
+            if (distance.first < MAX_TIMESTEP && distance.second >= 0)
+                remaining[agent] = distance.first + distance.second;
+        }
+        return remaining;
+    }
+
     /**
      * @brief Default planner initialization
      * 

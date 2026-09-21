@@ -48,10 +48,28 @@ float matcher_score(SharedEnvironment* env, int agent_location, const TaskInfo& 
                     const PortableTaskMatcherConfig& config)
 {
     const float base = task_score(env, agent_location, task, config.dist_weight);
-    if (base >= kInvalidCost / 2.0F || config.wait_priority_weight <= 0.0F) return base;
-    const int waited = std::max(0, env->curr_timestep - task.revealed_at -
-                                    std::max(0, config.wait_priority_threshold));
-    return base - config.wait_priority_weight * static_cast<float>(waited);
+    if (base >= kInvalidCost / 2.0F) return base;
+    const int age = std::max(0, env->curr_timestep - task.revealed_at);
+    float wait_bonus = 0.0F;
+    if (config.wait_priority_weight > 0.0F) {
+        wait_bonus += config.wait_priority_weight * static_cast<float>(
+            std::max(0, age - std::max(0, config.wait_priority_threshold)));
+    }
+    if (config.tail_rescue_weight > 0.0F) {
+        const int overdue = std::max(0, age - std::max(0, config.tail_rescue_threshold));
+        wait_bonus += config.tail_rescue_weight * static_cast<float>(
+            std::min(overdue, std::max(0, config.tail_rescue_cap)));
+    }
+    return base - wait_bonus;
+}
+
+float guide_regret_bonus(const PortableTaskMatcherConfig& config,
+                         const std::vector<int>& guide_path_remaining, int agent)
+{
+    if (config.guide_regret_weight <= 0.0F || agent < 0 ||
+        agent >= static_cast<int>(guide_path_remaining.size())) return 0.0F;
+    return config.guide_regret_weight * static_cast<float>(std::min(
+        std::max(0, guide_path_remaining[agent]), std::max(0, config.guide_regret_cap)));
 }
 
 int task_length(SharedEnvironment* env, const TaskInfo& task)
@@ -147,11 +165,17 @@ std::vector<std::vector<float>> traffic_cost_matrix(
                     if (lengths[task_index] == -2) lengths[task_index] = task_length(env, tasks[task_index]);
                     if (lengths[task_index] >= 0) {
                         cost[i][task_index] = config.dist_weight * static_cast<float>(current_cost) +
-                                              static_cast<float>(lengths[task_index]) -
-                                              std::max(0.0F, config.wait_priority_weight) *
-                                              static_cast<float>(std::max(0, env->curr_timestep -
-                                                  tasks[task_index].revealed_at -
-                                                  std::max(0, config.wait_priority_threshold)));
+                                              static_cast<float>(lengths[task_index]);
+                        const int age = std::max(0, env->curr_timestep - tasks[task_index].revealed_at);
+                        if (config.wait_priority_weight > 0.0F) {
+                            cost[i][task_index] -= config.wait_priority_weight * static_cast<float>(
+                                std::max(0, age - std::max(0, config.wait_priority_threshold)));
+                        }
+                        if (config.tail_rescue_weight > 0.0F) {
+                            cost[i][task_index] -= config.tail_rescue_weight * static_cast<float>(
+                                std::min(std::max(0, age - std::max(0, config.tail_rescue_threshold)),
+                                         std::max(0, config.tail_rescue_cap)));
+                        }
                     }
                 }
                 task_indices_at_location.erase(goal);
@@ -314,7 +338,8 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
                                           std::vector<int>& proposed_schedule,
                                           SharedEnvironment* env,
                                           const PortableTaskMatcherConfig& config,
-                                          const std::vector<Double4>& background_flow)
+                                          const std::vector<Double4>& background_flow,
+                                          const std::vector<int>& guide_path_remaining)
 {
     const auto deadline = std::chrono::steady_clock::now() +
                           std::chrono::milliseconds(std::max(0, time_limit_ms));
@@ -390,6 +415,8 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
                 if (old != old_assignment.end() && old->second == tasks[j].id &&
                     cost[i][j] < kInvalidCost / 2.0F) {
                     cost[i][j] -= config.reassign_keep_bias;
+                    cost[i][j] -= guide_regret_bonus(config, guide_path_remaining,
+                                                       candidates[i].id);
                 }
             }
         }
@@ -439,6 +466,7 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
                 const auto old = old_assignment.find(match.first);
                 if (old != old_assignment.end() && old->second == match.second) {
                     value -= config.reassign_keep_bias;
+                    value -= guide_regret_bonus(config, guide_path_remaining, match.first);
                 }
                 scored_matches.emplace_back(value, match);
             }

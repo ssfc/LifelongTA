@@ -22,6 +22,7 @@ public:
     void set_refinement_time_limit(int time_limit);
 
     std::vector<DefaultPlanner::Double4> get_flow();
+    std::vector<int> get_guide_path_remaining();
     void plan_pibt(int time_limit,vector<Action> & actions); 
 
 private:

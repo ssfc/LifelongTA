@@ -17,6 +17,8 @@ class TaskScheduler
         virtual void plan(int time_limit, std::vector<int> & proposed_schedule);
 
         void set_flow(std::vector<DefaultPlanner::Double4> flow);
+        void set_guide_path_remaining(std::vector<int> remaining);
+        bool uses_guide_path_regret() const;
 
         void set_use_traffic(bool use_traffic);
         void set_new_only(bool new_only);
@@ -27,6 +29,7 @@ class TaskScheduler
         void set_capped_hungarian_config(const DefaultPlanner::PortableCappedHungarianConfig& config);
 
         std::vector<DefaultPlanner::Double4> background_flow;
+        std::vector<int> guide_path_remaining;
 
         bool use_traffic = false;
         bool new_only = false;

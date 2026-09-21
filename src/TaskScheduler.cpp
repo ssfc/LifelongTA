@@ -62,7 +62,8 @@ void TaskScheduler::plan(int time_limit, std::vector<int> & proposed_schedule)
     else if (solver == 7)
     {
         DefaultPlanner::schedule_plan_portable_task_matcher(limit, proposed_schedule, env,
-                                                             task_matcher_config, background_flow);
+                                                             task_matcher_config, background_flow,
+                                                             guide_path_remaining);
     }
     else if (solver == 8)
     {
@@ -79,6 +80,16 @@ void TaskScheduler::plan(int time_limit, std::vector<int> & proposed_schedule)
 void TaskScheduler::set_flow(std::vector<DefaultPlanner::Double4> flow)
 {
     background_flow = flow;
+}
+
+void TaskScheduler::set_guide_path_remaining(std::vector<int> remaining)
+{
+    guide_path_remaining = std::move(remaining);
+}
+
+bool TaskScheduler::uses_guide_path_regret() const
+{
+    return solver == 7 && task_matcher_config.guide_regret_weight > 0.0F;
 }
 
 void TaskScheduler::set_use_traffic(bool use_traffic)

@@ -58,3 +58,8 @@ std::vector<DefaultPlanner::Double4> MAPFPlanner::get_flow()
     // return DefaultPlanner::get_flow();
     return DefaultPlanner::get_opened_flow(env);
 }
+
+std::vector<int> MAPFPlanner::get_guide_path_remaining()
+{
+    return DefaultPlanner::get_guide_path_remaining(env);
+}
