@@ -1,0 +1,61 @@
+{
+    "actionModel": "MAPF",
+    "teamSize": 2,
+    "numTaskFinished": 2,
+    "makespan": 11,
+    "maxAgentActiveSteps": 11,
+    "taskSourceType": "finite",
+    "numTasksTotal": 2,
+    "simulationSteps": 11,
+    "allTasksCompleted": true,
+    "actualMakespan": 11,
+    "tailBottleneckDecisions": [],
+    "numPlannerErrors": 0,
+    "numScheduleErrors": 0,
+    "numEntryTimeouts": 0,
+    "plannerTimes": [
+        0.920294,
+        0.9202699,
+        0.9202927,
+        0.9203138,
+        0.9202764,
+        0.9202879,
+        0.9202945,
+        0.9202991,
+        0.9202797,
+        0.9202963,
+        0.9203434
+    ],
+    "start": [
+        [
+            2,
+            1,
+            "E"
+        ],
+        [
+            2,
+            8,
+            "E"
+        ]
+    ],
+    "actualPaths": [
+        "",
+        ""
+    ],
+    "plannerPaths": [
+        "",
+        ""
+    ],
+    "errors": [],
+    "actualSchedule": [
+        "",
+        ""
+    ],
+    "plannerSchedule": [
+        "",
+        ""
+    ],
+    "scheduleErrors": [],
+    "events": [],
+    "tasks": []
+}

@@ -1,0 +1,2 @@
+timestep,finished_tasks,active_tasks,unassigned_backlog,assigned_agents,idle_agents,empty_agents,loaded_agents,active_wait_steps_cumulative,planner_seconds
+1,0,2,1,1,1,0,1,1,0.9203039

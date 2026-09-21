@@ -1,0 +1,260 @@
+#include "CompetitionSystem.h"
+#include "Evaluation.h"
+#include <boost/program_options.hpp>
+#include <boost/filesystem.hpp>
+#include <boost/tokenizer.hpp>
+#include "nlohmann/json.hpp"
+#include <signal.h>
+#include <climits>
+#include <memory>
+
+
+#ifdef PYTHON
+#if PYTHON
+#include "pyMAPFPlanner.hpp"
+#include <pybind11/embed.h>
+#include "pyEntry.hpp"
+#include "pyTaskScheduler.hpp"
+#endif
+#endif
+
+namespace po = boost::program_options;
+using json = nlohmann::json;
+
+po::variables_map vm;
+std::unique_ptr<BaseSystem> system_ptr;
+
+
+void sigint_handler(int a)
+{
+    fprintf(stdout, "stop the simulation...\n");
+    system_ptr->saveResults(vm["output"].as<std::string>(),vm["outputScreen"].as<int>());
+    _exit(0);
+}
+
+
+int main(int argc, char **argv)
+{
+#ifdef PYTHON
+#if PYTHON
+    pybind11::initialize_interpreter();
+#endif
+#endif
+    // Declare the supported options.
+    po::options_description desc("Allowed options");
+    desc.add_options()("help", "produce help message")
+        ("inputFile,i", po::value<std::string>()->required(), "input file name")
+        ("output,o", po::value<std::string>()->default_value("./output.json"), "output results from the evaluation into a JSON formated file. If no file specified, the default name is 'output.json'")
+        ("outputScreen,c", po::value<int>()->default_value(3), "the level of details in the output file, 1--showing all the output, 2--ignore the events and tasks, 3--ignore the events, tasks, errors, planner times, starts and paths")
+        ("simulationTime,s", po::value<int>()->default_value(5000), "run simulation")
+        ("fileStoragePath,f", po::value<std::string>()->default_value(""), "the large file storage path")
+        ("planTimeLimit,t", po::value<int>()->default_value(1000), "the time limit for planner in milliseconds")
+        ("preprocessTimeLimit,p", po::value<int>()->default_value(30000), "the time limit for preprocessing in milliseconds")
+        ("logFile,l", po::value<std::string>()->default_value(""), "redirect stdout messages into the specified log file")
+        ("logDetailLevel,d", po::value<int>()->default_value(1), "the minimum severity level of log messages to display, 1--showing all the messages, 2--showing warnings and fatal errors, 3--showing fatal errors only")
+        ("useTraffic,u", po::value<bool>()->default_value(false), "use of traffic in scheduling")
+        ("assignNew,n", po::value<bool>()->default_value(false), "wether new agents only or allow task swapping")
+        ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy, 6- greedy heap, 7- contest task matcher, 8- capped Hungarian, 9- stable-snatch Hungarian")
+        ("heapDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for greedy heap")
+        ("heapReassign", po::value<bool>()->default_value(true), "enable stable unopened-task reassignment for greedy heap")
+        ("heapKeepBias", po::value<float>()->default_value(6.0f), "old-pair bias during greedy-heap reassignment")
+        ("heapProtectDist", po::value<int>()->default_value(10), "protect assignments this close to pickup")
+        ("heapRebuildPct", po::value<int>()->default_value(45), "greedy-heap candidate rebuild budget percentage")
+        ("heapLnsPct", po::value<int>()->default_value(10), "greedy-heap swap-refinement budget percentage")
+        ("heapSortK", po::value<int>()->default_value(500), "sorted candidates retained per agent")
+        ("matcherDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for contest task matcher")
+        ("matcherTaskLengthWeight", po::value<float>()->default_value(1.0f), "task-internal path-length weight for contest task matcher")
+        ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
+        ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
+        ("matcherUseTraffic", po::value<bool>()->default_value(false), "use traffic-aware pickup costs in TaskMatcher")
+        ("matcherTrafficTopK", po::value<int>()->default_value(50), "nearest pickups rescored with traffic-aware Dijkstra per agent")
+        ("matcherTrafficCongestionWeight", po::value<float>()->default_value(1.0f), "traffic congestion penalty multiplier")
+        ("matcherTrafficContraflowWeight", po::value<float>()->default_value(0.0f), "TaskMatcher penalty for guide-path counter-flow only")
+        ("matcherUseProjectedLoad", po::value<bool>()->default_value(false), "iteratively penalize overlap among TaskMatcher assignments")
+        ("matcherProjectedTopK", po::value<int>()->default_value(100), "per-agent candidates retained for projected-load matching")
+        ("matcherProjectedLoadWeight", po::value<float>()->default_value(0.25f), "projected route-overlap penalty multiplier")
+        ("matcherProjectedIterations", po::value<int>()->default_value(2), "projected-load Hungarian refinement rounds")
+        ("matcherUseBottleneckFlow", po::value<bool>()->default_value(false), "use capacity-thresholded future-flow penalties for TaskMatcher")
+        ("matcherBottleneckCapacity", po::value<int>()->default_value(2), "predicted route load allowed per cell before future-flow penalty")
+        ("matcherBottleneckPenaltyWeight", po::value<float>()->default_value(0.25f), "marginal over-capacity future-flow penalty multiplier")
+        ("matcherBottleneckIterations", po::value<int>()->default_value(2), "future-flow Hungarian refinement rounds")
+        ("matcherFlowSeedBias", po::value<float>()->default_value(0.0f), "cost discount for a Flow-Unit suggested TaskMatcher edge")
+        ("matcherFlowSeedBudgetMs", po::value<int>()->default_value(100), "maximum scheduler milliseconds spent generating Flow-Unit suggestions")
+        ("matcherOldTaskAgeThreshold", po::value<int>()->default_value(0), "TaskMatcher waiting-age threshold before old-task protection applies")
+        ("matcherOldTaskAgeWeight", po::value<float>()->default_value(0.0f), "TaskMatcher cost discount per step beyond the old-task age threshold")
+        ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
+        ("matcherTailBottleneck", po::value<bool>()->default_value(false), "opt-in min-max completion matching after task stream exhaustion")
+        ("hungarianMaxAgents", po::value<int>()->default_value(256), "capped Hungarian candidate-agent limit")
+        ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
+        ("hungarianDistWeight", po::value<float>()->default_value(1.0f), "agent-to-pickup distance weight for capped Hungarian")
+        ("hungarianTaskLengthWeight", po::value<float>()->default_value(1.0f), "task-internal path-length weight for capped Hungarian")
+        ("snatchMinPickupDistance", po::value<int>()->default_value(10), "minimum pickup distance before an unopened task may be snatched")
+        ("snatchMinAbsImprove", po::value<float>()->default_value(6.0f), "minimum absolute cost improvement required for a snatch")
+        ("snatchMinRelImprove", po::value<float>()->default_value(0.10f), "minimum relative cost improvement required for a snatch")
+        ("commitWindow,w", po::value<int>()->default_value(1), "commit window");
+    clock_t start_time = clock();
+    po::store(po::parse_command_line(argc, argv, desc), vm);
+
+    if (vm.count("help"))
+    {
+        std::cout << desc << std::endl;
+        return 1;
+    }
+
+    po::notify(vm);
+
+    boost::filesystem::path p(vm["inputFile"].as<std::string>());
+    boost::filesystem::path dir = p.parent_path();
+    std::string base_folder = dir.string();
+    if (base_folder.size() > 0 && base_folder.back() != '/')
+    {
+        base_folder += "/";
+    }
+
+    int log_level = vm["logDetailLevel"].as<int>();
+    if (log_level <= 1)
+        log_level = 2; //info
+    else if (log_level == 2)
+        log_level = 3; //warning
+    else
+        log_level = 5; //fatal
+
+    Logger *logger = new Logger(vm["logFile"].as<std::string>(),log_level);
+
+    std::filesystem::path filepath(vm["output"].as<std::string>());
+    if (filepath.parent_path().string().size() > 0 && !std::filesystem::is_directory(filepath.parent_path()))
+    {
+        logger->log_fatal("output directory does not exist",0);
+        _exit(1);
+    }
+
+
+    Entry *planner = nullptr;
+
+#ifdef PYTHON
+#if PYTHON
+        planner = new PyEntry();
+#else
+        planner = new Entry();
+#endif
+#endif
+
+    auto input_json_file = vm["inputFile"].as<std::string>();
+    json data;
+    std::ifstream f(input_json_file);
+    try
+    {
+        data = json::parse(f);
+    }
+    catch (json::parse_error error)
+    {
+        std::cerr << "Failed to load " << input_json_file << std::endl;
+        std::cerr << "Message: " << error.what() << std::endl;
+        exit(1);
+    }
+
+    auto map_path = read_param_json<std::string>(data, "mapFile");
+    Grid grid(base_folder + map_path);
+
+    planner->env->map_name = map_path.substr(map_path.find_last_of("/") + 1);
+
+
+    string file_storage_path = vm["fileStoragePath"].as<std::string>();
+    if (file_storage_path==""){
+      char const* tmp = getenv("LORR_LARGE_FILE_STORAGE_PATH");
+      if ( tmp != nullptr ) {
+        file_storage_path = string(tmp);
+      }
+    }
+
+    // check if the path exists;
+    if (file_storage_path!="" &&!std::filesystem::exists(file_storage_path)){
+      std::ostringstream stringStream;
+      stringStream << "fileStoragePath (" << file_storage_path << ") is not valid";
+      logger->log_warning(stringStream.str());
+    }
+    planner->env->file_storage_path = file_storage_path;
+
+    planner->scheduler->set_use_traffic(vm["useTraffic"].as<bool>());
+    planner->scheduler->set_new_only(vm["assignNew"].as<bool>());
+    planner->scheduler->set_solver(vm["scheduleModel"].as<int>());
+    DefaultPlanner::PortableGreedyHeapConfig heap_config;
+    heap_config.dist_weight = vm["heapDistWeight"].as<float>();
+    heap_config.reassign_enabled = vm["heapReassign"].as<bool>();
+    heap_config.reassign_keep_bias = vm["heapKeepBias"].as<float>();
+    heap_config.reassign_min_dist = vm["heapProtectDist"].as<int>();
+    heap_config.rebuild_pct = vm["heapRebuildPct"].as<int>();
+    heap_config.lns_pct = vm["heapLnsPct"].as<int>();
+    heap_config.sort_k = vm["heapSortK"].as<int>();
+    planner->scheduler->set_heap_config(heap_config);
+    DefaultPlanner::PortableTaskMatcherConfig matcher_config;
+    matcher_config.dist_weight = vm["matcherDistWeight"].as<float>();
+    matcher_config.task_length_weight = vm["matcherTaskLengthWeight"].as<float>();
+    matcher_config.candidate_top_k = vm["matcherTopK"].as<int>();
+    matcher_config.max_matrix_elements = vm["matcherMaxMatrix"].as<int>();
+    matcher_config.use_traffic_cost = vm["matcherUseTraffic"].as<bool>();
+    matcher_config.traffic_top_k = vm["matcherTrafficTopK"].as<int>();
+    matcher_config.traffic_congestion_weight = vm["matcherTrafficCongestionWeight"].as<float>();
+    matcher_config.traffic_contraflow_weight = vm["matcherTrafficContraflowWeight"].as<float>();
+    matcher_config.use_projected_load = vm["matcherUseProjectedLoad"].as<bool>();
+    matcher_config.projected_top_k = vm["matcherProjectedTopK"].as<int>();
+    matcher_config.projected_load_weight = vm["matcherProjectedLoadWeight"].as<float>();
+    matcher_config.projected_iterations = vm["matcherProjectedIterations"].as<int>();
+    matcher_config.use_bottleneck_flow = vm["matcherUseBottleneckFlow"].as<bool>();
+    matcher_config.bottleneck_capacity = vm["matcherBottleneckCapacity"].as<int>();
+    matcher_config.bottleneck_penalty_weight = vm["matcherBottleneckPenaltyWeight"].as<float>();
+    matcher_config.bottleneck_iterations = vm["matcherBottleneckIterations"].as<int>();
+    matcher_config.flow_seed_bias = vm["matcherFlowSeedBias"].as<float>();
+    matcher_config.flow_seed_budget_ms = vm["matcherFlowSeedBudgetMs"].as<int>();
+    matcher_config.old_task_age_threshold = vm["matcherOldTaskAgeThreshold"].as<int>();
+    matcher_config.old_task_age_weight = vm["matcherOldTaskAgeWeight"].as<float>();
+    matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();
+    matcher_config.tail_bottleneck = vm["matcherTailBottleneck"].as<bool>();
+    matcher_config.reassign_keep_bias = heap_config.reassign_keep_bias;
+    matcher_config.reassign_min_dist = heap_config.reassign_min_dist;
+    planner->scheduler->set_task_matcher_config(matcher_config);
+    DefaultPlanner::PortableCappedHungarianConfig hungarian_config;
+    hungarian_config.max_agents = vm["hungarianMaxAgents"].as<int>();
+    hungarian_config.max_tasks = vm["hungarianMaxTasks"].as<int>();
+    hungarian_config.dist_weight = vm["hungarianDistWeight"].as<float>();
+    hungarian_config.task_length_weight = vm["hungarianTaskLengthWeight"].as<float>();
+    planner->scheduler->set_capped_hungarian_config(hungarian_config);
+    DefaultPlanner::PortableStableSnatchHungarianConfig stable_snatch_config;
+    stable_snatch_config.max_agents = vm["hungarianMaxAgents"].as<int>();
+    stable_snatch_config.max_tasks = vm["hungarianMaxTasks"].as<int>();
+    stable_snatch_config.dist_weight = vm["hungarianDistWeight"].as<float>();
+    stable_snatch_config.task_length_weight = vm["hungarianTaskLengthWeight"].as<float>();
+    stable_snatch_config.snatch_min_pickup_distance = vm["snatchMinPickupDistance"].as<int>();
+    stable_snatch_config.snatch_min_abs_improve = vm["snatchMinAbsImprove"].as<float>();
+    stable_snatch_config.snatch_min_rel_improve = vm["snatchMinRelImprove"].as<float>();
+    planner->scheduler->set_stable_snatch_hungarian_config(stable_snatch_config);
+    planner->commit_window = vm["commitWindow"].as<int>();
+
+    ActionModel *model = new ActionModel(grid);
+    model->set_logger(logger);
+
+    int team_size = read_param_json<int>(data, "teamSize");
+
+    std::vector<int> agents = read_int_vec(base_folder + read_param_json<std::string>(data, "agentFile"), team_size);
+    std::vector<list<int>> tasks = read_int_vec(base_folder + read_param_json<std::string>(data, "taskFile"));
+    if (agents.size() > tasks.size())
+        logger->log_warning("Not enough tasks for robots (number of tasks < team size)");
+
+    system_ptr = std::make_unique<BaseSystem>(grid, planner, agents, tasks, model);
+
+    system_ptr->set_logger(logger);
+    system_ptr->set_plan_time_limit(vm["planTimeLimit"].as<int>()*vm["commitWindow"].as<int>());//times commit window
+    system_ptr->set_preprocess_time_limit(vm["preprocessTimeLimit"].as<int>());
+
+    system_ptr->set_num_tasks_reveal(read_param_json<float>(data, "numTasksReveal", 1));
+    signal(SIGINT, sigint_handler);
+
+    system_ptr->simulate(vm["simulationTime"].as<int>());
+
+
+    system_ptr->saveResults(vm["output"].as<std::string>(),vm["outputScreen"].as<int>());
+
+    delete model;
+    delete logger;
+    _exit(0);
+}

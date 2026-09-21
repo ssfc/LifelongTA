@@ -1,0 +1,40 @@
+{
+  "format": "lifelongta-metrics-v2",
+  "assignmentMetricTiming": "before first movement under accepted assignment",
+  "firstHopMetricType": "static shortest-path proxy, not executed planner movement",
+  "reassignmentDefinition": "agent changes, including across unassigned intervals",
+  "timeoutStepAccounting": "agent-state steps only; task progress remains paused",
+  "tasksRevealed": 2,
+  "tasksCompleted": 0,
+  "activeTasksAtEnd": 2,
+  "unassignedBacklogAtEnd": 1,
+  "taskLatency": {
+    "arrivalToAssignment": null,
+    "arrivalToPickup": null,
+    "arrivalToCompletion": null
+  },
+  "matchingQuality": {
+    "pickupDistanceAtAssignment": null
+  },
+  "movement": {
+    "emptyDistance": 0,
+    "loadedDistance": 0,
+    "completedTaskServiceShortestDistance": 0,
+    "loadedDetourRatio": null,
+    "productiveMovementRatio": 0.0
+  },
+  "agentStateSteps": {
+    "idle": 1,
+    "empty": 1,
+    "loaded": 0,
+    "activeWait": 1
+  },
+  "plannerSeconds": {
+    "count": 1,
+    "mean": 0.9203039,
+    "p50": 0.9203039,
+    "p95": 0.9203039,
+    "p99": 0.9203039,
+    "max": 0.9203039
+  }
+}

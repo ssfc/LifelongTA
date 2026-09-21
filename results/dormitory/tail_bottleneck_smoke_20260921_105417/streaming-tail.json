@@ -1,0 +1,146 @@
+{
+    "actionModel": "MAPF",
+    "teamSize": 2,
+    "numTaskFinished": 2,
+    "makespan": 11,
+    "maxAgentActiveSteps": 11,
+    "taskSourceType": "finite",
+    "numTasksTotal": 2,
+    "simulationSteps": 11,
+    "allTasksCompleted": true,
+    "actualMakespan": 11,
+    "tailBottleneckDecisions": [
+        {
+            "timestep": 1,
+            "source_exhausted": true,
+            "eligible": true,
+            "attempted": true,
+            "accepted": false,
+            "deadline_fallback": false,
+            "infeasible": false,
+            "invalid_input": false,
+            "baseline_complete": true,
+            "task_count": 1,
+            "agent_count": 1,
+            "baseline_tail": 11,
+            "candidate_tail": 11,
+            "locked_tail": 1,
+            "baseline_flexible_tail": 11,
+            "candidate_flexible_tail": 11,
+            "baseline_pickup": 5,
+            "candidate_pickup": 5,
+            "elapsed_us": 11
+        },
+        {
+            "timestep": 2,
+            "source_exhausted": true,
+            "eligible": true,
+            "attempted": true,
+            "accepted": false,
+            "deadline_fallback": false,
+            "infeasible": false,
+            "invalid_input": false,
+            "baseline_complete": true,
+            "task_count": 1,
+            "agent_count": 2,
+            "baseline_tail": 9,
+            "candidate_tail": 9,
+            "locked_tail": 0,
+            "baseline_flexible_tail": 9,
+            "candidate_flexible_tail": 9,
+            "baseline_pickup": 3,
+            "candidate_pickup": 3,
+            "elapsed_us": 4
+        },
+        {
+            "timestep": 3,
+            "source_exhausted": true,
+            "eligible": true,
+            "attempted": true,
+            "accepted": false,
+            "deadline_fallback": false,
+            "infeasible": false,
+            "invalid_input": false,
+            "baseline_complete": true,
+            "task_count": 1,
+            "agent_count": 2,
+            "baseline_tail": 8,
+            "candidate_tail": 8,
+            "locked_tail": 0,
+            "baseline_flexible_tail": 8,
+            "candidate_flexible_tail": 8,
+            "baseline_pickup": 2,
+            "candidate_pickup": 2,
+            "elapsed_us": 4
+        },
+        {
+            "timestep": 4,
+            "source_exhausted": true,
+            "eligible": true,
+            "attempted": true,
+            "accepted": false,
+            "deadline_fallback": false,
+            "infeasible": false,
+            "invalid_input": false,
+            "baseline_complete": true,
+            "task_count": 1,
+            "agent_count": 2,
+            "baseline_tail": 7,
+            "candidate_tail": 7,
+            "locked_tail": 0,
+            "baseline_flexible_tail": 7,
+            "candidate_flexible_tail": 7,
+            "baseline_pickup": 1,
+            "candidate_pickup": 1,
+            "elapsed_us": 5
+        }
+    ],
+    "numPlannerErrors": 0,
+    "numScheduleErrors": 0,
+    "numEntryTimeouts": 0,
+    "plannerTimes": [
+        0.920323,
+        0.9203051,
+        0.9202664,
+        0.9202683,
+        0.9202764,
+        0.9203017,
+        0.9202669,
+        0.9202974,
+        0.9202609,
+        0.9202953,
+        0.9203043
+    ],
+    "start": [
+        [
+            2,
+            1,
+            "E"
+        ],
+        [
+            2,
+            8,
+            "E"
+        ]
+    ],
+    "actualPaths": [
+        "",
+        ""
+    ],
+    "plannerPaths": [
+        "",
+        ""
+    ],
+    "errors": [],
+    "actualSchedule": [
+        "",
+        ""
+    ],
+    "plannerSchedule": [
+        "",
+        ""
+    ],
+    "scheduleErrors": [],
+    "events": [],
+    "tasks": []
+}

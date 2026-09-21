@@ -1,0 +1,125 @@
+{
+  "CreatedUtc": "2026-09-21T02:56:49.5323128Z",
+  "Host": "DORMITORY",
+  "SourceHead": "0f4ee4e260c6d3fd9091c25636a93734a4f35995",
+  "SourceStatus": [
+    " M default_planner/portable_assignment.cpp",
+    " M default_planner/portable_assignment.h",
+    " M inc/SharedEnv.h",
+    " M inc/Simulator.h",
+    " M inc/TaskManager.h",
+    " M src/CompetitionSystem.cpp",
+    " M src/Entry.cpp",
+    " M src/TaskManager.cpp",
+    " M src/TaskScheduler.cpp",
+    " M src/driver.cpp",
+    "?? build-tail-bottleneck/",
+    "?? build-win/",
+    "?? default_planner/tail_bottleneck.h",
+    "?? docs/",
+    "?? tests/"
+  ],
+  "Signature": "{\"Format\":\"table2-tail-screen-v1\",\"SourceRoot\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\",\"Rows\":[\"f2_n50\",\"f2_n80\",\"f2_n100\",\"f5_n50\",\"f5_n80\",\"f5_n100\",\"f10_n50\",\"f10_n80\",\"f10_n100\"],\"Seeds\":[0],\"Methods\":[\"flow-unit\",\"taskmatcher-free\",\"taskmatcher-tail\"],\"Tasks\":500,\"SimulationSteps\":400,\"PlanTimeLimitMs\":1000,\"PreprocessTimeLimitMs\":30000,\"MatcherDistWeight\":10,\"MatcherTaskLengthWeight\":1,\"MatcherUseTraffic\":false,\"MatcherReassign\":true,\"HeapKeepBias\":0,\"HeapProtectDist\":0,\"Inputs\":[{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\agents\\\\100.agents\",\"SHA256\":\"02E43ECFBCA80C3F32B896B1840A59A4762544921427E03CB9373F30A16B70D3\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\agents\\\\50.agents\",\"SHA256\":\"C99075AB6A0D959E1B5F81063F03872EB48F2D21747D39DB20F3CC68824EDF88\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\agents\\\\80.agents\",\"SHA256\":\"A473142304299C76DCEDA325BB1D9CD2A276EDB0285117B2BD02ECEBCD7C614F\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\kiva.map\",\"SHA256\":\"E0BB2B60B36951628D20B6A794746F4056CCD30B5E2D80DDDD79686D96F98AFF\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\problem_100_10_0.json\",\"SHA256\":\"32FDBFBB0C8E9A57E699F43871AEE2E0072B7B865EC1F051720E4BC9F35371A8\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\problem_100_2_0.json\",\"SHA256\":\"451476127F75550377EC9DC94181694986A8906DF76837F8BEF3ACC322BBFF3A\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\problem_100_5_0.json\",\"SHA256\":\"891B9057A1616B1A6589AF89AF6FC167CDC7C400227F18E4E4D076DC8A8F00BB\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\problem_50_10_0.json\",\"SHA256\":\"581949C59A7263C1190BE033964B4348AFC7C557822FD07A2CE17B3A41F75984\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\problem_50_2_0.json\",\"SHA256\":\"6559B251AA0A125C783389DC656489E811977F578E9D4FB34E131D91CEDF9AA9\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\problem_50_5_0.json\",\"SHA256\":\"97134BFD9BF5933DC5EF973379C5A32112E31B614E4ACC681FF7290D99EA1B64\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\problem_80_10_0.json\",\"SHA256\":\"BF1975CB73B82C8EA9E75C726FCA2226FB5B3B89AB738ACBD4AD519A99B9EE8B\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\problem_80_2_0.json\",\"SHA256\":\"B14A5549CD83D7AF4F618A2ECA2F5316D24075D4227BD5A24B713A59BE550B90\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\problem_80_5_0.json\",\"SHA256\":\"8C30F542E827CDA3E2C18F5102D70881A47EF11A6070E13CC70AF5D516C318FC\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\tasks\\\\10\\\\0.tasks\",\"SHA256\":\"D9AE6BBF56B031E1466CCA5F505CEE555D61572A8F1CF5B6AB8C18DE1B8443D9\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\tasks\\\\2\\\\0.tasks\",\"SHA256\":\"D9AE6BBF56B031E1466CCA5F505CEE555D61572A8F1CF5B6AB8C18DE1B8443D9\"},{\"Path\":\"C:\\\\Users\\\\34288\\\\.codex\\\\worktrees\\\\table2-diagnose\\\\LifelongTA\\\\instances\\\\tasks\\\\5\\\\0.tasks\",\"SHA256\":\"D9AE6BBF56B031E1466CCA5F505CEE555D61572A8F1CF5B6AB8C18DE1B8443D9\"}],\"RunnerSHA256\":\"D718889BBC7FBBEA4B78FA564297C593B35D443BCA60A9E8218624E7F2C51F7A\",\"BuildSHA256\":\"BFBE086443837690B1B50EDA22317D77F97C6601323369D663F429F7132EC49F\"}",
+  "Configuration": {
+    "Format": "table2-tail-screen-v1",
+    "SourceRoot": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA",
+    "Rows": [
+      "f2_n50",
+      "f2_n80",
+      "f2_n100",
+      "f5_n50",
+      "f5_n80",
+      "f5_n100",
+      "f10_n50",
+      "f10_n80",
+      "f10_n100"
+    ],
+    "Seeds": [
+      0
+    ],
+    "Methods": [
+      "flow-unit",
+      "taskmatcher-free",
+      "taskmatcher-tail"
+    ],
+    "Tasks": 500,
+    "SimulationSteps": 400,
+    "PlanTimeLimitMs": 1000,
+    "PreprocessTimeLimitMs": 30000,
+    "MatcherDistWeight": 10,
+    "MatcherTaskLengthWeight": 1,
+    "MatcherUseTraffic": false,
+    "MatcherReassign": true,
+    "HeapKeepBias": 0,
+    "HeapProtectDist": 0,
+    "Inputs": [
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\agents\\100.agents",
+        "SHA256": "02E43ECFBCA80C3F32B896B1840A59A4762544921427E03CB9373F30A16B70D3"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\agents\\50.agents",
+        "SHA256": "C99075AB6A0D959E1B5F81063F03872EB48F2D21747D39DB20F3CC68824EDF88"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\agents\\80.agents",
+        "SHA256": "A473142304299C76DCEDA325BB1D9CD2A276EDB0285117B2BD02ECEBCD7C614F"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\kiva.map",
+        "SHA256": "E0BB2B60B36951628D20B6A794746F4056CCD30B5E2D80DDDD79686D96F98AFF"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\problem_100_10_0.json",
+        "SHA256": "32FDBFBB0C8E9A57E699F43871AEE2E0072B7B865EC1F051720E4BC9F35371A8"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\problem_100_2_0.json",
+        "SHA256": "451476127F75550377EC9DC94181694986A8906DF76837F8BEF3ACC322BBFF3A"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\problem_100_5_0.json",
+        "SHA256": "891B9057A1616B1A6589AF89AF6FC167CDC7C400227F18E4E4D076DC8A8F00BB"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\problem_50_10_0.json",
+        "SHA256": "581949C59A7263C1190BE033964B4348AFC7C557822FD07A2CE17B3A41F75984"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\problem_50_2_0.json",
+        "SHA256": "6559B251AA0A125C783389DC656489E811977F578E9D4FB34E131D91CEDF9AA9"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\problem_50_5_0.json",
+        "SHA256": "97134BFD9BF5933DC5EF973379C5A32112E31B614E4ACC681FF7290D99EA1B64"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\problem_80_10_0.json",
+        "SHA256": "BF1975CB73B82C8EA9E75C726FCA2226FB5B3B89AB738ACBD4AD519A99B9EE8B"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\problem_80_2_0.json",
+        "SHA256": "B14A5549CD83D7AF4F618A2ECA2F5316D24075D4227BD5A24B713A59BE550B90"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\problem_80_5_0.json",
+        "SHA256": "8C30F542E827CDA3E2C18F5102D70881A47EF11A6070E13CC70AF5D516C318FC"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\tasks\\10\\0.tasks",
+        "SHA256": "D9AE6BBF56B031E1466CCA5F505CEE555D61572A8F1CF5B6AB8C18DE1B8443D9"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\tasks\\2\\0.tasks",
+        "SHA256": "D9AE6BBF56B031E1466CCA5F505CEE555D61572A8F1CF5B6AB8C18DE1B8443D9"
+      },
+      {
+        "Path": "C:\\Users\\34288\\.codex\\worktrees\\table2-diagnose\\LifelongTA\\instances\\tasks\\5\\0.tasks",
+        "SHA256": "D9AE6BBF56B031E1466CCA5F505CEE555D61572A8F1CF5B6AB8C18DE1B8443D9"
+      }
+    ],
+    "RunnerSHA256": "D718889BBC7FBBEA4B78FA564297C593B35D443BCA60A9E8218624E7F2C51F7A",
+    "BuildSHA256": "BFBE086443837690B1B50EDA22317D77F97C6601323369D663F429F7132EC49F"
+  },
+  "Note": "PIBT rollout disabled. Original shared planner retained, including wall-clock sensitivity. Screening, not statistical confirmation."
+}

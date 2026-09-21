@@ -1,0 +1,3 @@
+task_id,revealed_at,first_assigned_at,picked_up_at,completed_at,first_agent,reassignments,pickup_distance_at_assignment,pickup_local_degree,first_hop_local_degree,first_hop_opposing_flow,first_hop_vertex_flow,service_shortest_distance,empty_distance,loaded_distance,empty_wait_steps,loaded_wait_steps,active_wait_steps,assignment_wait,pickup_wait,completion_time,loaded_detour_ratio
+0,0,0,1,2,0,0,0,3,-1,-1,-1,1,0,1,1,0,1,0,1,2,1.000000
+1,1,1,5,11,1,1,5,4,4,0.000000,0.000000,6,4,6,0,0,0,0,4,10,1.000000
