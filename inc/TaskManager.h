@@ -20,8 +20,14 @@ public:
         int current_agent = -1;
         int reassignments = 0;
         int pickup_distance_at_assignment = -1;
+        int pickup_local_degree = -1;
+        int first_hop_local_degree = -1;
+        double first_hop_opposing_flow = -1;
+        double first_hop_vertex_flow = -1;
         long long empty_distance = 0;
         long long loaded_distance = 0;
+        long long empty_wait_steps = 0;
+        long long loaded_wait_steps = 0;
         long long active_wait_steps = 0;
         std::vector<int> locations;
     };

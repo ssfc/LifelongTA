@@ -5,9 +5,61 @@
 #include <fstream>
 #include <iomanip>
 #include <algorithm>
+#include <limits>
 #include <vector>
 
 using json = nlohmann::ordered_json;
+
+namespace {
+
+double flow_at(const SharedEnvironment* env, int location, int direction)
+{
+    if (env == nullptr || location < 0 || location >= static_cast<int>(env->assignment_flow.size()) ||
+        direction < 0 || direction >= 4)
+        return -1;
+    return env->assignment_flow[location][direction];
+}
+
+double vertex_flow_at(const SharedEnvironment* env, int location)
+{
+    if (env == nullptr || location < 0 || location >= static_cast<int>(env->assignment_flow.size())) return -1;
+    double total = 0;
+    for (double value : env->assignment_flow[location]) total += value;
+    return total;
+}
+
+// This deliberately uses the same shortest-distance heuristic as the
+// scheduler.  It is not a reconstructed future path: it records the local
+// entry pressure visible at the moment an assignment is made.
+void record_assignment_planner_context(TaskManager::TaskMetric& metric,
+                                       SharedEnvironment* env, int agent_location, int pickup)
+{
+    if (env == nullptr || agent_location < 0 || pickup < 0 ||
+        agent_location >= static_cast<int>(DefaultPlanner::global_neighbors.size())) return;
+    metric.pickup_local_degree = pickup < static_cast<int>(DefaultPlanner::global_neighbors.size())
+        ? static_cast<int>(DefaultPlanner::global_neighbors[pickup].size()) : -1;
+
+    const int current_h = DefaultPlanner::get_h(env, agent_location, pickup);
+    int next = -1;
+    int best_h = current_h;
+    for (const int candidate : DefaultPlanner::global_neighbors[agent_location]) {
+        const int candidate_h = DefaultPlanner::get_h(env, candidate, pickup);
+        if (candidate_h < best_h || (candidate_h == best_h && (next < 0 || candidate < next))) {
+            best_h = candidate_h;
+            next = candidate;
+        }
+    }
+    if (next < 0) return;
+
+    metric.first_hop_local_degree = static_cast<int>(DefaultPlanner::global_neighbors[next].size());
+    const int direction = DefaultPlanner::get_d(next - agent_location, env);
+    // A guide path moving agent_location -> next conflicts with traffic on
+    // next -> agent_location, hence the opposite direction at the next cell.
+    metric.first_hop_opposing_flow = flow_at(env, next, (direction + 2) % 4);
+    metric.first_hop_vertex_flow = vertex_flow_at(env, next);
+}
+
+} // namespace
 
 /**
  * This function validates the proposed schedule (assignment) from participants
@@ -111,6 +163,10 @@ bool TaskManager::set_task_assignment(vector<int>& assignment, const vector<Stat
                 !metric.locations.empty())
                 metric.pickup_distance_at_assignment = DefaultPlanner::get_h(metric_env,
                     states->at(agent).location, metric.locations.front());
+            if (metric_env != nullptr && states != nullptr && agent < static_cast<int>(states->size()) &&
+                !metric.locations.empty())
+                record_assignment_planner_context(metric, metric_env, states->at(agent).location,
+                                                  metric.locations.front());
         }
         else if (metric.current_agent >= 0)
         {
@@ -244,7 +300,7 @@ void TaskManager::reveal_tasks(int timestep)
         Task* task = new Task(task_id,locs,timestep);
         ongoing_tasks[task->task_id] = task;
         task_metrics.emplace(task->task_id, TaskMetric{task->task_id, timestep, -1, -1, -1,
-            -1, -1, 0, -1, 0, 0, 0, task->locations});
+            -1, -1, 0, -1, -1, -1, -1, -1, 0, 0, 0, 0, 0, task->locations});
         //all_tasks.push_back(task);
         new_tasks.push_back(task->task_id);         // record the new tasks
         logger->log_info("Task " + std::to_string(task_id) + " is revealed");
@@ -294,7 +350,11 @@ void TaskManager::record_agent_step(const vector<State>& before, const vector<St
         if (!moved)
         {
             ++agent_metrics[agent].active_wait_steps;
-            if (task_metric != nullptr) ++task_metric->active_wait_steps;
+            if (task_metric != nullptr) {
+                ++task_metric->active_wait_steps;
+                if (loaded) ++task_metric->loaded_wait_steps;
+                else ++task_metric->empty_wait_steps;
+            }
         }
         else if (loaded)
         {
@@ -337,8 +397,9 @@ void TaskManager::save_metrics(const std::string& result_file) const
         ? result_file.substr(0, result_file.size() - 5) : result_file;
     std::ofstream tasks_out(base + ".task_metrics.csv", std::ios::trunc);
     tasks_out << "task_id,revealed_at,first_assigned_at,picked_up_at,completed_at,first_agent,reassignments,"
-                 "pickup_distance_at_assignment,service_shortest_distance,empty_distance,loaded_distance,"
-                 "active_wait_steps,assignment_wait,pickup_wait,completion_time,loaded_detour_ratio\n";
+                 "pickup_distance_at_assignment,pickup_local_degree,first_hop_local_degree,"
+                 "first_hop_opposing_flow,first_hop_vertex_flow,service_shortest_distance,empty_distance,loaded_distance,"
+                 "empty_wait_steps,loaded_wait_steps,active_wait_steps,assignment_wait,pickup_wait,completion_time,loaded_detour_ratio\n";
     std::vector<const TaskMetric*> ordered_tasks;
     ordered_tasks.reserve(task_metrics.size());
     for (const auto& entry : task_metrics) ordered_tasks.push_back(&entry.second);
@@ -364,8 +425,11 @@ void TaskManager::save_metrics(const std::string& result_file) const
         const int completion_time = task.completed_at < 0 ? -1 : task.completed_at - task.revealed_at;
         tasks_out << task.task_id << ',' << task.revealed_at << ',' << task.first_assigned_at << ','
                   << task.picked_up_at << ',' << task.completed_at << ',' << task.first_agent << ','
-                  << task.reassignments << ',' << task.pickup_distance_at_assignment << ',' << service_distance << ','
-                  << task.empty_distance << ',' << task.loaded_distance << ',' << task.active_wait_steps << ','
+                  << task.reassignments << ',' << task.pickup_distance_at_assignment << ','
+                  << task.pickup_local_degree << ',' << task.first_hop_local_degree << ','
+                  << task.first_hop_opposing_flow << ',' << task.first_hop_vertex_flow << ',' << service_distance << ','
+                  << task.empty_distance << ',' << task.loaded_distance << ',' << task.empty_wait_steps << ','
+                  << task.loaded_wait_steps << ',' << task.active_wait_steps << ','
                   << assignment_wait << ',' << pickup_wait << ',' << completion_time << ',';
         if (service_distance > 0) tasks_out << std::fixed << std::setprecision(6)
                                              << static_cast<double>(task.loaded_distance) / service_distance;

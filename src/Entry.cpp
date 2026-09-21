@@ -27,7 +27,12 @@ void Entry::compute(int time_limit, std::vector<Action> & plan, std::vector<int>
     // {
          //first call task schedule
 
-        scheduler->set_flow(planner->get_flow());
+        const auto flow = planner->get_flow();
+        scheduler->set_flow(flow);
+        env->assignment_flow.clear();
+        env->assignment_flow.reserve(flow.size());
+        for (const auto& cell : flow)
+            env->assignment_flow.push_back({cell.d[0], cell.d[1], cell.d[2], cell.d[3]});
         scheduler->plan(time_limit,proposed_schedule);
 
         //then update the first unfinished errand/location of tasks for planner reference

@@ -3,6 +3,7 @@
 #include "Grid.h"
 #include "nlohmann/json.hpp"
 #include "Tasks.h"
+#include <array>
 #include <unordered_map>
 
 
@@ -31,6 +32,12 @@ public:
     vector<int> new_tasks; // task ids of tasks that are newly revealed in the current timestep
     vector<int> new_freeagents; // agent ids of agents that are newly free in the current timestep
     vector<int> curr_task_schedule; // the current scheduler, agent_id -> task_id
+
+    // Snapshot of the planner's currently opened guide-path flow, copied just
+    // before scheduling.  It is observational state: schedulers are free to
+    // ignore it, while the evaluator can later relate an assignment to the
+    // local traffic field the planner was already following.
+    vector<std::array<double, 4>> assignment_flow;
 
     // plan_start_time records the time point that plan/initialise() function is called; 
     // It is a convenient variable to help planners/schedulers to keep track of time.
