@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-09-21T13:39:00",
+  "sourceResultsRoot": "C:\\gitcloud\\LifelongTA\\results",
+  "resultFilesAudited": 264,
+  "validCompletedRuns": 249,
+  "incompleteOrCensoredRuns": 1,
+  "missingOrInvalidMetrics": 14,
+  "runsWithDifferentLegacyMakespan": 238,
+  "pairedComparisons": 165,
+  "pairedComparisonGroups": 50
+}
