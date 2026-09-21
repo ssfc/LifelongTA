@@ -274,42 +274,82 @@ std::vector<std::pair<int, int>> top_k_match(
     const std::vector<TaskInfo>& tasks, float dist_weight, float task_length_weight,
     int candidate_top_k, std::chrono::steady_clock::time_point deadline)
 {
-    struct OrderedAgent { int index; int nearest_manhattan; };
-    std::vector<OrderedAgent> order;
-    order.reserve(agents.size());
+    struct AgentCandidates {
+        int index;
+        int nearest_manhattan;
+        std::vector<std::pair<int, int>> rough;
+    };
+
     const int cols = std::max(1, env->cols);
-    for (int i = 0; i < static_cast<int>(agents.size()); ++i) {
-        if (std::chrono::steady_clock::now() >= deadline) break;
-        int nearest = std::numeric_limits<int>::max();
-        for (const TaskInfo& task : tasks) {
-            nearest = std::min(nearest, std::abs(agents[i].location / cols - task.pickup / cols) +
-                                            std::abs(agents[i].location % cols - task.pickup % cols));
-        }
-        order.push_back({i, nearest});
+    const int rows = std::max(1, env->rows);
+    constexpr int kCellSize = 16;
+    const int cell_rows = (rows + kCellSize - 1) / kCellSize;
+    const int cell_cols = (cols + kCellSize - 1) / kCellSize;
+    const int cell_count = cell_rows * cell_cols;
+    const int keep = std::min(std::max(1, candidate_top_k), static_cast<int>(tasks.size()));
+    const int rough_keep = std::min(static_cast<int>(tasks.size()), std::max(256, keep * 4));
+
+    std::vector<std::vector<int>> task_cells(cell_count);
+    for (int task_index = 0; task_index < static_cast<int>(tasks.size()); ++task_index) {
+        const int row = std::clamp(tasks[task_index].pickup / cols, 0, rows - 1);
+        const int col = std::clamp(tasks[task_index].pickup % cols, 0, cols - 1);
+        task_cells[(row / kCellSize) * cell_cols + col / kCellSize].push_back(task_index);
     }
-    std::sort(order.begin(), order.end(), [](const OrderedAgent& lhs, const OrderedAgent& rhs) {
+
+    std::vector<AgentCandidates> order;
+    order.reserve(agents.size());
+    for (int i = 0; i < static_cast<int>(agents.size()); ++i) {
+        const int agent_row = std::clamp(agents[i].location / cols, 0, rows - 1);
+        const int agent_col = std::clamp(agents[i].location % cols, 0, cols - 1);
+        std::vector<std::pair<int, int>> cells;
+        cells.reserve(cell_count);
+        for (int cell = 0; cell < cell_count; ++cell) {
+            if (task_cells[cell].empty()) continue;
+            const int cell_row = cell / cell_cols;
+            const int cell_col = cell % cell_cols;
+            const int row_begin = cell_row * kCellSize;
+            const int row_end = std::min(rows - 1, row_begin + kCellSize - 1);
+            const int col_begin = cell_col * kCellSize;
+            const int col_end = std::min(cols - 1, col_begin + kCellSize - 1);
+            const int row_distance = agent_row < row_begin ? row_begin - agent_row :
+                (agent_row > row_end ? agent_row - row_end : 0);
+            const int col_distance = agent_col < col_begin ? col_begin - agent_col :
+                (agent_col > col_end ? agent_col - col_end : 0);
+            cells.emplace_back(row_distance + col_distance, cell);
+        }
+        std::sort(cells.begin(), cells.end());
+
+        std::vector<std::pair<int, int>> rough;
+        rough.reserve(rough_keep);
+        for (const auto& cell : cells) {
+            for (const int task_index : task_cells[cell.second]) {
+                const int pickup = tasks[task_index].pickup;
+                rough.emplace_back(std::abs(agent_row - pickup / cols) +
+                                       std::abs(agent_col - pickup % cols), task_index);
+            }
+            if (static_cast<int>(rough.size()) >= rough_keep) break;
+        }
+        if (rough.empty()) continue;
+        const int selected = std::min(keep, static_cast<int>(rough.size()));
+        std::partial_sort(rough.begin(), rough.begin() + selected, rough.end());
+        rough.resize(selected);
+        order.push_back({i, rough.front().first, std::move(rough)});
+    }
+    std::sort(order.begin(), order.end(), [](const AgentCandidates& lhs, const AgentCandidates& rhs) {
         return lhs.nearest_manhattan > rhs.nearest_manhattan;
     });
 
     std::vector<bool> used(tasks.size(), false);
     std::vector<std::pair<int, int>> result;
-    for (const OrderedAgent& ordered : order) {
+    for (const AgentCandidates& ordered : order) {
         if (std::chrono::steady_clock::now() >= deadline) break;
         const AgentInfo& agent = agents[ordered.index];
-        std::vector<std::pair<int, int>> rough;
-        rough.reserve(tasks.size());
-        for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
-            if (used[j]) continue;
-            rough.emplace_back(std::abs(agent.location / cols - tasks[j].pickup / cols) +
-                                   std::abs(agent.location % cols - tasks[j].pickup % cols), j);
-        }
-        const int keep = std::min(std::max(1, candidate_top_k), static_cast<int>(rough.size()));
-        if (keep == 0) continue;
-        std::partial_sort(rough.begin(), rough.begin() + keep, rough.end());
         float best_score = kInvalidCost;
         int best = -1;
-        for (int k = 0; k < keep && std::chrono::steady_clock::now() < deadline; ++k) {
-            const int task_index = rough[k].second;
+        for (const auto& candidate : ordered.rough) {
+            if (std::chrono::steady_clock::now() >= deadline) break;
+            const int task_index = candidate.second;
+            if (used[task_index]) continue;
             const float score = task_score(env, agent.location, tasks[task_index],
                                            dist_weight, task_length_weight);
             if (score < best_score) {
