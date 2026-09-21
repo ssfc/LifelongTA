@@ -348,6 +348,14 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
     std::unordered_set<int> locked_tasks;
     std::unordered_map<int, int> old_assignment;
     std::vector<AgentInfo> candidates;
+    // Top-K matching has no global assignment guarantee. Reassigning every
+    // unopened task from that approximate branch can make agents chase a new
+    // pickup every tick on dense, large instances. Reserve those assignments
+    // for the exact Hungarian branch and use Top-K incrementally.
+    const bool use_incremental_approximation =
+        static_cast<long long>(env->num_of_agents) *
+            static_cast<long long>(env->task_pool.size()) >
+        std::max(1, config.max_matrix_elements);
 
     for (int agent = 0; agent < env->num_of_agents; ++agent) {
         const int task_id = local[agent];
@@ -365,7 +373,7 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
         const Task& task = task_it->second;
         const int pickup = task.locations.at(task.idx_next_loc);
         const int distance = get_h(env, env->curr_states.at(agent).location, pickup);
-        if (!config.reassign_enabled || task.idx_next_loc > 0 ||
+        if (use_incremental_approximation || !config.reassign_enabled || task.idx_next_loc > 0 ||
             (config.reassign_min_dist > 0 && distance < config.reassign_min_dist)) {
             locked_tasks.insert(task_id);
             continue;

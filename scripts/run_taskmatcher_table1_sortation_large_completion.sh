@@ -5,7 +5,7 @@ set -euo pipefail
 # free-reassignment TaskMatcher configuration used for the other ten rows.
 ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 BIN=${BIN:-"$ROOT/build-ucrt/lifelong.exe"}
-OUT_DIR="$ROOT/results/portable_assignment/table1_sortation_large_completion"
+OUT_DIR="$ROOT/results/portable_assignment/table1_sortation_large_incremental_completion"
 TIMESTEPS=${1:-1000}
 
 [[ -x "$BIN" ]] || { echo "Missing executable: $BIN" >&2; exit 1; }
