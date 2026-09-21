@@ -1,0 +1,19 @@
+﻿
+Method                   Trial FinishedTasks UnassignedBacklogAtEnd PickupDistanceMean CompletionP95 EmptyDistance Load
+                                                                                                                   edDe
+                                                                                                                   tour
+                                                                                                                   Mean
+------                   ----- ------------- ---------------------- ------------------ ------------- ------------- ----
+flow-traffic                 1          3605                    105 11.261026352288487         206.0         65486 ...7
+flow-traffic                 2          3605                    102  10.98502080443828         194.0         65994 ...2
+flow-traffic                 3          3610                    101 11.012742382271469         202.0         65140 ...1
+flow-traffic                 4          3609                    105  11.16708229426434         188.0         65507 ...3
+flow-traffic                 5          3631                    104 11.185348388873589         193.0         65286 ...2
+taskmatcher-traffic-k100     1          3776                    106  10.06594279661017         144.0         62606 ...4
+taskmatcher-traffic-k100     2          3760                    103   9.97340425531915         142.0         62958 ...6
+taskmatcher-traffic-k100     3          3765                    102 10.012749003984064         136.0         62993 ...1
+taskmatcher-traffic-k100     4          3770                    102  9.954376657824934         139.0         63255 ...2
+taskmatcher-traffic-k100     5          3769                    101 10.117537808437252         140.0         62824 ...9
+
+
+
