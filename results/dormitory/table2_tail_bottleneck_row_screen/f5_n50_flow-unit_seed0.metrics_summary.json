@@ -1,0 +1,75 @@
+{
+  "format": "lifelongta-metrics-v2",
+  "assignmentMetricTiming": "before first movement under accepted assignment",
+  "firstHopMetricType": "static shortest-path proxy, not executed planner movement",
+  "reassignmentDefinition": "agent changes, including across unassigned intervals",
+  "timeoutStepAccounting": "agent-state steps only; task progress remains paused",
+  "tasksRevealed": 500,
+  "tasksCompleted": 500,
+  "activeTasksAtEnd": 0,
+  "unassignedBacklogAtEnd": 0,
+  "taskLatency": {
+    "arrivalToAssignment": {
+      "count": 500,
+      "mean": 58.366,
+      "p50": 41.0,
+      "p95": 164.0,
+      "p99": 195.0,
+      "max": 206.0
+    },
+    "arrivalToPickup": {
+      "count": 500,
+      "mean": 66.222,
+      "p50": 48.0,
+      "p95": 174.0,
+      "p99": 205.0,
+      "max": 234.0
+    },
+    "arrivalToCompletion": {
+      "count": 500,
+      "mean": 87.174,
+      "p50": 71.0,
+      "p95": 191.0,
+      "p99": 227.0,
+      "max": 268.0
+    }
+  },
+  "matchingQuality": {
+    "pickupDistanceAtAssignment": {
+      "count": 500,
+      "mean": 3.294,
+      "p50": 2.0,
+      "p95": 13.0,
+      "p99": 31.0,
+      "max": 38.0
+    }
+  },
+  "movement": {
+    "emptyDistance": 1426,
+    "loadedDistance": 10323,
+    "completedTaskServiceShortestDistance": 9429,
+    "loadedDetourRatio": {
+      "count": 500,
+      "mean": 1.1003813139013603,
+      "p50": 1.0,
+      "p95": 1.5,
+      "p99": 1.8,
+      "max": 2.25
+    },
+    "productiveMovementRatio": 0.8025363860754107
+  },
+  "agentStateSteps": {
+    "idle": 1840,
+    "empty": 1634,
+    "loaded": 10476,
+    "activeWait": 361
+  },
+  "plannerSeconds": {
+    "count": 279,
+    "mean": 0.9207069802867384,
+    "p50": 0.9207246,
+    "p95": 0.9210645,
+    "p99": 0.9211857,
+    "max": 0.9212007
+  }
+}
