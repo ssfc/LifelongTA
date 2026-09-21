@@ -78,6 +78,8 @@ public:
     bool set_task_assignment(vector<int>& assignment, const vector<State>* states = nullptr);
 
     int get_number_errors() const {return schedule_errors.size();}
+    size_t get_total_task_count() const {return tasks.size();}
+    int get_actual_makespan() const;
 
 
 

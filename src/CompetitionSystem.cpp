@@ -264,6 +264,15 @@ void BaseSystem::saveResults(const string &fileName, int screen) const
         }
     }
     js["makespan"] = makespan;
+    // Historical compatibility: this is the largest per-agent count of active
+    // timesteps, not the final global task-completion time.
+    js["maxAgentActiveSteps"] = makespan;
+    const int actual_makespan = task_manager.get_actual_makespan();
+    js["taskSourceType"] = "finite";
+    js["numTasksTotal"] = task_manager.get_total_task_count();
+    js["simulationSteps"] = simulator.get_curr_timestep();
+    js["allTasksCompleted"] = actual_makespan >= 0;
+    js["actualMakespan"] = actual_makespan >= 0 ? json(actual_makespan) : json(nullptr);
 
     js["numPlannerErrors"] = simulator.get_number_errors();
     js["numScheduleErrors"] = task_manager.get_number_errors();
@@ -402,4 +411,3 @@ void BaseSystem::saveResults(const string &fileName, int screen) const
     task_manager.save_metrics(fileName);
 
 }
-

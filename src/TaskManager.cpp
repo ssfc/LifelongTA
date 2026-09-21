@@ -351,6 +351,17 @@ void TaskManager::record_timeline(int timestep, double planner_seconds)
     timeline_metrics.push_back(metric);
 }
 
+int TaskManager::get_actual_makespan() const
+{
+    if (num_of_task_finish != static_cast<int>(tasks.size())) return -1;
+    int last_completion = 0;
+    for (const auto& entry : task_metrics) {
+        if (entry.second.completed_at < 0) return -1;
+        last_completion = std::max(last_completion, entry.second.completed_at);
+    }
+    return last_completion;
+}
+
 void TaskManager::save_metrics(const std::string& result_file) const
 {
     const std::string base = result_file.size() >= 5 && result_file.substr(result_file.size() - 5) == ".json"
@@ -451,9 +462,12 @@ void TaskManager::save_metrics(const std::string& result_file) const
     for (const auto& task : ongoing_tasks)
         if (task.second->agent_assigned < 0) ++unassigned_backlog;
     json summary;
-    summary["format"] = "lifelongta-metrics-v1";
+    const int actual_makespan = get_actual_makespan();
+    summary["format"] = "lifelongta-metrics-v2";
     summary["tasksRevealed"] = tasks.size();
     summary["tasksCompleted"] = num_of_task_finish;
+    summary["allTasksCompleted"] = actual_makespan >= 0;
+    summary["actualMakespan"] = actual_makespan >= 0 ? json(actual_makespan) : json(nullptr);
     summary["activeTasksAtEnd"] = ongoing_tasks.size();
     summary["unassignedBacklogAtEnd"] = unassigned_backlog;
     summary["taskLatency"] = {{"arrivalToAssignment", summarize(assignment_waits)},
