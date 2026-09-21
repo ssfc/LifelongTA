@@ -205,6 +205,30 @@ list<int> TaskManager::check_finished_tasks(vector<State>& states, int timestep)
     return finished_tasks_this_timestep;
 }
 
+bool TaskManager::all_tasks_completed() const
+{
+    if (!finite_task_stream || !finish_all_tasks || task_metrics.empty())
+        return false;
+
+    for (const auto& entry : task_metrics)
+    {
+        if (entry.second.completed_at < 0)
+            return false;
+    }
+    return true;
+}
+
+int TaskManager::actual_makespan() const
+{
+    if (!all_tasks_completed())
+        return -1;
+
+    int latest_completion = 0;
+    for (const auto& entry : task_metrics)
+        latest_completion = std::max(latest_completion, entry.second.completed_at);
+    return latest_completion;
+}
+
 /**
  * This function synchronises the shared environment with the current task manager.
  * It copies the current task pool, current task schedule, new free agents, and new tasks to the shared environment.

@@ -76,6 +76,8 @@ public:
     };
     void set_finite_task_stream(bool enabled){finite_task_stream = enabled;};
     bool finished_all_tasks() const {return finish_all_tasks;};
+    bool all_tasks_completed() const;
+    int actual_makespan() const;
     void set_logger(Logger* logger){this->logger = logger;}
 
     bool validate_task_assignment(vector<int>& assignment); // validate the task assignment

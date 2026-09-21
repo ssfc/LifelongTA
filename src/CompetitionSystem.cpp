@@ -315,7 +315,16 @@ void BaseSystem::saveResults(const string &fileName, int screen) const
             }
         }
     }
+    // Kept for compatibility with prior result readers. It is the maximum
+    // per-agent active-task steps, not the absolute task-completion makespan.
     js["makespan"] = makespan;
+    js["maxAgentActiveSteps"] = makespan;
+    js["simulationSteps"] = simulator.get_curr_timestep();
+    const bool all_tasks_completed = task_manager.all_tasks_completed();
+    js["allTasksCompleted"] = all_tasks_completed;
+    js["actualMakespan"] = all_tasks_completed
+        ? json(task_manager.actual_makespan())
+        : json(nullptr);
 
     js["numPlannerErrors"] = simulator.get_number_errors();
     js["numScheduleErrors"] = task_manager.get_number_errors();
