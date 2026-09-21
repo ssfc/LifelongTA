@@ -1,6 +1,7 @@
 #pragma once
 #include "Tasks.h"
 #include "SharedEnv.h"
+#include "planner.h"
 #include "scheduler.h"
 #include "portable_assignment.h"
 
@@ -17,6 +18,7 @@ class TaskScheduler
         virtual void plan(int time_limit, std::vector<int> & proposed_schedule);
 
         void set_flow(std::vector<DefaultPlanner::Double4> flow);
+        void set_planner_snapshot(DefaultPlanner::PlannerSnapshot snapshot);
 
         void set_use_traffic(bool use_traffic);
         void set_new_only(bool new_only);
@@ -29,6 +31,7 @@ class TaskScheduler
             const DefaultPlanner::PortableStableSnatchHungarianConfig& config);
 
         std::vector<DefaultPlanner::Double4> background_flow;
+        DefaultPlanner::PlannerSnapshot planner_snapshot;
 
         bool use_traffic = false;
         bool new_only = false;

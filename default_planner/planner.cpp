@@ -59,6 +59,25 @@ namespace DefaultPlanner{
         return background_flow;
     }
 
+    PlannerSnapshot get_snapshot(SharedEnvironment* env, int prefix_length)
+    {
+        PlannerSnapshot snapshot(env->num_of_agents);
+        const int limit = std::max(0, prefix_length);
+        for (int agent = 0; agent < env->num_of_agents; ++agent) {
+            PlannerAgentSnapshot& item = snapshot[agent];
+            if (agent < static_cast<int>(trajLNS.tasks.size())) item.goal = trajLNS.tasks[agent];
+            if (agent < static_cast<int>(p.size())) item.priority = p[agent];
+            const int location = env->curr_states.at(agent).location;
+            if (location >= 0 && location < static_cast<int>(trajLNS.neighbors.size()))
+                item.in_deadend = trajLNS.neighbors[location].size() == 1;
+            if (agent >= static_cast<int>(trajLNS.trajs.size())) continue;
+            const Traj& trajectory = trajLNS.trajs[agent];
+            const int count = std::min(limit, static_cast<int>(trajectory.size()));
+            item.guide_prefix.assign(trajectory.begin(), trajectory.begin() + count);
+        }
+        return snapshot;
+    }
+
     /**
      * @brief Default planner initialization
      * 

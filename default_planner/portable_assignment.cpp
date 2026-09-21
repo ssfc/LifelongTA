@@ -36,6 +36,32 @@ std::unordered_map<int, AssignmentProgress> assignment_progress;
 
 int task_length(SharedEnvironment* env, const TaskInfo& task);
 
+int guide_prefix_detour(SharedEnvironment* env, const PlannerSnapshot& snapshot,
+                        int agent_id, int pickup)
+{
+    if (agent_id < 0 || agent_id >= static_cast<int>(snapshot.size())) return 0;
+    const std::vector<int>& prefix = snapshot[agent_id].guide_prefix;
+    if (prefix.empty()) return 0;
+    const int current = env->curr_states.at(agent_id).location;
+    const int direct = get_h(env, current, pickup);
+    if (direct < 0 || direct >= std::numeric_limits<int>::max() / 8) return 0;
+    int current_index = -1;
+    for (int index = 0; index < static_cast<int>(prefix.size()); ++index) {
+        if (prefix[index] == current) {
+            current_index = index;
+            break;
+        }
+    }
+    if (current_index < 0) return 0;
+    int best = direct;
+    for (int index = current_index; index < static_cast<int>(prefix.size()); ++index) {
+        const int suffix = get_h(env, prefix[index], pickup);
+        if (suffix >= 0 && suffix < std::numeric_limits<int>::max() / 8)
+            best = std::min(best, index - current_index + suffix);
+    }
+    return std::max(0, best - direct);
+}
+
 float task_score(SharedEnvironment* env, int agent_location, const TaskInfo& task,
                  float dist_weight, float task_length_weight = 1.0F)
 {
@@ -382,7 +408,8 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
                                          std::vector<int>& proposed_schedule,
                                          SharedEnvironment* env,
                                          const PortableTaskMatcherConfig& config,
-                                         const std::vector<Double4>& background_flow)
+                                         const std::vector<Double4>& background_flow,
+                                         const PlannerSnapshot& planner_snapshot)
 {
     const auto deadline = std::chrono::steady_clock::now() +
                           std::chrono::milliseconds(std::max(0, time_limit_ms));
@@ -468,8 +495,8 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
             cost = traffic_cost_matrix(env, candidates, tasks, config, background_flow, deadline);
         else
             cost.assign(candidates.size(), std::vector<float>(tasks.size(), kInvalidCost));
+        int pickup_multiplier = 1;
         if (!config.use_traffic_cost && !config.use_projected_load) {
-            int pickup_multiplier = 1;
             if (config.lexicographic_pickup_first) {
                 for (const TaskInfo& task : tasks) {
                     const int length = task_length(env, task);
@@ -493,6 +520,14 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
                 if (candidates[i].id < static_cast<int>(flow_seed.size()) &&
                     flow_seed[candidates[i].id] == tasks[j].id && cost[i][j] < kInvalidCost / 2.0F)
                     cost[i][j] -= config.flow_seed_bias;
+                if (old_assignment.count(candidates[i].id) > 0 &&
+                    config.guide_deviation_weight > 0.0F && cost[i][j] < kInvalidCost / 2.0F) {
+                    const int detour = guide_prefix_detour(env, planner_snapshot, candidates[i].id,
+                                                           tasks[j].pickup);
+                    const float unit = config.lexicographic_pickup_first
+                        ? static_cast<float>(pickup_multiplier) : config.dist_weight;
+                    cost[i][j] += config.guide_deviation_weight * unit * detour;
+                }
             }
         }
         if (std::chrono::steady_clock::now() < deadline) {

@@ -53,3 +53,8 @@ std::vector<DefaultPlanner::Double4> MAPFPlanner::get_flow()
     // return DefaultPlanner::get_flow();
     return DefaultPlanner::get_opened_flow(env);
 }
+
+DefaultPlanner::PlannerSnapshot MAPFPlanner::get_snapshot(int prefix_length)
+{
+    return DefaultPlanner::get_snapshot(env, prefix_length);
+}

@@ -2,6 +2,7 @@
 
 #include "SharedEnv.h"
 #include "Types.h"
+#include "planner.h"
 
 #include <vector>
 
@@ -29,6 +30,7 @@ struct PortableTaskMatcherConfig {
     int new_task_delay_steps = 0;
     bool lexicographic_pickup_first = false;
     bool lock_after_pickup_progress = false;
+    float guide_deviation_weight = 0.0f;
 };
 
 struct PortableCappedHungarianConfig {
@@ -52,7 +54,8 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
                                          std::vector<int>& proposed_schedule,
                                          SharedEnvironment* env,
                                          const PortableTaskMatcherConfig& config,
-                                         const std::vector<Double4>& background_flow);
+                                         const std::vector<Double4>& background_flow,
+                                         const PlannerSnapshot& planner_snapshot);
 
 void schedule_plan_portable_capped_hungarian(
     int time_limit_ms, std::vector<int>& proposed_schedule, SharedEnvironment* env,

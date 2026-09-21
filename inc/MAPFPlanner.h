@@ -21,6 +21,7 @@ public:
     virtual void plan(int time_limit, std::vector<Action> & plan);
 
     std::vector<DefaultPlanner::Double4> get_flow();
+    DefaultPlanner::PlannerSnapshot get_snapshot(int prefix_length = 8);
     void plan_pibt(int time_limit,vector<Action> & actions); 
 
 };
