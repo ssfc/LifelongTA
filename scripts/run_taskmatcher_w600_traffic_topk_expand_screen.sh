@@ -4,7 +4,7 @@ set -euo pipefail
 # Extend the W600 traffic candidate-count screen beyond the prior top-k=100.
 ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 BIN=${BIN:-"$ROOT/build/lifelong"}
-OUT_DIR="$ROOT/results/portable_assignment/traffic_topk_w600_expand_screen"
+OUT_DIR=${OUT_DIR:-"$ROOT/results/portable_assignment/traffic_topk_w600_expand_screen"}
 TIMESTEPS=${1:-100}
 
 [[ -x "$BIN" ]] || { echo "Missing executable: $BIN" >&2; exit 1; }
