@@ -298,6 +298,9 @@ void BaseSystem::saveResults(const string &fileName, int screen) const
     js["teamSize"] = num_of_agents;
 
     js["numTaskFinished"] = task_manager.num_of_task_finish;
+    js["avgRevealToAssign"] = task_manager.average_reveal_to_assign();
+    js["avgAssignToOpen"] = task_manager.average_assign_to_open();
+    js["avgOpenToFinish"] = task_manager.average_open_to_finish();
     int makespan = 0;
     if (num_of_agents > 0)
     {

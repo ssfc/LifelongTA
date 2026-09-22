@@ -101,7 +101,12 @@ bool TaskManager::set_task_assignment(vector< int>& assignment)
         {
             continue;
         }
-        ongoing_tasks[t_id]->agent_assigned = a;
+        Task* task = ongoing_tasks[t_id];
+        task->agent_assigned = a;
+        if (task->t_first_assigned < 0)
+        {
+            task->t_first_assigned = curr_timestep;
+        }
     }
     
     // cout<<"assignments:"<<endl;
@@ -136,11 +141,19 @@ list<int> TaskManager::check_finished_tasks(vector<State>& states, int timestep)
             Task * task = ongoing_tasks[current_assignment[k]];
             task->idx_next_loc += 1;
 
+            if (task->idx_next_loc == 1 && task->t_opened < 0)
+            {
+                task->t_opened = timestep;
+            }
+
             if (task->is_finished())
             {
                 current_assignment[k] = -1;
                 ongoing_tasks.erase(task->task_id);
                 task->t_completed = timestep;
+                reveal_to_assign_total += task->t_first_assigned - task->t_revealed;
+                assign_to_open_total += task->t_opened - task->t_first_assigned;
+                open_to_finish_total += task->t_completed - task->t_opened;
 
                 finished_tasks_this_timestep.push_back(task->task_id);
                 finished_tasks[task->agent_assigned].emplace_back(task);
@@ -157,6 +170,21 @@ list<int> TaskManager::check_finished_tasks(vector<State>& states, int timestep)
         }
     }
     return finished_tasks_this_timestep;
+}
+
+double TaskManager::average_reveal_to_assign() const
+{
+    return num_of_task_finish == 0 ? 0.0 : static_cast<double>(reveal_to_assign_total) / num_of_task_finish;
+}
+
+double TaskManager::average_assign_to_open() const
+{
+    return num_of_task_finish == 0 ? 0.0 : static_cast<double>(assign_to_open_total) / num_of_task_finish;
+}
+
+double TaskManager::average_open_to_finish() const
+{
+    return num_of_task_finish == 0 ? 0.0 : static_cast<double>(open_to_finish_total) / num_of_task_finish;
 }
 
 /**

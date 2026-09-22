@@ -35,6 +35,9 @@ public:
     bool set_task_assignment( vector<int>&  assignment); // set the task assignment; return true if task is valid
 
     int get_number_errors() const {return schedule_errors.size();}
+    double average_reveal_to_assign() const;
+    double average_assign_to_open() const;
+    double average_open_to_finish() const;
 
 
 
@@ -79,5 +82,8 @@ private:
 
     std::vector<list<int>>& tasks;
     int task_id = 0;
+    long long reveal_to_assign_total = 0;
+    long long assign_to_open_total = 0;
+    long long open_to_finish_total = 0;
 
 };

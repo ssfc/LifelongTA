@@ -1,0 +1,21 @@
+[2026-09-22 00:47:11] flow_traffic warehouse-small n=400 trial=1
+[2026-09-22 01:02:28] taskmatcher_traffic_k100 warehouse-small n=400 trial=1
+[2026-09-22 01:17:45] flow_traffic warehouse-small n=400 trial=2
+[2026-09-22 01:33:03] taskmatcher_traffic_k100 warehouse-small n=400 trial=2
+[2026-09-22 01:48:20] flow_traffic warehouse-small n=400 trial=3
+[2026-09-22 02:03:38] taskmatcher_traffic_k100 warehouse-small n=400 trial=3
+[2026-09-22 02:18:55] flow_traffic warehouse-small n=500 trial=1
+[2026-09-22 02:34:12] taskmatcher_traffic_k100 warehouse-small n=500 trial=1
+[2026-09-22 02:49:29] flow_traffic warehouse-small n=500 trial=2
+[2026-09-22 03:04:45] taskmatcher_traffic_k100 warehouse-small n=500 trial=2
+[2026-09-22 03:20:02] flow_traffic warehouse-small n=500 trial=3
+[2026-09-22 03:35:19] taskmatcher_traffic_k100 warehouse-small n=500 trial=3
+[2026-09-22 03:50:35] flow_traffic warehouse-small n=600 trial=1
+[2026-09-22 04:05:51] taskmatcher_traffic_k100 warehouse-small n=600 trial=1
+[2026-09-22 04:21:07] flow_traffic warehouse-small n=600 trial=2
+[2026-09-22 04:36:23] taskmatcher_traffic_k100 warehouse-small n=600 trial=2
+[2026-09-22 04:51:39] flow_traffic warehouse-small n=600 trial=3
+[2026-09-22 05:06:55] taskmatcher_traffic_k100 warehouse-small n=600 trial=3
+
+========== Warehouse traffic TaskMatcher validation complete ==========
+Completed at 2026-09-22 05:22:11 CST

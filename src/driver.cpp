@@ -64,9 +64,13 @@ int main(int argc, char **argv)
         ("heapLnsPct", po::value<int>()->default_value(10), "greedy-heap swap-refinement budget percentage")
         ("heapSortK", po::value<int>()->default_value(500), "sorted candidates retained per agent")
         ("matcherDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for contest task matcher")
-        ("matcherMaxAssign", po::value<float>()->default_value(1.0f), "maximum fraction of agents carrying a task in contest task matcher")
         ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
         ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
+        ("matcherMaxAssign", po::value<float>()->default_value(1.0f), "maximum fraction of task-matcher candidates assigned per tick")
+        ("matcherUseTraffic", po::value<bool>()->default_value(false), "use Flow-Traffic edge costs in task matcher")
+        ("matcherTrafficTopK", po::value<int>()->default_value(50), "static nearest pickups rescored with traffic-aware Dijkstra per agent")
+        ("matcherTrafficCongestionWeight", po::value<float>()->default_value(1.0f), "multiplier for TaskMatcher traffic congestion penalties")
+        ("matcherTrafficServiceWeight", po::value<float>()->default_value(0.0f), "weight of delivery-leg congestion proxy in TaskMatcher traffic cost")
         ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
         ("hungarianMaxAgents", po::value<int>()->default_value(256), "capped Hungarian candidate-agent limit")
         ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
@@ -177,9 +181,13 @@ int main(int argc, char **argv)
     planner->scheduler->set_heap_config(heap_config);
     DefaultPlanner::PortableTaskMatcherConfig matcher_config;
     matcher_config.dist_weight = vm["matcherDistWeight"].as<float>();
-    matcher_config.max_assign_ratio = vm["matcherMaxAssign"].as<float>();
     matcher_config.candidate_top_k = vm["matcherTopK"].as<int>();
     matcher_config.max_matrix_elements = vm["matcherMaxMatrix"].as<int>();
+    matcher_config.max_assign_ratio = vm["matcherMaxAssign"].as<float>();
+    matcher_config.use_traffic_cost = vm["matcherUseTraffic"].as<bool>();
+    matcher_config.traffic_top_k = vm["matcherTrafficTopK"].as<int>();
+    matcher_config.traffic_congestion_weight = vm["matcherTrafficCongestionWeight"].as<float>();
+    matcher_config.traffic_service_weight = vm["matcherTrafficServiceWeight"].as<float>();
     matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();
     matcher_config.reassign_keep_bias = heap_config.reassign_keep_bias;
     matcher_config.reassign_min_dist = heap_config.reassign_min_dist;

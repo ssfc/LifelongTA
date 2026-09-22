@@ -6,6 +6,8 @@ struct Task
     int task_id;
     int t_completed = -1;
     int t_revealed = -1;
+    int t_first_assigned = -1;
+    int t_opened = -1;
     int agent_assigned = -1;
 
     vector<int> locations;
@@ -45,6 +47,8 @@ struct Task
     {
         task_id = other->task_id;
         t_completed = other->t_completed;
+        t_first_assigned = other->t_first_assigned;
+        t_opened = other->t_opened;
         locations = other->locations;
         t_revealed = other->t_revealed;
         idx_next_loc = other->idx_next_loc;
@@ -55,6 +59,8 @@ struct Task
     {
         task_id = other.task_id;
         t_completed = other.t_completed;
+        t_first_assigned = other.t_first_assigned;
+        t_opened = other.t_opened;
         locations = other.locations;
         t_revealed = other.t_revealed;
         idx_next_loc = other.idx_next_loc;
