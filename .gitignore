@@ -13,3 +13,6 @@ test.txt
 python/tmp
 python/__pycache__
 output.json
+
+# Debug traces are regenerated on demand and can be hundreds of megabytes.
+*.trace.json

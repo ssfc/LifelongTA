@@ -63,6 +63,15 @@ int main(int argc, char **argv)
         ("heapRebuildPct", po::value<int>()->default_value(45), "greedy-heap candidate rebuild budget percentage")
         ("heapLnsPct", po::value<int>()->default_value(10), "greedy-heap swap-refinement budget percentage")
         ("heapSortK", po::value<int>()->default_value(500), "sorted candidates retained per agent")
+        ("heapFlowAwareSpatial", po::value<bool>()->default_value(false), "use spatial candidates and planner-flow congestion penalties in greedy heap")
+        ("heapSpatialCell", po::value<int>()->default_value(16), "grid cell side length for flow-aware greedy heap candidates")
+        ("heapSpatialCandidates", po::value<int>()->default_value(1000), "maximum nearby tasks scored per agent in flow-aware greedy heap")
+        ("heapTrafficWeight", po::value<float>()->default_value(1.0f), "planner-flow congestion penalty weight in flow-aware greedy heap")
+        ("heapReassignMinGain", po::value<float>()->default_value(0.0f), "minimum score reduction required for a greedy-heap reassignment swap")
+        ("heapFutureFlowCell", po::value<int>()->default_value(32), "zone side length for dynamic future-flow matching")
+        ("heapFutureFlowWeight", po::value<float>()->default_value(0.0f), "weight of newly assigned zone future-flow penalties in greedy heap")
+        ("heapFutureFlowHardCap", po::value<float>()->default_value(0.0f), "block opposing movement into zones above this dynamic flow level; 0 disables blocking")
+        ("heapFutureFlowRegret", po::value<bool>()->default_value(true), "prioritize agents with high candidate regret in dynamic future-flow matching")
         ("matcherDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for contest task matcher")
         ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
         ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
@@ -190,6 +199,15 @@ int main(int argc, char **argv)
     heap_config.rebuild_pct = vm["heapRebuildPct"].as<int>();
     heap_config.lns_pct = vm["heapLnsPct"].as<int>();
     heap_config.sort_k = vm["heapSortK"].as<int>();
+    heap_config.flow_aware_spatial = vm["heapFlowAwareSpatial"].as<bool>();
+    heap_config.spatial_cell_size = vm["heapSpatialCell"].as<int>();
+    heap_config.spatial_candidate_limit = vm["heapSpatialCandidates"].as<int>();
+    heap_config.traffic_weight = vm["heapTrafficWeight"].as<float>();
+    heap_config.reassign_min_gain = vm["heapReassignMinGain"].as<float>();
+    heap_config.future_flow_cell_size = vm["heapFutureFlowCell"].as<int>();
+    heap_config.future_flow_weight = vm["heapFutureFlowWeight"].as<float>();
+    heap_config.future_flow_hard_cap = vm["heapFutureFlowHardCap"].as<float>();
+    heap_config.future_flow_regret_order = vm["heapFutureFlowRegret"].as<bool>();
     planner->scheduler->set_heap_config(heap_config);
     DefaultPlanner::PortableTaskMatcherConfig matcher_config;
     matcher_config.dist_weight = vm["matcherDistWeight"].as<float>();

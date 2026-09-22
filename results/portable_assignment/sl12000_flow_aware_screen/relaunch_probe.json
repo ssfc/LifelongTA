@@ -1,0 +1,17 @@
+{
+    "actionModel": "MAPF",
+    "teamSize": 12000,
+    "numTaskFinished": 0,
+    "makespan": 2,
+    "maxAgentActiveSteps": 2,
+    "simulationSteps": 2,
+    "allTasksCompleted": false,
+    "actualMakespan": null,
+    "numPlannerErrors": 0,
+    "numScheduleErrors": 0,
+    "numEntryTimeouts": 0,
+    "plannerTimes": [
+        0.8067708,
+        0.8092271
+    ]
+}
