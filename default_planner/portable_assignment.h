@@ -29,6 +29,26 @@ struct PortableTaskMatcherConfig {
     bool scalable_mode = false;
     int scalable_bucket_size = 8;
     int scalable_candidates_per_bucket = 2;
+    // Preserve global competition at large scale without building the full
+    // agent-by-task matrix.  Each agent contributes a bounded spatially
+    // retrieved candidate list to one lazy global min-heap.
+    bool scalable_global_heap = false;
+    int scalable_global_candidates = 24;
+    // Values below one reserve the remaining agents/tasks for the bounded
+    // spatial fallback, so sparse global candidates cannot reduce coverage.
+    float scalable_global_heap_fraction = 1.0F;
+    // HardWarehouse-inspired sparse pair graph.  Candidate edges are drawn
+    // from both the agent and task side, constrained by a zone radius and
+    // connected components, before the global heap is formed.
+    bool scalable_bilateral_heap = false;
+    int scalable_task_candidates = 8;
+    int scalable_zone_radius = 4;
+    // Softly distribute one scheduling round across pickup zones while
+    // retaining the coverage-preserving spatial matcher.
+    bool scalable_zone_capacity = false;
+    int scalable_zone_capacity_limit = 8;
+    float scalable_zone_capacity_weight = 20.0F;
+    int scalable_zone_capacity_radius = 1;
 };
 
 struct PortableCappedHungarianConfig {

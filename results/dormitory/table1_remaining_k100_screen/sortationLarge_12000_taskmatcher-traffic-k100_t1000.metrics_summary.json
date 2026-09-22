@@ -1,0 +1,36 @@
+{
+  "format": "lifelongta-metrics-v1",
+  "tasksRevealed": 18000,
+  "tasksCompleted": 0,
+  "activeTasksAtEnd": 18000,
+  "unassignedBacklogAtEnd": 18000,
+  "taskLatency": {
+    "arrivalToAssignment": null,
+    "arrivalToPickup": null,
+    "arrivalToCompletion": null
+  },
+  "matchingQuality": {
+    "pickupDistanceAtAssignment": null
+  },
+  "movement": {
+    "emptyDistance": 0,
+    "loadedDistance": 0,
+    "completedTaskServiceShortestDistance": 0,
+    "loadedDetourRatio": null,
+    "productiveMovementRatio": 0.0
+  },
+  "agentStateSteps": {
+    "idle": 12000000,
+    "empty": 0,
+    "loaded": 0,
+    "activeWait": 0
+  },
+  "plannerSeconds": {
+    "count": 1000,
+    "mean": 0.8136565644000001,
+    "p50": 0.8133329,
+    "p95": 0.8162522,
+    "p99": 0.8184082,
+    "max": 0.8305452
+  }
+}

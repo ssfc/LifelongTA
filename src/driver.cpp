@@ -74,6 +74,16 @@ int main(int argc, char **argv)
         ("matcherScalable", po::value<bool>()->default_value(false), "use bounded spatial TaskMatcher fallback for large instances")
         ("matcherScalableBucket", po::value<int>()->default_value(8), "grid bucket side length for bounded spatial TaskMatcher")
         ("matcherScalableCandidates", po::value<int>()->default_value(2), "tasks inspected per spatial bucket in bounded TaskMatcher")
+        ("matcherScalableGlobalHeap", po::value<bool>()->default_value(false), "use a sparse global lazy heap in scalable TaskMatcher mode")
+        ("matcherScalableGlobalCandidates", po::value<int>()->default_value(24), "maximum spatial candidates per agent for scalable global heap")
+        ("matcherScalableGlobalFraction", po::value<float>()->default_value(1.0f), "fraction matched by sparse global heap before spatial coverage fallback")
+        ("matcherScalableBilateralHeap", po::value<bool>()->default_value(false), "use component-filtered bilateral sparse candidates before scalable global heap")
+        ("matcherScalableTaskCandidates", po::value<int>()->default_value(8), "maximum nearby agents contributed by each task in bilateral scalable heap")
+        ("matcherScalableZoneRadius", po::value<int>()->default_value(4), "maximum bucket-ring radius for bilateral scalable heap candidates")
+        ("matcherScalableZoneCapacity", po::value<bool>()->default_value(false), "softly spread scalable spatial matches across pickup zones")
+        ("matcherScalableZoneCapacityLimit", po::value<int>()->default_value(8), "free predicted pickup assignments per spatial zone")
+        ("matcherScalableZoneCapacityWeight", po::value<float>()->default_value(20.0f), "quadratic overflow penalty for scalable pickup-zone assignments")
+        ("matcherScalableZoneCapacityRadius", po::value<int>()->default_value(1), "bucket rings compared by zone-capacity spatial matcher")
         ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
         ("hungarianMaxAgents", po::value<int>()->default_value(256), "capped Hungarian candidate-agent limit")
         ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
@@ -194,6 +204,16 @@ int main(int argc, char **argv)
     matcher_config.scalable_mode = vm["matcherScalable"].as<bool>();
     matcher_config.scalable_bucket_size = vm["matcherScalableBucket"].as<int>();
     matcher_config.scalable_candidates_per_bucket = vm["matcherScalableCandidates"].as<int>();
+    matcher_config.scalable_global_heap = vm["matcherScalableGlobalHeap"].as<bool>();
+    matcher_config.scalable_global_candidates = vm["matcherScalableGlobalCandidates"].as<int>();
+    matcher_config.scalable_global_heap_fraction = vm["matcherScalableGlobalFraction"].as<float>();
+    matcher_config.scalable_bilateral_heap = vm["matcherScalableBilateralHeap"].as<bool>();
+    matcher_config.scalable_task_candidates = vm["matcherScalableTaskCandidates"].as<int>();
+    matcher_config.scalable_zone_radius = vm["matcherScalableZoneRadius"].as<int>();
+    matcher_config.scalable_zone_capacity = vm["matcherScalableZoneCapacity"].as<bool>();
+    matcher_config.scalable_zone_capacity_limit = vm["matcherScalableZoneCapacityLimit"].as<int>();
+    matcher_config.scalable_zone_capacity_weight = vm["matcherScalableZoneCapacityWeight"].as<float>();
+    matcher_config.scalable_zone_capacity_radius = vm["matcherScalableZoneCapacityRadius"].as<int>();
     matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();
     matcher_config.reassign_keep_bias = heap_config.reassign_keep_bias;
     matcher_config.reassign_min_dist = heap_config.reassign_min_dist;
