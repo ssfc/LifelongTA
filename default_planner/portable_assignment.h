@@ -24,6 +24,11 @@ struct PortableTaskMatcherConfig {
     // Zero preserves the original traffic matcher, which only scores the
     // agent-to-pickup path with traffic.
     float traffic_service_weight = 0.0F;
+    // Use a bounded spatial matcher instead of the O(agents * tasks) large
+    // instance fallback.  Disabled by default to preserve existing results.
+    bool scalable_mode = false;
+    int scalable_bucket_size = 8;
+    int scalable_candidates_per_bucket = 2;
 };
 
 struct PortableCappedHungarianConfig {

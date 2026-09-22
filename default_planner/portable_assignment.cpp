@@ -288,6 +288,105 @@ std::vector<std::pair<int, int>> top_k_match(
     return result;
 }
 
+// A bounded alternative to top_k_match for very large teams.  The original
+// fallback first scans every task for every agent, which consumes the complete
+// online scheduling budget before emitting a single assignment on SL-8000.
+// Here tasks are indexed by small map cells.  An agent examines only the
+// closest nonempty cells, and each cell advances a cursor as tasks are taken.
+// This intentionally trades exact global matching for predictable progress.
+std::vector<std::pair<int, int>> spatial_bounded_match(
+    SharedEnvironment* env, const std::vector<AgentInfo>& agents,
+    const std::vector<TaskInfo>& tasks, const PortableTaskMatcherConfig& config,
+    const std::vector<Double4>& background_flow, std::chrono::steady_clock::time_point deadline)
+{
+    const int side = std::max(1, config.scalable_bucket_size);
+    const int bucket_cols = std::max(1, (env->cols + side - 1) / side);
+    const int bucket_rows = std::max(1, (env->rows + side - 1) / side);
+    const auto bucket_of = [&](int location) {
+        const int row = location / env->cols;
+        const int col = location % env->cols;
+        return (row / side) * bucket_cols + (col / side);
+    };
+
+    std::vector<std::vector<int>> buckets(bucket_rows * bucket_cols);
+    for (int task_index = 0; task_index < static_cast<int>(tasks.size()); ++task_index) {
+        buckets[bucket_of(tasks[task_index].pickup)].push_back(task_index);
+    }
+    std::vector<size_t> next_in_bucket(buckets.size(), 0);
+    std::vector<int> lengths(tasks.size(), -2);
+    std::vector<float> service_penalties(tasks.size(), -1.0F);
+    std::vector<std::pair<int, int>> result;
+    result.reserve(agents.size());
+    const int per_bucket = std::max(1, config.scalable_candidates_per_bucket);
+
+    for (const AgentInfo& agent : agents) {
+        if (std::chrono::steady_clock::now() >= deadline) break;
+        const int agent_row = agent.location / env->cols / side;
+        const int agent_col = agent.location % env->cols / side;
+        float best_score = kInvalidCost;
+        int best_bucket = -1;
+        int best_task = -1;
+
+        // The first ring that exposes any candidate is sufficient: farther
+        // rings cannot beat its cell-level Manhattan lower bound.  Looking at
+        // every cell on that ring prevents a fixed row-major bias.
+        const int max_ring = std::max(bucket_rows, bucket_cols);
+        for (int ring = 0; ring <= max_ring && best_task < 0; ++ring) {
+            for (int dr = -ring; dr <= ring; ++dr) {
+                for (int dc = -ring; dc <= ring; ++dc) {
+                    if (std::max(std::abs(dr), std::abs(dc)) != ring) continue;
+                    const int row = agent_row + dr;
+                    const int col = agent_col + dc;
+                    if (row < 0 || row >= bucket_rows || col < 0 || col >= bucket_cols) continue;
+                    const int bucket = row * bucket_cols + col;
+                    const auto& entries = buckets[bucket];
+                    const size_t first = next_in_bucket[bucket];
+                    for (size_t offset = 0; offset < static_cast<size_t>(per_bucket) &&
+                                            first + offset < entries.size(); ++offset) {
+                        const int task_index = entries[first + offset];
+                        if (lengths[task_index] == -2)
+                            lengths[task_index] = task_length(env, tasks[task_index]);
+                        if (lengths[task_index] < 0) continue;
+                        const int distance = get_h(env, agent.location, tasks[task_index].pickup);
+                        if (distance >= std::numeric_limits<int>::max() / 8) continue;
+                        float score = config.dist_weight * static_cast<float>(distance) +
+                                      static_cast<float>(lengths[task_index]);
+                        if (config.use_traffic_cost && background_flow.size() == env->map.size()) {
+                            float pickup_flow = 0.0F;
+                            for (int direction = 0; direction < 4; ++direction)
+                                pickup_flow += static_cast<float>(background_flow[tasks[task_index].pickup].d[direction]);
+                            if (service_penalties[task_index] < 0.0F)
+                                service_penalties[task_index] = task_service_congestion_proxy(
+                                    env, tasks[task_index], background_flow);
+                            score += std::max(0.0F, config.traffic_congestion_weight) * pickup_flow;
+                            score += std::max(0.0F, config.traffic_service_weight) *
+                                     service_penalties[task_index];
+                        }
+                        if (score < best_score) {
+                            best_score = score;
+                            best_bucket = bucket;
+                            best_task = task_index;
+                        }
+                    }
+                }
+            }
+        }
+        if (best_task >= 0) {
+            // Consume every earlier task in the selected cell as well: it was
+            // considered by this agent and keeping it would make later scans
+            // revisit the same entries indefinitely.
+            const auto& entries = buckets[best_bucket];
+            while (next_in_bucket[best_bucket] < entries.size() &&
+                   entries[next_in_bucket[best_bucket]] != best_task) {
+                ++next_in_bucket[best_bucket];
+            }
+            if (next_in_bucket[best_bucket] < entries.size()) ++next_in_bucket[best_bucket];
+            result.emplace_back(agent.id, tasks[best_task].id);
+        }
+    }
+    return result;
+}
+
 TaskInfo make_task_info(int id, const Task& task)
 {
     const int index = std::max(0, task.idx_next_loc);
@@ -397,8 +496,13 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
         }
     }
     if (matches.empty() && std::chrono::steady_clock::now() < deadline) {
-        matches = top_k_match(env, candidates, tasks, config.dist_weight, 1.0F,
-                              config.candidate_top_k, deadline);
+        if (config.scalable_mode) {
+            matches = spatial_bounded_match(env, candidates, tasks, config,
+                                            background_flow, deadline);
+        } else {
+            matches = top_k_match(env, candidates, tasks, config.dist_weight, 1.0F,
+                                  config.candidate_top_k, deadline);
+        }
     }
     if (matches.empty()) {
         // A scheduler timeout must not discard a still-valid unopened task.
