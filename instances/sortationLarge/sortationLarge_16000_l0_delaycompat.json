@@ -1,0 +1,18 @@
+{
+  "mapFile": "maps/sortation_large.map",
+  "agentFile": "agents/sortationLarge_16000.agents",
+  "teamSize": 16000,
+  "taskFile": "tasks/output_sortation1.tasks",
+  "numTasksReveal": 1.5,
+  "version": "2024 LoRR",
+  "delayConfig": {
+    "seed": 0,
+    "minDelay": 1,
+    "maxDelay": 1,
+    "eventModel": "bernoulli",
+    "pDelay": 0,
+    "durationModel": "uniform",
+    "gaussMeanRatio": 0.5,
+    "gaussStdRatio": 0
+  }
+}

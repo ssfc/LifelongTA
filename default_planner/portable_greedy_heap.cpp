@@ -32,11 +32,132 @@ float PortableGreedyHeapScheduler::score(SharedEnvironment* env, int agent_locat
 {
     if (task.locations.empty()) return std::numeric_limits<float>::infinity();
     int distance = get_h(env, agent_location, task.start_location);
-    int length = 0;
-    for (size_t i = 1; i < task.locations.size(); ++i) {
-        length += get_h(env, task.locations[i - 1], task.locations[i]);
+    if (task.cached_remaining_length < 0) {
+        int length = 0;
+        for (size_t i = 1; i < task.locations.size(); ++i) {
+            length += get_h(env, task.locations[i - 1], task.locations[i]);
+        }
+        task.cached_remaining_length = length;
     }
-    return dist_weight * static_cast<float>(distance) + static_cast<float>(length);
+    float value = dist_weight * static_cast<float>(distance) +
+                  static_cast<float>(task.cached_remaining_length);
+    if (flow_penalty_weight_ > 0.0f && flow_zone_rows_ > 0 && flow_zone_cols_ > 0) {
+        if (task.cached_flow_penalty < 0.0f) {
+            float total_penalty = 0.0f;
+            int segments = 0;
+            for (size_t i = 1; i < task.locations.size(); ++i) {
+                total_penalty += zone_path_penalty(zone_of_location(env, task.locations[i - 1]),
+                                                   zone_of_location(env, task.locations[i]));
+                ++segments;
+            }
+            task.cached_flow_penalty = segments > 0 ? total_penalty / static_cast<float>(segments) : 0.0f;
+        }
+        value += flow_penalty_weight_ * task.cached_flow_penalty;
+    }
+    return value;
+}
+
+int PortableGreedyHeapScheduler::zone_of_location(SharedEnvironment* env, int location) const
+{
+    if (flow_zone_rows_ <= 0 || flow_zone_cols_ <= 0 || location < 0 ||
+        env->rows <= 0 || env->cols <= 0) {
+        return -1;
+    }
+    const int row = location / env->cols;
+    const int col = location % env->cols;
+    if (row < 0 || row >= env->rows || col < 0 || col >= env->cols) return -1;
+    const int zone_row = std::min(flow_zone_rows_ - 1, row * flow_zone_rows_ / env->rows);
+    const int zone_col = std::min(flow_zone_cols_ - 1, col * flow_zone_cols_ / env->cols);
+    return zone_row * flow_zone_cols_ + zone_col;
+}
+
+void PortableGreedyHeapScheduler::add_zone_path(int from_zone, int to_zone, float weight)
+{
+    if (from_zone < 0 || to_zone < 0 || from_zone >= static_cast<int>(opened_zone_flow_.size()) ||
+        to_zone >= static_cast<int>(opened_zone_flow_.size()) || weight <= 0.0f) {
+        return;
+    }
+    int row = from_zone / flow_zone_cols_;
+    int col = from_zone % flow_zone_cols_;
+    const int target_row = to_zone / flow_zone_cols_;
+    const int target_col = to_zone % flow_zone_cols_;
+    while (row != target_row) {
+        const int direction = target_row > row ? 1 : 3;  // south or north
+        opened_zone_flow_[row * flow_zone_cols_ + col][direction] += weight;
+        row += target_row > row ? 1 : -1;
+    }
+    while (col != target_col) {
+        const int direction = target_col > col ? 0 : 2;  // east or west
+        opened_zone_flow_[row * flow_zone_cols_ + col][direction] += weight;
+        col += target_col > col ? 1 : -1;
+    }
+}
+
+float PortableGreedyHeapScheduler::zone_path_penalty(int from_zone, int to_zone) const
+{
+    if (from_zone < 0 || to_zone < 0 || from_zone >= static_cast<int>(opened_zone_flow_.size()) ||
+        to_zone >= static_cast<int>(opened_zone_flow_.size())) {
+        return 0.0f;
+    }
+    int row = from_zone / flow_zone_cols_;
+    int col = from_zone % flow_zone_cols_;
+    const int target_row = to_zone / flow_zone_cols_;
+    const int target_col = to_zone % flow_zone_cols_;
+    float penalty = 0.0f;
+    int steps = 0;
+    auto add_step = [&](int direction, int next_row, int next_col) {
+        const int zone = row * flow_zone_cols_ + col;
+        const int next_zone = next_row * flow_zone_cols_ + next_col;
+        const int opposite = (direction + 2) % 4;
+        const float local_load = opened_zone_flow_[zone][direction];
+        const float opposing_load = opened_zone_flow_[next_zone][opposite];
+        const float arrival_load = opened_zone_flow_[next_zone][0] + opened_zone_flow_[next_zone][1] +
+                                   opened_zone_flow_[next_zone][2] + opened_zone_flow_[next_zone][3];
+        penalty += local_load + opposing_load + 0.25f * arrival_load;
+        ++steps;
+        row = next_row;
+        col = next_col;
+    };
+    while (row != target_row) {
+        const int direction = target_row > row ? 1 : 3;
+        add_step(direction, row + (target_row > row ? 1 : -1), col);
+    }
+    while (col != target_col) {
+        const int direction = target_col > col ? 0 : 2;
+        add_step(direction, row, col + (target_col > col ? 1 : -1));
+    }
+    return steps > 0 ? penalty / static_cast<float>(steps) : 0.0f;
+}
+
+void PortableGreedyHeapScheduler::build_opened_zone_flow(
+    SharedEnvironment* env, const PortableGreedyHeapConfig& config)
+{
+    flow_zone_rows_ = std::max(0, config.flow_zone_rows);
+    flow_zone_cols_ = std::max(0, config.flow_zone_cols);
+    flow_penalty_weight_ = std::max(0.0f, config.flow_penalty_weight);
+    opened_zone_flow_.clear();
+    if (flow_penalty_weight_ <= 0.0f || flow_zone_rows_ <= 0 || flow_zone_cols_ <= 0 ||
+        env->rows <= 0 || env->cols <= 0) {
+        flow_zone_rows_ = 0;
+        flow_zone_cols_ = 0;
+        flow_penalty_weight_ = 0.0f;
+        return;
+    }
+    opened_zone_flow_.assign(static_cast<size_t>(flow_zone_rows_ * flow_zone_cols_), {});
+    for (const auto& entry : env->task_pool) {
+        const Task& task = entry.second;
+        if (task.idx_next_loc <= 0 || task.agent_assigned < 0 ||
+            task.agent_assigned >= static_cast<int>(env->curr_states.size()) ||
+            task.idx_next_loc >= static_cast<int>(task.locations.size())) {
+            continue;
+        }
+        int previous = env->curr_states.at(task.agent_assigned).location;
+        for (size_t i = static_cast<size_t>(task.idx_next_loc); i < task.locations.size(); ++i) {
+            const int next = task.locations[i];
+            add_zone_path(zone_of_location(env, previous), zone_of_location(env, next), 1.0f);
+            previous = next;
+        }
+    }
 }
 
 void PortableGreedyHeapScheduler::rebuild_candidates(
@@ -243,7 +364,10 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
 
     // Preserve active and stable assignments, then cap only newly assigned
     // agents. This mirrors the contest GreedyHeap throttling semantics.
-    const float max_assign_ratio = std::clamp(config.max_assign_ratio, 0.0f, 1.0f);
+    const float configured_ratio = env->curr_timestep < config.warmup_steps
+        ? config.warmup_assign_ratio
+        : config.max_assign_ratio;
+    const float max_assign_ratio = std::clamp(configured_ratio, 0.0f, 1.0f);
     if (max_assign_ratio < 0.999f) {
         const int max_total = std::max(1, static_cast<int>(max_assign_ratio * agent_count));
         const int already_assigned = static_cast<int>(std::count_if(
@@ -259,6 +383,14 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
     const auto rebuild_deadline = std::min(deadline, start + std::chrono::milliseconds(rebuild_ms));
     const auto lns_deadline = deadline - std::chrono::milliseconds(std::min(lns_ms, std::max(0, time_limit_ms)));
 
+    build_opened_zone_flow(env, config);
+    if (flow_penalty_weight_ > 0.0f) {
+        // Candidate scores depend on the open-task flow snapshot at this timestep.
+        candidates_.clear();
+        candidate_agent_ids_.clear();
+        candidate_agent_locations_.clear();
+        candidate_task_ids_.clear();
+    }
     rebuild_candidates(env, free_agents, free_tasks, config.dist_weight, config.sort_k, rebuild_deadline);
     std::vector<Match> matches = lazy_match(free_agents, free_tasks, lns_deadline);
 

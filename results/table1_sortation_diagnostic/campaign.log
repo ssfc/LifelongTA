@@ -6,3 +6,8 @@
 [2026-09-22 10:59:05] flow_traffic sortation-large n=16000
 [2026-09-22 11:12:35] greedy_heap sortation-large n=16000
 [2026-09-22 11:25:39] flow_traffic sortation-large n=20000
+[2026-09-22 11:38:41] greedy_heap sortation-large n=20000
+[2026-09-22 11:51:10] greedy_heap_throttle60 sortation-large n=20000
+
+========== Sortation Large diagnostic campaign complete ==========
+Completed at 2026-09-22 12:03:36 CST

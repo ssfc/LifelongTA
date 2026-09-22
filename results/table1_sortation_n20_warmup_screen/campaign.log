@@ -1,0 +1,8 @@
+bash: line 1: scripts/run_table1_sortation_n20_warmup_screen.sh: Permission denied
+[2026-09-22 12:26:46] throttle60 sortation-large n=20000
+[2026-09-22 12:29:53] warmup25 sortation-large n=20000
+[2026-09-22 12:32:59] warmup75 sortation-large n=20000
+[2026-09-22 12:36:06] warmup150 sortation-large n=20000
+
+========== Sortation Large 20k warm-up screen complete ==========
+Completed at 2026-09-22 12:39:12 CST

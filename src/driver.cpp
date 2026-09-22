@@ -57,12 +57,17 @@ int main(int argc, char **argv)
         ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy, 6- greedy heap, 7- contest task matcher, 8- capped Hungarian")
         ("heapDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for greedy heap")
         ("heapMaxAssign", po::value<float>()->default_value(1.0f), "maximum fraction of agents carrying a task in greedy heap")
+        ("heapWarmupSteps", po::value<int>()->default_value(0), "initial timesteps using the GreedyHeap warm-up assignment ratio")
+        ("heapWarmupAssign", po::value<float>()->default_value(1.0f), "GreedyHeap assignment ratio used during warm-up")
         ("heapReassign", po::value<bool>()->default_value(true), "enable stable unopened-task reassignment for greedy heap")
         ("heapKeepBias", po::value<float>()->default_value(6.0f), "old-pair bias during greedy-heap reassignment")
         ("heapProtectDist", po::value<int>()->default_value(10), "protect assignments this close to pickup")
         ("heapRebuildPct", po::value<int>()->default_value(45), "greedy-heap candidate rebuild budget percentage")
         ("heapLnsPct", po::value<int>()->default_value(10), "greedy-heap swap-refinement budget percentage")
         ("heapSortK", po::value<int>()->default_value(500), "sorted candidates retained per agent")
+        ("heapFlowZoneRows", po::value<int>()->default_value(0), "coarse flow grid rows for GreedyHeap (0 disables)")
+        ("heapFlowZoneCols", po::value<int>()->default_value(0), "coarse flow grid columns for GreedyHeap (0 disables)")
+        ("heapFlowPenaltyWeight", po::value<float>()->default_value(0.0f), "opened-task coarse-flow penalty in GreedyHeap")
         ("matcherDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for contest task matcher")
         ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
         ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
@@ -172,12 +177,17 @@ int main(int argc, char **argv)
     DefaultPlanner::PortableGreedyHeapConfig heap_config;
     heap_config.dist_weight = vm["heapDistWeight"].as<float>();
     heap_config.max_assign_ratio = vm["heapMaxAssign"].as<float>();
+    heap_config.warmup_steps = vm["heapWarmupSteps"].as<int>();
+    heap_config.warmup_assign_ratio = vm["heapWarmupAssign"].as<float>();
     heap_config.reassign_enabled = vm["heapReassign"].as<bool>();
     heap_config.reassign_keep_bias = vm["heapKeepBias"].as<float>();
     heap_config.reassign_min_dist = vm["heapProtectDist"].as<int>();
     heap_config.rebuild_pct = vm["heapRebuildPct"].as<int>();
     heap_config.lns_pct = vm["heapLnsPct"].as<int>();
     heap_config.sort_k = vm["heapSortK"].as<int>();
+    heap_config.flow_zone_rows = vm["heapFlowZoneRows"].as<int>();
+    heap_config.flow_zone_cols = vm["heapFlowZoneCols"].as<int>();
+    heap_config.flow_penalty_weight = vm["heapFlowPenaltyWeight"].as<float>();
     planner->scheduler->set_heap_config(heap_config);
     DefaultPlanner::PortableTaskMatcherConfig matcher_config;
     matcher_config.dist_weight = vm["matcherDistWeight"].as<float>();
