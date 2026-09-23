@@ -84,6 +84,10 @@ int main(int argc, char **argv)
         ("matcherScalableZoneCapacityLimit", po::value<int>()->default_value(8), "free predicted pickup assignments per spatial zone")
         ("matcherScalableZoneCapacityWeight", po::value<float>()->default_value(20.0f), "quadratic overflow penalty for scalable pickup-zone assignments")
         ("matcherScalableZoneCapacityRadius", po::value<int>()->default_value(1), "bucket rings compared by zone-capacity spatial matcher")
+        ("matcherFutureFlow", po::value<bool>()->default_value(false), "penalize TaskMatcher delivery legs using opened-task coarse future flow")
+        ("matcherFutureFlowZoneRows", po::value<int>()->default_value(20), "coarse future-flow grid rows for TaskMatcher")
+        ("matcherFutureFlowZoneCols", po::value<int>()->default_value(10), "coarse future-flow grid columns for TaskMatcher")
+        ("matcherFutureFlowWeight", po::value<float>()->default_value(1.0f), "opened-task coarse future-flow penalty in TaskMatcher")
         ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
         ("hungarianMaxAgents", po::value<int>()->default_value(256), "capped Hungarian candidate-agent limit")
         ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
@@ -214,6 +218,10 @@ int main(int argc, char **argv)
     matcher_config.scalable_zone_capacity_limit = vm["matcherScalableZoneCapacityLimit"].as<int>();
     matcher_config.scalable_zone_capacity_weight = vm["matcherScalableZoneCapacityWeight"].as<float>();
     matcher_config.scalable_zone_capacity_radius = vm["matcherScalableZoneCapacityRadius"].as<int>();
+    matcher_config.future_flow_enabled = vm["matcherFutureFlow"].as<bool>();
+    matcher_config.future_flow_zone_rows = vm["matcherFutureFlowZoneRows"].as<int>();
+    matcher_config.future_flow_zone_cols = vm["matcherFutureFlowZoneCols"].as<int>();
+    matcher_config.future_flow_penalty_weight = vm["matcherFutureFlowWeight"].as<float>();
     matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();
     matcher_config.reassign_keep_bias = heap_config.reassign_keep_bias;
     matcher_config.reassign_min_dist = heap_config.reassign_min_dist;

@@ -49,6 +49,13 @@ struct PortableTaskMatcherConfig {
     int scalable_zone_capacity_limit = 8;
     float scalable_zone_capacity_weight = 20.0F;
     int scalable_zone_capacity_radius = 1;
+    // Coarse future-flow from already opened tasks' remaining service legs.
+    // This is the assignment-only signal validated by the Sortation Large
+    // GreedyHeap campaign; it is off by default.
+    bool future_flow_enabled = false;
+    int future_flow_zone_rows = 20;
+    int future_flow_zone_cols = 10;
+    float future_flow_penalty_weight = 1.0F;
 };
 
 struct PortableCappedHungarianConfig {

@@ -3,6 +3,7 @@
 #include "heuristics.h"
 
 #include <algorithm>
+#include <array>
 #include <chrono>
 #include <cmath>
 #include <limits>
@@ -24,6 +25,118 @@ struct TaskInfo {
     int id;
     int pickup;
     std::vector<int> locations;
+};
+
+// Coarse future-flow is intentionally an assignment-side estimate: it looks
+// at service legs already committed in the task pool, without changing MAPF
+// routes or reserving any cells.  It matches the successful Sortation Large
+// GreedyHeap experiment, but is reusable by TaskMatcher candidate scoring.
+class OpenedTaskZoneFlow {
+public:
+    OpenedTaskZoneFlow(SharedEnvironment* env, const PortableTaskMatcherConfig& config)
+        : env_(env), rows_(std::max(0, config.future_flow_zone_rows)),
+          cols_(std::max(0, config.future_flow_zone_cols)),
+          weight_(std::max(0.0F, config.future_flow_penalty_weight))
+    {
+        if (!config.future_flow_enabled || weight_ <= 0.0F || rows_ <= 0 || cols_ <= 0 ||
+            env_ == nullptr || env_->rows <= 0 || env_->cols <= 0) {
+            rows_ = cols_ = 0;
+            weight_ = 0.0F;
+            return;
+        }
+        flow_.assign(static_cast<size_t>(rows_ * cols_), {});
+        for (const auto& entry : env_->task_pool) {
+            const Task& task = entry.second;
+            if (task.idx_next_loc <= 0 || task.agent_assigned < 0 ||
+                task.agent_assigned >= static_cast<int>(env_->curr_states.size()) ||
+                task.idx_next_loc >= static_cast<int>(task.locations.size())) continue;
+            int previous = env_->curr_states.at(task.agent_assigned).location;
+            for (size_t i = static_cast<size_t>(task.idx_next_loc); i < task.locations.size(); ++i) {
+                const int next = task.locations[i];
+                add_path(zone_of(previous), zone_of(next));
+                previous = next;
+            }
+        }
+    }
+
+    bool enabled() const { return weight_ > 0.0F; }
+
+    float task_penalty(const TaskInfo& task) const
+    {
+        if (!enabled() || task.locations.size() < 2) return 0.0F;
+        float total = 0.0F;
+        int segments = 0;
+        for (size_t i = 1; i < task.locations.size(); ++i) {
+            total += path_penalty(zone_of(task.locations[i - 1]), zone_of(task.locations[i]));
+            ++segments;
+        }
+        return segments > 0 ? weight_ * total / static_cast<float>(segments) : 0.0F;
+    }
+
+private:
+    int zone_of(int location) const
+    {
+        if (location < 0 || rows_ <= 0 || cols_ <= 0) return -1;
+        const int row = location / env_->cols;
+        const int col = location % env_->cols;
+        if (row < 0 || row >= env_->rows || col < 0 || col >= env_->cols) return -1;
+        return std::min(rows_ - 1, row * rows_ / env_->rows) * cols_ +
+               std::min(cols_ - 1, col * cols_ / env_->cols);
+    }
+
+    void add_path(int from, int to)
+    {
+        if (from < 0 || to < 0 || from >= static_cast<int>(flow_.size()) ||
+            to >= static_cast<int>(flow_.size())) return;
+        int row = from / cols_, col = from % cols_;
+        const int target_row = to / cols_, target_col = to % cols_;
+        while (row != target_row) {
+            const int direction = target_row > row ? 1 : 3;
+            flow_[row * cols_ + col][direction] += 1.0F;
+            row += target_row > row ? 1 : -1;
+        }
+        while (col != target_col) {
+            const int direction = target_col > col ? 0 : 2;
+            flow_[row * cols_ + col][direction] += 1.0F;
+            col += target_col > col ? 1 : -1;
+        }
+    }
+
+    float path_penalty(int from, int to) const
+    {
+        if (from < 0 || to < 0 || from >= static_cast<int>(flow_.size()) ||
+            to >= static_cast<int>(flow_.size())) return 0.0F;
+        int row = from / cols_, col = from % cols_;
+        const int target_row = to / cols_, target_col = to % cols_;
+        float total = 0.0F;
+        int steps = 0;
+        const auto add_step = [&](int direction, int next_row, int next_col) {
+            const int zone = row * cols_ + col;
+            const int next_zone = next_row * cols_ + next_col;
+            const int opposite = (direction + 2) % 4;
+            const float arrival = flow_[next_zone][0] + flow_[next_zone][1] +
+                                  flow_[next_zone][2] + flow_[next_zone][3];
+            total += flow_[zone][direction] + flow_[next_zone][opposite] + 0.25F * arrival;
+            ++steps;
+            row = next_row;
+            col = next_col;
+        };
+        while (row != target_row) {
+            const int direction = target_row > row ? 1 : 3;
+            add_step(direction, row + (target_row > row ? 1 : -1), col);
+        }
+        while (col != target_col) {
+            const int direction = target_col > col ? 0 : 2;
+            add_step(direction, row, col + (target_col > col ? 1 : -1));
+        }
+        return steps > 0 ? total / static_cast<float>(steps) : 0.0F;
+    }
+
+    SharedEnvironment* env_;
+    int rows_;
+    int cols_;
+    float weight_;
+    std::vector<std::array<float, 4>> flow_;
 };
 
 float task_score(SharedEnvironment* env, int agent_location, const TaskInfo& task,
@@ -317,6 +430,8 @@ std::vector<std::pair<int, int>> spatial_bounded_match(
     std::vector<int> predicted_pickup_load(buckets.size(), 0);
     std::vector<int> lengths(tasks.size(), -2);
     std::vector<float> service_penalties(tasks.size(), -1.0F);
+    OpenedTaskZoneFlow future_flow(env, config);
+    std::vector<float> future_penalties(tasks.size(), -1.0F);
     std::vector<std::pair<int, int>> result;
     result.reserve(agents.size());
     const int per_bucket = std::max(1, config.scalable_candidates_per_bucket);
@@ -372,6 +487,11 @@ std::vector<std::pair<int, int>> spatial_bounded_match(
                             const int overflow = std::max(
                                 0, predicted_pickup_load[bucket] - capacity_limit + 1);
                             score += capacity_weight * static_cast<float>(overflow * overflow);
+                        }
+                        if (future_flow.enabled()) {
+                            if (future_penalties[task_index] < 0.0F)
+                                future_penalties[task_index] = future_flow.task_penalty(tasks[task_index]);
+                            score += future_penalties[task_index];
                         }
                         if (score < best_score) {
                             best_score = score;
