@@ -1,0 +1,71 @@
+{
+  "format": "lifelongta-metrics-v1",
+  "tasksRevealed": 2328,
+  "tasksCompleted": 1578,
+  "activeTasksAtEnd": 750,
+  "unassignedBacklogAtEnd": 258,
+  "taskLatency": {
+    "arrivalToAssignment": {
+      "count": 1578,
+      "mean": 7.947401774397972,
+      "p50": 1.0,
+      "p95": 48.0,
+      "p99": 118.0,
+      "max": 178.0
+    },
+    "arrivalToPickup": {
+      "count": 1578,
+      "mean": 30.512674271229404,
+      "p50": 15.0,
+      "p95": 110.0,
+      "p99": 168.0,
+      "max": 217.0
+    },
+    "arrivalToCompletion": {
+      "count": 1578,
+      "mean": 74.21546261089988,
+      "p50": 64.0,
+      "p95": 169.0,
+      "p99": 225.0,
+      "max": 245.0
+    }
+  },
+  "matchingQuality": {
+    "pickupDistanceAtAssignment": {
+      "count": 1578,
+      "mean": 8.327629911280102,
+      "p50": 7.0,
+      "p95": 19.0,
+      "p99": 24.0,
+      "max": 29.0
+    }
+  },
+  "movement": {
+    "emptyDistance": 35117,
+    "loadedDistance": 66078,
+    "completedTaskServiceShortestDistance": 42241,
+    "loadedDetourRatio": {
+      "count": 1578,
+      "mean": 1.4393740596104103,
+      "p50": 1.3018867924528301,
+      "p95": 2.3076923076923075,
+      "p99": 3.3333333333333335,
+      "max": 5.0
+    },
+    "productiveMovementRatio": 0.4174218093779337
+  },
+  "agentStateSteps": {
+    "idle": 2070,
+    "empty": 46543,
+    "loaded": 76387,
+    "activeWait": 21735
+  },
+  "plannerSeconds": {
+    "count": 250,
+    "mean": 0.9169199743999995,
+    "p50": 0.9168783,
+    "p95": 0.9177151,
+    "p99": 0.9179439,
+    "max": 0.9199888
+  }
+}

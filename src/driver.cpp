@@ -71,6 +71,7 @@ int main(int argc, char **argv)
         ("matcherTrafficTopK", po::value<int>()->default_value(50), "static nearest pickups rescored with traffic-aware Dijkstra per agent")
         ("matcherTrafficCongestionWeight", po::value<float>()->default_value(1.0f), "multiplier for TaskMatcher traffic congestion penalties")
         ("matcherTrafficServiceWeight", po::value<float>()->default_value(0.0f), "weight of delivery-leg congestion proxy in TaskMatcher traffic cost")
+        ("matcherTrafficServiceRouteWeight", po::value<float>()->default_value(0.0f), "weight of shortest-route delivery congestion in TaskMatcher traffic cost")
         ("matcherScalable", po::value<bool>()->default_value(false), "use bounded spatial TaskMatcher fallback for large instances")
         ("matcherScalableBucket", po::value<int>()->default_value(8), "grid bucket side length for bounded spatial TaskMatcher")
         ("matcherScalableCandidates", po::value<int>()->default_value(2), "tasks inspected per spatial bucket in bounded TaskMatcher")
@@ -205,6 +206,7 @@ int main(int argc, char **argv)
     matcher_config.traffic_top_k = vm["matcherTrafficTopK"].as<int>();
     matcher_config.traffic_congestion_weight = vm["matcherTrafficCongestionWeight"].as<float>();
     matcher_config.traffic_service_weight = vm["matcherTrafficServiceWeight"].as<float>();
+    matcher_config.traffic_service_route_weight = vm["matcherTrafficServiceRouteWeight"].as<float>();
     matcher_config.scalable_mode = vm["matcherScalable"].as<bool>();
     matcher_config.scalable_bucket_size = vm["matcherScalableBucket"].as<int>();
     matcher_config.scalable_candidates_per_bucket = vm["matcherScalableCandidates"].as<int>();

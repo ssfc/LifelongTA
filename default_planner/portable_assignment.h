@@ -24,6 +24,9 @@ struct PortableTaskMatcherConfig {
     // Zero preserves the original traffic matcher, which only scores the
     // agent-to-pickup path with traffic.
     float traffic_service_weight = 0.0F;
+    // Congestion sampled along a shortest pickup-to-delivery route.
+    // Zero preserves the original matcher.
+    float traffic_service_route_weight = 0.0F;
     // Use a bounded spatial matcher instead of the O(agents * tasks) large
     // instance fallback.  Disabled by default to preserve existing results.
     bool scalable_mode = false;

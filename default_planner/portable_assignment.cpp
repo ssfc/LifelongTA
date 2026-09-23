@@ -202,6 +202,46 @@ float task_service_congestion_proxy(SharedEnvironment* env, const TaskInfo& task
     return penalty;
 }
 
+float task_service_route_congestion(
+    SharedEnvironment* env, const TaskInfo& task,
+    const std::vector<Double4>& background_flow,
+    std::unordered_map<int, std::vector<float>>& weighted_distances,
+    std::chrono::steady_clock::time_point deadline)
+{
+    if (background_flow.size() != env->map.size() || task.locations.size() < 2) return 0.0F;
+    float penalty = 0.0F;
+    for (size_t i = 1; i < task.locations.size(); ++i) {
+        const int origin = task.locations[i - 1];
+        const int goal = task.locations[i];
+        auto entry = weighted_distances.find(origin);
+        if (entry == weighted_distances.end()) {
+            std::vector<float> distances(env->map.size(), std::numeric_limits<float>::infinity());
+            std::priority_queue<std::pair<float, int>, std::vector<std::pair<float, int>>,
+                                std::greater<std::pair<float, int>>> open;
+            distances[origin] = 0.0F;
+            open.emplace(0.0F, origin);
+            while (!open.empty() && std::chrono::steady_clock::now() < deadline) {
+                const auto [current_cost, location] = open.top();
+                open.pop();
+                if (current_cost > distances[location]) continue;
+                for (const int next : global_neighbors.at(location)) {
+                    const float candidate = current_cost + flow_traffic_edge_cost(
+                        env, background_flow, location, next, 1.0F);
+                    if (candidate < distances[next]) {
+                        distances[next] = candidate;
+                        open.emplace(candidate, next);
+                    }
+                }
+            }
+            entry = weighted_distances.emplace(origin, std::move(distances)).first;
+        }
+        const float weighted = entry->second[goal];
+        if (!std::isfinite(weighted)) continue;
+        penalty += std::max(0.0F, weighted - static_cast<float>(get_h(env, origin, goal)));
+    }
+    return penalty;
+}
+
 std::vector<std::vector<float>> traffic_cost_matrix(
     SharedEnvironment* env, const std::vector<AgentInfo>& agents,
     const std::vector<TaskInfo>& tasks, const PortableTaskMatcherConfig& config,
@@ -212,6 +252,8 @@ std::vector<std::vector<float>> traffic_cost_matrix(
     const int keep = std::min(std::max(1, config.traffic_top_k), static_cast<int>(tasks.size()));
     std::vector<int> lengths(tasks.size(), -2);
     std::vector<float> service_penalties(tasks.size(), -1.0F);
+    std::vector<float> service_route_penalties(tasks.size(), -1.0F);
+    std::unordered_map<int, std::vector<float>> service_route_distances;
 
     for (int i = 0; i < static_cast<int>(agents.size()) &&
                     std::chrono::steady_clock::now() < deadline; ++i) {
@@ -249,10 +291,17 @@ std::vector<std::vector<float>> traffic_cost_matrix(
                         if (service_penalties[task_index] < 0.0F)
                             service_penalties[task_index] = task_service_congestion_proxy(
                                 env, tasks[task_index], background_flow);
+                        if (config.traffic_service_route_weight > 0.0F &&
+                            service_route_penalties[task_index] < 0.0F)
+                            service_route_penalties[task_index] = task_service_route_congestion(
+                                env, tasks[task_index], background_flow,
+                                service_route_distances, deadline);
                         cost[i][task_index] = config.dist_weight * static_cast<float>(current_cost) +
                                               static_cast<float>(lengths[task_index]) +
                                               std::max(0.0F, config.traffic_service_weight) *
-                                                  service_penalties[task_index];
+                                                  service_penalties[task_index] +
+                                              std::max(0.0F, config.traffic_service_route_weight) *
+                                                  std::max(0.0F, service_route_penalties[task_index]);
                     }
                 }
                 task_indices_at_location.erase(goal);
