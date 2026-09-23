@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <chrono>
 #include <cmath>
+#include <iostream>
 #include <limits>
 #include <queue>
 #include <random>
@@ -27,15 +28,113 @@ int remaining_task_length(SharedEnvironment* env, const Task& task)
 
 }  // namespace
 
+void PortableGreedyHeapScheduler::prepare_fair_landmarks(SharedEnvironment* env)
+{
+    if (fair_landmark_map_size_ == env->map.size() && !fair_landmarks_.empty()) return;
+    fair_landmarks_.clear();
+    fair_landmark_map_size_ = env->map.size();
+    if (env->rows <= 0 || env->cols <= 0 || env->map.empty()) return;
+
+    for (int gr = 0; gr < 3; ++gr) {
+        for (int gc = 0; gc < 4; ++gc) {
+            const int target_row = gr * (env->rows - 1) / 2;
+            const int target_col = gc * (env->cols - 1) / 3;
+            int anchor = -1;
+            int best = std::numeric_limits<int>::max();
+            for (int loc = 0; loc < static_cast<int>(env->map.size()); ++loc) {
+                if (env->map[loc] != 0) continue;
+                const int distance = std::abs(loc / env->cols - target_row) +
+                                     std::abs(loc % env->cols - target_col);
+                if (distance < best) {
+                    best = distance;
+                    anchor = loc;
+                }
+            }
+            if (anchor < 0) continue;
+
+            std::vector<int> distance(env->map.size(), MAX_TIMESTEP);
+            std::queue<int> open;
+            distance[anchor] = 0;
+            open.push(anchor);
+            while (!open.empty()) {
+                const int location = open.front();
+                open.pop();
+                for (const int next : global_neighbors[location]) {
+                    if (distance[next] != MAX_TIMESTEP) continue;
+                    distance[next] = distance[location] + 1;
+                    open.push(next);
+                }
+            }
+            fair_landmarks_.push_back(std::move(distance));
+        }
+    }
+}
+
+void PortableGreedyHeapScheduler::prepare_exact_pickup_cache(
+    SharedEnvironment* env, const std::vector<int>& pickup_sites)
+{
+    exact_pickup_distances_.clear();
+    exact_pickup_index_.clear();
+    if (pickup_sites.empty() || env->map.empty() ||
+        pickup_sites.size() * env->map.size() * sizeof(int) > 256ULL * 1024 * 1024) {
+        std::cerr << "heap_exact_pickup_cache disabled: no sites or memory limit exceeded\n";
+        return;
+    }
+
+    std::vector<int> open;
+    open.reserve(env->map.size());
+    for (const int site : pickup_sites) {
+        if (site < 0 || site >= static_cast<int>(env->map.size()) || env->map[site] != 0 ||
+            exact_pickup_index_.count(site) != 0) continue;
+        auto& distance = exact_pickup_distances_.emplace_back(env->map.size(), MAX_TIMESTEP);
+        exact_pickup_index_[site] = static_cast<int>(exact_pickup_distances_.size()) - 1;
+        open.clear();
+        open.push_back(site);
+        distance[site] = 0;
+        for (size_t head = 0; head < open.size(); ++head) {
+            const int location = open[head];
+            for (const int next : global_neighbors[location]) {
+                if (distance[next] != MAX_TIMESTEP) continue;
+                distance[next] = distance[location] + 1;
+                open.push_back(next);
+            }
+        }
+    }
+    std::cerr << "heap_exact_pickup_cache sites=" << exact_pickup_distances_.size()
+              << " bytes=" << exact_pickup_distances_.size() * env->map.size() * sizeof(int) << '\n';
+}
+
+int PortableGreedyHeapScheduler::exact_distance(SharedEnvironment* env, int first, int second) const
+{
+    if (exact_pickup_cache_enabled_) {
+        const auto first_it = exact_pickup_index_.find(first);
+        if (first_it != exact_pickup_index_.end()) return exact_pickup_distances_[first_it->second][second];
+        const auto second_it = exact_pickup_index_.find(second);
+        if (second_it != exact_pickup_index_.end()) return exact_pickup_distances_[second_it->second][first];
+    }
+    return get_h(env, first, second);
+}
+
+int PortableGreedyHeapScheduler::fair_distance(SharedEnvironment* env, int first, int second) const
+{
+    int bound = std::abs(first / env->cols - second / env->cols) +
+                std::abs(first % env->cols - second % env->cols);
+    for (const auto& distance : fair_landmarks_) {
+        if (distance[first] == MAX_TIMESTEP || distance[second] == MAX_TIMESTEP) continue;
+        bound = std::max(bound, std::abs(distance[first] - distance[second]));
+    }
+    return bound;
+}
+
 float PortableGreedyHeapScheduler::score(SharedEnvironment* env, int agent_location,
                                          const TaskInfo& task, float dist_weight) const
 {
     if (task.locations.empty()) return std::numeric_limits<float>::infinity();
-    int distance = get_h(env, agent_location, task.start_location);
+    int distance = exact_distance(env, agent_location, task.start_location);
     if (task.cached_remaining_length < 0) {
         int length = 0;
         for (size_t i = 1; i < task.locations.size(); ++i) {
-            length += get_h(env, task.locations[i - 1], task.locations[i]);
+            length += exact_distance(env, task.locations[i - 1], task.locations[i]);
         }
         task.cached_remaining_length = length;
     }
@@ -169,6 +268,7 @@ void PortableGreedyHeapScheduler::rebuild_candidates(
     const std::vector<TaskInfo>& tasks, float dist_weight, int sort_k,
     std::chrono::steady_clock::time_point deadline)
 {
+    last_build_stats_ = {};
     std::vector<int> task_ids;
     task_ids.reserve(tasks.size());
     for (const TaskInfo& task : tasks) task_ids.push_back(task.id);
@@ -198,6 +298,9 @@ void PortableGreedyHeapScheduler::rebuild_candidates(
             list.push_back({score(env, agents[ai].location, tasks[ti], dist_weight),
                             static_cast<int>(ti)});
         }
+        last_build_stats_.evaluated_pairs += static_cast<long long>(list.size());
+        if (list.size() == tasks.size()) ++last_build_stats_.full_scans;
+        else if (!list.empty()) ++last_build_stats_.partial_scans;
         if (list.empty()) continue;
         const int keep = sort_k > 0 ? std::min(sort_k, static_cast<int>(list.size()))
                                     : static_cast<int>(list.size());
@@ -213,6 +316,122 @@ void PortableGreedyHeapScheduler::rebuild_candidates(
         });
         candidate_agent_ids_[ai] = agents[ai].id;
         candidate_agent_locations_[ai] = agents[ai].location;
+    }
+}
+
+void PortableGreedyHeapScheduler::rebuild_candidates_fair(
+    SharedEnvironment* env, const std::vector<AgentInfo>& agents,
+    const std::vector<TaskInfo>& tasks, const PortableGreedyHeapConfig& config,
+    std::chrono::steady_clock::time_point deadline)
+{
+    last_build_stats_ = {};
+    candidates_.assign(agents.size(), {});
+    candidate_agent_ids_.clear();
+    candidate_agent_locations_.clear();
+    candidate_task_ids_.clear();
+    if (agents.empty() || tasks.empty()) return;
+
+    const int zone_rows = std::min(env->rows, 40);
+    const int zone_cols = std::min(env->cols, 40);
+    if (zone_rows <= 0 || zone_cols <= 0) return;
+    const int keep = std::min(std::max(1, config.fair_candidate_k),
+                              static_cast<int>(tasks.size()));
+    auto zone_row = [&](int location) { return (location / env->cols) * zone_rows / env->rows; };
+    auto zone_col = [&](int location) { return (location % env->cols) * zone_cols / env->cols; };
+    std::vector<std::vector<int>> zones(static_cast<size_t>(zone_rows * zone_cols));
+    std::vector<float> task_base(tasks.size(), 0.0f);
+    for (int ti = 0; ti < static_cast<int>(tasks.size()); ++ti) {
+        const TaskInfo& task = tasks[ti];
+        zones[zone_row(task.start_location) * zone_cols + zone_col(task.start_location)].push_back(ti);
+        for (size_t i = 1; i < task.locations.size(); ++i) {
+            task_base[ti] += static_cast<float>(exact_pickup_cache_enabled_
+                ? exact_distance(env, task.locations[i - 1], task.locations[i])
+                : fair_distance(env, task.locations[i - 1], task.locations[i]));
+        }
+        if (flow_penalty_weight_ > 0.0f && task.locations.size() > 1) {
+            float pressure = 0.0f;
+            for (size_t i = 1; i < task.locations.size(); ++i) {
+                pressure += zone_path_penalty(zone_of_location(env, task.locations[i - 1]),
+                                              zone_of_location(env, task.locations[i]));
+            }
+            task_base[ti] += flow_penalty_weight_ *
+                pressure / static_cast<float>(task.locations.size() - 1);
+        }
+    }
+
+    const size_t start = static_cast<size_t>(env->curr_timestep) * 7919U % agents.size();
+    for (size_t offset = 0; offset < agents.size(); ++offset) {
+        if ((offset & 63U) == 0U && std::chrono::steady_clock::now() >= deadline) break;
+        const size_t ai = (start + offset) % agents.size();
+        const int location = agents[ai].location;
+        const int zr = zone_row(location);
+        const int zc = zone_col(location);
+        auto& list = candidates_[ai];
+        list.reserve(keep);
+        for (int radius = 0; radius <= 3 &&
+                             (radius <= 1 || static_cast<int>(list.size()) < keep); ++radius) {
+            for (int row = std::max(0, zr - radius); row <= std::min(zone_rows - 1, zr + radius); ++row) {
+                for (int col = std::max(0, zc - radius); col <= std::min(zone_cols - 1, zc + radius); ++col) {
+                    if (std::max(std::abs(row - zr), std::abs(col - zc)) != radius) continue;
+                    for (const int ti : zones[row * zone_cols + col]) {
+                        const float value = config.dist_weight * static_cast<float>(
+                            exact_pickup_cache_enabled_
+                                ? exact_distance(env, location, tasks[ti].start_location)
+                                : fair_distance(env, location, tasks[ti].start_location)) + task_base[ti];
+                        if (static_cast<int>(list.size()) < keep) {
+                            list.push_back({value, ti});
+                        } else {
+                            auto worst = std::max_element(list.begin(), list.end(),
+                                [](const Candidate& lhs, const Candidate& rhs) {
+                                    return lhs.score < rhs.score;
+                                });
+                            if (value < worst->score) *worst = {value, ti};
+                        }
+                    }
+                }
+            }
+        }
+        if (list.empty()) {
+            const int ti = static_cast<int>((ai + static_cast<size_t>(env->curr_timestep)) % tasks.size());
+            list.push_back({config.dist_weight * static_cast<float>(exact_pickup_cache_enabled_
+                ? exact_distance(env, location, tasks[ti].start_location)
+                : fair_distance(env, location, tasks[ti].start_location)) + task_base[ti], ti});
+        }
+        std::sort(list.begin(), list.end(), [](const Candidate& lhs, const Candidate& rhs) {
+            return lhs.score < rhs.score;
+        });
+        ++last_build_stats_.seeded_agents;
+        last_build_stats_.evaluated_pairs += static_cast<long long>(list.size());
+    }
+
+    if (exact_pickup_cache_enabled_) {
+        last_build_stats_.exact_agents = last_build_stats_.seeded_agents;
+        return;
+    }
+
+    // Refine complete shortlists only; unrefined agents retain comparable
+    // inexpensive scores and remain eligible for the heap match.
+    for (size_t offset = 0; offset < agents.size() &&
+                            std::chrono::steady_clock::now() < deadline; ++offset) {
+        const size_t ai = (start + offset) % agents.size();
+        auto& list = candidates_[ai];
+        if (list.empty()) continue;
+        std::vector<Candidate> refined = list;
+        bool complete = true;
+        for (Candidate& candidate : refined) {
+            if (std::chrono::steady_clock::now() >= deadline) {
+                complete = false;
+                break;
+            }
+            candidate.score = score(env, agents[ai].location, tasks[candidate.task_index],
+                                    config.dist_weight);
+        }
+        if (!complete) break;
+        std::sort(refined.begin(), refined.end(), [](const Candidate& lhs, const Candidate& rhs) {
+            return lhs.score < rhs.score;
+        });
+        list = std::move(refined);
+        ++last_build_stats_.exact_agents;
     }
 }
 
@@ -432,6 +651,7 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
                                            const PortableGreedyHeapConfig& config,
                                            const std::vector<Double4>& background_flow)
 {
+    exact_pickup_cache_enabled_ = config.exact_pickup_cache && !exact_pickup_distances_.empty();
     const auto start = std::chrono::steady_clock::now();
     const auto deadline = start + std::chrono::milliseconds(std::max(0, time_limit_ms));
     const int agent_count = env->num_of_agents;
@@ -529,7 +749,29 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
         candidate_agent_locations_.clear();
         candidate_task_ids_.clear();
     }
-    rebuild_candidates(env, free_agents, free_tasks, config.dist_weight, config.sort_k, rebuild_deadline);
+    if (config.fair_candidate_k > 0 &&
+        static_cast<int>(free_agents.size()) > std::max(0, config.fair_exact_agent_threshold)) {
+        rebuild_candidates_fair(env, free_agents, free_tasks, config, rebuild_deadline);
+    } else {
+        rebuild_candidates(env, free_agents, free_tasks, config.dist_weight, config.sort_k,
+                           rebuild_deadline);
+    }
+    if (config.candidate_diag_every > 0 &&
+        env->curr_timestep % config.candidate_diag_every == 0) {
+        std::array<int, 4> covered{};
+        for (size_t ai = 0; ai < candidates_.size(); ++ai) {
+            if (!candidates_[ai].empty()) ++covered[ai * covered.size() / candidates_.size()];
+        }
+        std::cerr << "heap_candidate_coverage timestep=" << env->curr_timestep
+                  << " agents=" << free_agents.size() << " tasks=" << free_tasks.size()
+                  << " quartiles=" << covered[0] << ',' << covered[1] << ','
+                  << covered[2] << ',' << covered[3]
+                  << " full_scans=" << last_build_stats_.full_scans
+                  << " partial_scans=" << last_build_stats_.partial_scans
+                  << " seeded_agents=" << last_build_stats_.seeded_agents
+                  << " exact_agents=" << last_build_stats_.exact_agents
+                  << " evaluated_pairs=" << last_build_stats_.evaluated_pairs << '\n';
+    }
     rerank_traffic_candidates(env, free_agents, free_tasks, background_flow, config, lns_deadline);
     std::vector<Match> matches = lazy_match(free_agents, free_tasks, lns_deadline);
     refine_local_exchanges(env, matches, free_agents, free_tasks, config, lns_deadline);
@@ -556,13 +798,31 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
     proposed_schedule = std::move(local);
 }
 
+namespace {
+PortableGreedyHeapScheduler& portable_scheduler()
+{
+    static PortableGreedyHeapScheduler scheduler;
+    return scheduler;
+}
+}  // namespace
+
 void schedule_plan_portable_greedy_heap(int time_limit_ms, std::vector<int>& proposed_schedule,
                                         SharedEnvironment* env,
                                         const PortableGreedyHeapConfig& config,
                                         const std::vector<Double4>& background_flow)
 {
-    static PortableGreedyHeapScheduler scheduler;
-    scheduler.schedule(time_limit_ms, proposed_schedule, env, config, background_flow);
+    portable_scheduler().schedule(time_limit_ms, proposed_schedule, env, config, background_flow);
+}
+
+void prepare_portable_greedy_heap(SharedEnvironment* env,
+                                  const PortableGreedyHeapConfig& config,
+                                  const std::vector<int>& pickup_sites)
+{
+    if (config.exact_pickup_cache) {
+        portable_scheduler().prepare_exact_pickup_cache(env, pickup_sites);
+    } else if (config.fair_candidate_k > 0) {
+        portable_scheduler().prepare_fair_landmarks(env);
+    }
 }
 
 }  // namespace DefaultPlanner

@@ -73,6 +73,10 @@ int main(int argc, char **argv)
         ("heapTrafficRerankTopK", po::value<int>()->default_value(0), "top Heap candidates reranked with planner edge-flow pressure")
         ("heapTrafficRerankSteps", po::value<int>()->default_value(4), "heuristic descent steps used for Heap traffic reranking")
         ("heapTrafficRerankWeight", po::value<float>()->default_value(0.0f), "planner edge-flow pressure weight for Heap reranking")
+        ("heapCandidateDiagEvery", po::value<int>()->default_value(0), "emit GreedyHeap candidate coverage every N timesteps")
+        ("heapFairCandidateK", po::value<int>()->default_value(0), "seed each free agent with K nearby task candidates before exact refinement")
+        ("heapFairExactAgentThreshold", po::value<int>()->default_value(256), "use full exact Heap when free agents do not exceed this count")
+        ("heapExactPickupCache", po::value<bool>()->default_value(false), "precompute exact distances from public-map pickup sites")
         ("matcherDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for contest task matcher")
         ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
         ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
@@ -198,7 +202,14 @@ int main(int argc, char **argv)
     heap_config.traffic_rerank_top_k = vm["heapTrafficRerankTopK"].as<int>();
     heap_config.traffic_rerank_steps = vm["heapTrafficRerankSteps"].as<int>();
     heap_config.traffic_rerank_weight = vm["heapTrafficRerankWeight"].as<float>();
+    heap_config.candidate_diag_every = vm["heapCandidateDiagEvery"].as<int>();
+    heap_config.fair_candidate_k = vm["heapFairCandidateK"].as<int>();
+    heap_config.fair_exact_agent_threshold = vm["heapFairExactAgentThreshold"].as<int>();
+    heap_config.exact_pickup_cache = vm["heapExactPickupCache"].as<bool>();
     planner->scheduler->set_heap_config(heap_config);
+    if (heap_config.exact_pickup_cache) {
+        planner->scheduler->set_heap_pickup_sites(grid.pickup_sites);
+    }
     DefaultPlanner::PortableTaskMatcherConfig matcher_config;
     matcher_config.dist_weight = vm["matcherDistWeight"].as<float>();
     matcher_config.candidate_top_k = vm["matcherTopK"].as<int>();

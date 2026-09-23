@@ -1,0 +1,753 @@
+current timestep 0
+heap_candidate_coverage timestep=0 agents=16000 tasks=24000 quartiles=4000,4000,4000,4000 full_scans=0 partial_scans=0 seeded_agents=16000 exact_agents=139 evaluated_pairs=76585
+plan limit 495
+compute initial stop until 0
+current timestep 1
+plan limit 495
+compute initial stop until 121
+current timestep 2
+plan limit 495
+compute initial stop until 579
+current timestep 3
+plan limit 495
+compute initial stop until 839
+current timestep 4
+plan limit 494
+compute initial stop until 1028
+current timestep 5
+plan limit 494
+compute initial stop until 1174
+current timestep 6
+plan limit 494
+compute initial stop until 1334
+current timestep 7
+plan limit 493
+compute initial stop until 1415
+current timestep 8
+plan limit 494
+compute initial stop until 706
+current timestep 9
+plan limit 494
+compute initial stop until 914
+current timestep 10
+plan limit 494
+compute initial stop until 1395
+current timestep 11
+plan limit 493
+compute initial stop until 1512
+current timestep 12
+plan limit 493
+compute initial stop until 1758
+current timestep 13
+plan limit 493
+compute initial stop until 2074
+current timestep 14
+plan limit 493
+compute initial stop until 2368
+current timestep 15
+plan limit 493
+compute initial stop until 2686
+current timestep 16
+plan limit 493
+compute initial stop until 2947
+current timestep 17
+plan limit 493
+compute initial stop until 3177
+current timestep 18
+plan limit 493
+compute initial stop until 3427
+current timestep 19
+plan limit 493
+compute initial stop until 3642
+current timestep 20
+plan limit 493
+compute initial stop until 3877
+current timestep 21
+plan limit 493
+compute initial stop until 4096
+current timestep 22
+plan limit 492
+compute initial stop until 4305
+current timestep 23
+plan limit 493
+compute initial stop until 4528
+current timestep 24
+plan limit 492
+compute initial stop until 4765
+current timestep 25
+heap_candidate_coverage timestep=25 agents=20 tasks=8020 quartiles=5,5,5,5 full_scans=20 partial_scans=0 seeded_agents=0 exact_agents=0 evaluated_pairs=160400
+plan limit 493
+compute initial stop until 4958
+current timestep 26
+plan limit 492
+compute initial stop until 5220
+current timestep 27
+plan limit 492
+compute initial stop until 5412
+current timestep 28
+plan limit 492
+compute initial stop until 5599
+current timestep 29
+plan limit 492
+compute initial stop until 5767
+current timestep 30
+plan limit 492
+compute initial stop until 5906
+current timestep 31
+plan limit 492
+compute initial stop until 6121
+current timestep 32
+plan limit 492
+compute initial stop until 6280
+current timestep 33
+plan limit 492
+compute initial stop until 6449
+current timestep 34
+plan limit 492
+compute initial stop until 6561
+current timestep 35
+plan limit 492
+compute initial stop until 6684
+current timestep 36
+plan limit 492
+compute initial stop until 6795
+current timestep 37
+plan limit 492
+compute initial stop until 6915
+current timestep 38
+plan limit 491
+compute initial stop until 6975
+current timestep 39
+plan limit 492
+compute initial stop until 7049
+current timestep 40
+plan limit 492
+compute initial stop until 7128
+current timestep 41
+plan limit 492
+compute initial stop until 7215
+current timestep 42
+plan limit 492
+compute initial stop until 7298
+current timestep 43
+plan limit 492
+compute initial stop until 7351
+current timestep 44
+plan limit 491
+compute initial stop until 7437
+current timestep 45
+plan limit 491
+compute initial stop until 7454
+current timestep 46
+plan limit 491
+compute initial stop until 7533
+current timestep 47
+plan limit 491
+compute initial stop until 7577
+current timestep 48
+plan limit 491
+compute initial stop until 7620
+current timestep 49
+plan limit 491
+compute initial stop until 7724
+current timestep 50
+heap_candidate_coverage timestep=50 agents=30 tasks=8030 quartiles=8,7,8,7 full_scans=30 partial_scans=0 seeded_agents=0 exact_agents=0 evaluated_pairs=240900
+plan limit 491
+compute initial stop until 7749
+current timestep 51
+plan limit 491
+compute initial stop until 7792
+current timestep 52
+plan limit 491
+compute initial stop until 7153
+current timestep 53
+plan limit 491
+compute initial stop until 7815
+current timestep 54
+plan limit 491
+compute initial stop until 6939
+current timestep 55
+plan limit 491
+compute initial stop until 7834
+current timestep 56
+plan limit 491
+compute initial stop until 7856
+current timestep 57
+plan limit 490
+compute initial stop until 7940
+current timestep 58
+plan limit 491
+compute initial stop until 7744
+current timestep 59
+plan limit 491
+compute initial stop until 6820
+current timestep 60
+plan limit 490
+compute initial stop until 7867
+current timestep 61
+plan limit 491
+compute initial stop until 7992
+current timestep 62
+plan limit 490
+compute initial stop until 8008
+current timestep 63
+plan limit 490
+compute initial stop until 6879
+current timestep 64
+plan limit 490
+compute initial stop until 7391
+current timestep 65
+plan limit 490
+compute initial stop until 7747
+current timestep 66
+plan limit 490
+compute initial stop until 7765
+current timestep 67
+plan limit 490
+compute initial stop until 8039
+current timestep 68
+plan limit 490
+compute initial stop until 8087
+current timestep 69
+plan limit 490
+compute initial stop until 8127
+current timestep 70
+plan limit 489
+compute initial stop until 7941
+current timestep 71
+plan limit 490
+compute initial stop until 8095
+current timestep 72
+plan limit 489
+compute initial stop until 8130
+current timestep 73
+plan limit 490
+compute initial stop until 8135
+current timestep 74
+plan limit 488
+compute initial stop until 6370
+current timestep 75
+heap_candidate_coverage timestep=75 agents=27 tasks=8027 quartiles=7,7,7,6 full_scans=27 partial_scans=0 seeded_agents=0 exact_agents=0 evaluated_pairs=216729
+plan limit 490
+compute initial stop until 8162
+current timestep 76
+plan limit 489
+compute initial stop until 8191
+current timestep 77
+plan limit 489
+compute initial stop until 8210
+current timestep 78
+plan limit 489
+compute initial stop until 8222
+current timestep 79
+plan limit 488
+compute initial stop until 8226
+current timestep 80
+plan limit 488
+compute initial stop until 7918
+current timestep 81
+plan limit 489
+compute initial stop until 8260
+current timestep 82
+plan limit 488
+compute initial stop until 8284
+current timestep 83
+plan limit 489
+compute initial stop until 8295
+current timestep 84
+plan limit 489
+compute initial stop until 8317
+current timestep 85
+plan limit 489
+compute initial stop until 8331
+current timestep 86
+plan limit 488
+compute initial stop until 8340
+current timestep 87
+plan limit 489
+compute initial stop until 8356
+current timestep 88
+plan limit 488
+compute initial stop until 8357
+current timestep 89
+plan limit 489
+compute initial stop until 6974
+current timestep 90
+plan limit 487
+compute initial stop until 7634
+current timestep 91
+plan limit 489
+compute initial stop until 8377
+current timestep 92
+plan limit 488
+compute initial stop until 8403
+current timestep 93
+plan limit 488
+compute initial stop until 8459
+current timestep 94
+plan limit 488
+compute initial stop until 8509
+current timestep 95
+plan limit 488
+compute initial stop until 8513
+current timestep 96
+plan limit 487
+compute initial stop until 8476
+current timestep 97
+plan limit 488
+compute initial stop until 8547
+current timestep 98
+plan limit 488
+compute initial stop until 8575
+current timestep 99
+plan limit 488
+compute initial stop until 8582
+current timestep 100
+heap_candidate_coverage timestep=100 agents=25 tasks=8025 quartiles=7,6,6,6 full_scans=25 partial_scans=0 seeded_agents=0 exact_agents=0 evaluated_pairs=200625
+plan limit 488
+compute initial stop until 8633
+current timestep 101
+plan limit 488
+compute initial stop until 8682
+current timestep 102
+plan limit 488
+compute initial stop until 8720
+current timestep 103
+plan limit 488
+compute initial stop until 8755
+current timestep 104
+plan limit 487
+compute initial stop until 8787
+current timestep 105
+plan limit 488
+compute initial stop until 8818
+current timestep 106
+plan limit 487
+compute initial stop until 8853
+current timestep 107
+plan limit 487
+compute initial stop until 8903
+current timestep 108
+plan limit 487
+compute initial stop until 8950
+current timestep 109
+plan limit 487
+compute initial stop until 8994
+current timestep 110
+plan limit 487
+compute initial stop until 9039
+current timestep 111
+plan limit 487
+compute initial stop until 9072
+current timestep 112
+plan limit 487
+compute initial stop until 9113
+current timestep 113
+plan limit 487
+compute initial stop until 9178
+current timestep 114
+plan limit 487
+compute initial stop until 9214
+current timestep 115
+plan limit 487
+compute initial stop until 9236
+current timestep 116
+plan limit 487
+compute initial stop until 9297
+current timestep 117
+plan limit 487
+compute initial stop until 9314
+current timestep 118
+plan limit 487
+compute initial stop until 9369
+current timestep 119
+plan limit 487
+compute initial stop until 9012
+current timestep 120
+plan limit 487
+compute initial stop until 9413
+current timestep 121
+plan limit 486
+compute initial stop until 9451
+current timestep 122
+plan limit 487
+compute initial stop until 9494
+current timestep 123
+plan limit 486
+compute initial stop until 9533
+current timestep 124
+plan limit 486
+compute initial stop until 9586
+current timestep 125
+heap_candidate_coverage timestep=125 agents=26 tasks=8026 quartiles=7,6,7,6 full_scans=26 partial_scans=0 seeded_agents=0 exact_agents=0 evaluated_pairs=208676
+plan limit 486
+compute initial stop until 9662
+current timestep 126
+plan limit 486
+compute initial stop until 9720
+current timestep 127
+plan limit 486
+compute initial stop until 9743
+current timestep 128
+plan limit 486
+compute initial stop until 9777
+current timestep 129
+plan limit 486
+compute initial stop until 9821
+current timestep 130
+plan limit 486
+compute initial stop until 9867
+current timestep 131
+plan limit 486
+compute initial stop until 9938
+current timestep 132
+plan limit 486
+compute initial stop until 9968
+current timestep 133
+plan limit 486
+compute initial stop until 10030
+current timestep 134
+plan limit 486
+compute initial stop until 10122
+current timestep 135
+plan limit 486
+compute initial stop until 10180
+current timestep 136
+plan limit 486
+compute initial stop until 10217
+current timestep 137
+plan limit 486
+compute initial stop until 10278
+current timestep 138
+plan limit 485
+compute initial stop until 10313
+current timestep 139
+plan limit 485
+compute initial stop until 10375
+current timestep 140
+plan limit 485
+compute initial stop until 10406
+current timestep 141
+plan limit 486
+compute initial stop until 10445
+current timestep 142
+plan limit 486
+compute initial stop until 10490
+current timestep 143
+plan limit 486
+compute initial stop until 10533
+current timestep 144
+plan limit 485
+compute initial stop until 10588
+current timestep 145
+plan limit 485
+compute initial stop until 10657
+current timestep 146
+plan limit 485
+compute initial stop until 10713
+current timestep 147
+plan limit 485
+compute initial stop until 10792
+current timestep 148
+plan limit 485
+compute initial stop until 10842
+current timestep 149
+plan limit 485
+compute initial stop until 10891
+current timestep 150
+heap_candidate_coverage timestep=150 agents=25 tasks=8025 quartiles=7,6,6,6 full_scans=25 partial_scans=0 seeded_agents=0 exact_agents=0 evaluated_pairs=200625
+plan limit 485
+compute initial stop until 10917
+current timestep 151
+plan limit 485
+compute initial stop until 10947
+current timestep 152
+plan limit 485
+compute initial stop until 11020
+current timestep 153
+plan limit 485
+compute initial stop until 11075
+current timestep 154
+plan limit 485
+compute initial stop until 11105
+current timestep 155
+plan limit 485
+compute initial stop until 11154
+current timestep 156
+plan limit 485
+compute initial stop until 11191
+current timestep 157
+plan limit 485
+compute initial stop until 11238
+current timestep 158
+plan limit 485
+compute initial stop until 11290
+current timestep 159
+plan limit 485
+compute initial stop until 11336
+current timestep 160
+plan limit 485
+compute initial stop until 11384
+current timestep 161
+plan limit 485
+compute initial stop until 11427
+current timestep 162
+plan limit 484
+compute initial stop until 11492
+current timestep 163
+plan limit 485
+compute initial stop until 11543
+current timestep 164
+plan limit 484
+compute initial stop until 11622
+current timestep 165
+plan limit 484
+compute initial stop until 11692
+current timestep 166
+plan limit 484
+compute initial stop until 11742
+current timestep 167
+plan limit 484
+compute initial stop until 11803
+current timestep 168
+plan limit 484
+compute initial stop until 11865
+current timestep 169
+plan limit 484
+compute initial stop until 11927
+current timestep 170
+plan limit 484
+compute initial stop until 12001
+current timestep 171
+plan limit 484
+compute initial stop until 12077
+current timestep 172
+plan limit 483
+compute initial stop until 12118
+current timestep 173
+plan limit 484
+compute initial stop until 12197
+current timestep 174
+plan limit 483
+compute initial stop until 12262
+current timestep 175
+heap_candidate_coverage timestep=175 agents=21 tasks=8021 quartiles=6,5,5,5 full_scans=21 partial_scans=0 seeded_agents=0 exact_agents=0 evaluated_pairs=168441
+plan limit 484
+compute initial stop until 12334
+current timestep 176
+plan limit 483
+compute initial stop until 12385
+current timestep 177
+plan limit 484
+compute initial stop until 12438
+current timestep 178
+plan limit 483
+compute initial stop until 12474
+current timestep 179
+plan limit 484
+compute initial stop until 12527
+current timestep 180
+plan limit 482
+compute initial stop until 12586
+current timestep 181
+plan limit 483
+compute initial stop until 12636
+current timestep 182
+plan limit 483
+compute initial stop until 12687
+current timestep 183
+plan limit 483
+compute initial stop until 12745
+current timestep 184
+plan limit 483
+compute initial stop until 12827
+current timestep 185
+plan limit 483
+compute initial stop until 12886
+current timestep 186
+plan limit 483
+compute initial stop until 12931
+current timestep 187
+plan limit 483
+compute initial stop until 12987
+current timestep 188
+plan limit 483
+compute initial stop until 13033
+current timestep 189
+plan limit 484
+compute initial stop until 13076
+current timestep 190
+plan limit 483
+compute initial stop until 13143
+current timestep 191
+plan limit 483
+compute initial stop until 13206
+current timestep 192
+plan limit 483
+compute initial stop until 13276
+current timestep 193
+plan limit 483
+compute initial stop until 13335
+current timestep 194
+plan limit 483
+compute initial stop until 13385
+current timestep 195
+plan limit 483
+compute initial stop until 13425
+current timestep 196
+plan limit 483
+compute initial stop until 13473
+current timestep 197
+plan limit 483
+compute initial stop until 13519
+current timestep 198
+plan limit 483
+compute initial stop until 13559
+current timestep 199
+plan limit 483
+compute initial stop until 13616
+current timestep 200
+heap_candidate_coverage timestep=200 agents=20 tasks=8020 quartiles=5,5,5,5 full_scans=20 partial_scans=0 seeded_agents=0 exact_agents=0 evaluated_pairs=160400
+plan limit 482
+compute initial stop until 13638
+current timestep 201
+plan limit 483
+compute initial stop until 13673
+current timestep 202
+plan limit 482
+compute initial stop until 13718
+current timestep 203
+plan limit 482
+compute initial stop until 13769
+current timestep 204
+plan limit 482
+compute initial stop until 13845
+current timestep 205
+plan limit 482
+compute initial stop until 13907
+current timestep 206
+plan limit 482
+compute initial stop until 13961
+current timestep 207
+plan limit 482
+compute initial stop until 14021
+current timestep 208
+plan limit 483
+compute initial stop until 14115
+current timestep 209
+plan limit 482
+compute initial stop until 14170
+current timestep 210
+plan limit 482
+compute initial stop until 14245
+current timestep 211
+plan limit 482
+compute initial stop until 14297
+current timestep 212
+plan limit 483
+compute initial stop until 14379
+current timestep 213
+plan limit 482
+compute initial stop until 14429
+current timestep 214
+plan limit 483
+compute initial stop until 14479
+current timestep 215
+plan limit 482
+compute initial stop until 14532
+current timestep 216
+plan limit 482
+compute initial stop until 14574
+current timestep 217
+plan limit 482
+compute initial stop until 14625
+current timestep 218
+plan limit 482
+compute initial stop until 14684
+current timestep 219
+plan limit 482
+compute initial stop until 14737
+current timestep 220
+plan limit 482
+compute initial stop until 14771
+current timestep 221
+plan limit 482
+compute initial stop until 14835
+current timestep 222
+plan limit 482
+compute initial stop until 14882
+current timestep 223
+plan limit 482
+compute initial stop until 14944
+current timestep 224
+plan limit 481
+compute initial stop until 15002
+current timestep 225
+heap_candidate_coverage timestep=225 agents=28 tasks=8028 quartiles=7,7,7,7 full_scans=28 partial_scans=0 seeded_agents=0 exact_agents=0 evaluated_pairs=224784
+plan limit 481
+compute initial stop until 15061
+current timestep 226
+plan limit 481
+compute initial stop until 15128
+current timestep 227
+plan limit 481
+compute initial stop until 15173
+current timestep 228
+plan limit 482
+compute initial stop until 15225
+current timestep 229
+plan limit 481
+compute initial stop until 15277
+current timestep 230
+plan limit 481
+compute initial stop until 15325
+current timestep 231
+plan limit 480
+compute initial stop until 15380
+current timestep 232
+plan limit 481
+compute initial stop until 15437
+current timestep 233
+plan limit 480
+compute initial stop until 15495
+current timestep 234
+plan limit 482
+compute initial stop until 15560
+current timestep 235
+plan limit 481
+compute initial stop until 15605
+current timestep 236
+plan limit 481
+compute initial stop until 15666
+current timestep 237
+plan limit 481
+compute initial stop until 15719
+current timestep 238
+plan limit 481
+compute initial stop until 15775
+current timestep 239
+plan limit 480
+compute initial stop until 15834
+current timestep 240
+plan limit 481
+compute initial stop until 15886
+current timestep 241
+plan limit 481
+compute initial stop until 15926
+current timestep 242
+plan limit 481
+compute initial stop until 15995
+current timestep 243
+plan limit 480
+current timestep 244
+plan limit 481
+current timestep 245
+plan limit 481
+current timestep 246
+plan limit 481
+current timestep 247
+plan limit 481
+current timestep 248
+plan limit 481
+current timestep 249
+plan limit 481

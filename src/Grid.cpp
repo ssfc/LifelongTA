@@ -61,6 +61,7 @@ Grid::Grid(string fname)
                 map[id] = 1;
             else   // free space
                 map[id] = 0;
+            if (line[j] == 'E') pickup_sites.push_back(id);
         }
     }
 

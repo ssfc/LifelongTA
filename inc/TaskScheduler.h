@@ -23,6 +23,7 @@ class TaskScheduler
         void set_solver(int solver);
         void set_max_matching_edges(int max_matching_edges);
         void set_heap_config(const DefaultPlanner::PortableGreedyHeapConfig& config);
+        void set_heap_pickup_sites(std::vector<int> sites);
         void set_task_matcher_config(const DefaultPlanner::PortableTaskMatcherConfig& config);
         void set_capped_hungarian_config(const DefaultPlanner::PortableCappedHungarianConfig& config);
 
@@ -33,6 +34,7 @@ class TaskScheduler
         int solver = 1; //1 matching, 2 flow
         int max_matching_edges = INT_MAX;
         DefaultPlanner::PortableGreedyHeapConfig heap_config;
+        std::vector<int> heap_pickup_sites;
         DefaultPlanner::PortableTaskMatcherConfig task_matcher_config;
         DefaultPlanner::PortableCappedHungarianConfig capped_hungarian_config;
 

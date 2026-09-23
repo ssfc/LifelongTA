@@ -16,7 +16,9 @@ void TaskScheduler::initialize(int preprocess_time_limit)
     //give at most half of the entry time_limit to scheduler;
     //-SCHEDULER_TIMELIMIT_TOLERANCE for timing error tolerance
     int limit = preprocess_time_limit/2 - DefaultPlanner::SCHEDULER_TIMELIMIT_TOLERANCE;
-    DefaultPlanner::schedule_initialize(limit, env);    
+    DefaultPlanner::schedule_initialize(limit, env);
+    if (solver == 6) DefaultPlanner::prepare_portable_greedy_heap(env, heap_config,
+                                                                   heap_pickup_sites);
 }
 
 /**
@@ -101,6 +103,11 @@ void TaskScheduler::set_max_matching_edges(int max_matching_edges)
 void TaskScheduler::set_heap_config(const DefaultPlanner::PortableGreedyHeapConfig& config)
 {
     heap_config = config;
+}
+
+void TaskScheduler::set_heap_pickup_sites(std::vector<int> sites)
+{
+    heap_pickup_sites = std::move(sites);
 }
 
 void TaskScheduler::set_task_matcher_config(const DefaultPlanner::PortableTaskMatcherConfig& config)

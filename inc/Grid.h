@@ -10,6 +10,7 @@ public:
     int rows = 0;
     int cols = 0;
     std::vector<int> map;
+    std::vector<int> pickup_sites;
     string map_name;
 
 };
