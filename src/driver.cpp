@@ -68,6 +68,11 @@ int main(int argc, char **argv)
         ("heapFlowZoneRows", po::value<int>()->default_value(0), "coarse flow grid rows for GreedyHeap (0 disables)")
         ("heapFlowZoneCols", po::value<int>()->default_value(0), "coarse flow grid columns for GreedyHeap (0 disables)")
         ("heapFlowPenaltyWeight", po::value<float>()->default_value(0.0f), "opened-task coarse-flow penalty in GreedyHeap")
+        ("heapAgeBonus", po::value<float>()->default_value(0.0f), "per-timestep waiting-age bonus in GreedyHeap")
+        ("heapLocalExchangeTopK", po::value<int>()->default_value(0), "top Heap candidates considered for bounded deterministic pair exchanges")
+        ("heapTrafficRerankTopK", po::value<int>()->default_value(0), "top Heap candidates reranked with planner edge-flow pressure")
+        ("heapTrafficRerankSteps", po::value<int>()->default_value(4), "heuristic descent steps used for Heap traffic reranking")
+        ("heapTrafficRerankWeight", po::value<float>()->default_value(0.0f), "planner edge-flow pressure weight for Heap reranking")
         ("matcherDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for contest task matcher")
         ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
         ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
@@ -188,6 +193,11 @@ int main(int argc, char **argv)
     heap_config.flow_zone_rows = vm["heapFlowZoneRows"].as<int>();
     heap_config.flow_zone_cols = vm["heapFlowZoneCols"].as<int>();
     heap_config.flow_penalty_weight = vm["heapFlowPenaltyWeight"].as<float>();
+    heap_config.age_bonus = vm["heapAgeBonus"].as<float>();
+    heap_config.local_exchange_top_k = vm["heapLocalExchangeTopK"].as<int>();
+    heap_config.traffic_rerank_top_k = vm["heapTrafficRerankTopK"].as<int>();
+    heap_config.traffic_rerank_steps = vm["heapTrafficRerankSteps"].as<int>();
+    heap_config.traffic_rerank_weight = vm["heapTrafficRerankWeight"].as<float>();
     planner->scheduler->set_heap_config(heap_config);
     DefaultPlanner::PortableTaskMatcherConfig matcher_config;
     matcher_config.dist_weight = vm["matcherDistWeight"].as<float>();

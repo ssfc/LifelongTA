@@ -1,0 +1,6021 @@
+current timestep 0
+num of flexible agents: 8000
+num of flexible tasks: 12000
+Optimal assignment with minimum cost:
+Solving time: 0.145878 seconds
+plan limit 828
+compute initial stop until 509
+current timestep 1
+num of flexible agents: 7763
+num of flexible tasks: 11763
+Optimal assignment with minimum cost:
+Solving time: 0.140915 seconds
+plan limit 834
+compute initial stop until 2164
+current timestep 2
+num of flexible agents: 7558
+num of flexible tasks: 11558
+Optimal assignment with minimum cost:
+Solving time: 0.137177 seconds
+plan limit 838
+compute initial stop until 3200
+current timestep 3
+num of flexible agents: 7414
+num of flexible tasks: 11414
+Optimal assignment with minimum cost:
+Solving time: 0.134829 seconds
+plan limit 840
+compute initial stop until 3902
+current timestep 4
+num of flexible agents: 7243
+num of flexible tasks: 11243
+Optimal assignment with minimum cost:
+Solving time: 0.142822 seconds
+plan limit 831
+compute initial stop until 4314
+current timestep 5
+num of flexible agents: 7107
+num of flexible tasks: 11107
+Optimal assignment with minimum cost:
+Solving time: 0.136479 seconds
+plan limit 838
+compute initial stop until 4845
+current timestep 6
+num of flexible agents: 6958
+num of flexible tasks: 10958
+Optimal assignment with minimum cost:
+Solving time: 0.122784 seconds
+plan limit 851
+compute initial stop until 5127
+current timestep 7
+num of flexible agents: 6833
+num of flexible tasks: 10833
+Optimal assignment with minimum cost:
+Solving time: 0.141916 seconds
+plan limit 832
+compute initial stop until 5458
+current timestep 8
+num of flexible agents: 6726
+num of flexible tasks: 10726
+Optimal assignment with minimum cost:
+Solving time: 0.124097 seconds
+plan limit 850
+compute initial stop until 5838
+current timestep 9
+num of flexible agents: 6597
+num of flexible tasks: 10597
+Optimal assignment with minimum cost:
+Solving time: 0.123257 seconds
+plan limit 850
+compute initial stop until 6030
+current timestep 10
+num of flexible agents: 6497
+num of flexible tasks: 10497
+Optimal assignment with minimum cost:
+Solving time: 0.126034 seconds
+plan limit 847
+compute initial stop until 6235
+current timestep 11
+num of flexible agents: 6378
+num of flexible tasks: 10378
+Optimal assignment with minimum cost:
+Solving time: 0.121161 seconds
+plan limit 852
+compute initial stop until 6350
+current timestep 12
+num of flexible agents: 6248
+num of flexible tasks: 10248
+Optimal assignment with minimum cost:
+Solving time: 0.118471 seconds
+plan limit 855
+compute initial stop until 6563
+current timestep 13
+num of flexible agents: 6133
+num of flexible tasks: 10133
+Optimal assignment with minimum cost:
+Solving time: 0.122916 seconds
+plan limit 850
+compute initial stop until 6753
+current timestep 14
+num of flexible agents: 6022
+num of flexible tasks: 10022
+Optimal assignment with minimum cost:
+Solving time: 0.122728 seconds
+plan limit 850
+compute initial stop until 6971
+current timestep 15
+num of flexible agents: 5906
+num of flexible tasks: 9906
+Optimal assignment with minimum cost:
+Solving time: 0.117688 seconds
+plan limit 855
+compute initial stop until 7156
+current timestep 16
+num of flexible agents: 5794
+num of flexible tasks: 9794
+Optimal assignment with minimum cost:
+Solving time: 0.128438 seconds
+plan limit 844
+compute initial stop until 7246
+current timestep 17
+num of flexible agents: 5671
+num of flexible tasks: 9671
+Optimal assignment with minimum cost:
+Solving time: 0.121615 seconds
+plan limit 851
+compute initial stop until 7375
+current timestep 18
+num of flexible agents: 5581
+num of flexible tasks: 9581
+Optimal assignment with minimum cost:
+Solving time: 0.120006 seconds
+plan limit 853
+compute initial stop until 7614
+current timestep 19
+num of flexible agents: 5472
+num of flexible tasks: 9472
+Optimal assignment with minimum cost:
+Solving time: 0.127114 seconds
+plan limit 845
+compute initial stop until 7775
+current timestep 20
+num of flexible agents: 5367
+num of flexible tasks: 9367
+Optimal assignment with minimum cost:
+Solving time: 0.121379 seconds
+plan limit 851
+compute initial stop until 7915
+current timestep 21
+num of flexible agents: 5251
+num of flexible tasks: 9251
+Optimal assignment with minimum cost:
+Solving time: 0.118742 seconds
+plan limit 853
+current timestep 22
+num of flexible agents: 5131
+num of flexible tasks: 9131
+Optimal assignment with minimum cost:
+Solving time: 0.107166 seconds
+plan limit 865
+current timestep 23
+num of flexible agents: 5029
+num of flexible tasks: 9029
+Optimal assignment with minimum cost:
+Solving time: 0.106779 seconds
+plan limit 865
+current timestep 24
+num of flexible agents: 4917
+num of flexible tasks: 8917
+Optimal assignment with minimum cost:
+Solving time: 0.109574 seconds
+plan limit 862
+current timestep 25
+num of flexible agents: 4809
+num of flexible tasks: 8809
+Optimal assignment with minimum cost:
+Solving time: 0.107856 seconds
+plan limit 864
+current timestep 26
+num of flexible agents: 4722
+num of flexible tasks: 8722
+Optimal assignment with minimum cost:
+Solving time: 0.104674 seconds
+plan limit 867
+current timestep 27
+num of flexible agents: 4632
+num of flexible tasks: 8632
+Optimal assignment with minimum cost:
+Solving time: 0.103637 seconds
+plan limit 868
+current timestep 28
+num of flexible agents: 4540
+num of flexible tasks: 8540
+Optimal assignment with minimum cost:
+Solving time: 0.0988917 seconds
+plan limit 873
+current timestep 29
+num of flexible agents: 4436
+num of flexible tasks: 8436
+Optimal assignment with minimum cost:
+Solving time: 0.0985716 seconds
+plan limit 873
+current timestep 30
+num of flexible agents: 4337
+num of flexible tasks: 8337
+Optimal assignment with minimum cost:
+Solving time: 0.0944636 seconds
+plan limit 877
+current timestep 31
+num of flexible agents: 4241
+num of flexible tasks: 8241
+Optimal assignment with minimum cost:
+Solving time: 0.0909551 seconds
+plan limit 881
+current timestep 32
+num of flexible agents: 4155
+num of flexible tasks: 8155
+Optimal assignment with minimum cost:
+Solving time: 0.0873275 seconds
+plan limit 884
+current timestep 33
+num of flexible agents: 4072
+num of flexible tasks: 8072
+Optimal assignment with minimum cost:
+Solving time: 0.0920397 seconds
+plan limit 879
+current timestep 34
+num of flexible agents: 3986
+num of flexible tasks: 7986
+Optimal assignment with minimum cost:
+Solving time: 0.0928398 seconds
+plan limit 878
+current timestep 35
+num of flexible agents: 3873
+num of flexible tasks: 7873
+Optimal assignment with minimum cost:
+Solving time: 0.0889753 seconds
+plan limit 882
+current timestep 36
+num of flexible agents: 3805
+num of flexible tasks: 7805
+Optimal assignment with minimum cost:
+Solving time: 0.0671792 seconds
+plan limit 903
+current timestep 37
+num of flexible agents: 3708
+num of flexible tasks: 7708
+Optimal assignment with minimum cost:
+Solving time: 0.0835985 seconds
+plan limit 887
+current timestep 38
+num of flexible agents: 3613
+num of flexible tasks: 7613
+Optimal assignment with minimum cost:
+Solving time: 0.0739206 seconds
+plan limit 896
+current timestep 39
+num of flexible agents: 3537
+num of flexible tasks: 7537
+Optimal assignment with minimum cost:
+Solving time: 0.0687371 seconds
+plan limit 902
+current timestep 40
+num of flexible agents: 3436
+num of flexible tasks: 7436
+Optimal assignment with minimum cost:
+Solving time: 0.0686208 seconds
+plan limit 902
+current timestep 41
+num of flexible agents: 3337
+num of flexible tasks: 7337
+Optimal assignment with minimum cost:
+Solving time: 0.0720965 seconds
+plan limit 898
+current timestep 42
+num of flexible agents: 3268
+num of flexible tasks: 7268
+Optimal assignment with minimum cost:
+Solving time: 0.0751242 seconds
+plan limit 895
+current timestep 43
+num of flexible agents: 3193
+num of flexible tasks: 7193
+Optimal assignment with minimum cost:
+Solving time: 0.0692949 seconds
+plan limit 901
+current timestep 44
+num of flexible agents: 3107
+num of flexible tasks: 7107
+Optimal assignment with minimum cost:
+Solving time: 0.0713061 seconds
+plan limit 898
+current timestep 45
+num of flexible agents: 3015
+num of flexible tasks: 7015
+Optimal assignment with minimum cost:
+Solving time: 0.0652075 seconds
+plan limit 905
+current timestep 46
+num of flexible agents: 2940
+num of flexible tasks: 6940
+Optimal assignment with minimum cost:
+Solving time: 0.0680691 seconds
+plan limit 901
+current timestep 47
+num of flexible agents: 2862
+num of flexible tasks: 6862
+Optimal assignment with minimum cost:
+Solving time: 0.0692117 seconds
+plan limit 900
+current timestep 48
+num of flexible agents: 2788
+num of flexible tasks: 6788
+Optimal assignment with minimum cost:
+Solving time: 0.063254 seconds
+plan limit 907
+current timestep 49
+num of flexible agents: 2717
+num of flexible tasks: 6717
+Optimal assignment with minimum cost:
+Solving time: 0.0616321 seconds
+plan limit 908
+current timestep 50
+num of flexible agents: 2647
+num of flexible tasks: 6647
+Optimal assignment with minimum cost:
+Solving time: 0.0604811 seconds
+plan limit 909
+current timestep 51
+num of flexible agents: 2578
+num of flexible tasks: 6578
+Optimal assignment with minimum cost:
+Solving time: 0.0622854 seconds
+plan limit 907
+current timestep 52
+num of flexible agents: 2507
+num of flexible tasks: 6507
+Optimal assignment with minimum cost:
+Solving time: 0.0612129 seconds
+plan limit 908
+current timestep 53
+num of flexible agents: 2428
+num of flexible tasks: 6428
+Optimal assignment with minimum cost:
+Solving time: 0.0600129 seconds
+plan limit 910
+current timestep 54
+num of flexible agents: 2354
+num of flexible tasks: 6354
+Optimal assignment with minimum cost:
+Solving time: 0.0567408 seconds
+plan limit 913
+current timestep 55
+num of flexible agents: 2279
+num of flexible tasks: 6279
+Optimal assignment with minimum cost:
+Solving time: 0.0699827 seconds
+plan limit 899
+current timestep 56
+num of flexible agents: 2218
+num of flexible tasks: 6218
+Optimal assignment with minimum cost:
+Solving time: 0.0575848 seconds
+plan limit 911
+current timestep 57
+num of flexible agents: 2145
+num of flexible tasks: 6145
+Optimal assignment with minimum cost:
+Solving time: 0.0569519 seconds
+plan limit 913
+current timestep 58
+num of flexible agents: 2093
+num of flexible tasks: 6093
+Optimal assignment with minimum cost:
+Solving time: 0.0845376 seconds
+plan limit 884
+current timestep 59
+num of flexible agents: 2031
+num of flexible tasks: 6031
+Optimal assignment with minimum cost:
+Solving time: 0.0839574 seconds
+plan limit 885
+current timestep 60
+num of flexible agents: 1957
+num of flexible tasks: 5957
+Optimal assignment with minimum cost:
+Solving time: 0.0786127 seconds
+plan limit 890
+current timestep 61
+num of flexible agents: 1899
+num of flexible tasks: 5899
+Optimal assignment with minimum cost:
+Solving time: 0.0853667 seconds
+plan limit 883
+current timestep 62
+num of flexible agents: 1841
+num of flexible tasks: 5841
+Optimal assignment with minimum cost:
+Solving time: 0.0767568 seconds
+plan limit 892
+current timestep 63
+num of flexible agents: 1780
+num of flexible tasks: 5780
+Optimal assignment with minimum cost:
+Solving time: 0.0741445 seconds
+plan limit 894
+current timestep 64
+num of flexible agents: 1718
+num of flexible tasks: 5718
+Optimal assignment with minimum cost:
+Solving time: 0.0825668 seconds
+plan limit 886
+current timestep 65
+num of flexible agents: 1680
+num of flexible tasks: 5680
+Optimal assignment with minimum cost:
+Solving time: 0.0807104 seconds
+plan limit 888
+current timestep 66
+num of flexible agents: 1639
+num of flexible tasks: 5639
+Optimal assignment with minimum cost:
+Solving time: 0.079271 seconds
+plan limit 889
+current timestep 67
+num of flexible agents: 1577
+num of flexible tasks: 5577
+Optimal assignment with minimum cost:
+Solving time: 0.0763894 seconds
+plan limit 891
+current timestep 68
+num of flexible agents: 1522
+num of flexible tasks: 5522
+Optimal assignment with minimum cost:
+Solving time: 0.0719844 seconds
+plan limit 896
+current timestep 69
+num of flexible agents: 1466
+num of flexible tasks: 5466
+Optimal assignment with minimum cost:
+Solving time: 0.0750485 seconds
+plan limit 893
+current timestep 70
+num of flexible agents: 1401
+num of flexible tasks: 5401
+Optimal assignment with minimum cost:
+Solving time: 0.0712622 seconds
+plan limit 897
+current timestep 71
+num of flexible agents: 1352
+num of flexible tasks: 5352
+Optimal assignment with minimum cost:
+Solving time: 0.0809726 seconds
+plan limit 886
+current timestep 72
+num of flexible agents: 1301
+num of flexible tasks: 5301
+Optimal assignment with minimum cost:
+Solving time: 0.0801249 seconds
+plan limit 887
+current timestep 73
+num of flexible agents: 1256
+num of flexible tasks: 5256
+Optimal assignment with minimum cost:
+Solving time: 0.0743557 seconds
+plan limit 894
+current timestep 74
+num of flexible agents: 1228
+num of flexible tasks: 5228
+Optimal assignment with minimum cost:
+Solving time: 0.0743235 seconds
+plan limit 894
+current timestep 75
+num of flexible agents: 1186
+num of flexible tasks: 5186
+Optimal assignment with minimum cost:
+Solving time: 0.0786032 seconds
+plan limit 889
+current timestep 76
+num of flexible agents: 1156
+num of flexible tasks: 5156
+Optimal assignment with minimum cost:
+Solving time: 0.0765403 seconds
+plan limit 891
+current timestep 77
+num of flexible agents: 1126
+num of flexible tasks: 5126
+Optimal assignment with minimum cost:
+Solving time: 0.0764514 seconds
+plan limit 891
+current timestep 78
+num of flexible agents: 1097
+num of flexible tasks: 5097
+Optimal assignment with minimum cost:
+Solving time: 0.0845514 seconds
+plan limit 883
+current timestep 79
+num of flexible agents: 1065
+num of flexible tasks: 5065
+Optimal assignment with minimum cost:
+Solving time: 0.0739793 seconds
+plan limit 894
+current timestep 80
+num of flexible agents: 1032
+num of flexible tasks: 5032
+Optimal assignment with minimum cost:
+Solving time: 0.0726538 seconds
+plan limit 895
+current timestep 81
+num of flexible agents: 1002
+num of flexible tasks: 5002
+Optimal assignment with minimum cost:
+Solving time: 0.0750926 seconds
+plan limit 892
+current timestep 82
+num of flexible agents: 975
+num of flexible tasks: 4975
+Optimal assignment with minimum cost:
+Solving time: 0.0741091 seconds
+plan limit 893
+current timestep 83
+num of flexible agents: 946
+num of flexible tasks: 4946
+Optimal assignment with minimum cost:
+Solving time: 0.0750898 seconds
+plan limit 892
+current timestep 84
+num of flexible agents: 921
+num of flexible tasks: 4921
+Optimal assignment with minimum cost:
+Solving time: 0.075152 seconds
+plan limit 893
+current timestep 85
+num of flexible agents: 886
+num of flexible tasks: 4886
+Optimal assignment with minimum cost:
+Solving time: 0.0784789 seconds
+plan limit 889
+current timestep 86
+num of flexible agents: 869
+num of flexible tasks: 4869
+Optimal assignment with minimum cost:
+Solving time: 0.0737894 seconds
+plan limit 893
+current timestep 87
+num of flexible agents: 853
+num of flexible tasks: 4853
+Optimal assignment with minimum cost:
+Solving time: 0.0728467 seconds
+plan limit 894
+current timestep 88
+num of flexible agents: 834
+num of flexible tasks: 4834
+Optimal assignment with minimum cost:
+Solving time: 0.0708908 seconds
+plan limit 896
+current timestep 89
+num of flexible agents: 816
+num of flexible tasks: 4816
+Optimal assignment with minimum cost:
+Solving time: 0.0725996 seconds
+plan limit 894
+current timestep 90
+num of flexible agents: 802
+num of flexible tasks: 4802
+Optimal assignment with minimum cost:
+Solving time: 0.071684 seconds
+plan limit 894
+current timestep 91
+num of flexible agents: 771
+num of flexible tasks: 4771
+Optimal assignment with minimum cost:
+Solving time: 0.0715823 seconds
+plan limit 895
+current timestep 92
+num of flexible agents: 751
+num of flexible tasks: 4751
+Optimal assignment with minimum cost:
+Solving time: 0.0789787 seconds
+plan limit 888
+current timestep 93
+num of flexible agents: 745
+num of flexible tasks: 4745
+Optimal assignment with minimum cost:
+Solving time: 0.0696454 seconds
+plan limit 897
+current timestep 94
+num of flexible agents: 741
+num of flexible tasks: 4741
+Optimal assignment with minimum cost:
+Solving time: 0.0713443 seconds
+plan limit 896
+current timestep 95
+num of flexible agents: 733
+num of flexible tasks: 4733
+Optimal assignment with minimum cost:
+Solving time: 0.0752312 seconds
+plan limit 892
+current timestep 96
+num of flexible agents: 731
+num of flexible tasks: 4731
+Optimal assignment with minimum cost:
+Solving time: 0.0812422 seconds
+plan limit 886
+current timestep 97
+num of flexible agents: 733
+num of flexible tasks: 4733
+Optimal assignment with minimum cost:
+Solving time: 0.0711401 seconds
+plan limit 896
+current timestep 98
+num of flexible agents: 729
+num of flexible tasks: 4729
+Optimal assignment with minimum cost:
+Solving time: 0.0720195 seconds
+plan limit 894
+current timestep 99
+num of flexible agents: 724
+num of flexible tasks: 4724
+Optimal assignment with minimum cost:
+Solving time: 0.0727969 seconds
+plan limit 894
+current timestep 100
+num of flexible agents: 719
+num of flexible tasks: 4719
+Optimal assignment with minimum cost:
+Solving time: 0.0712302 seconds
+plan limit 896
+current timestep 101
+num of flexible agents: 726
+num of flexible tasks: 4726
+Optimal assignment with minimum cost:
+Solving time: 0.0687945 seconds
+plan limit 898
+current timestep 102
+num of flexible agents: 727
+num of flexible tasks: 4727
+Optimal assignment with minimum cost:
+Solving time: 0.0675497 seconds
+plan limit 899
+current timestep 103
+num of flexible agents: 723
+num of flexible tasks: 4723
+Optimal assignment with minimum cost:
+Solving time: 0.0701151 seconds
+plan limit 896
+current timestep 104
+num of flexible agents: 720
+num of flexible tasks: 4720
+Optimal assignment with minimum cost:
+Solving time: 0.0672745 seconds
+plan limit 899
+current timestep 105
+num of flexible agents: 714
+num of flexible tasks: 4714
+Optimal assignment with minimum cost:
+Solving time: 0.0673175 seconds
+plan limit 899
+current timestep 106
+num of flexible agents: 732
+num of flexible tasks: 4732
+Optimal assignment with minimum cost:
+Solving time: 0.0698136 seconds
+plan limit 896
+current timestep 107
+num of flexible agents: 740
+num of flexible tasks: 4740
+Optimal assignment with minimum cost:
+Solving time: 0.0691932 seconds
+plan limit 897
+current timestep 108
+num of flexible agents: 743
+num of flexible tasks: 4743
+Optimal assignment with minimum cost:
+Solving time: 0.0686874 seconds
+plan limit 897
+current timestep 109
+num of flexible agents: 754
+num of flexible tasks: 4754
+Optimal assignment with minimum cost:
+Solving time: 0.0744681 seconds
+plan limit 891
+current timestep 110
+num of flexible agents: 766
+num of flexible tasks: 4766
+Optimal assignment with minimum cost:
+Solving time: 0.0730786 seconds
+plan limit 893
+current timestep 111
+num of flexible agents: 768
+num of flexible tasks: 4768
+Optimal assignment with minimum cost:
+Solving time: 0.0706312 seconds
+plan limit 896
+current timestep 112
+num of flexible agents: 779
+num of flexible tasks: 4779
+Optimal assignment with minimum cost:
+Solving time: 0.0788367 seconds
+plan limit 887
+current timestep 113
+num of flexible agents: 779
+num of flexible tasks: 4779
+Optimal assignment with minimum cost:
+Solving time: 0.0737925 seconds
+plan limit 892
+current timestep 114
+num of flexible agents: 785
+num of flexible tasks: 4785
+Optimal assignment with minimum cost:
+Solving time: 0.072888 seconds
+plan limit 893
+current timestep 115
+num of flexible agents: 787
+num of flexible tasks: 4787
+Optimal assignment with minimum cost:
+Solving time: 0.0799919 seconds
+plan limit 885
+current timestep 116
+num of flexible agents: 786
+num of flexible tasks: 4786
+Optimal assignment with minimum cost:
+Solving time: 0.0746847 seconds
+plan limit 891
+current timestep 117
+num of flexible agents: 783
+num of flexible tasks: 4783
+Optimal assignment with minimum cost:
+Solving time: 0.075396 seconds
+plan limit 890
+current timestep 118
+num of flexible agents: 775
+num of flexible tasks: 4775
+Optimal assignment with minimum cost:
+Solving time: 0.0743266 seconds
+plan limit 891
+current timestep 119
+num of flexible agents: 772
+num of flexible tasks: 4772
+Optimal assignment with minimum cost:
+Solving time: 0.0754454 seconds
+plan limit 890
+current timestep 120
+num of flexible agents: 768
+num of flexible tasks: 4768
+Optimal assignment with minimum cost:
+Solving time: 0.0764147 seconds
+plan limit 889
+current timestep 121
+num of flexible agents: 765
+num of flexible tasks: 4765
+Optimal assignment with minimum cost:
+Solving time: 0.0731792 seconds
+plan limit 893
+current timestep 122
+num of flexible agents: 770
+num of flexible tasks: 4770
+Optimal assignment with minimum cost:
+Solving time: 0.0746931 seconds
+plan limit 891
+current timestep 123
+num of flexible agents: 778
+num of flexible tasks: 4778
+Optimal assignment with minimum cost:
+Solving time: 0.0737957 seconds
+plan limit 891
+current timestep 124
+num of flexible agents: 785
+num of flexible tasks: 4785
+Optimal assignment with minimum cost:
+Solving time: 0.0741183 seconds
+plan limit 891
+current timestep 125
+num of flexible agents: 800
+num of flexible tasks: 4800
+Optimal assignment with minimum cost:
+Solving time: 0.0744116 seconds
+plan limit 891
+current timestep 126
+num of flexible agents: 797
+num of flexible tasks: 4797
+Optimal assignment with minimum cost:
+Solving time: 0.0756244 seconds
+plan limit 889
+current timestep 127
+num of flexible agents: 805
+num of flexible tasks: 4805
+Optimal assignment with minimum cost:
+Solving time: 0.0764575 seconds
+plan limit 889
+current timestep 128
+num of flexible agents: 808
+num of flexible tasks: 4808
+Optimal assignment with minimum cost:
+Solving time: 0.0759414 seconds
+plan limit 889
+current timestep 129
+num of flexible agents: 817
+num of flexible tasks: 4817
+Optimal assignment with minimum cost:
+Solving time: 0.0776132 seconds
+plan limit 887
+current timestep 130
+num of flexible agents: 830
+num of flexible tasks: 4830
+Optimal assignment with minimum cost:
+Solving time: 0.0752988 seconds
+plan limit 890
+current timestep 131
+num of flexible agents: 837
+num of flexible tasks: 4837
+Optimal assignment with minimum cost:
+Solving time: 0.0783601 seconds
+plan limit 887
+current timestep 132
+num of flexible agents: 840
+num of flexible tasks: 4840
+Optimal assignment with minimum cost:
+Solving time: 0.0834286 seconds
+plan limit 881
+current timestep 133
+num of flexible agents: 830
+num of flexible tasks: 4830
+Optimal assignment with minimum cost:
+Solving time: 0.0766802 seconds
+plan limit 888
+current timestep 134
+num of flexible agents: 827
+num of flexible tasks: 4827
+Optimal assignment with minimum cost:
+Solving time: 0.0756466 seconds
+plan limit 889
+current timestep 135
+num of flexible agents: 830
+num of flexible tasks: 4830
+Optimal assignment with minimum cost:
+Solving time: 0.0830973 seconds
+plan limit 882
+current timestep 136
+num of flexible agents: 839
+num of flexible tasks: 4839
+Optimal assignment with minimum cost:
+Solving time: 0.0764202 seconds
+plan limit 889
+current timestep 137
+num of flexible agents: 843
+num of flexible tasks: 4843
+Optimal assignment with minimum cost:
+Solving time: 0.0812072 seconds
+plan limit 884
+current timestep 138
+num of flexible agents: 845
+num of flexible tasks: 4845
+Optimal assignment with minimum cost:
+Solving time: 0.083708 seconds
+plan limit 881
+current timestep 139
+num of flexible agents: 852
+num of flexible tasks: 4852
+Optimal assignment with minimum cost:
+Solving time: 0.0773115 seconds
+plan limit 887
+current timestep 140
+num of flexible agents: 859
+num of flexible tasks: 4859
+Optimal assignment with minimum cost:
+Solving time: 0.0804312 seconds
+plan limit 884
+current timestep 141
+num of flexible agents: 866
+num of flexible tasks: 4866
+Optimal assignment with minimum cost:
+Solving time: 0.0850376 seconds
+plan limit 879
+current timestep 142
+num of flexible agents: 869
+num of flexible tasks: 4869
+Optimal assignment with minimum cost:
+Solving time: 0.082612 seconds
+plan limit 882
+current timestep 143
+num of flexible agents: 874
+num of flexible tasks: 4874
+Optimal assignment with minimum cost:
+Solving time: 0.0807371 seconds
+plan limit 884
+current timestep 144
+num of flexible agents: 886
+num of flexible tasks: 4886
+Optimal assignment with minimum cost:
+Solving time: 0.0828441 seconds
+plan limit 881
+current timestep 145
+num of flexible agents: 891
+num of flexible tasks: 4891
+Optimal assignment with minimum cost:
+Solving time: 0.0811626 seconds
+plan limit 884
+current timestep 146
+num of flexible agents: 891
+num of flexible tasks: 4891
+Optimal assignment with minimum cost:
+Solving time: 0.0814741 seconds
+plan limit 883
+current timestep 147
+num of flexible agents: 902
+num of flexible tasks: 4902
+Optimal assignment with minimum cost:
+Solving time: 0.0833741 seconds
+plan limit 882
+current timestep 148
+num of flexible agents: 915
+num of flexible tasks: 4915
+Optimal assignment with minimum cost:
+Solving time: 0.0842883 seconds
+plan limit 881
+current timestep 149
+num of flexible agents: 928
+num of flexible tasks: 4928
+Optimal assignment with minimum cost:
+Solving time: 0.0823066 seconds
+plan limit 883
+current timestep 150
+num of flexible agents: 936
+num of flexible tasks: 4936
+Optimal assignment with minimum cost:
+Solving time: 0.0844799 seconds
+plan limit 880
+current timestep 151
+num of flexible agents: 945
+num of flexible tasks: 4945
+Optimal assignment with minimum cost:
+Solving time: 0.083319 seconds
+plan limit 882
+current timestep 152
+num of flexible agents: 950
+num of flexible tasks: 4950
+Optimal assignment with minimum cost:
+Solving time: 0.0868519 seconds
+plan limit 877
+current timestep 153
+num of flexible agents: 944
+num of flexible tasks: 4944
+Optimal assignment with minimum cost:
+Solving time: 0.0823014 seconds
+plan limit 883
+current timestep 154
+num of flexible agents: 948
+num of flexible tasks: 4948
+Optimal assignment with minimum cost:
+Solving time: 0.0824314 seconds
+plan limit 883
+current timestep 155
+num of flexible agents: 943
+num of flexible tasks: 4943
+Optimal assignment with minimum cost:
+Solving time: 0.0835229 seconds
+plan limit 880
+current timestep 156
+num of flexible agents: 956
+num of flexible tasks: 4956
+Optimal assignment with minimum cost:
+Solving time: 0.0823377 seconds
+plan limit 882
+current timestep 157
+num of flexible agents: 981
+num of flexible tasks: 4981
+Optimal assignment with minimum cost:
+Solving time: 0.0801522 seconds
+plan limit 884
+current timestep 158
+num of flexible agents: 975
+num of flexible tasks: 4975
+Optimal assignment with minimum cost:
+Solving time: 0.0896907 seconds
+plan limit 875
+current timestep 159
+num of flexible agents: 982
+num of flexible tasks: 4982
+Optimal assignment with minimum cost:
+Solving time: 0.0839165 seconds
+plan limit 881
+current timestep 160
+num of flexible agents: 988
+num of flexible tasks: 4988
+Optimal assignment with minimum cost:
+Solving time: 0.0819589 seconds
+plan limit 886
+current timestep 161
+num of flexible agents: 995
+num of flexible tasks: 4995
+Optimal assignment with minimum cost:
+Solving time: 0.0892379 seconds
+plan limit 878
+current timestep 162
+num of flexible agents: 993
+num of flexible tasks: 4993
+Optimal assignment with minimum cost:
+Solving time: 0.0841814 seconds
+plan limit 883
+current timestep 163
+num of flexible agents: 988
+num of flexible tasks: 4988
+Optimal assignment with minimum cost:
+Solving time: 0.0813713 seconds
+plan limit 886
+current timestep 164
+num of flexible agents: 998
+num of flexible tasks: 4998
+Optimal assignment with minimum cost:
+Solving time: 0.084676 seconds
+plan limit 882
+current timestep 165
+num of flexible agents: 999
+num of flexible tasks: 4999
+Optimal assignment with minimum cost:
+Solving time: 0.0836969 seconds
+plan limit 883
+current timestep 166
+num of flexible agents: 1012
+num of flexible tasks: 5012
+Optimal assignment with minimum cost:
+Solving time: 0.0823518 seconds
+plan limit 885
+current timestep 167
+num of flexible agents: 1010
+num of flexible tasks: 5010
+Optimal assignment with minimum cost:
+Solving time: 0.0875696 seconds
+plan limit 879
+current timestep 168
+num of flexible agents: 1022
+num of flexible tasks: 5022
+Optimal assignment with minimum cost:
+Solving time: 0.0817948 seconds
+plan limit 885
+current timestep 169
+num of flexible agents: 1032
+num of flexible tasks: 5032
+Optimal assignment with minimum cost:
+Solving time: 0.0829446 seconds
+plan limit 884
+current timestep 170
+num of flexible agents: 1042
+num of flexible tasks: 5042
+Optimal assignment with minimum cost:
+Solving time: 0.0840538 seconds
+plan limit 883
+current timestep 171
+num of flexible agents: 1035
+num of flexible tasks: 5035
+Optimal assignment with minimum cost:
+Solving time: 0.0841582 seconds
+plan limit 882
+current timestep 172
+num of flexible agents: 1042
+num of flexible tasks: 5042
+Optimal assignment with minimum cost:
+Solving time: 0.0828095 seconds
+plan limit 884
+current timestep 173
+num of flexible agents: 1043
+num of flexible tasks: 5043
+Optimal assignment with minimum cost:
+Solving time: 0.0833672 seconds
+plan limit 883
+current timestep 174
+num of flexible agents: 1044
+num of flexible tasks: 5044
+Optimal assignment with minimum cost:
+Solving time: 0.0842157 seconds
+plan limit 882
+current timestep 175
+num of flexible agents: 1057
+num of flexible tasks: 5057
+Optimal assignment with minimum cost:
+Solving time: 0.0829955 seconds
+plan limit 884
+current timestep 176
+num of flexible agents: 1069
+num of flexible tasks: 5069
+Optimal assignment with minimum cost:
+Solving time: 0.0856092 seconds
+plan limit 881
+current timestep 177
+num of flexible agents: 1069
+num of flexible tasks: 5069
+Optimal assignment with minimum cost:
+Solving time: 0.0845654 seconds
+plan limit 882
+current timestep 178
+num of flexible agents: 1075
+num of flexible tasks: 5075
+Optimal assignment with minimum cost:
+Solving time: 0.0858664 seconds
+plan limit 881
+current timestep 179
+num of flexible agents: 1089
+num of flexible tasks: 5089
+Optimal assignment with minimum cost:
+Solving time: 0.0844814 seconds
+plan limit 882
+current timestep 180
+num of flexible agents: 1095
+num of flexible tasks: 5095
+Optimal assignment with minimum cost:
+Solving time: 0.0853043 seconds
+plan limit 881
+current timestep 181
+num of flexible agents: 1097
+num of flexible tasks: 5097
+Optimal assignment with minimum cost:
+Solving time: 0.0884 seconds
+plan limit 878
+current timestep 182
+num of flexible agents: 1116
+num of flexible tasks: 5116
+Optimal assignment with minimum cost:
+Solving time: 0.0844383 seconds
+plan limit 882
+current timestep 183
+num of flexible agents: 1119
+num of flexible tasks: 5119
+Optimal assignment with minimum cost:
+Solving time: 0.0851627 seconds
+plan limit 882
+current timestep 184
+num of flexible agents: 1120
+num of flexible tasks: 5120
+Optimal assignment with minimum cost:
+Solving time: 0.0867451 seconds
+plan limit 879
+current timestep 185
+num of flexible agents: 1113
+num of flexible tasks: 5113
+Optimal assignment with minimum cost:
+Solving time: 0.0856654 seconds
+plan limit 881
+current timestep 186
+num of flexible agents: 1115
+num of flexible tasks: 5115
+Optimal assignment with minimum cost:
+Solving time: 0.0822436 seconds
+plan limit 886
+current timestep 187
+num of flexible agents: 1122
+num of flexible tasks: 5122
+Optimal assignment with minimum cost:
+Solving time: 0.0912366 seconds
+plan limit 875
+current timestep 188
+num of flexible agents: 1112
+num of flexible tasks: 5112
+Optimal assignment with minimum cost:
+Solving time: 0.0853229 seconds
+plan limit 882
+current timestep 189
+num of flexible agents: 1112
+num of flexible tasks: 5112
+Optimal assignment with minimum cost:
+Solving time: 0.0852567 seconds
+plan limit 882
+current timestep 190
+num of flexible agents: 1109
+num of flexible tasks: 5109
+Optimal assignment with minimum cost:
+Solving time: 0.095095 seconds
+plan limit 870
+current timestep 191
+num of flexible agents: 1110
+num of flexible tasks: 5110
+Optimal assignment with minimum cost:
+Solving time: 0.0849259 seconds
+plan limit 882
+current timestep 192
+num of flexible agents: 1106
+num of flexible tasks: 5106
+Optimal assignment with minimum cost:
+Solving time: 0.0842056 seconds
+plan limit 883
+current timestep 193
+num of flexible agents: 1109
+num of flexible tasks: 5109
+Optimal assignment with minimum cost:
+Solving time: 0.0915226 seconds
+plan limit 875
+current timestep 194
+num of flexible agents: 1115
+num of flexible tasks: 5115
+Optimal assignment with minimum cost:
+Solving time: 0.0873544 seconds
+plan limit 880
+current timestep 195
+num of flexible agents: 1116
+num of flexible tasks: 5116
+Optimal assignment with minimum cost:
+Solving time: 0.0900846 seconds
+plan limit 877
+current timestep 196
+num of flexible agents: 1124
+num of flexible tasks: 5124
+Optimal assignment with minimum cost:
+Solving time: 0.0942522 seconds
+plan limit 873
+current timestep 197
+num of flexible agents: 1132
+num of flexible tasks: 5132
+Optimal assignment with minimum cost:
+Solving time: 0.0883359 seconds
+plan limit 878
+current timestep 198
+num of flexible agents: 1123
+num of flexible tasks: 5123
+Optimal assignment with minimum cost:
+Solving time: 0.0872942 seconds
+plan limit 880
+current timestep 199
+num of flexible agents: 1120
+num of flexible tasks: 5120
+Optimal assignment with minimum cost:
+Solving time: 0.0956031 seconds
+plan limit 871
+current timestep 200
+num of flexible agents: 1115
+num of flexible tasks: 5115
+Optimal assignment with minimum cost:
+Solving time: 0.0858029 seconds
+plan limit 881
+current timestep 201
+num of flexible agents: 1104
+num of flexible tasks: 5104
+Optimal assignment with minimum cost:
+Solving time: 0.0862765 seconds
+plan limit 881
+current timestep 202
+num of flexible agents: 1132
+num of flexible tasks: 5132
+Optimal assignment with minimum cost:
+Solving time: 0.0956616 seconds
+plan limit 871
+current timestep 203
+num of flexible agents: 1134
+num of flexible tasks: 5134
+Optimal assignment with minimum cost:
+Solving time: 0.0833476 seconds
+plan limit 883
+current timestep 204
+num of flexible agents: 1131
+num of flexible tasks: 5131
+Optimal assignment with minimum cost:
+Solving time: 0.0861156 seconds
+plan limit 881
+current timestep 205
+num of flexible agents: 1124
+num of flexible tasks: 5124
+Optimal assignment with minimum cost:
+Solving time: 0.0918308 seconds
+plan limit 875
+current timestep 206
+num of flexible agents: 1121
+num of flexible tasks: 5121
+Optimal assignment with minimum cost:
+Solving time: 0.085404 seconds
+plan limit 882
+current timestep 207
+num of flexible agents: 1121
+num of flexible tasks: 5121
+Optimal assignment with minimum cost:
+Solving time: 0.0854947 seconds
+plan limit 881
+current timestep 208
+num of flexible agents: 1127
+num of flexible tasks: 5127
+Optimal assignment with minimum cost:
+Solving time: 0.0902174 seconds
+plan limit 877
+current timestep 209
+num of flexible agents: 1128
+num of flexible tasks: 5128
+Optimal assignment with minimum cost:
+Solving time: 0.0886389 seconds
+plan limit 878
+current timestep 210
+num of flexible agents: 1131
+num of flexible tasks: 5131
+Optimal assignment with minimum cost:
+Solving time: 0.0863996 seconds
+plan limit 880
+current timestep 211
+num of flexible agents: 1140
+num of flexible tasks: 5140
+Optimal assignment with minimum cost:
+Solving time: 0.09509 seconds
+plan limit 871
+current timestep 212
+num of flexible agents: 1141
+num of flexible tasks: 5141
+Optimal assignment with minimum cost:
+Solving time: 0.0899989 seconds
+plan limit 877
+current timestep 213
+num of flexible agents: 1141
+num of flexible tasks: 5141
+Optimal assignment with minimum cost:
+Solving time: 0.0880382 seconds
+plan limit 879
+current timestep 214
+num of flexible agents: 1150
+num of flexible tasks: 5150
+Optimal assignment with minimum cost:
+Solving time: 0.0887895 seconds
+plan limit 878
+current timestep 215
+num of flexible agents: 1145
+num of flexible tasks: 5145
+Optimal assignment with minimum cost:
+Solving time: 0.0902289 seconds
+plan limit 876
+current timestep 216
+num of flexible agents: 1150
+num of flexible tasks: 5150
+Optimal assignment with minimum cost:
+Solving time: 0.0922108 seconds
+plan limit 875
+current timestep 217
+num of flexible agents: 1153
+num of flexible tasks: 5153
+Optimal assignment with minimum cost:
+Solving time: 0.0890309 seconds
+plan limit 877
+current timestep 218
+num of flexible agents: 1156
+num of flexible tasks: 5156
+Optimal assignment with minimum cost:
+Solving time: 0.0897083 seconds
+plan limit 877
+current timestep 219
+num of flexible agents: 1156
+num of flexible tasks: 5156
+Optimal assignment with minimum cost:
+Solving time: 0.0887706 seconds
+plan limit 878
+current timestep 220
+num of flexible agents: 1152
+num of flexible tasks: 5152
+Optimal assignment with minimum cost:
+Solving time: 0.09128 seconds
+plan limit 875
+current timestep 221
+num of flexible agents: 1153
+num of flexible tasks: 5153
+Optimal assignment with minimum cost:
+Solving time: 0.0927896 seconds
+plan limit 874
+current timestep 222
+num of flexible agents: 1150
+num of flexible tasks: 5150
+Optimal assignment with minimum cost:
+Solving time: 0.0910881 seconds
+plan limit 875
+current timestep 223
+num of flexible agents: 1151
+num of flexible tasks: 5151
+Optimal assignment with minimum cost:
+Solving time: 0.0929594 seconds
+plan limit 874
+current timestep 224
+num of flexible agents: 1158
+num of flexible tasks: 5158
+Optimal assignment with minimum cost:
+Solving time: 0.0978766 seconds
+plan limit 869
+current timestep 225
+num of flexible agents: 1168
+num of flexible tasks: 5168
+Optimal assignment with minimum cost:
+Solving time: 0.0944335 seconds
+plan limit 872
+current timestep 226
+num of flexible agents: 1162
+num of flexible tasks: 5162
+Optimal assignment with minimum cost:
+Solving time: 0.0961588 seconds
+plan limit 870
+current timestep 227
+num of flexible agents: 1162
+num of flexible tasks: 5162
+Optimal assignment with minimum cost:
+Solving time: 0.0955026 seconds
+plan limit 871
+current timestep 228
+num of flexible agents: 1158
+num of flexible tasks: 5158
+Optimal assignment with minimum cost:
+Solving time: 0.0946975 seconds
+plan limit 871
+current timestep 229
+num of flexible agents: 1169
+num of flexible tasks: 5169
+Optimal assignment with minimum cost:
+Solving time: 0.0977336 seconds
+plan limit 869
+current timestep 230
+num of flexible agents: 1168
+num of flexible tasks: 5168
+Optimal assignment with minimum cost:
+Solving time: 0.100021 seconds
+plan limit 867
+current timestep 231
+num of flexible agents: 1164
+num of flexible tasks: 5164
+Optimal assignment with minimum cost:
+Solving time: 0.105262 seconds
+plan limit 861
+current timestep 232
+num of flexible agents: 1164
+num of flexible tasks: 5164
+Optimal assignment with minimum cost:
+Solving time: 0.100351 seconds
+plan limit 867
+current timestep 233
+num of flexible agents: 1161
+num of flexible tasks: 5161
+Optimal assignment with minimum cost:
+Solving time: 0.101419 seconds
+plan limit 865
+current timestep 234
+num of flexible agents: 1157
+num of flexible tasks: 5157
+Optimal assignment with minimum cost:
+Solving time: 0.105096 seconds
+plan limit 860
+current timestep 235
+num of flexible agents: 1159
+num of flexible tasks: 5159
+Optimal assignment with minimum cost:
+Solving time: 0.0983619 seconds
+plan limit 868
+current timestep 236
+num of flexible agents: 1157
+num of flexible tasks: 5157
+Optimal assignment with minimum cost:
+Solving time: 0.10275 seconds
+plan limit 864
+current timestep 237
+num of flexible agents: 1157
+num of flexible tasks: 5157
+Optimal assignment with minimum cost:
+Solving time: 0.111391 seconds
+plan limit 854
+current timestep 238
+num of flexible agents: 1147
+num of flexible tasks: 5147
+Optimal assignment with minimum cost:
+Solving time: 0.106098 seconds
+plan limit 860
+current timestep 239
+num of flexible agents: 1133
+num of flexible tasks: 5133
+Optimal assignment with minimum cost:
+Solving time: 0.0972858 seconds
+plan limit 869
+current timestep 240
+num of flexible agents: 1140
+num of flexible tasks: 5140
+Optimal assignment with minimum cost:
+Solving time: 0.111177 seconds
+plan limit 855
+current timestep 241
+num of flexible agents: 1145
+num of flexible tasks: 5145
+Optimal assignment with minimum cost:
+Solving time: 0.103624 seconds
+plan limit 863
+current timestep 242
+num of flexible agents: 1145
+num of flexible tasks: 5145
+Optimal assignment with minimum cost:
+Solving time: 0.109761 seconds
+plan limit 857
+current timestep 243
+num of flexible agents: 1135
+num of flexible tasks: 5135
+Optimal assignment with minimum cost:
+Solving time: 0.107752 seconds
+plan limit 859
+current timestep 244
+num of flexible agents: 1139
+num of flexible tasks: 5139
+Optimal assignment with minimum cost:
+Solving time: 0.0990002 seconds
+plan limit 868
+current timestep 245
+num of flexible agents: 1129
+num of flexible tasks: 5129
+Optimal assignment with minimum cost:
+Solving time: 0.101987 seconds
+plan limit 865
+current timestep 246
+num of flexible agents: 1135
+num of flexible tasks: 5135
+Optimal assignment with minimum cost:
+Solving time: 0.10759 seconds
+plan limit 859
+current timestep 247
+num of flexible agents: 1122
+num of flexible tasks: 5122
+Optimal assignment with minimum cost:
+Solving time: 0.0991185 seconds
+plan limit 868
+current timestep 248
+num of flexible agents: 1126
+num of flexible tasks: 5126
+Optimal assignment with minimum cost:
+Solving time: 0.0981935 seconds
+plan limit 869
+current timestep 249
+num of flexible agents: 1131
+num of flexible tasks: 5131
+Optimal assignment with minimum cost:
+Solving time: 0.102935 seconds
+plan limit 863
+current timestep 250
+num of flexible agents: 1127
+num of flexible tasks: 5127
+Optimal assignment with minimum cost:
+Solving time: 0.100618 seconds
+plan limit 866
+current timestep 251
+num of flexible agents: 1125
+num of flexible tasks: 5125
+Optimal assignment with minimum cost:
+Solving time: 0.100878 seconds
+plan limit 865
+current timestep 252
+num of flexible agents: 1133
+num of flexible tasks: 5133
+Optimal assignment with minimum cost:
+Solving time: 0.107783 seconds
+plan limit 859
+current timestep 253
+num of flexible agents: 1123
+num of flexible tasks: 5123
+Optimal assignment with minimum cost:
+Solving time: 0.123869 seconds
+plan limit 842
+current timestep 254
+num of flexible agents: 1140
+num of flexible tasks: 5140
+Optimal assignment with minimum cost:
+Solving time: 0.1097 seconds
+plan limit 857
+current timestep 255
+num of flexible agents: 1135
+num of flexible tasks: 5135
+Optimal assignment with minimum cost:
+Solving time: 0.130662 seconds
+plan limit 836
+current timestep 256
+num of flexible agents: 1132
+num of flexible tasks: 5132
+Optimal assignment with minimum cost:
+Solving time: 0.117478 seconds
+plan limit 849
+current timestep 257
+num of flexible agents: 1151
+num of flexible tasks: 5151
+Optimal assignment with minimum cost:
+Solving time: 0.112801 seconds
+plan limit 854
+current timestep 258
+num of flexible agents: 1151
+num of flexible tasks: 5151
+Optimal assignment with minimum cost:
+Solving time: 0.118163 seconds
+plan limit 848
+current timestep 259
+num of flexible agents: 1147
+num of flexible tasks: 5147
+Optimal assignment with minimum cost:
+Solving time: 0.131838 seconds
+plan limit 834
+current timestep 260
+num of flexible agents: 1153
+num of flexible tasks: 5153
+Optimal assignment with minimum cost:
+Solving time: 0.136109 seconds
+plan limit 830
+current timestep 261
+num of flexible agents: 1147
+num of flexible tasks: 5147
+Optimal assignment with minimum cost:
+Solving time: 0.159527 seconds
+plan limit 807
+current timestep 262
+num of flexible agents: 1139
+num of flexible tasks: 5139
+Optimal assignment with minimum cost:
+Solving time: 0.154012 seconds
+plan limit 812
+current timestep 263
+num of flexible agents: 1140
+num of flexible tasks: 5140
+Optimal assignment with minimum cost:
+Solving time: 0.153276 seconds
+plan limit 813
+current timestep 264
+num of flexible agents: 1146
+num of flexible tasks: 5146
+Optimal assignment with minimum cost:
+Solving time: 0.156383 seconds
+plan limit 810
+current timestep 265
+num of flexible agents: 1138
+num of flexible tasks: 5138
+Optimal assignment with minimum cost:
+Solving time: 0.149485 seconds
+plan limit 817
+current timestep 266
+num of flexible agents: 1148
+num of flexible tasks: 5148
+Optimal assignment with minimum cost:
+Solving time: 0.140666 seconds
+plan limit 825
+current timestep 267
+num of flexible agents: 1145
+num of flexible tasks: 5145
+Optimal assignment with minimum cost:
+Solving time: 0.159929 seconds
+plan limit 808
+current timestep 268
+num of flexible agents: 1152
+num of flexible tasks: 5152
+Optimal assignment with minimum cost:
+Solving time: 0.153528 seconds
+plan limit 813
+current timestep 269
+num of flexible agents: 1155
+num of flexible tasks: 5155
+Optimal assignment with minimum cost:
+Solving time: 0.149482 seconds
+plan limit 816
+current timestep 270
+num of flexible agents: 1155
+num of flexible tasks: 5155
+Optimal assignment with minimum cost:
+Solving time: 0.169487 seconds
+plan limit 796
+current timestep 271
+num of flexible agents: 1156
+num of flexible tasks: 5156
+Optimal assignment with minimum cost:
+Solving time: 0.16307 seconds
+plan limit 803
+current timestep 272
+num of flexible agents: 1161
+num of flexible tasks: 5161
+Optimal assignment with minimum cost:
+Solving time: 0.155062 seconds
+plan limit 811
+current timestep 273
+num of flexible agents: 1171
+num of flexible tasks: 5171
+Optimal assignment with minimum cost:
+Solving time: 0.157654 seconds
+plan limit 808
+current timestep 274
+num of flexible agents: 1181
+num of flexible tasks: 5181
+Optimal assignment with minimum cost:
+Solving time: 0.165872 seconds
+plan limit 800
+current timestep 275
+num of flexible agents: 1181
+num of flexible tasks: 5181
+Optimal assignment with minimum cost:
+Solving time: 0.177038 seconds
+plan limit 788
+current timestep 276
+num of flexible agents: 1194
+num of flexible tasks: 5194
+Optimal assignment with minimum cost:
+Solving time: 0.165968 seconds
+plan limit 799
+current timestep 277
+num of flexible agents: 1203
+num of flexible tasks: 5203
+Optimal assignment with minimum cost:
+Solving time: 0.16349 seconds
+plan limit 802
+current timestep 278
+num of flexible agents: 1211
+num of flexible tasks: 5211
+Optimal assignment with minimum cost:
+Solving time: 0.160274 seconds
+plan limit 805
+current timestep 279
+num of flexible agents: 1218
+num of flexible tasks: 5218
+Optimal assignment with minimum cost:
+Solving time: 0.172792 seconds
+plan limit 793
+current timestep 280
+num of flexible agents: 1229
+num of flexible tasks: 5229
+Optimal assignment with minimum cost:
+Solving time: 0.165675 seconds
+plan limit 799
+current timestep 281
+num of flexible agents: 1233
+num of flexible tasks: 5233
+Optimal assignment with minimum cost:
+Solving time: 0.169016 seconds
+plan limit 796
+current timestep 282
+num of flexible agents: 1246
+num of flexible tasks: 5246
+Optimal assignment with minimum cost:
+Solving time: 0.156413 seconds
+plan limit 809
+current timestep 283
+num of flexible agents: 1247
+num of flexible tasks: 5247
+Optimal assignment with minimum cost:
+Solving time: 0.159406 seconds
+plan limit 806
+current timestep 284
+num of flexible agents: 1247
+num of flexible tasks: 5247
+Optimal assignment with minimum cost:
+Solving time: 0.162538 seconds
+plan limit 802
+current timestep 285
+num of flexible agents: 1254
+num of flexible tasks: 5254
+Optimal assignment with minimum cost:
+Solving time: 0.161336 seconds
+plan limit 803
+current timestep 286
+num of flexible agents: 1259
+num of flexible tasks: 5259
+Optimal assignment with minimum cost:
+Solving time: 0.158939 seconds
+plan limit 806
+current timestep 287
+num of flexible agents: 1265
+num of flexible tasks: 5265
+Optimal assignment with minimum cost:
+Solving time: 0.160548 seconds
+plan limit 804
+current timestep 288
+num of flexible agents: 1278
+num of flexible tasks: 5278
+Optimal assignment with minimum cost:
+Solving time: 0.162751 seconds
+plan limit 801
+current timestep 289
+num of flexible agents: 1281
+num of flexible tasks: 5281
+Optimal assignment with minimum cost:
+Solving time: 0.155589 seconds
+plan limit 809
+current timestep 290
+num of flexible agents: 1289
+num of flexible tasks: 5289
+Optimal assignment with minimum cost:
+Solving time: 0.153063 seconds
+plan limit 811
+current timestep 291
+num of flexible agents: 1291
+num of flexible tasks: 5291
+Optimal assignment with minimum cost:
+Solving time: 0.154465 seconds
+plan limit 808
+current timestep 292
+num of flexible agents: 1289
+num of flexible tasks: 5289
+Optimal assignment with minimum cost:
+Solving time: 0.157733 seconds
+plan limit 807
+current timestep 293
+num of flexible agents: 1286
+num of flexible tasks: 5286
+Optimal assignment with minimum cost:
+Solving time: 0.163147 seconds
+plan limit 800
+current timestep 294
+num of flexible agents: 1301
+num of flexible tasks: 5301
+Optimal assignment with minimum cost:
+Solving time: 0.156437 seconds
+plan limit 808
+current timestep 295
+num of flexible agents: 1301
+num of flexible tasks: 5301
+Optimal assignment with minimum cost:
+Solving time: 0.163865 seconds
+plan limit 800
+current timestep 296
+num of flexible agents: 1301
+num of flexible tasks: 5301
+Optimal assignment with minimum cost:
+Solving time: 0.16321 seconds
+plan limit 800
+current timestep 297
+num of flexible agents: 1294
+num of flexible tasks: 5294
+Optimal assignment with minimum cost:
+Solving time: 0.159433 seconds
+plan limit 804
+current timestep 298
+num of flexible agents: 1302
+num of flexible tasks: 5302
+Optimal assignment with minimum cost:
+Solving time: 0.151164 seconds
+plan limit 813
+current timestep 299
+num of flexible agents: 1320
+num of flexible tasks: 5320
+Optimal assignment with minimum cost:
+Solving time: 0.168395 seconds
+plan limit 795
+current timestep 300
+num of flexible agents: 1346
+num of flexible tasks: 5346
+Optimal assignment with minimum cost:
+Solving time: 0.163606 seconds
+plan limit 800
+current timestep 301
+num of flexible agents: 1356
+num of flexible tasks: 5356
+Optimal assignment with minimum cost:
+Solving time: 0.156255 seconds
+plan limit 808
+current timestep 302
+num of flexible agents: 1365
+num of flexible tasks: 5365
+Optimal assignment with minimum cost:
+Solving time: 0.163824 seconds
+plan limit 799
+current timestep 303
+num of flexible agents: 1370
+num of flexible tasks: 5370
+Optimal assignment with minimum cost:
+Solving time: 0.167547 seconds
+plan limit 796
+current timestep 304
+num of flexible agents: 1385
+num of flexible tasks: 5385
+Optimal assignment with minimum cost:
+Solving time: 0.156521 seconds
+plan limit 807
+current timestep 305
+num of flexible agents: 1385
+num of flexible tasks: 5385
+Optimal assignment with minimum cost:
+Solving time: 0.166538 seconds
+plan limit 796
+current timestep 306
+num of flexible agents: 1387
+num of flexible tasks: 5387
+Optimal assignment with minimum cost:
+Solving time: 0.169457 seconds
+plan limit 794
+current timestep 307
+num of flexible agents: 1396
+num of flexible tasks: 5396
+Optimal assignment with minimum cost:
+Solving time: 0.169422 seconds
+plan limit 794
+current timestep 308
+num of flexible agents: 1418
+num of flexible tasks: 5418
+Optimal assignment with minimum cost:
+Solving time: 0.164731 seconds
+plan limit 797
+current timestep 309
+num of flexible agents: 1426
+num of flexible tasks: 5426
+Optimal assignment with minimum cost:
+Solving time: 0.160965 seconds
+plan limit 802
+current timestep 310
+num of flexible agents: 1432
+num of flexible tasks: 5432
+Optimal assignment with minimum cost:
+Solving time: 0.160163 seconds
+plan limit 803
+current timestep 311
+num of flexible agents: 1438
+num of flexible tasks: 5438
+Optimal assignment with minimum cost:
+Solving time: 0.160213 seconds
+plan limit 801
+current timestep 312
+num of flexible agents: 1443
+num of flexible tasks: 5443
+Optimal assignment with minimum cost:
+Solving time: 0.156879 seconds
+plan limit 806
+current timestep 313
+num of flexible agents: 1442
+num of flexible tasks: 5442
+Optimal assignment with minimum cost:
+Solving time: 0.165627 seconds
+plan limit 798
+current timestep 314
+num of flexible agents: 1450
+num of flexible tasks: 5450
+Optimal assignment with minimum cost:
+Solving time: 0.164842 seconds
+plan limit 797
+current timestep 315
+num of flexible agents: 1466
+num of flexible tasks: 5466
+Optimal assignment with minimum cost:
+Solving time: 0.164305 seconds
+plan limit 799
+current timestep 316
+num of flexible agents: 1461
+num of flexible tasks: 5461
+Optimal assignment with minimum cost:
+Solving time: 0.163793 seconds
+plan limit 800
+current timestep 317
+num of flexible agents: 1480
+num of flexible tasks: 5480
+Optimal assignment with minimum cost:
+Solving time: 0.16406 seconds
+plan limit 798
+current timestep 318
+num of flexible agents: 1495
+num of flexible tasks: 5495
+Optimal assignment with minimum cost:
+Solving time: 0.169833 seconds
+plan limit 792
+current timestep 319
+num of flexible agents: 1509
+num of flexible tasks: 5509
+Optimal assignment with minimum cost:
+Solving time: 0.174544 seconds
+plan limit 788
+current timestep 320
+num of flexible agents: 1511
+num of flexible tasks: 5511
+Optimal assignment with minimum cost:
+Solving time: 0.169365 seconds
+plan limit 793
+current timestep 321
+num of flexible agents: 1515
+num of flexible tasks: 5515
+Optimal assignment with minimum cost:
+Solving time: 0.164893 seconds
+plan limit 798
+current timestep 322
+num of flexible agents: 1536
+num of flexible tasks: 5536
+Optimal assignment with minimum cost:
+Solving time: 0.163128 seconds
+plan limit 799
+current timestep 323
+num of flexible agents: 1542
+num of flexible tasks: 5542
+Optimal assignment with minimum cost:
+Solving time: 0.168277 seconds
+plan limit 794
+current timestep 324
+num of flexible agents: 1545
+num of flexible tasks: 5545
+Optimal assignment with minimum cost:
+Solving time: 0.172662 seconds
+plan limit 790
+current timestep 325
+num of flexible agents: 1552
+num of flexible tasks: 5552
+Optimal assignment with minimum cost:
+Solving time: 0.16787 seconds
+plan limit 794
+current timestep 326
+num of flexible agents: 1549
+num of flexible tasks: 5549
+Optimal assignment with minimum cost:
+Solving time: 0.172367 seconds
+plan limit 790
+current timestep 327
+num of flexible agents: 1546
+num of flexible tasks: 5546
+Optimal assignment with minimum cost:
+Solving time: 0.175364 seconds
+plan limit 787
+current timestep 328
+num of flexible agents: 1553
+num of flexible tasks: 5553
+Optimal assignment with minimum cost:
+Solving time: 0.167116 seconds
+plan limit 796
+current timestep 329
+num of flexible agents: 1561
+num of flexible tasks: 5561
+Optimal assignment with minimum cost:
+Solving time: 0.175265 seconds
+plan limit 790
+current timestep 330
+num of flexible agents: 1571
+num of flexible tasks: 5571
+Optimal assignment with minimum cost:
+Solving time: 0.174009 seconds
+plan limit 789
+current timestep 331
+num of flexible agents: 1571
+num of flexible tasks: 5571
+Optimal assignment with minimum cost:
+Solving time: 0.170319 seconds
+plan limit 792
+current timestep 332
+num of flexible agents: 1579
+num of flexible tasks: 5579
+Optimal assignment with minimum cost:
+Solving time: 0.167568 seconds
+plan limit 795
+current timestep 333
+num of flexible agents: 1577
+num of flexible tasks: 5577
+Optimal assignment with minimum cost:
+Solving time: 0.181086 seconds
+plan limit 777
+current timestep 334
+num of flexible agents: 1575
+num of flexible tasks: 5575
+Optimal assignment with minimum cost:
+Solving time: 0.171104 seconds
+plan limit 791
+current timestep 335
+num of flexible agents: 1583
+num of flexible tasks: 5583
+Optimal assignment with minimum cost:
+Solving time: 0.166111 seconds
+plan limit 793
+current timestep 336
+num of flexible agents: 1602
+num of flexible tasks: 5602
+Optimal assignment with minimum cost:
+Solving time: 0.178624 seconds
+plan limit 783
+current timestep 337
+num of flexible agents: 1610
+num of flexible tasks: 5610
+Optimal assignment with minimum cost:
+Solving time: 0.167942 seconds
+plan limit 793
+current timestep 338
+num of flexible agents: 1606
+num of flexible tasks: 5606
+Optimal assignment with minimum cost:
+Solving time: 0.169072 seconds
+plan limit 793
+current timestep 339
+num of flexible agents: 1605
+num of flexible tasks: 5605
+Optimal assignment with minimum cost:
+Solving time: 0.16798 seconds
+plan limit 794
+current timestep 340
+num of flexible agents: 1632
+num of flexible tasks: 5632
+Optimal assignment with minimum cost:
+Solving time: 0.157195 seconds
+plan limit 802
+current timestep 341
+num of flexible agents: 1635
+num of flexible tasks: 5635
+Optimal assignment with minimum cost:
+Solving time: 0.168825 seconds
+plan limit 793
+current timestep 342
+num of flexible agents: 1640
+num of flexible tasks: 5640
+Optimal assignment with minimum cost:
+Solving time: 0.174162 seconds
+plan limit 788
+current timestep 343
+num of flexible agents: 1636
+num of flexible tasks: 5636
+Optimal assignment with minimum cost:
+Solving time: 0.169265 seconds
+plan limit 792
+current timestep 344
+num of flexible agents: 1639
+num of flexible tasks: 5639
+Optimal assignment with minimum cost:
+Solving time: 0.158035 seconds
+plan limit 805
+current timestep 345
+num of flexible agents: 1640
+num of flexible tasks: 5640
+Optimal assignment with minimum cost:
+Solving time: 0.162725 seconds
+plan limit 799
+current timestep 346
+num of flexible agents: 1655
+num of flexible tasks: 5655
+Optimal assignment with minimum cost:
+Solving time: 0.159916 seconds
+plan limit 802
+current timestep 347
+num of flexible agents: 1668
+num of flexible tasks: 5668
+Optimal assignment with minimum cost:
+Solving time: 0.160611 seconds
+plan limit 801
+current timestep 348
+num of flexible agents: 1692
+num of flexible tasks: 5692
+Optimal assignment with minimum cost:
+Solving time: 0.175742 seconds
+plan limit 785
+current timestep 349
+num of flexible agents: 1700
+num of flexible tasks: 5700
+Optimal assignment with minimum cost:
+Solving time: 0.157182 seconds
+plan limit 804
+current timestep 350
+num of flexible agents: 1715
+num of flexible tasks: 5715
+Optimal assignment with minimum cost:
+Solving time: 0.165267 seconds
+plan limit 800
+current timestep 351
+num of flexible agents: 1721
+num of flexible tasks: 5721
+Optimal assignment with minimum cost:
+Solving time: 0.169013 seconds
+plan limit 793
+current timestep 352
+num of flexible agents: 1735
+num of flexible tasks: 5735
+Optimal assignment with minimum cost:
+Solving time: 0.169913 seconds
+plan limit 791
+current timestep 353
+num of flexible agents: 1744
+num of flexible tasks: 5744
+Optimal assignment with minimum cost:
+Solving time: 0.169197 seconds
+plan limit 793
+current timestep 354
+num of flexible agents: 1758
+num of flexible tasks: 5758
+Optimal assignment with minimum cost:
+Solving time: 0.174751 seconds
+plan limit 787
+current timestep 355
+num of flexible agents: 1780
+num of flexible tasks: 5780
+Optimal assignment with minimum cost:
+Solving time: 0.168322 seconds
+plan limit 793
+current timestep 356
+num of flexible agents: 1772
+num of flexible tasks: 5772
+Optimal assignment with minimum cost:
+Solving time: 0.166431 seconds
+plan limit 795
+current timestep 357
+num of flexible agents: 1777
+num of flexible tasks: 5777
+Optimal assignment with minimum cost:
+Solving time: 0.181828 seconds
+plan limit 777
+current timestep 358
+num of flexible agents: 1784
+num of flexible tasks: 5784
+Optimal assignment with minimum cost:
+Solving time: 0.180489 seconds
+plan limit 781
+current timestep 359
+num of flexible agents: 1789
+num of flexible tasks: 5789
+Optimal assignment with minimum cost:
+Solving time: 0.169972 seconds
+plan limit 791
+current timestep 360
+num of flexible agents: 1792
+num of flexible tasks: 5792
+Optimal assignment with minimum cost:
+Solving time: 0.184235 seconds
+plan limit 777
+current timestep 361
+num of flexible agents: 1795
+num of flexible tasks: 5795
+Optimal assignment with minimum cost:
+Solving time: 0.169075 seconds
+plan limit 792
+current timestep 362
+num of flexible agents: 1797
+num of flexible tasks: 5797
+Optimal assignment with minimum cost:
+Solving time: 0.170712 seconds
+plan limit 794
+current timestep 363
+num of flexible agents: 1802
+num of flexible tasks: 5802
+Optimal assignment with minimum cost:
+Solving time: 0.187391 seconds
+plan limit 777
+current timestep 364
+num of flexible agents: 1803
+num of flexible tasks: 5803
+Optimal assignment with minimum cost:
+Solving time: 0.175458 seconds
+plan limit 786
+current timestep 365
+num of flexible agents: 1813
+num of flexible tasks: 5813
+Optimal assignment with minimum cost:
+Solving time: 0.174285 seconds
+plan limit 787
+current timestep 366
+num of flexible agents: 1803
+num of flexible tasks: 5803
+Optimal assignment with minimum cost:
+Solving time: 0.181815 seconds
+plan limit 780
+current timestep 367
+num of flexible agents: 1816
+num of flexible tasks: 5816
+Optimal assignment with minimum cost:
+Solving time: 0.194363 seconds
+plan limit 767
+current timestep 368
+num of flexible agents: 1812
+num of flexible tasks: 5812
+Optimal assignment with minimum cost:
+Solving time: 0.189927 seconds
+plan limit 772
+current timestep 369
+num of flexible agents: 1815
+num of flexible tasks: 5815
+Optimal assignment with minimum cost:
+Solving time: 0.190395 seconds
+plan limit 771
+current timestep 370
+num of flexible agents: 1824
+num of flexible tasks: 5824
+Optimal assignment with minimum cost:
+Solving time: 0.196195 seconds
+plan limit 765
+current timestep 371
+num of flexible agents: 1823
+num of flexible tasks: 5823
+Optimal assignment with minimum cost:
+Solving time: 0.197074 seconds
+plan limit 763
+current timestep 372
+num of flexible agents: 1830
+num of flexible tasks: 5830
+Optimal assignment with minimum cost:
+Solving time: 0.206826 seconds
+plan limit 753
+current timestep 373
+num of flexible agents: 1821
+num of flexible tasks: 5821
+Optimal assignment with minimum cost:
+Solving time: 0.193244 seconds
+plan limit 764
+current timestep 374
+num of flexible agents: 1818
+num of flexible tasks: 5818
+Optimal assignment with minimum cost:
+Solving time: 0.199658 seconds
+plan limit 763
+current timestep 375
+num of flexible agents: 1814
+num of flexible tasks: 5814
+Optimal assignment with minimum cost:
+Solving time: 0.204855 seconds
+plan limit 754
+current timestep 376
+num of flexible agents: 1802
+num of flexible tasks: 5802
+Optimal assignment with minimum cost:
+Solving time: 0.200084 seconds
+plan limit 759
+current timestep 377
+num of flexible agents: 1797
+num of flexible tasks: 5797
+Optimal assignment with minimum cost:
+Solving time: 0.186345 seconds
+plan limit 776
+current timestep 378
+num of flexible agents: 1802
+num of flexible tasks: 5802
+Optimal assignment with minimum cost:
+Solving time: 0.190372 seconds
+plan limit 769
+current timestep 379
+num of flexible agents: 1798
+num of flexible tasks: 5798
+Optimal assignment with minimum cost:
+Solving time: 0.187394 seconds
+plan limit 774
+current timestep 380
+num of flexible agents: 1795
+num of flexible tasks: 5795
+Optimal assignment with minimum cost:
+Solving time: 0.187451 seconds
+plan limit 773
+current timestep 381
+num of flexible agents: 1789
+num of flexible tasks: 5789
+Optimal assignment with minimum cost:
+Solving time: 0.199149 seconds
+plan limit 762
+current timestep 382
+num of flexible agents: 1773
+num of flexible tasks: 5773
+Optimal assignment with minimum cost:
+Solving time: 0.190503 seconds
+plan limit 770
+current timestep 383
+num of flexible agents: 1775
+num of flexible tasks: 5775
+Optimal assignment with minimum cost:
+Solving time: 0.190133 seconds
+plan limit 768
+current timestep 384
+num of flexible agents: 1776
+num of flexible tasks: 5776
+Optimal assignment with minimum cost:
+Solving time: 0.194584 seconds
+plan limit 767
+current timestep 385
+num of flexible agents: 1775
+num of flexible tasks: 5775
+Optimal assignment with minimum cost:
+Solving time: 0.190621 seconds
+plan limit 768
+current timestep 386
+num of flexible agents: 1789
+num of flexible tasks: 5789
+Optimal assignment with minimum cost:
+Solving time: 0.191062 seconds
+plan limit 768
+current timestep 387
+num of flexible agents: 1791
+num of flexible tasks: 5791
+Optimal assignment with minimum cost:
+Solving time: 0.198493 seconds
+plan limit 762
+current timestep 388
+num of flexible agents: 1781
+num of flexible tasks: 5781
+Optimal assignment with minimum cost:
+Solving time: 0.195668 seconds
+plan limit 764
+current timestep 389
+num of flexible agents: 1783
+num of flexible tasks: 5783
+Optimal assignment with minimum cost:
+Solving time: 0.199558 seconds
+plan limit 762
+current timestep 390
+num of flexible agents: 1775
+num of flexible tasks: 5775
+Optimal assignment with minimum cost:
+Solving time: 0.202755 seconds
+plan limit 752
+current timestep 391
+num of flexible agents: 1781
+num of flexible tasks: 5781
+Optimal assignment with minimum cost:
+Solving time: 0.193181 seconds
+plan limit 765
+current timestep 392
+num of flexible agents: 1776
+num of flexible tasks: 5776
+Optimal assignment with minimum cost:
+Solving time: 0.18526 seconds
+plan limit 777
+current timestep 393
+num of flexible agents: 1777
+num of flexible tasks: 5777
+Optimal assignment with minimum cost:
+Solving time: 0.201257 seconds
+plan limit 758
+current timestep 394
+num of flexible agents: 1779
+num of flexible tasks: 5779
+Optimal assignment with minimum cost:
+Solving time: 0.199572 seconds
+plan limit 757
+current timestep 395
+num of flexible agents: 1786
+num of flexible tasks: 5786
+Optimal assignment with minimum cost:
+Solving time: 0.181369 seconds
+plan limit 777
+current timestep 396
+num of flexible agents: 1786
+num of flexible tasks: 5786
+Optimal assignment with minimum cost:
+Solving time: 0.185659 seconds
+plan limit 770
+current timestep 397
+num of flexible agents: 1769
+num of flexible tasks: 5769
+Optimal assignment with minimum cost:
+Solving time: 0.19485 seconds
+plan limit 763
+current timestep 398
+num of flexible agents: 1770
+num of flexible tasks: 5770
+Optimal assignment with minimum cost:
+Solving time: 0.194242 seconds
+plan limit 765
+current timestep 399
+num of flexible agents: 1772
+num of flexible tasks: 5772
+Optimal assignment with minimum cost:
+Solving time: 0.200513 seconds
+plan limit 759
+current timestep 400
+num of flexible agents: 1759
+num of flexible tasks: 5759
+Optimal assignment with minimum cost:
+Solving time: 0.202614 seconds
+plan limit 759
+current timestep 401
+num of flexible agents: 1768
+num of flexible tasks: 5768
+Optimal assignment with minimum cost:
+Solving time: 0.196159 seconds
+plan limit 765
+current timestep 402
+num of flexible agents: 1764
+num of flexible tasks: 5764
+Optimal assignment with minimum cost:
+Solving time: 0.189164 seconds
+plan limit 771
+current timestep 403
+num of flexible agents: 1766
+num of flexible tasks: 5766
+Optimal assignment with minimum cost:
+Solving time: 0.189691 seconds
+plan limit 772
+current timestep 404
+num of flexible agents: 1767
+num of flexible tasks: 5767
+Optimal assignment with minimum cost:
+Solving time: 0.206538 seconds
+plan limit 755
+current timestep 405
+num of flexible agents: 1769
+num of flexible tasks: 5769
+Optimal assignment with minimum cost:
+Solving time: 0.201226 seconds
+plan limit 758
+current timestep 406
+num of flexible agents: 1765
+num of flexible tasks: 5765
+Optimal assignment with minimum cost:
+Solving time: 0.194286 seconds
+plan limit 767
+current timestep 407
+num of flexible agents: 1766
+num of flexible tasks: 5766
+Optimal assignment with minimum cost:
+Solving time: 0.187401 seconds
+plan limit 774
+current timestep 408
+num of flexible agents: 1769
+num of flexible tasks: 5769
+Optimal assignment with minimum cost:
+Solving time: 0.191453 seconds
+plan limit 767
+current timestep 409
+num of flexible agents: 1773
+num of flexible tasks: 5773
+Optimal assignment with minimum cost:
+Solving time: 0.187908 seconds
+plan limit 773
+current timestep 410
+num of flexible agents: 1765
+num of flexible tasks: 5765
+Optimal assignment with minimum cost:
+Solving time: 0.194422 seconds
+plan limit 767
+current timestep 411
+num of flexible agents: 1770
+num of flexible tasks: 5770
+Optimal assignment with minimum cost:
+Solving time: 0.196157 seconds
+plan limit 765
+current timestep 412
+num of flexible agents: 1778
+num of flexible tasks: 5778
+Optimal assignment with minimum cost:
+Solving time: 0.205312 seconds
+plan limit 756
+current timestep 413
+num of flexible agents: 1774
+num of flexible tasks: 5774
+Optimal assignment with minimum cost:
+Solving time: 0.19699 seconds
+plan limit 765
+current timestep 414
+num of flexible agents: 1766
+num of flexible tasks: 5766
+Optimal assignment with minimum cost:
+Solving time: 0.196626 seconds
+plan limit 765
+current timestep 415
+num of flexible agents: 1766
+num of flexible tasks: 5766
+Optimal assignment with minimum cost:
+Solving time: 0.188821 seconds
+plan limit 769
+current timestep 416
+num of flexible agents: 1756
+num of flexible tasks: 5756
+Optimal assignment with minimum cost:
+Solving time: 0.19636 seconds
+plan limit 761
+current timestep 417
+num of flexible agents: 1764
+num of flexible tasks: 5764
+Optimal assignment with minimum cost:
+Solving time: 0.195029 seconds
+plan limit 761
+current timestep 418
+num of flexible agents: 1765
+num of flexible tasks: 5765
+Optimal assignment with minimum cost:
+Solving time: 0.185902 seconds
+plan limit 771
+current timestep 419
+num of flexible agents: 1761
+num of flexible tasks: 5761
+Optimal assignment with minimum cost:
+Solving time: 0.178757 seconds
+plan limit 777
+current timestep 420
+num of flexible agents: 1768
+num of flexible tasks: 5768
+Optimal assignment with minimum cost:
+Solving time: 0.18197 seconds
+plan limit 775
+current timestep 421
+num of flexible agents: 1780
+num of flexible tasks: 5780
+Optimal assignment with minimum cost:
+Solving time: 0.190695 seconds
+plan limit 767
+current timestep 422
+num of flexible agents: 1781
+num of flexible tasks: 5781
+Optimal assignment with minimum cost:
+Solving time: 0.188857 seconds
+plan limit 769
+current timestep 423
+num of flexible agents: 1782
+num of flexible tasks: 5782
+Optimal assignment with minimum cost:
+Solving time: 0.187594 seconds
+plan limit 770
+current timestep 424
+num of flexible agents: 1792
+num of flexible tasks: 5792
+Optimal assignment with minimum cost:
+Solving time: 0.196916 seconds
+plan limit 761
+current timestep 425
+num of flexible agents: 1790
+num of flexible tasks: 5790
+Optimal assignment with minimum cost:
+Solving time: 0.190479 seconds
+plan limit 770
+current timestep 426
+num of flexible agents: 1787
+num of flexible tasks: 5787
+Optimal assignment with minimum cost:
+Solving time: 0.194266 seconds
+plan limit 763
+current timestep 427
+num of flexible agents: 1786
+num of flexible tasks: 5786
+Optimal assignment with minimum cost:
+Solving time: 0.19345 seconds
+plan limit 768
+current timestep 428
+num of flexible agents: 1773
+num of flexible tasks: 5773
+Optimal assignment with minimum cost:
+Solving time: 0.192139 seconds
+plan limit 766
+current timestep 429
+num of flexible agents: 1770
+num of flexible tasks: 5770
+Optimal assignment with minimum cost:
+Solving time: 0.183225 seconds
+plan limit 774
+current timestep 430
+num of flexible agents: 1779
+num of flexible tasks: 5779
+Optimal assignment with minimum cost:
+Solving time: 0.189092 seconds
+plan limit 769
+current timestep 431
+num of flexible agents: 1776
+num of flexible tasks: 5776
+Optimal assignment with minimum cost:
+Solving time: 0.185378 seconds
+plan limit 775
+current timestep 432
+num of flexible agents: 1768
+num of flexible tasks: 5768
+Optimal assignment with minimum cost:
+Solving time: 0.181035 seconds
+plan limit 780
+current timestep 433
+num of flexible agents: 1770
+num of flexible tasks: 5770
+Optimal assignment with minimum cost:
+Solving time: 0.201888 seconds
+plan limit 755
+current timestep 434
+num of flexible agents: 1779
+num of flexible tasks: 5779
+Optimal assignment with minimum cost:
+Solving time: 0.190305 seconds
+plan limit 771
+current timestep 435
+num of flexible agents: 1783
+num of flexible tasks: 5783
+Optimal assignment with minimum cost:
+Solving time: 0.191576 seconds
+plan limit 769
+current timestep 436
+num of flexible agents: 1790
+num of flexible tasks: 5790
+Optimal assignment with minimum cost:
+Solving time: 0.202832 seconds
+plan limit 755
+current timestep 437
+num of flexible agents: 1796
+num of flexible tasks: 5796
+Optimal assignment with minimum cost:
+Solving time: 0.195294 seconds
+plan limit 762
+current timestep 438
+num of flexible agents: 1790
+num of flexible tasks: 5790
+Optimal assignment with minimum cost:
+Solving time: 0.192178 seconds
+plan limit 765
+current timestep 439
+num of flexible agents: 1788
+num of flexible tasks: 5788
+Optimal assignment with minimum cost:
+Solving time: 0.205349 seconds
+plan limit 752
+current timestep 440
+num of flexible agents: 1793
+num of flexible tasks: 5793
+Optimal assignment with minimum cost:
+Solving time: 0.188346 seconds
+plan limit 769
+current timestep 441
+num of flexible agents: 1797
+num of flexible tasks: 5797
+Optimal assignment with minimum cost:
+Solving time: 0.197662 seconds
+plan limit 760
+current timestep 442
+num of flexible agents: 1799
+num of flexible tasks: 5799
+Optimal assignment with minimum cost:
+Solving time: 0.187972 seconds
+plan limit 770
+current timestep 443
+num of flexible agents: 1802
+num of flexible tasks: 5802
+Optimal assignment with minimum cost:
+Solving time: 0.187078 seconds
+plan limit 771
+current timestep 444
+num of flexible agents: 1802
+num of flexible tasks: 5802
+Optimal assignment with minimum cost:
+Solving time: 0.209428 seconds
+plan limit 746
+current timestep 445
+num of flexible agents: 1798
+num of flexible tasks: 5798
+Optimal assignment with minimum cost:
+Solving time: 0.202271 seconds
+plan limit 754
+current timestep 446
+num of flexible agents: 1809
+num of flexible tasks: 5809
+Optimal assignment with minimum cost:
+Solving time: 0.196015 seconds
+plan limit 762
+current timestep 447
+num of flexible agents: 1804
+num of flexible tasks: 5804
+Optimal assignment with minimum cost:
+Solving time: 0.184234 seconds
+plan limit 773
+current timestep 448
+num of flexible agents: 1797
+num of flexible tasks: 5797
+Optimal assignment with minimum cost:
+Solving time: 0.198206 seconds
+plan limit 760
+current timestep 449
+num of flexible agents: 1803
+num of flexible tasks: 5803
+Optimal assignment with minimum cost:
+Solving time: 0.182511 seconds
+plan limit 775
+current timestep 450
+num of flexible agents: 1814
+num of flexible tasks: 5814
+Optimal assignment with minimum cost:
+Solving time: 0.201224 seconds
+plan limit 756
+current timestep 451
+num of flexible agents: 1821
+num of flexible tasks: 5821
+Optimal assignment with minimum cost:
+Solving time: 0.196952 seconds
+plan limit 761
+current timestep 452
+num of flexible agents: 1824
+num of flexible tasks: 5824
+Optimal assignment with minimum cost:
+Solving time: 0.180002 seconds
+plan limit 778
+current timestep 453
+num of flexible agents: 1825
+num of flexible tasks: 5825
+Optimal assignment with minimum cost:
+Solving time: 0.18109 seconds
+plan limit 776
+current timestep 454
+num of flexible agents: 1821
+num of flexible tasks: 5821
+Optimal assignment with minimum cost:
+Solving time: 0.198403 seconds
+plan limit 759
+current timestep 455
+num of flexible agents: 1799
+num of flexible tasks: 5799
+Optimal assignment with minimum cost:
+Solving time: 0.197227 seconds
+plan limit 760
+current timestep 456
+num of flexible agents: 1801
+num of flexible tasks: 5801
+Optimal assignment with minimum cost:
+Solving time: 0.189032 seconds
+plan limit 770
+current timestep 457
+num of flexible agents: 1804
+num of flexible tasks: 5804
+Optimal assignment with minimum cost:
+Solving time: 0.201105 seconds
+plan limit 760
+current timestep 458
+num of flexible agents: 1814
+num of flexible tasks: 5814
+Optimal assignment with minimum cost:
+Solving time: 0.193945 seconds
+plan limit 767
+current timestep 459
+num of flexible agents: 1797
+num of flexible tasks: 5797
+Optimal assignment with minimum cost:
+Solving time: 0.180301 seconds
+plan limit 781
+current timestep 460
+num of flexible agents: 1799
+num of flexible tasks: 5799
+Optimal assignment with minimum cost:
+Solving time: 0.194814 seconds
+plan limit 763
+current timestep 461
+num of flexible agents: 1797
+num of flexible tasks: 5797
+Optimal assignment with minimum cost:
+Solving time: 0.179691 seconds
+plan limit 776
+current timestep 462
+num of flexible agents: 1789
+num of flexible tasks: 5789
+Optimal assignment with minimum cost:
+Solving time: 0.189422 seconds
+plan limit 767
+current timestep 463
+num of flexible agents: 1794
+num of flexible tasks: 5794
+Optimal assignment with minimum cost:
+Solving time: 0.208828 seconds
+plan limit 748
+current timestep 464
+num of flexible agents: 1789
+num of flexible tasks: 5789
+Optimal assignment with minimum cost:
+Solving time: 0.184103 seconds
+plan limit 774
+current timestep 465
+num of flexible agents: 1783
+num of flexible tasks: 5783
+Optimal assignment with minimum cost:
+Solving time: 0.191282 seconds
+plan limit 770
+current timestep 466
+num of flexible agents: 1775
+num of flexible tasks: 5775
+Optimal assignment with minimum cost:
+Solving time: 0.183489 seconds
+plan limit 777
+current timestep 467
+num of flexible agents: 1779
+num of flexible tasks: 5779
+Optimal assignment with minimum cost:
+Solving time: 0.180792 seconds
+plan limit 780
+current timestep 468
+num of flexible agents: 1771
+num of flexible tasks: 5771
+Optimal assignment with minimum cost:
+Solving time: 0.175899 seconds
+plan limit 785
+current timestep 469
+num of flexible agents: 1774
+num of flexible tasks: 5774
+Optimal assignment with minimum cost:
+Solving time: 0.18362 seconds
+plan limit 774
+current timestep 470
+num of flexible agents: 1784
+num of flexible tasks: 5784
+Optimal assignment with minimum cost:
+Solving time: 0.192217 seconds
+plan limit 768
+current timestep 471
+num of flexible agents: 1790
+num of flexible tasks: 5790
+Optimal assignment with minimum cost:
+Solving time: 0.172088 seconds
+plan limit 789
+current timestep 472
+num of flexible agents: 1791
+num of flexible tasks: 5791
+Optimal assignment with minimum cost:
+Solving time: 0.174437 seconds
+plan limit 784
+current timestep 473
+num of flexible agents: 1790
+num of flexible tasks: 5790
+Optimal assignment with minimum cost:
+Solving time: 0.176988 seconds
+plan limit 781
+current timestep 474
+num of flexible agents: 1774
+num of flexible tasks: 5774
+Optimal assignment with minimum cost:
+Solving time: 0.186679 seconds
+plan limit 771
+current timestep 475
+num of flexible agents: 1761
+num of flexible tasks: 5761
+Optimal assignment with minimum cost:
+Solving time: 0.207495 seconds
+plan limit 753
+current timestep 476
+num of flexible agents: 1776
+num of flexible tasks: 5776
+Optimal assignment with minimum cost:
+Solving time: 0.189394 seconds
+plan limit 768
+current timestep 477
+num of flexible agents: 1771
+num of flexible tasks: 5771
+Optimal assignment with minimum cost:
+Solving time: 0.183027 seconds
+plan limit 778
+current timestep 478
+num of flexible agents: 1759
+num of flexible tasks: 5759
+Optimal assignment with minimum cost:
+Solving time: 0.187683 seconds
+plan limit 773
+current timestep 479
+num of flexible agents: 1759
+num of flexible tasks: 5759
+Optimal assignment with minimum cost:
+Solving time: 0.180493 seconds
+plan limit 777
+current timestep 480
+num of flexible agents: 1753
+num of flexible tasks: 5753
+Optimal assignment with minimum cost:
+Solving time: 0.191648 seconds
+plan limit 765
+current timestep 481
+num of flexible agents: 1737
+num of flexible tasks: 5737
+Optimal assignment with minimum cost:
+Solving time: 0.19198 seconds
+plan limit 766
+current timestep 482
+num of flexible agents: 1736
+num of flexible tasks: 5736
+Optimal assignment with minimum cost:
+Solving time: 0.191259 seconds
+plan limit 765
+current timestep 483
+num of flexible agents: 1731
+num of flexible tasks: 5731
+Optimal assignment with minimum cost:
+Solving time: 0.182294 seconds
+plan limit 778
+current timestep 484
+num of flexible agents: 1726
+num of flexible tasks: 5726
+Optimal assignment with minimum cost:
+Solving time: 0.17235 seconds
+plan limit 788
+current timestep 485
+num of flexible agents: 1736
+num of flexible tasks: 5736
+Optimal assignment with minimum cost:
+Solving time: 0.199508 seconds
+plan limit 761
+current timestep 486
+num of flexible agents: 1729
+num of flexible tasks: 5729
+Optimal assignment with minimum cost:
+Solving time: 0.184861 seconds
+plan limit 776
+current timestep 487
+num of flexible agents: 1720
+num of flexible tasks: 5720
+Optimal assignment with minimum cost:
+Solving time: 0.191977 seconds
+plan limit 769
+current timestep 488
+num of flexible agents: 1725
+num of flexible tasks: 5725
+Optimal assignment with minimum cost:
+Solving time: 0.189051 seconds
+plan limit 772
+current timestep 489
+num of flexible agents: 1704
+num of flexible tasks: 5704
+Optimal assignment with minimum cost:
+Solving time: 0.181061 seconds
+plan limit 777
+current timestep 490
+num of flexible agents: 1696
+num of flexible tasks: 5696
+Optimal assignment with minimum cost:
+Solving time: 0.206991 seconds
+plan limit 751
+current timestep 491
+num of flexible agents: 1698
+num of flexible tasks: 5698
+Optimal assignment with minimum cost:
+Solving time: 0.186564 seconds
+plan limit 774
+current timestep 492
+num of flexible agents: 1697
+num of flexible tasks: 5697
+Optimal assignment with minimum cost:
+Solving time: 0.185766 seconds
+plan limit 775
+current timestep 493
+num of flexible agents: 1694
+num of flexible tasks: 5694
+Optimal assignment with minimum cost:
+Solving time: 0.19942 seconds
+plan limit 758
+current timestep 494
+num of flexible agents: 1688
+num of flexible tasks: 5688
+Optimal assignment with minimum cost:
+Solving time: 0.186325 seconds
+plan limit 771
+current timestep 495
+num of flexible agents: 1668
+num of flexible tasks: 5668
+Optimal assignment with minimum cost:
+Solving time: 0.180605 seconds
+plan limit 780
+current timestep 496
+num of flexible agents: 1657
+num of flexible tasks: 5657
+Optimal assignment with minimum cost:
+Solving time: 0.200431 seconds
+plan limit 757
+current timestep 497
+num of flexible agents: 1641
+num of flexible tasks: 5641
+Optimal assignment with minimum cost:
+Solving time: 0.192182 seconds
+plan limit 768
+current timestep 498
+num of flexible agents: 1638
+num of flexible tasks: 5638
+Optimal assignment with minimum cost:
+Solving time: 0.171258 seconds
+plan limit 790
+current timestep 499
+num of flexible agents: 1637
+num of flexible tasks: 5637
+Optimal assignment with minimum cost:
+Solving time: 0.18796 seconds
+plan limit 772
+current timestep 500
+num of flexible agents: 1637
+num of flexible tasks: 5637
+Optimal assignment with minimum cost:
+Solving time: 0.170221 seconds
+plan limit 787
+current timestep 501
+num of flexible agents: 1634
+num of flexible tasks: 5634
+Optimal assignment with minimum cost:
+Solving time: 0.156253 seconds
+plan limit 804
+current timestep 502
+num of flexible agents: 1642
+num of flexible tasks: 5642
+Optimal assignment with minimum cost:
+Solving time: 0.156504 seconds
+plan limit 801
+current timestep 503
+num of flexible agents: 1623
+num of flexible tasks: 5623
+Optimal assignment with minimum cost:
+Solving time: 0.137703 seconds
+plan limit 822
+current timestep 504
+num of flexible agents: 1624
+num of flexible tasks: 5624
+Optimal assignment with minimum cost:
+Solving time: 0.14903 seconds
+plan limit 811
+current timestep 505
+num of flexible agents: 1605
+num of flexible tasks: 5605
+Optimal assignment with minimum cost:
+Solving time: 0.180318 seconds
+plan limit 781
+current timestep 506
+num of flexible agents: 1608
+num of flexible tasks: 5608
+Optimal assignment with minimum cost:
+Solving time: 0.163293 seconds
+plan limit 797
+current timestep 507
+num of flexible agents: 1605
+num of flexible tasks: 5605
+Optimal assignment with minimum cost:
+Solving time: 0.183376 seconds
+plan limit 777
+current timestep 508
+num of flexible agents: 1617
+num of flexible tasks: 5617
+Optimal assignment with minimum cost:
+Solving time: 0.173641 seconds
+plan limit 787
+current timestep 509
+num of flexible agents: 1607
+num of flexible tasks: 5607
+Optimal assignment with minimum cost:
+Solving time: 0.165469 seconds
+plan limit 796
+current timestep 510
+num of flexible agents: 1595
+num of flexible tasks: 5595
+Optimal assignment with minimum cost:
+Solving time: 0.160658 seconds
+plan limit 800
+current timestep 511
+num of flexible agents: 1603
+num of flexible tasks: 5603
+Optimal assignment with minimum cost:
+Solving time: 0.164422 seconds
+plan limit 796
+current timestep 512
+num of flexible agents: 1602
+num of flexible tasks: 5602
+Optimal assignment with minimum cost:
+Solving time: 0.143908 seconds
+plan limit 816
+current timestep 513
+num of flexible agents: 1598
+num of flexible tasks: 5598
+Optimal assignment with minimum cost:
+Solving time: 0.134336 seconds
+plan limit 824
+current timestep 514
+num of flexible agents: 1605
+num of flexible tasks: 5605
+Optimal assignment with minimum cost:
+Solving time: 0.146091 seconds
+plan limit 815
+current timestep 515
+num of flexible agents: 1612
+num of flexible tasks: 5612
+Optimal assignment with minimum cost:
+Solving time: 0.167458 seconds
+plan limit 793
+current timestep 516
+num of flexible agents: 1604
+num of flexible tasks: 5604
+Optimal assignment with minimum cost:
+Solving time: 0.164253 seconds
+plan limit 796
+current timestep 517
+num of flexible agents: 1592
+num of flexible tasks: 5592
+Optimal assignment with minimum cost:
+Solving time: 0.149211 seconds
+plan limit 811
+current timestep 518
+num of flexible agents: 1592
+num of flexible tasks: 5592
+Optimal assignment with minimum cost:
+Solving time: 0.137516 seconds
+plan limit 823
+current timestep 519
+num of flexible agents: 1592
+num of flexible tasks: 5592
+Optimal assignment with minimum cost:
+Solving time: 0.155402 seconds
+plan limit 800
+current timestep 520
+num of flexible agents: 1592
+num of flexible tasks: 5592
+Optimal assignment with minimum cost:
+Solving time: 0.176455 seconds
+plan limit 784
+current timestep 521
+num of flexible agents: 1585
+num of flexible tasks: 5585
+Optimal assignment with minimum cost:
+Solving time: 0.147526 seconds
+plan limit 814
+current timestep 522
+num of flexible agents: 1597
+num of flexible tasks: 5597
+Optimal assignment with minimum cost:
+Solving time: 0.159383 seconds
+plan limit 801
+current timestep 523
+num of flexible agents: 1603
+num of flexible tasks: 5603
+Optimal assignment with minimum cost:
+Solving time: 0.18624 seconds
+plan limit 774
+current timestep 524
+num of flexible agents: 1599
+num of flexible tasks: 5599
+Optimal assignment with minimum cost:
+Solving time: 0.184195 seconds
+plan limit 776
+current timestep 525
+num of flexible agents: 1613
+num of flexible tasks: 5613
+Optimal assignment with minimum cost:
+Solving time: 0.1677 seconds
+plan limit 790
+current timestep 526
+num of flexible agents: 1622
+num of flexible tasks: 5622
+Optimal assignment with minimum cost:
+Solving time: 0.183992 seconds
+plan limit 776
+current timestep 527
+num of flexible agents: 1615
+num of flexible tasks: 5615
+Optimal assignment with minimum cost:
+Solving time: 0.18799 seconds
+plan limit 769
+current timestep 528
+num of flexible agents: 1614
+num of flexible tasks: 5614
+Optimal assignment with minimum cost:
+Solving time: 0.183161 seconds
+plan limit 777
+current timestep 529
+num of flexible agents: 1598
+num of flexible tasks: 5598
+Optimal assignment with minimum cost:
+Solving time: 0.191221 seconds
+plan limit 769
+current timestep 530
+num of flexible agents: 1600
+num of flexible tasks: 5600
+Optimal assignment with minimum cost:
+Solving time: 0.198025 seconds
+plan limit 762
+current timestep 531
+num of flexible agents: 1587
+num of flexible tasks: 5587
+Optimal assignment with minimum cost:
+Solving time: 0.181185 seconds
+plan limit 779
+current timestep 532
+num of flexible agents: 1578
+num of flexible tasks: 5578
+Optimal assignment with minimum cost:
+Solving time: 0.195002 seconds
+plan limit 765
+current timestep 533
+num of flexible agents: 1588
+num of flexible tasks: 5588
+Optimal assignment with minimum cost:
+Solving time: 0.185428 seconds
+plan limit 775
+current timestep 534
+num of flexible agents: 1593
+num of flexible tasks: 5593
+Optimal assignment with minimum cost:
+Solving time: 0.181078 seconds
+plan limit 779
+current timestep 535
+num of flexible agents: 1595
+num of flexible tasks: 5595
+Optimal assignment with minimum cost:
+Solving time: 0.200024 seconds
+plan limit 760
+current timestep 536
+num of flexible agents: 1616
+num of flexible tasks: 5616
+Optimal assignment with minimum cost:
+Solving time: 0.188939 seconds
+plan limit 771
+current timestep 537
+num of flexible agents: 1616
+num of flexible tasks: 5616
+Optimal assignment with minimum cost:
+Solving time: 0.19507 seconds
+plan limit 765
+current timestep 538
+num of flexible agents: 1612
+num of flexible tasks: 5612
+Optimal assignment with minimum cost:
+Solving time: 0.198493 seconds
+plan limit 761
+current timestep 539
+num of flexible agents: 1619
+num of flexible tasks: 5619
+Optimal assignment with minimum cost:
+Solving time: 0.172293 seconds
+plan limit 788
+current timestep 540
+num of flexible agents: 1623
+num of flexible tasks: 5623
+Optimal assignment with minimum cost:
+Solving time: 0.195997 seconds
+plan limit 764
+current timestep 541
+num of flexible agents: 1630
+num of flexible tasks: 5630
+Optimal assignment with minimum cost:
+Solving time: 0.199591 seconds
+plan limit 758
+current timestep 542
+num of flexible agents: 1635
+num of flexible tasks: 5635
+Optimal assignment with minimum cost:
+Solving time: 0.200208 seconds
+plan limit 758
+current timestep 543
+num of flexible agents: 1635
+num of flexible tasks: 5635
+Optimal assignment with minimum cost:
+Solving time: 0.178569 seconds
+plan limit 781
+current timestep 544
+num of flexible agents: 1622
+num of flexible tasks: 5622
+Optimal assignment with minimum cost:
+Solving time: 0.209877 seconds
+plan limit 750
+current timestep 545
+num of flexible agents: 1622
+num of flexible tasks: 5622
+Optimal assignment with minimum cost:
+Solving time: 0.19438 seconds
+plan limit 766
+current timestep 546
+num of flexible agents: 1620
+num of flexible tasks: 5620
+Optimal assignment with minimum cost:
+Solving time: 0.206017 seconds
+plan limit 751
+current timestep 547
+num of flexible agents: 1622
+num of flexible tasks: 5622
+Optimal assignment with minimum cost:
+Solving time: 0.206354 seconds
+plan limit 751
+current timestep 548
+num of flexible agents: 1619
+num of flexible tasks: 5619
+Optimal assignment with minimum cost:
+Solving time: 0.196927 seconds
+plan limit 762
+current timestep 549
+num of flexible agents: 1621
+num of flexible tasks: 5621
+Optimal assignment with minimum cost:
+Solving time: 0.187393 seconds
+plan limit 773
+current timestep 550
+num of flexible agents: 1620
+num of flexible tasks: 5620
+Optimal assignment with minimum cost:
+Solving time: 0.199322 seconds
+plan limit 761
+current timestep 551
+num of flexible agents: 1613
+num of flexible tasks: 5613
+Optimal assignment with minimum cost:
+Solving time: 0.189669 seconds
+plan limit 770
+current timestep 552
+num of flexible agents: 1614
+num of flexible tasks: 5614
+Optimal assignment with minimum cost:
+Solving time: 0.21275 seconds
+plan limit 747
+current timestep 553
+num of flexible agents: 1615
+num of flexible tasks: 5615
+Optimal assignment with minimum cost:
+Solving time: 0.211664 seconds
+plan limit 745
+current timestep 554
+num of flexible agents: 1616
+num of flexible tasks: 5616
+Optimal assignment with minimum cost:
+Solving time: 0.190932 seconds
+plan limit 769
+current timestep 555
+num of flexible agents: 1613
+num of flexible tasks: 5613
+Optimal assignment with minimum cost:
+Solving time: 0.178247 seconds
+plan limit 782
+current timestep 556
+num of flexible agents: 1610
+num of flexible tasks: 5610
+Optimal assignment with minimum cost:
+Solving time: 0.186356 seconds
+plan limit 774
+current timestep 557
+num of flexible agents: 1615
+num of flexible tasks: 5615
+Optimal assignment with minimum cost:
+Solving time: 0.1899 seconds
+plan limit 770
+current timestep 558
+num of flexible agents: 1610
+num of flexible tasks: 5610
+Optimal assignment with minimum cost:
+Solving time: 0.184141 seconds
+plan limit 776
+current timestep 559
+num of flexible agents: 1617
+num of flexible tasks: 5617
+Optimal assignment with minimum cost:
+Solving time: 0.191431 seconds
+plan limit 769
+current timestep 560
+num of flexible agents: 1632
+num of flexible tasks: 5632
+Optimal assignment with minimum cost:
+Solving time: 0.187643 seconds
+plan limit 772
+current timestep 561
+num of flexible agents: 1621
+num of flexible tasks: 5621
+Optimal assignment with minimum cost:
+Solving time: 0.184427 seconds
+plan limit 776
+current timestep 562
+num of flexible agents: 1628
+num of flexible tasks: 5628
+Optimal assignment with minimum cost:
+Solving time: 0.195759 seconds
+plan limit 764
+current timestep 563
+num of flexible agents: 1630
+num of flexible tasks: 5630
+Optimal assignment with minimum cost:
+Solving time: 0.198373 seconds
+plan limit 762
+current timestep 564
+num of flexible agents: 1614
+num of flexible tasks: 5614
+Optimal assignment with minimum cost:
+Solving time: 0.188654 seconds
+plan limit 772
+current timestep 565
+num of flexible agents: 1615
+num of flexible tasks: 5615
+Optimal assignment with minimum cost:
+Solving time: 0.197885 seconds
+plan limit 762
+current timestep 566
+num of flexible agents: 1618
+num of flexible tasks: 5618
+Optimal assignment with minimum cost:
+Solving time: 0.207573 seconds
+plan limit 752
+current timestep 567
+num of flexible agents: 1615
+num of flexible tasks: 5615
+Optimal assignment with minimum cost:
+Solving time: 0.175423 seconds
+plan limit 781
+current timestep 568
+num of flexible agents: 1613
+num of flexible tasks: 5613
+Optimal assignment with minimum cost:
+Solving time: 0.207062 seconds
+plan limit 753
+current timestep 569
+num of flexible agents: 1592
+num of flexible tasks: 5592
+Optimal assignment with minimum cost:
+Solving time: 0.188433 seconds
+plan limit 769
+current timestep 570
+num of flexible agents: 1581
+num of flexible tasks: 5581
+Optimal assignment with minimum cost:
+Solving time: 0.198239 seconds
+plan limit 759
+current timestep 571
+num of flexible agents: 1583
+num of flexible tasks: 5583
+Optimal assignment with minimum cost:
+Solving time: 0.195104 seconds
+plan limit 765
+current timestep 572
+num of flexible agents: 1573
+num of flexible tasks: 5573
+Optimal assignment with minimum cost:
+Solving time: 0.192235 seconds
+plan limit 768
+current timestep 573
+num of flexible agents: 1573
+num of flexible tasks: 5573
+Optimal assignment with minimum cost:
+Solving time: 0.187929 seconds
+plan limit 770
+current timestep 574
+num of flexible agents: 1571
+num of flexible tasks: 5571
+Optimal assignment with minimum cost:
+Solving time: 0.192281 seconds
+plan limit 768
+current timestep 575
+num of flexible agents: 1566
+num of flexible tasks: 5566
+Optimal assignment with minimum cost:
+Solving time: 0.193159 seconds
+plan limit 764
+current timestep 576
+num of flexible agents: 1575
+num of flexible tasks: 5575
+Optimal assignment with minimum cost:
+Solving time: 0.18757 seconds
+plan limit 770
+current timestep 577
+num of flexible agents: 1574
+num of flexible tasks: 5574
+Optimal assignment with minimum cost:
+Solving time: 0.1947 seconds
+plan limit 763
+current timestep 578
+num of flexible agents: 1564
+num of flexible tasks: 5564
+Optimal assignment with minimum cost:
+Solving time: 0.177582 seconds
+plan limit 780
+current timestep 579
+num of flexible agents: 1562
+num of flexible tasks: 5562
+Optimal assignment with minimum cost:
+Solving time: 0.186094 seconds
+plan limit 771
+current timestep 580
+num of flexible agents: 1565
+num of flexible tasks: 5565
+Optimal assignment with minimum cost:
+Solving time: 0.193768 seconds
+plan limit 763
+current timestep 581
+num of flexible agents: 1559
+num of flexible tasks: 5559
+Optimal assignment with minimum cost:
+Solving time: 0.190306 seconds
+plan limit 767
+current timestep 582
+num of flexible agents: 1553
+num of flexible tasks: 5553
+Optimal assignment with minimum cost:
+Solving time: 0.186649 seconds
+plan limit 769
+current timestep 583
+num of flexible agents: 1543
+num of flexible tasks: 5543
+Optimal assignment with minimum cost:
+Solving time: 0.194961 seconds
+plan limit 765
+current timestep 584
+num of flexible agents: 1545
+num of flexible tasks: 5545
+Optimal assignment with minimum cost:
+Solving time: 0.17977 seconds
+plan limit 778
+current timestep 585
+num of flexible agents: 1546
+num of flexible tasks: 5546
+Optimal assignment with minimum cost:
+Solving time: 0.203759 seconds
+plan limit 753
+current timestep 586
+num of flexible agents: 1542
+num of flexible tasks: 5542
+Optimal assignment with minimum cost:
+Solving time: 0.187449 seconds
+plan limit 770
+current timestep 587
+num of flexible agents: 1528
+num of flexible tasks: 5528
+Optimal assignment with minimum cost:
+Solving time: 0.190609 seconds
+plan limit 767
+current timestep 588
+num of flexible agents: 1528
+num of flexible tasks: 5528
+Optimal assignment with minimum cost:
+Solving time: 0.20082 seconds
+plan limit 759
+current timestep 589
+num of flexible agents: 1533
+num of flexible tasks: 5533
+Optimal assignment with minimum cost:
+Solving time: 0.204878 seconds
+plan limit 754
+current timestep 590
+num of flexible agents: 1521
+num of flexible tasks: 5521
+Optimal assignment with minimum cost:
+Solving time: 0.201528 seconds
+plan limit 756
+current timestep 591
+num of flexible agents: 1517
+num of flexible tasks: 5517
+Optimal assignment with minimum cost:
+Solving time: 0.191385 seconds
+plan limit 766
+current timestep 592
+num of flexible agents: 1512
+num of flexible tasks: 5512
+Optimal assignment with minimum cost:
+Solving time: 0.208517 seconds
+plan limit 749
+current timestep 593
+num of flexible agents: 1510
+num of flexible tasks: 5510
+Optimal assignment with minimum cost:
+Solving time: 0.193238 seconds
+plan limit 764
+current timestep 594
+num of flexible agents: 1507
+num of flexible tasks: 5507
+Optimal assignment with minimum cost:
+Solving time: 0.190267 seconds
+plan limit 767
+current timestep 595
+num of flexible agents: 1501
+num of flexible tasks: 5501
+Optimal assignment with minimum cost:
+Solving time: 0.199969 seconds
+plan limit 757
+current timestep 596
+num of flexible agents: 1480
+num of flexible tasks: 5480
+Optimal assignment with minimum cost:
+Solving time: 0.201809 seconds
+plan limit 755
+current timestep 597
+num of flexible agents: 1470
+num of flexible tasks: 5470
+Optimal assignment with minimum cost:
+Solving time: 0.18804 seconds
+plan limit 769
+current timestep 598
+num of flexible agents: 1462
+num of flexible tasks: 5462
+Optimal assignment with minimum cost:
+Solving time: 0.18773 seconds
+plan limit 769
+current timestep 599
+num of flexible agents: 1462
+num of flexible tasks: 5462
+Optimal assignment with minimum cost:
+Solving time: 0.192345 seconds
+plan limit 767
+current timestep 600
+num of flexible agents: 1457
+num of flexible tasks: 5457
+Optimal assignment with minimum cost:
+Solving time: 0.191683 seconds
+plan limit 765
+current timestep 601
+num of flexible agents: 1437
+num of flexible tasks: 5437
+Optimal assignment with minimum cost:
+Solving time: 0.196877 seconds
+plan limit 760
+current timestep 602
+num of flexible agents: 1433
+num of flexible tasks: 5433
+Optimal assignment with minimum cost:
+Solving time: 0.181277 seconds
+plan limit 776
+current timestep 603
+num of flexible agents: 1430
+num of flexible tasks: 5430
+Optimal assignment with minimum cost:
+Solving time: 0.187683 seconds
+plan limit 769
+current timestep 604
+num of flexible agents: 1435
+num of flexible tasks: 5435
+Optimal assignment with minimum cost:
+Solving time: 0.203143 seconds
+plan limit 751
+current timestep 605
+num of flexible agents: 1443
+num of flexible tasks: 5443
+Optimal assignment with minimum cost:
+Solving time: 0.181774 seconds
+plan limit 778
+current timestep 606
+num of flexible agents: 1438
+num of flexible tasks: 5438
+Optimal assignment with minimum cost:
+Solving time: 0.178702 seconds
+plan limit 778
+current timestep 607
+num of flexible agents: 1438
+num of flexible tasks: 5438
+Optimal assignment with minimum cost:
+Solving time: 0.196186 seconds
+plan limit 762
+current timestep 608
+num of flexible agents: 1431
+num of flexible tasks: 5431
+Optimal assignment with minimum cost:
+Solving time: 0.195195 seconds
+plan limit 762
+current timestep 609
+num of flexible agents: 1426
+num of flexible tasks: 5426
+Optimal assignment with minimum cost:
+Solving time: 0.19419 seconds
+plan limit 762
+current timestep 610
+num of flexible agents: 1431
+num of flexible tasks: 5431
+Optimal assignment with minimum cost:
+Solving time: 0.209848 seconds
+plan limit 747
+current timestep 611
+num of flexible agents: 1425
+num of flexible tasks: 5425
+Optimal assignment with minimum cost:
+Solving time: 0.186722 seconds
+plan limit 770
+current timestep 612
+num of flexible agents: 1422
+num of flexible tasks: 5422
+Optimal assignment with minimum cost:
+Solving time: 0.203212 seconds
+plan limit 752
+current timestep 613
+num of flexible agents: 1411
+num of flexible tasks: 5411
+Optimal assignment with minimum cost:
+Solving time: 0.196591 seconds
+plan limit 760
+current timestep 614
+num of flexible agents: 1401
+num of flexible tasks: 5401
+Optimal assignment with minimum cost:
+Solving time: 0.190902 seconds
+plan limit 766
+current timestep 615
+num of flexible agents: 1396
+num of flexible tasks: 5396
+Optimal assignment with minimum cost:
+Solving time: 0.203466 seconds
+plan limit 752
+current timestep 616
+num of flexible agents: 1387
+num of flexible tasks: 5387
+Optimal assignment with minimum cost:
+Solving time: 0.188756 seconds
+plan limit 770
+current timestep 617
+num of flexible agents: 1384
+num of flexible tasks: 5384
+Optimal assignment with minimum cost:
+Solving time: 0.202606 seconds
+plan limit 754
+current timestep 618
+num of flexible agents: 1384
+num of flexible tasks: 5384
+Optimal assignment with minimum cost:
+Solving time: 0.204763 seconds
+plan limit 753
+current timestep 619
+num of flexible agents: 1397
+num of flexible tasks: 5397
+Optimal assignment with minimum cost:
+Solving time: 0.204757 seconds
+plan limit 751
+current timestep 620
+num of flexible agents: 1396
+num of flexible tasks: 5396
+Optimal assignment with minimum cost:
+Solving time: 0.192181 seconds
+plan limit 763
+current timestep 621
+num of flexible agents: 1400
+num of flexible tasks: 5400
+Optimal assignment with minimum cost:
+Solving time: 0.209907 seconds
+plan limit 748
+current timestep 622
+num of flexible agents: 1397
+num of flexible tasks: 5397
+Optimal assignment with minimum cost:
+Solving time: 0.221448 seconds
+plan limit 738
+current timestep 623
+num of flexible agents: 1389
+num of flexible tasks: 5389
+Optimal assignment with minimum cost:
+Solving time: 0.211915 seconds
+plan limit 745
+current timestep 624
+num of flexible agents: 1392
+num of flexible tasks: 5392
+Optimal assignment with minimum cost:
+Solving time: 0.204574 seconds
+plan limit 753
+current timestep 625
+num of flexible agents: 1385
+num of flexible tasks: 5385
+Optimal assignment with minimum cost:
+Solving time: 0.220846 seconds
+plan limit 738
+current timestep 626
+num of flexible agents: 1395
+num of flexible tasks: 5395
+Optimal assignment with minimum cost:
+Solving time: 0.205005 seconds
+plan limit 748
+current timestep 627
+num of flexible agents: 1399
+num of flexible tasks: 5399
+Optimal assignment with minimum cost:
+Solving time: 0.223071 seconds
+plan limit 732
+current timestep 628
+num of flexible agents: 1402
+num of flexible tasks: 5402
+Optimal assignment with minimum cost:
+Solving time: 0.213959 seconds
+plan limit 745
+current timestep 629
+num of flexible agents: 1401
+num of flexible tasks: 5401
+Optimal assignment with minimum cost:
+Solving time: 0.20728 seconds
+plan limit 751
+current timestep 630
+num of flexible agents: 1405
+num of flexible tasks: 5405
+Optimal assignment with minimum cost:
+Solving time: 0.228402 seconds
+plan limit 726
+current timestep 631
+num of flexible agents: 1396
+num of flexible tasks: 5396
+Optimal assignment with minimum cost:
+Solving time: 0.241853 seconds
+plan limit 712
+current timestep 632
+num of flexible agents: 1388
+num of flexible tasks: 5388
+Optimal assignment with minimum cost:
+Solving time: 0.203394 seconds
+plan limit 752
+current timestep 633
+num of flexible agents: 1395
+num of flexible tasks: 5395
+Optimal assignment with minimum cost:
+Solving time: 0.233513 seconds
+plan limit 717
+current timestep 634
+num of flexible agents: 1398
+num of flexible tasks: 5398
+Optimal assignment with minimum cost:
+Solving time: 0.215755 seconds
+plan limit 734
+current timestep 635
+num of flexible agents: 1395
+num of flexible tasks: 5395
+Optimal assignment with minimum cost:
+Solving time: 0.22594 seconds
+plan limit 723
+current timestep 636
+num of flexible agents: 1386
+num of flexible tasks: 5386
+Optimal assignment with minimum cost:
+Solving time: 0.223696 seconds
+plan limit 730
+current timestep 637
+num of flexible agents: 1385
+num of flexible tasks: 5385
+Optimal assignment with minimum cost:
+Solving time: 0.233955 seconds
+plan limit 718
+current timestep 638
+num of flexible agents: 1369
+num of flexible tasks: 5369
+Optimal assignment with minimum cost:
+Solving time: 0.219925 seconds
+plan limit 728
+current timestep 639
+num of flexible agents: 1373
+num of flexible tasks: 5373
+Optimal assignment with minimum cost:
+Solving time: 0.220036 seconds
+plan limit 729
+current timestep 640
+num of flexible agents: 1379
+num of flexible tasks: 5379
+Optimal assignment with minimum cost:
+Solving time: 0.222853 seconds
+plan limit 726
+current timestep 641
+num of flexible agents: 1366
+num of flexible tasks: 5366
+Optimal assignment with minimum cost:
+Solving time: 0.220538 seconds
+plan limit 734
+current timestep 642
+num of flexible agents: 1381
+num of flexible tasks: 5381
+Optimal assignment with minimum cost:
+Solving time: 0.197174 seconds
+plan limit 754
+current timestep 643
+num of flexible agents: 1380
+num of flexible tasks: 5380
+Optimal assignment with minimum cost:
+Solving time: 0.189562 seconds
+plan limit 767
+current timestep 644
+num of flexible agents: 1382
+num of flexible tasks: 5382
+Optimal assignment with minimum cost:
+Solving time: 0.199606 seconds
+plan limit 756
+current timestep 645
+num of flexible agents: 1375
+num of flexible tasks: 5375
+Optimal assignment with minimum cost:
+Solving time: 0.192554 seconds
+plan limit 766
+current timestep 646
+num of flexible agents: 1372
+num of flexible tasks: 5372
+Optimal assignment with minimum cost:
+Solving time: 0.199044 seconds
+plan limit 757
+current timestep 647
+num of flexible agents: 1384
+num of flexible tasks: 5384
+Optimal assignment with minimum cost:
+Solving time: 0.20029 seconds
+plan limit 759
+current timestep 648
+num of flexible agents: 1386
+num of flexible tasks: 5386
+Optimal assignment with minimum cost:
+Solving time: 0.18891 seconds
+plan limit 770
+current timestep 649
+num of flexible agents: 1387
+num of flexible tasks: 5387
+Optimal assignment with minimum cost:
+Solving time: 0.203283 seconds
+plan limit 755
+current timestep 650
+num of flexible agents: 1384
+num of flexible tasks: 5384
+Optimal assignment with minimum cost:
+Solving time: 0.196464 seconds
+plan limit 760
+current timestep 651
+num of flexible agents: 1375
+num of flexible tasks: 5375
+Optimal assignment with minimum cost:
+Solving time: 0.205892 seconds
+plan limit 750
+current timestep 652
+num of flexible agents: 1375
+num of flexible tasks: 5375
+Optimal assignment with minimum cost:
+Solving time: 0.197209 seconds
+plan limit 759
+current timestep 653
+num of flexible agents: 1375
+num of flexible tasks: 5375
+Optimal assignment with minimum cost:
+Solving time: 0.187086 seconds
+plan limit 769
+current timestep 654
+num of flexible agents: 1364
+num of flexible tasks: 5364
+Optimal assignment with minimum cost:
+Solving time: 0.189266 seconds
+plan limit 766
+current timestep 655
+num of flexible agents: 1364
+num of flexible tasks: 5364
+Optimal assignment with minimum cost:
+Solving time: 0.199528 seconds
+plan limit 759
+current timestep 656
+num of flexible agents: 1366
+num of flexible tasks: 5366
+Optimal assignment with minimum cost:
+Solving time: 0.184085 seconds
+plan limit 772
+current timestep 657
+num of flexible agents: 1367
+num of flexible tasks: 5367
+Optimal assignment with minimum cost:
+Solving time: 0.186945 seconds
+plan limit 772
+current timestep 658
+num of flexible agents: 1369
+num of flexible tasks: 5369
+Optimal assignment with minimum cost:
+Solving time: 0.197617 seconds
+plan limit 760
+current timestep 659
+num of flexible agents: 1370
+num of flexible tasks: 5370
+Optimal assignment with minimum cost:
+Solving time: 0.188507 seconds
+plan limit 766
+current timestep 660
+num of flexible agents: 1366
+num of flexible tasks: 5366
+Optimal assignment with minimum cost:
+Solving time: 0.195231 seconds
+plan limit 760
+current timestep 661
+num of flexible agents: 1366
+num of flexible tasks: 5366
+Optimal assignment with minimum cost:
+Solving time: 0.19655 seconds
+plan limit 761
+current timestep 662
+num of flexible agents: 1371
+num of flexible tasks: 5371
+Optimal assignment with minimum cost:
+Solving time: 0.181314 seconds
+plan limit 774
+current timestep 663
+num of flexible agents: 1384
+num of flexible tasks: 5384
+Optimal assignment with minimum cost:
+Solving time: 0.185063 seconds
+plan limit 773
+current timestep 664
+num of flexible agents: 1391
+num of flexible tasks: 5391
+Optimal assignment with minimum cost:
+Solving time: 0.196744 seconds
+plan limit 758
+current timestep 665
+num of flexible agents: 1384
+num of flexible tasks: 5384
+Optimal assignment with minimum cost:
+Solving time: 0.197012 seconds
+plan limit 758
+current timestep 666
+num of flexible agents: 1389
+num of flexible tasks: 5389
+Optimal assignment with minimum cost:
+Solving time: 0.211631 seconds
+plan limit 743
+current timestep 667
+num of flexible agents: 1378
+num of flexible tasks: 5378
+Optimal assignment with minimum cost:
+Solving time: 0.194045 seconds
+plan limit 764
+current timestep 668
+num of flexible agents: 1372
+num of flexible tasks: 5372
+Optimal assignment with minimum cost:
+Solving time: 0.202658 seconds
+plan limit 752
+current timestep 669
+num of flexible agents: 1367
+num of flexible tasks: 5367
+Optimal assignment with minimum cost:
+Solving time: 0.196773 seconds
+plan limit 757
+current timestep 670
+num of flexible agents: 1367
+num of flexible tasks: 5367
+Optimal assignment with minimum cost:
+Solving time: 0.208251 seconds
+plan limit 746
+current timestep 671
+num of flexible agents: 1377
+num of flexible tasks: 5377
+Optimal assignment with minimum cost:
+Solving time: 0.190977 seconds
+plan limit 764
+current timestep 672
+num of flexible agents: 1380
+num of flexible tasks: 5380
+Optimal assignment with minimum cost:
+Solving time: 0.199072 seconds
+plan limit 754
+current timestep 673
+num of flexible agents: 1384
+num of flexible tasks: 5384
+Optimal assignment with minimum cost:
+Solving time: 0.203324 seconds
+plan limit 752
+current timestep 674
+num of flexible agents: 1386
+num of flexible tasks: 5386
+Optimal assignment with minimum cost:
+Solving time: 0.19895 seconds
+plan limit 755
+current timestep 675
+num of flexible agents: 1392
+num of flexible tasks: 5392
+Optimal assignment with minimum cost:
+Solving time: 0.192059 seconds
+plan limit 762
+current timestep 676
+num of flexible agents: 1391
+num of flexible tasks: 5391
+Optimal assignment with minimum cost:
+Solving time: 0.18949 seconds
+plan limit 765
+current timestep 677
+num of flexible agents: 1402
+num of flexible tasks: 5402
+Optimal assignment with minimum cost:
+Solving time: 0.190512 seconds
+plan limit 764
+current timestep 678
+num of flexible agents: 1395
+num of flexible tasks: 5395
+Optimal assignment with minimum cost:
+Solving time: 0.205652 seconds
+plan limit 747
+current timestep 679
+num of flexible agents: 1391
+num of flexible tasks: 5391
+Optimal assignment with minimum cost:
+Solving time: 0.192906 seconds
+plan limit 762
+current timestep 680
+num of flexible agents: 1382
+num of flexible tasks: 5382
+Optimal assignment with minimum cost:
+Solving time: 0.17842 seconds
+plan limit 774
+current timestep 681
+num of flexible agents: 1380
+num of flexible tasks: 5380
+Optimal assignment with minimum cost:
+Solving time: 0.209206 seconds
+plan limit 746
+current timestep 682
+num of flexible agents: 1380
+num of flexible tasks: 5380
+Optimal assignment with minimum cost:
+Solving time: 0.205115 seconds
+plan limit 753
+current timestep 683
+num of flexible agents: 1376
+num of flexible tasks: 5376
+Optimal assignment with minimum cost:
+Solving time: 0.193591 seconds
+plan limit 764
+current timestep 684
+num of flexible agents: 1391
+num of flexible tasks: 5391
+Optimal assignment with minimum cost:
+Solving time: 0.193003 seconds
+plan limit 765
+current timestep 685
+num of flexible agents: 1395
+num of flexible tasks: 5395
+Optimal assignment with minimum cost:
+Solving time: 0.197931 seconds
+plan limit 756
+current timestep 686
+num of flexible agents: 1402
+num of flexible tasks: 5402
+Optimal assignment with minimum cost:
+Solving time: 0.18414 seconds
+plan limit 769
+current timestep 687
+num of flexible agents: 1413
+num of flexible tasks: 5413
+Optimal assignment with minimum cost:
+Solving time: 0.190159 seconds
+plan limit 764
+current timestep 688
+num of flexible agents: 1408
+num of flexible tasks: 5408
+Optimal assignment with minimum cost:
+Solving time: 0.192429 seconds
+plan limit 765
+current timestep 689
+num of flexible agents: 1399
+num of flexible tasks: 5399
+Optimal assignment with minimum cost:
+Solving time: 0.190376 seconds
+plan limit 764
+current timestep 690
+num of flexible agents: 1403
+num of flexible tasks: 5403
+Optimal assignment with minimum cost:
+Solving time: 0.191417 seconds
+plan limit 760
+current timestep 691
+num of flexible agents: 1403
+num of flexible tasks: 5403
+Optimal assignment with minimum cost:
+Solving time: 0.198728 seconds
+plan limit 756
+current timestep 692
+num of flexible agents: 1402
+num of flexible tasks: 5402
+Optimal assignment with minimum cost:
+Solving time: 0.198594 seconds
+plan limit 759
+current timestep 693
+num of flexible agents: 1405
+num of flexible tasks: 5405
+Optimal assignment with minimum cost:
+Solving time: 0.189749 seconds
+plan limit 764
+current timestep 694
+num of flexible agents: 1406
+num of flexible tasks: 5406
+Optimal assignment with minimum cost:
+Solving time: 0.202804 seconds
+plan limit 755
+current timestep 695
+num of flexible agents: 1412
+num of flexible tasks: 5412
+Optimal assignment with minimum cost:
+Solving time: 0.199893 seconds
+plan limit 757
+current timestep 696
+num of flexible agents: 1419
+num of flexible tasks: 5419
+Optimal assignment with minimum cost:
+Solving time: 0.200574 seconds
+plan limit 753
+current timestep 697
+num of flexible agents: 1412
+num of flexible tasks: 5412
+Optimal assignment with minimum cost:
+Solving time: 0.199049 seconds
+plan limit 755
+current timestep 698
+num of flexible agents: 1409
+num of flexible tasks: 5409
+Optimal assignment with minimum cost:
+Solving time: 0.190879 seconds
+plan limit 767
+current timestep 699
+num of flexible agents: 1416
+num of flexible tasks: 5416
+Optimal assignment with minimum cost:
+Solving time: 0.203196 seconds
+plan limit 754
+current timestep 700
+num of flexible agents: 1427
+num of flexible tasks: 5427
+Optimal assignment with minimum cost:
+Solving time: 0.205815 seconds
+plan limit 751
+current timestep 701
+num of flexible agents: 1418
+num of flexible tasks: 5418
+Optimal assignment with minimum cost:
+Solving time: 0.197205 seconds
+plan limit 756
+current timestep 702
+num of flexible agents: 1419
+num of flexible tasks: 5419
+Optimal assignment with minimum cost:
+Solving time: 0.199394 seconds
+plan limit 755
+current timestep 703
+num of flexible agents: 1428
+num of flexible tasks: 5428
+Optimal assignment with minimum cost:
+Solving time: 0.204397 seconds
+plan limit 749
+current timestep 704
+num of flexible agents: 1441
+num of flexible tasks: 5441
+Optimal assignment with minimum cost:
+Solving time: 0.198734 seconds
+plan limit 756
+current timestep 705
+num of flexible agents: 1440
+num of flexible tasks: 5440
+Optimal assignment with minimum cost:
+Solving time: 0.217059 seconds
+plan limit 739
+current timestep 706
+num of flexible agents: 1447
+num of flexible tasks: 5447
+Optimal assignment with minimum cost:
+Solving time: 0.205441 seconds
+plan limit 751
+current timestep 707
+num of flexible agents: 1442
+num of flexible tasks: 5442
+Optimal assignment with minimum cost:
+Solving time: 0.192231 seconds
+plan limit 762
+current timestep 708
+num of flexible agents: 1458
+num of flexible tasks: 5458
+Optimal assignment with minimum cost:
+Solving time: 0.206432 seconds
+plan limit 745
+current timestep 709
+num of flexible agents: 1456
+num of flexible tasks: 5456
+Optimal assignment with minimum cost:
+Solving time: 0.217306 seconds
+plan limit 735
+current timestep 710
+num of flexible agents: 1462
+num of flexible tasks: 5462
+Optimal assignment with minimum cost:
+Solving time: 0.193524 seconds
+plan limit 761
+current timestep 711
+num of flexible agents: 1458
+num of flexible tasks: 5458
+Optimal assignment with minimum cost:
+Solving time: 0.200884 seconds
+plan limit 752
+current timestep 712
+num of flexible agents: 1465
+num of flexible tasks: 5465
+Optimal assignment with minimum cost:
+Solving time: 0.202957 seconds
+plan limit 751
+current timestep 713
+num of flexible agents: 1470
+num of flexible tasks: 5470
+Optimal assignment with minimum cost:
+Solving time: 0.191779 seconds
+plan limit 762
+current timestep 714
+num of flexible agents: 1468
+num of flexible tasks: 5468
+Optimal assignment with minimum cost:
+Solving time: 0.191698 seconds
+plan limit 765
+current timestep 715
+num of flexible agents: 1456
+num of flexible tasks: 5456
+Optimal assignment with minimum cost:
+Solving time: 0.196308 seconds
+plan limit 756
+current timestep 716
+num of flexible agents: 1453
+num of flexible tasks: 5453
+Optimal assignment with minimum cost:
+Solving time: 0.20147 seconds
+plan limit 752
+current timestep 717
+num of flexible agents: 1468
+num of flexible tasks: 5468
+Optimal assignment with minimum cost:
+Solving time: 0.186976 seconds
+plan limit 767
+current timestep 718
+num of flexible agents: 1478
+num of flexible tasks: 5478
+Optimal assignment with minimum cost:
+Solving time: 0.210237 seconds
+plan limit 743
+current timestep 719
+num of flexible agents: 1485
+num of flexible tasks: 5485
+Optimal assignment with minimum cost:
+Solving time: 0.183614 seconds
+plan limit 770
+current timestep 720
+num of flexible agents: 1478
+num of flexible tasks: 5478
+Optimal assignment with minimum cost:
+Solving time: 0.189504 seconds
+plan limit 763
+current timestep 721
+num of flexible agents: 1484
+num of flexible tasks: 5484
+Optimal assignment with minimum cost:
+Solving time: 0.199819 seconds
+plan limit 754
+current timestep 722
+num of flexible agents: 1495
+num of flexible tasks: 5495
+Optimal assignment with minimum cost:
+Solving time: 0.203867 seconds
+plan limit 753
+current timestep 723
+num of flexible agents: 1499
+num of flexible tasks: 5499
+Optimal assignment with minimum cost:
+Solving time: 0.192423 seconds
+plan limit 760
+current timestep 724
+num of flexible agents: 1507
+num of flexible tasks: 5507
+Optimal assignment with minimum cost:
+Solving time: 0.206469 seconds
+plan limit 750
+current timestep 725
+num of flexible agents: 1513
+num of flexible tasks: 5513
+Optimal assignment with minimum cost:
+Solving time: 0.191545 seconds
+plan limit 761
+current timestep 726
+num of flexible agents: 1525
+num of flexible tasks: 5525
+Optimal assignment with minimum cost:
+Solving time: 0.203168 seconds
+plan limit 753
+current timestep 727
+num of flexible agents: 1535
+num of flexible tasks: 5535
+Optimal assignment with minimum cost:
+Solving time: 0.209637 seconds
+plan limit 746
+current timestep 728
+num of flexible agents: 1547
+num of flexible tasks: 5547
+Optimal assignment with minimum cost:
+Solving time: 0.190696 seconds
+plan limit 765
+current timestep 729
+num of flexible agents: 1557
+num of flexible tasks: 5557
+Optimal assignment with minimum cost:
+Solving time: 0.195622 seconds
+plan limit 761
+current timestep 730
+num of flexible agents: 1560
+num of flexible tasks: 5560
+Optimal assignment with minimum cost:
+Solving time: 0.203 seconds
+plan limit 752
+current timestep 731
+num of flexible agents: 1561
+num of flexible tasks: 5561
+Optimal assignment with minimum cost:
+Solving time: 0.183378 seconds
+plan limit 773
+current timestep 732
+num of flexible agents: 1561
+num of flexible tasks: 5561
+Optimal assignment with minimum cost:
+Solving time: 0.197689 seconds
+plan limit 755
+current timestep 733
+num of flexible agents: 1557
+num of flexible tasks: 5557
+Optimal assignment with minimum cost:
+Solving time: 0.196711 seconds
+plan limit 756
+current timestep 734
+num of flexible agents: 1560
+num of flexible tasks: 5560
+Optimal assignment with minimum cost:
+Solving time: 0.19148 seconds
+plan limit 765
+current timestep 735
+num of flexible agents: 1560
+num of flexible tasks: 5560
+Optimal assignment with minimum cost:
+Solving time: 0.197601 seconds
+plan limit 759
+current timestep 736
+num of flexible agents: 1568
+num of flexible tasks: 5568
+Optimal assignment with minimum cost:
+Solving time: 0.208092 seconds
+plan limit 745
+current timestep 737
+num of flexible agents: 1562
+num of flexible tasks: 5562
+Optimal assignment with minimum cost:
+Solving time: 0.194352 seconds
+plan limit 759
+current timestep 738
+num of flexible agents: 1557
+num of flexible tasks: 5557
+Optimal assignment with minimum cost:
+Solving time: 0.177594 seconds
+plan limit 775
+current timestep 739
+num of flexible agents: 1557
+num of flexible tasks: 5557
+Optimal assignment with minimum cost:
+Solving time: 0.207531 seconds
+plan limit 749
+current timestep 740
+num of flexible agents: 1559
+num of flexible tasks: 5559
+Optimal assignment with minimum cost:
+Solving time: 0.187621 seconds
+plan limit 765
+current timestep 741
+num of flexible agents: 1555
+num of flexible tasks: 5555
+Optimal assignment with minimum cost:
+Solving time: 0.192089 seconds
+plan limit 764
+current timestep 742
+num of flexible agents: 1559
+num of flexible tasks: 5559
+Optimal assignment with minimum cost:
+Solving time: 0.198712 seconds
+plan limit 759
+current timestep 743
+num of flexible agents: 1560
+num of flexible tasks: 5560
+Optimal assignment with minimum cost:
+Solving time: 0.193567 seconds
+plan limit 763
+current timestep 744
+num of flexible agents: 1574
+num of flexible tasks: 5574
+Optimal assignment with minimum cost:
+Solving time: 0.200147 seconds
+plan limit 757
+current timestep 745
+num of flexible agents: 1572
+num of flexible tasks: 5572
+Optimal assignment with minimum cost:
+Solving time: 0.190883 seconds
+plan limit 766
+current timestep 746
+num of flexible agents: 1566
+num of flexible tasks: 5566
+Optimal assignment with minimum cost:
+Solving time: 0.180032 seconds
+plan limit 776
+current timestep 747
+num of flexible agents: 1558
+num of flexible tasks: 5558
+Optimal assignment with minimum cost:
+Solving time: 0.178629 seconds
+plan limit 774
+current timestep 748
+num of flexible agents: 1562
+num of flexible tasks: 5562
+Optimal assignment with minimum cost:
+Solving time: 0.187242 seconds
+plan limit 769
+current timestep 749
+num of flexible agents: 1565
+num of flexible tasks: 5565
+Optimal assignment with minimum cost:
+Solving time: 0.174364 seconds
+plan limit 783
+current timestep 750
+num of flexible agents: 1569
+num of flexible tasks: 5569
+Optimal assignment with minimum cost:
+Solving time: 0.179774 seconds
+plan limit 778
+current timestep 751
+num of flexible agents: 1577
+num of flexible tasks: 5577
+Optimal assignment with minimum cost:
+Solving time: 0.188019 seconds
+plan limit 768
+current timestep 752
+num of flexible agents: 1580
+num of flexible tasks: 5580
+Optimal assignment with minimum cost:
+Solving time: 0.183733 seconds
+plan limit 773
+current timestep 753
+num of flexible agents: 1590
+num of flexible tasks: 5590
+Optimal assignment with minimum cost:
+Solving time: 0.177007 seconds
+plan limit 780
+current timestep 754
+num of flexible agents: 1590
+num of flexible tasks: 5590
+Optimal assignment with minimum cost:
+Solving time: 0.193045 seconds
+plan limit 763
+current timestep 755
+num of flexible agents: 1590
+num of flexible tasks: 5590
+Optimal assignment with minimum cost:
+Solving time: 0.192086 seconds
+plan limit 764
+current timestep 756
+num of flexible agents: 1587
+num of flexible tasks: 5587
+Optimal assignment with minimum cost:
+Solving time: 0.190103 seconds
+plan limit 766
+current timestep 757
+num of flexible agents: 1587
+num of flexible tasks: 5587
+Optimal assignment with minimum cost:
+Solving time: 0.192299 seconds
+plan limit 763
+current timestep 758
+num of flexible agents: 1596
+num of flexible tasks: 5596
+Optimal assignment with minimum cost:
+Solving time: 0.200308 seconds
+plan limit 756
+current timestep 759
+num of flexible agents: 1592
+num of flexible tasks: 5592
+Optimal assignment with minimum cost:
+Solving time: 0.201223 seconds
+plan limit 755
+current timestep 760
+num of flexible agents: 1588
+num of flexible tasks: 5588
+Optimal assignment with minimum cost:
+Solving time: 0.202582 seconds
+plan limit 752
+current timestep 761
+num of flexible agents: 1581
+num of flexible tasks: 5581
+Optimal assignment with minimum cost:
+Solving time: 0.213647 seconds
+plan limit 743
+current timestep 762
+num of flexible agents: 1580
+num of flexible tasks: 5580
+Optimal assignment with minimum cost:
+Solving time: 0.193438 seconds
+plan limit 763
+current timestep 763
+num of flexible agents: 1587
+num of flexible tasks: 5587
+Optimal assignment with minimum cost:
+Solving time: 0.229245 seconds
+plan limit 726
+current timestep 764
+num of flexible agents: 1585
+num of flexible tasks: 5585
+Optimal assignment with minimum cost:
+Solving time: 0.217522 seconds
+plan limit 739
+current timestep 765
+num of flexible agents: 1580
+num of flexible tasks: 5580
+Optimal assignment with minimum cost:
+Solving time: 0.211139 seconds
+plan limit 745
+current timestep 766
+num of flexible agents: 1594
+num of flexible tasks: 5594
+Optimal assignment with minimum cost:
+Solving time: 0.221946 seconds
+plan limit 733
+current timestep 767
+num of flexible agents: 1598
+num of flexible tasks: 5598
+Optimal assignment with minimum cost:
+Solving time: 0.217311 seconds
+plan limit 739
+current timestep 768
+num of flexible agents: 1600
+num of flexible tasks: 5600
+Optimal assignment with minimum cost:
+Solving time: 0.224961 seconds
+plan limit 731
+current timestep 769
+num of flexible agents: 1594
+num of flexible tasks: 5594
+Optimal assignment with minimum cost:
+Solving time: 0.210443 seconds
+plan limit 746
+current timestep 770
+num of flexible agents: 1603
+num of flexible tasks: 5603
+Optimal assignment with minimum cost:
+Solving time: 0.217419 seconds
+plan limit 739
+current timestep 771
+num of flexible agents: 1603
+num of flexible tasks: 5603
+Optimal assignment with minimum cost:
+Solving time: 0.21431 seconds
+plan limit 742
+current timestep 772
+num of flexible agents: 1600
+num of flexible tasks: 5600
+Optimal assignment with minimum cost:
+Solving time: 0.204419 seconds
+plan limit 752
+current timestep 773
+num of flexible agents: 1591
+num of flexible tasks: 5591
+Optimal assignment with minimum cost:
+Solving time: 0.212112 seconds
+plan limit 745
+current timestep 774
+num of flexible agents: 1584
+num of flexible tasks: 5584
+Optimal assignment with minimum cost:
+Solving time: 0.198992 seconds
+plan limit 757
+current timestep 775
+num of flexible agents: 1570
+num of flexible tasks: 5570
+Optimal assignment with minimum cost:
+Solving time: 0.198823 seconds
+plan limit 753
+current timestep 776
+num of flexible agents: 1565
+num of flexible tasks: 5565
+Optimal assignment with minimum cost:
+Solving time: 0.210099 seconds
+plan limit 746
+current timestep 777
+num of flexible agents: 1576
+num of flexible tasks: 5576
+Optimal assignment with minimum cost:
+Solving time: 0.197103 seconds
+plan limit 760
+current timestep 778
+num of flexible agents: 1572
+num of flexible tasks: 5572
+Optimal assignment with minimum cost:
+Solving time: 0.200155 seconds
+plan limit 756
+current timestep 779
+num of flexible agents: 1564
+num of flexible tasks: 5564
+Optimal assignment with minimum cost:
+Solving time: 0.212257 seconds
+plan limit 744
+current timestep 780
+num of flexible agents: 1567
+num of flexible tasks: 5567
+Optimal assignment with minimum cost:
+Solving time: 0.209188 seconds
+plan limit 747
+current timestep 781
+num of flexible agents: 1578
+num of flexible tasks: 5578
+Optimal assignment with minimum cost:
+Solving time: 0.218689 seconds
+plan limit 737
+current timestep 782
+num of flexible agents: 1586
+num of flexible tasks: 5586
+Optimal assignment with minimum cost:
+Solving time: 0.205724 seconds
+plan limit 746
+current timestep 783
+num of flexible agents: 1578
+num of flexible tasks: 5578
+Optimal assignment with minimum cost:
+Solving time: 0.214336 seconds
+plan limit 741
+current timestep 784
+num of flexible agents: 1580
+num of flexible tasks: 5580
+Optimal assignment with minimum cost:
+Solving time: 0.193952 seconds
+plan limit 758
+current timestep 785
+num of flexible agents: 1582
+num of flexible tasks: 5582
+Optimal assignment with minimum cost:
+Solving time: 0.218395 seconds
+plan limit 738
+current timestep 786
+num of flexible agents: 1590
+num of flexible tasks: 5590
+Optimal assignment with minimum cost:
+Solving time: 0.204968 seconds
+plan limit 747
+current timestep 787
+num of flexible agents: 1602
+num of flexible tasks: 5602
+Optimal assignment with minimum cost:
+Solving time: 0.215282 seconds
+plan limit 741
+current timestep 788
+num of flexible agents: 1613
+num of flexible tasks: 5613
+Optimal assignment with minimum cost:
+Solving time: 0.219496 seconds
+plan limit 732
+current timestep 789
+num of flexible agents: 1627
+num of flexible tasks: 5627
+Optimal assignment with minimum cost:
+Solving time: 0.208469 seconds
+plan limit 746
+current timestep 790
+num of flexible agents: 1626
+num of flexible tasks: 5626
+Optimal assignment with minimum cost:
+Solving time: 0.212431 seconds
+plan limit 739
+current timestep 791
+num of flexible agents: 1632
+num of flexible tasks: 5632
+Optimal assignment with minimum cost:
+Solving time: 0.218438 seconds
+plan limit 733
+current timestep 792
+num of flexible agents: 1628
+num of flexible tasks: 5628
+Optimal assignment with minimum cost:
+Solving time: 0.204518 seconds
+plan limit 745
+current timestep 793
+num of flexible agents: 1644
+num of flexible tasks: 5644
+Optimal assignment with minimum cost:
+Solving time: 0.213406 seconds
+plan limit 742
+current timestep 794
+num of flexible agents: 1642
+num of flexible tasks: 5642
+Optimal assignment with minimum cost:
+Solving time: 0.223431 seconds
+plan limit 728
+current timestep 795
+num of flexible agents: 1645
+num of flexible tasks: 5645
+Optimal assignment with minimum cost:
+Solving time: 0.203553 seconds
+plan limit 746
+current timestep 796
+num of flexible agents: 1640
+num of flexible tasks: 5640
+Optimal assignment with minimum cost:
+Solving time: 0.19837 seconds
+plan limit 753
+current timestep 797
+num of flexible agents: 1636
+num of flexible tasks: 5636
+Optimal assignment with minimum cost:
+Solving time: 0.209078 seconds
+plan limit 747
+current timestep 798
+num of flexible agents: 1627
+num of flexible tasks: 5627
+Optimal assignment with minimum cost:
+Solving time: 0.205753 seconds
+plan limit 745
+current timestep 799
+num of flexible agents: 1628
+num of flexible tasks: 5628
+Optimal assignment with minimum cost:
+Solving time: 0.210757 seconds
+plan limit 741
+current timestep 800
+num of flexible agents: 1618
+num of flexible tasks: 5618
+Optimal assignment with minimum cost:
+Solving time: 0.209442 seconds
+plan limit 747
+current timestep 801
+num of flexible agents: 1632
+num of flexible tasks: 5632
+Optimal assignment with minimum cost:
+Solving time: 0.210394 seconds
+plan limit 745
+current timestep 802
+num of flexible agents: 1629
+num of flexible tasks: 5629
+Optimal assignment with minimum cost:
+Solving time: 0.222349 seconds
+plan limit 734
+current timestep 803
+num of flexible agents: 1625
+num of flexible tasks: 5625
+Optimal assignment with minimum cost:
+Solving time: 0.212872 seconds
+plan limit 743
+current timestep 804
+num of flexible agents: 1624
+num of flexible tasks: 5624
+Optimal assignment with minimum cost:
+Solving time: 0.209305 seconds
+plan limit 747
+current timestep 805
+num of flexible agents: 1620
+num of flexible tasks: 5620
+Optimal assignment with minimum cost:
+Solving time: 0.211831 seconds
+plan limit 744
+current timestep 806
+num of flexible agents: 1608
+num of flexible tasks: 5608
+Optimal assignment with minimum cost:
+Solving time: 0.219439 seconds
+plan limit 734
+current timestep 807
+num of flexible agents: 1620
+num of flexible tasks: 5620
+Optimal assignment with minimum cost:
+Solving time: 0.220332 seconds
+plan limit 732
+current timestep 808
+num of flexible agents: 1619
+num of flexible tasks: 5619
+Optimal assignment with minimum cost:
+Solving time: 0.223102 seconds
+plan limit 729
+current timestep 809
+num of flexible agents: 1610
+num of flexible tasks: 5610
+Optimal assignment with minimum cost:
+Solving time: 0.219527 seconds
+plan limit 729
+current timestep 810
+num of flexible agents: 1614
+num of flexible tasks: 5614
+Optimal assignment with minimum cost:
+Solving time: 0.223699 seconds
+plan limit 733
+current timestep 811
+num of flexible agents: 1621
+num of flexible tasks: 5621
+Optimal assignment with minimum cost:
+Solving time: 0.218251 seconds
+plan limit 733
+current timestep 812
+num of flexible agents: 1611
+num of flexible tasks: 5611
+Optimal assignment with minimum cost:
+Solving time: 0.218386 seconds
+plan limit 737
+current timestep 813
+num of flexible agents: 1616
+num of flexible tasks: 5616
+Optimal assignment with minimum cost:
+Solving time: 0.222769 seconds
+plan limit 733
+current timestep 814
+num of flexible agents: 1621
+num of flexible tasks: 5621
+Optimal assignment with minimum cost:
+Solving time: 0.215984 seconds
+plan limit 740
+current timestep 815
+num of flexible agents: 1638
+num of flexible tasks: 5638
+Optimal assignment with minimum cost:
+Solving time: 0.218372 seconds
+plan limit 737
+current timestep 816
+num of flexible agents: 1627
+num of flexible tasks: 5627
+Optimal assignment with minimum cost:
+Solving time: 0.217872 seconds
+plan limit 733
+current timestep 817
+num of flexible agents: 1634
+num of flexible tasks: 5634
+Optimal assignment with minimum cost:
+Solving time: 0.214797 seconds
+plan limit 741
+current timestep 818
+num of flexible agents: 1625
+num of flexible tasks: 5625
+Optimal assignment with minimum cost:
+Solving time: 0.220402 seconds
+plan limit 731
+current timestep 819
+num of flexible agents: 1628
+num of flexible tasks: 5628
+Optimal assignment with minimum cost:
+Solving time: 0.232697 seconds
+plan limit 719
+current timestep 820
+num of flexible agents: 1642
+num of flexible tasks: 5642
+Optimal assignment with minimum cost:
+Solving time: 0.222753 seconds
+plan limit 729
+current timestep 821
+num of flexible agents: 1638
+num of flexible tasks: 5638
+Optimal assignment with minimum cost:
+Solving time: 0.211413 seconds
+plan limit 737
+current timestep 822
+num of flexible agents: 1644
+num of flexible tasks: 5644
+Optimal assignment with minimum cost:
+Solving time: 0.226099 seconds
+plan limit 726
+current timestep 823
+num of flexible agents: 1645
+num of flexible tasks: 5645
+Optimal assignment with minimum cost:
+Solving time: 0.206345 seconds
+plan limit 745
+current timestep 824
+num of flexible agents: 1663
+num of flexible tasks: 5663
+Optimal assignment with minimum cost:
+Solving time: 0.210867 seconds
+plan limit 744
+current timestep 825
+num of flexible agents: 1667
+num of flexible tasks: 5667
+Optimal assignment with minimum cost:
+Solving time: 0.221684 seconds
+plan limit 730
+current timestep 826
+num of flexible agents: 1668
+num of flexible tasks: 5668
+Optimal assignment with minimum cost:
+Solving time: 0.227644 seconds
+plan limit 728
+current timestep 827
+num of flexible agents: 1681
+num of flexible tasks: 5681
+Optimal assignment with minimum cost:
+Solving time: 0.20539 seconds
+plan limit 746
+current timestep 828
+num of flexible agents: 1686
+num of flexible tasks: 5686
+Optimal assignment with minimum cost:
+Solving time: 0.208628 seconds
+plan limit 743
+current timestep 829
+num of flexible agents: 1673
+num of flexible tasks: 5673
+Optimal assignment with minimum cost:
+Solving time: 0.215837 seconds
+plan limit 736
+current timestep 830
+num of flexible agents: 1686
+num of flexible tasks: 5686
+Optimal assignment with minimum cost:
+Solving time: 0.21261 seconds
+plan limit 739
+current timestep 831
+num of flexible agents: 1693
+num of flexible tasks: 5693
+Optimal assignment with minimum cost:
+Solving time: 0.220415 seconds
+plan limit 735
+current timestep 832
+num of flexible agents: 1694
+num of flexible tasks: 5694
+Optimal assignment with minimum cost:
+Solving time: 0.221891 seconds
+plan limit 734
+current timestep 833
+num of flexible agents: 1698
+num of flexible tasks: 5698
+Optimal assignment with minimum cost:
+Solving time: 0.221395 seconds
+plan limit 735
+current timestep 834
+num of flexible agents: 1697
+num of flexible tasks: 5697
+Optimal assignment with minimum cost:
+Solving time: 0.21078 seconds
+plan limit 745
+current timestep 835
+num of flexible agents: 1701
+num of flexible tasks: 5701
+Optimal assignment with minimum cost:
+Solving time: 0.208744 seconds
+plan limit 747
+current timestep 836
+num of flexible agents: 1700
+num of flexible tasks: 5700
+Optimal assignment with minimum cost:
+Solving time: 0.208082 seconds
+plan limit 746
+current timestep 837
+num of flexible agents: 1693
+num of flexible tasks: 5693
+Optimal assignment with minimum cost:
+Solving time: 0.209523 seconds
+plan limit 742
+current timestep 838
+num of flexible agents: 1694
+num of flexible tasks: 5694
+Optimal assignment with minimum cost:
+Solving time: 0.205781 seconds
+plan limit 750
+current timestep 839
+num of flexible agents: 1698
+num of flexible tasks: 5698
+Optimal assignment with minimum cost:
+Solving time: 0.210014 seconds
+plan limit 745
+current timestep 840
+num of flexible agents: 1692
+num of flexible tasks: 5692
+Optimal assignment with minimum cost:
+Solving time: 0.232884 seconds
+plan limit 723
+current timestep 841
+num of flexible agents: 1697
+num of flexible tasks: 5697
+Optimal assignment with minimum cost:
+Solving time: 0.206712 seconds
+plan limit 749
+current timestep 842
+num of flexible agents: 1685
+num of flexible tasks: 5685
+Optimal assignment with minimum cost:
+Solving time: 0.206181 seconds
+plan limit 748
+current timestep 843
+num of flexible agents: 1687
+num of flexible tasks: 5687
+Optimal assignment with minimum cost:
+Solving time: 0.204256 seconds
+plan limit 752
+current timestep 844
+num of flexible agents: 1683
+num of flexible tasks: 5683
+Optimal assignment with minimum cost:
+Solving time: 0.200997 seconds
+plan limit 751
+current timestep 845
+num of flexible agents: 1696
+num of flexible tasks: 5696
+Optimal assignment with minimum cost:
+Solving time: 0.216855 seconds
+plan limit 734
+current timestep 846
+num of flexible agents: 1698
+num of flexible tasks: 5698
+Optimal assignment with minimum cost:
+Solving time: 0.225297 seconds
+plan limit 726
+current timestep 847
+num of flexible agents: 1695
+num of flexible tasks: 5695
+Optimal assignment with minimum cost:
+Solving time: 0.22047 seconds
+plan limit 731
+current timestep 848
+num of flexible agents: 1690
+num of flexible tasks: 5690
+Optimal assignment with minimum cost:
+Solving time: 0.20826 seconds
+plan limit 747
+current timestep 849
+num of flexible agents: 1684
+num of flexible tasks: 5684
+Optimal assignment with minimum cost:
+Solving time: 0.221585 seconds
+plan limit 730
+current timestep 850
+num of flexible agents: 1669
+num of flexible tasks: 5669
+Optimal assignment with minimum cost:
+Solving time: 0.20933 seconds
+plan limit 741
+current timestep 851
+num of flexible agents: 1663
+num of flexible tasks: 5663
+Optimal assignment with minimum cost:
+Solving time: 0.224819 seconds
+plan limit 731
+current timestep 852
+num of flexible agents: 1665
+num of flexible tasks: 5665
+Optimal assignment with minimum cost:
+Solving time: 0.23396 seconds
+plan limit 722
+current timestep 853
+num of flexible agents: 1676
+num of flexible tasks: 5676
+Optimal assignment with minimum cost:
+Solving time: 0.225713 seconds
+plan limit 726
+current timestep 854
+num of flexible agents: 1664
+num of flexible tasks: 5664
+Optimal assignment with minimum cost:
+Solving time: 0.240158 seconds
+plan limit 712
+current timestep 855
+num of flexible agents: 1663
+num of flexible tasks: 5663
+Optimal assignment with minimum cost:
+Solving time: 0.218477 seconds
+plan limit 732
+current timestep 856
+num of flexible agents: 1673
+num of flexible tasks: 5673
+Optimal assignment with minimum cost:
+Solving time: 0.238168 seconds
+plan limit 713
+current timestep 857
+num of flexible agents: 1673
+num of flexible tasks: 5673
+Optimal assignment with minimum cost:
+Solving time: 0.218347 seconds
+plan limit 733
+current timestep 858
+num of flexible agents: 1681
+num of flexible tasks: 5681
+Optimal assignment with minimum cost:
+Solving time: 0.227608 seconds
+plan limit 722
+current timestep 859
+num of flexible agents: 1675
+num of flexible tasks: 5675
+Optimal assignment with minimum cost:
+Solving time: 0.221756 seconds
+plan limit 730
+current timestep 860
+num of flexible agents: 1678
+num of flexible tasks: 5678
+Optimal assignment with minimum cost:
+Solving time: 0.219238 seconds
+plan limit 732
+current timestep 861
+num of flexible agents: 1684
+num of flexible tasks: 5684
+Optimal assignment with minimum cost:
+Solving time: 0.229804 seconds
+plan limit 720
+current timestep 862
+num of flexible agents: 1684
+num of flexible tasks: 5684
+Optimal assignment with minimum cost:
+Solving time: 0.22056 seconds
+plan limit 731
+current timestep 863
+num of flexible agents: 1689
+num of flexible tasks: 5689
+Optimal assignment with minimum cost:
+Solving time: 0.207408 seconds
+plan limit 744
+current timestep 864
+num of flexible agents: 1699
+num of flexible tasks: 5699
+Optimal assignment with minimum cost:
+Solving time: 0.221183 seconds
+plan limit 727
+current timestep 865
+num of flexible agents: 1704
+num of flexible tasks: 5704
+Optimal assignment with minimum cost:
+Solving time: 0.216088 seconds
+plan limit 733
+current timestep 866
+num of flexible agents: 1692
+num of flexible tasks: 5692
+Optimal assignment with minimum cost:
+Solving time: 0.217142 seconds
+plan limit 735
+current timestep 867
+num of flexible agents: 1689
+num of flexible tasks: 5689
+Optimal assignment with minimum cost:
+Solving time: 0.214962 seconds
+plan limit 732
+current timestep 868
+num of flexible agents: 1682
+num of flexible tasks: 5682
+Optimal assignment with minimum cost:
+Solving time: 0.243664 seconds
+plan limit 708
+current timestep 869
+num of flexible agents: 1678
+num of flexible tasks: 5678
+Optimal assignment with minimum cost:
+Solving time: 0.20213 seconds
+plan limit 750
+current timestep 870
+num of flexible agents: 1675
+num of flexible tasks: 5675
+Optimal assignment with minimum cost:
+Solving time: 0.231209 seconds
+plan limit 717
+current timestep 871
+num of flexible agents: 1675
+num of flexible tasks: 5675
+Optimal assignment with minimum cost:
+Solving time: 0.232114 seconds
+plan limit 720
+current timestep 872
+num of flexible agents: 1684
+num of flexible tasks: 5684
+Optimal assignment with minimum cost:
+Solving time: 0.209368 seconds
+plan limit 741
+current timestep 873
+num of flexible agents: 1672
+num of flexible tasks: 5672
+Optimal assignment with minimum cost:
+Solving time: 0.198078 seconds
+plan limit 752
+current timestep 874
+num of flexible agents: 1680
+num of flexible tasks: 5680
+Optimal assignment with minimum cost:
+Solving time: 0.21999 seconds
+plan limit 732
+current timestep 875
+num of flexible agents: 1673
+num of flexible tasks: 5673
+Optimal assignment with minimum cost:
+Solving time: 0.213236 seconds
+plan limit 738
+current timestep 876
+num of flexible agents: 1670
+num of flexible tasks: 5670
+Optimal assignment with minimum cost:
+Solving time: 0.203739 seconds
+plan limit 746
+current timestep 877
+num of flexible agents: 1671
+num of flexible tasks: 5671
+Optimal assignment with minimum cost:
+Solving time: 0.237021 seconds
+plan limit 715
+current timestep 878
+num of flexible agents: 1674
+num of flexible tasks: 5674
+Optimal assignment with minimum cost:
+Solving time: 0.221316 seconds
+plan limit 728
+current timestep 879
+num of flexible agents: 1667
+num of flexible tasks: 5667
+Optimal assignment with minimum cost:
+Solving time: 0.216763 seconds
+plan limit 734
+current timestep 880
+num of flexible agents: 1670
+num of flexible tasks: 5670
+Optimal assignment with minimum cost:
+Solving time: 0.23715 seconds
+plan limit 718
+current timestep 881
+num of flexible agents: 1665
+num of flexible tasks: 5665
+Optimal assignment with minimum cost:
+Solving time: 0.222011 seconds
+plan limit 733
+current timestep 882
+num of flexible agents: 1676
+num of flexible tasks: 5676
+Optimal assignment with minimum cost:
+Solving time: 0.206344 seconds
+plan limit 749
+current timestep 883
+num of flexible agents: 1674
+num of flexible tasks: 5674
+Optimal assignment with minimum cost:
+Solving time: 0.211954 seconds
+plan limit 744
+current timestep 884
+num of flexible agents: 1672
+num of flexible tasks: 5672
+Optimal assignment with minimum cost:
+Solving time: 0.214397 seconds
+plan limit 741
+current timestep 885
+num of flexible agents: 1666
+num of flexible tasks: 5666
+Optimal assignment with minimum cost:
+Solving time: 0.215419 seconds
+plan limit 740
+current timestep 886
+num of flexible agents: 1671
+num of flexible tasks: 5671
+Optimal assignment with minimum cost:
+Solving time: 0.239745 seconds
+plan limit 712
+current timestep 887
+num of flexible agents: 1673
+num of flexible tasks: 5673
+Optimal assignment with minimum cost:
+Solving time: 0.210365 seconds
+plan limit 745
+current timestep 888
+num of flexible agents: 1659
+num of flexible tasks: 5659
+Optimal assignment with minimum cost:
+Solving time: 0.225837 seconds
+plan limit 730
+current timestep 889
+num of flexible agents: 1662
+num of flexible tasks: 5662
+Optimal assignment with minimum cost:
+Solving time: 0.232635 seconds
+plan limit 723
+current timestep 890
+num of flexible agents: 1653
+num of flexible tasks: 5653
+Optimal assignment with minimum cost:
+Solving time: 0.221348 seconds
+plan limit 730
+current timestep 891
+num of flexible agents: 1667
+num of flexible tasks: 5667
+Optimal assignment with minimum cost:
+Solving time: 0.212928 seconds
+plan limit 738
+current timestep 892
+num of flexible agents: 1667
+num of flexible tasks: 5667
+Optimal assignment with minimum cost:
+Solving time: 0.229425 seconds
+plan limit 721
+current timestep 893
+num of flexible agents: 1653
+num of flexible tasks: 5653
+Optimal assignment with minimum cost:
+Solving time: 0.203647 seconds
+plan limit 747
+current timestep 894
+num of flexible agents: 1633
+num of flexible tasks: 5633
+Optimal assignment with minimum cost:
+Solving time: 0.195864 seconds
+plan limit 756
+current timestep 895
+num of flexible agents: 1632
+num of flexible tasks: 5632
+Optimal assignment with minimum cost:
+Solving time: 0.212907 seconds
+plan limit 739
+current timestep 896
+num of flexible agents: 1649
+num of flexible tasks: 5649
+Optimal assignment with minimum cost:
+Solving time: 0.232706 seconds
+plan limit 719
+current timestep 897
+num of flexible agents: 1647
+num of flexible tasks: 5647
+Optimal assignment with minimum cost:
+Solving time: 0.209442 seconds
+plan limit 740
+current timestep 898
+num of flexible agents: 1655
+num of flexible tasks: 5655
+Optimal assignment with minimum cost:
+Solving time: 0.216385 seconds
+plan limit 735
+current timestep 899
+num of flexible agents: 1646
+num of flexible tasks: 5646
+Optimal assignment with minimum cost:
+Solving time: 0.205522 seconds
+plan limit 746
+current timestep 900
+num of flexible agents: 1642
+num of flexible tasks: 5642
+Optimal assignment with minimum cost:
+Solving time: 0.210993 seconds
+plan limit 745
+current timestep 901
+num of flexible agents: 1646
+num of flexible tasks: 5646
+Optimal assignment with minimum cost:
+Solving time: 0.229795 seconds
+plan limit 726
+current timestep 902
+num of flexible agents: 1652
+num of flexible tasks: 5652
+Optimal assignment with minimum cost:
+Solving time: 0.209772 seconds
+plan limit 742
+current timestep 903
+num of flexible agents: 1647
+num of flexible tasks: 5647
+Optimal assignment with minimum cost:
+Solving time: 0.209874 seconds
+plan limit 746
+current timestep 904
+num of flexible agents: 1641
+num of flexible tasks: 5641
+Optimal assignment with minimum cost:
+Solving time: 0.227962 seconds
+plan limit 725
+current timestep 905
+num of flexible agents: 1647
+num of flexible tasks: 5647
+Optimal assignment with minimum cost:
+Solving time: 0.212384 seconds
+plan limit 743
+current timestep 906
+num of flexible agents: 1653
+num of flexible tasks: 5653
+Optimal assignment with minimum cost:
+Solving time: 0.212644 seconds
+plan limit 743
+current timestep 907
+num of flexible agents: 1660
+num of flexible tasks: 5660
+Optimal assignment with minimum cost:
+Solving time: 0.21459 seconds
+plan limit 740
+current timestep 908
+num of flexible agents: 1655
+num of flexible tasks: 5655
+Optimal assignment with minimum cost:
+Solving time: 0.216044 seconds
+plan limit 737
+current timestep 909
+num of flexible agents: 1643
+num of flexible tasks: 5643
+Optimal assignment with minimum cost:
+Solving time: 0.203735 seconds
+plan limit 748
+current timestep 910
+num of flexible agents: 1638
+num of flexible tasks: 5638
+Optimal assignment with minimum cost:
+Solving time: 0.218712 seconds
+plan limit 733
+current timestep 911
+num of flexible agents: 1642
+num of flexible tasks: 5642
+Optimal assignment with minimum cost:
+Solving time: 0.205204 seconds
+plan limit 744
+current timestep 912
+num of flexible agents: 1648
+num of flexible tasks: 5648
+Optimal assignment with minimum cost:
+Solving time: 0.200759 seconds
+plan limit 755
+current timestep 913
+num of flexible agents: 1647
+num of flexible tasks: 5647
+Optimal assignment with minimum cost:
+Solving time: 0.216001 seconds
+plan limit 735
+current timestep 914
+num of flexible agents: 1661
+num of flexible tasks: 5661
+Optimal assignment with minimum cost:
+Solving time: 0.209781 seconds
+plan limit 745
+current timestep 915
+num of flexible agents: 1651
+num of flexible tasks: 5651
+Optimal assignment with minimum cost:
+Solving time: 0.221727 seconds
+plan limit 732
+current timestep 916
+num of flexible agents: 1658
+num of flexible tasks: 5658
+Optimal assignment with minimum cost:
+Solving time: 0.225866 seconds
+plan limit 730
+current timestep 917
+num of flexible agents: 1672
+num of flexible tasks: 5672
+Optimal assignment with minimum cost:
+Solving time: 0.215075 seconds
+plan limit 739
+current timestep 918
+num of flexible agents: 1665
+num of flexible tasks: 5665
+Optimal assignment with minimum cost:
+Solving time: 0.21174 seconds
+plan limit 740
+current timestep 919
+num of flexible agents: 1665
+num of flexible tasks: 5665
+Optimal assignment with minimum cost:
+Solving time: 0.213765 seconds
+plan limit 736
+current timestep 920
+num of flexible agents: 1659
+num of flexible tasks: 5659
+Optimal assignment with minimum cost:
+Solving time: 0.212101 seconds
+plan limit 738
+current timestep 921
+num of flexible agents: 1662
+num of flexible tasks: 5662
+Optimal assignment with minimum cost:
+Solving time: 0.20405 seconds
+plan limit 752
+current timestep 922
+num of flexible agents: 1673
+num of flexible tasks: 5673
+Optimal assignment with minimum cost:
+Solving time: 0.204551 seconds
+plan limit 744
+current timestep 923
+num of flexible agents: 1665
+num of flexible tasks: 5665
+Optimal assignment with minimum cost:
+Solving time: 0.217696 seconds
+plan limit 733
+current timestep 924
+num of flexible agents: 1669
+num of flexible tasks: 5669
+Optimal assignment with minimum cost:
+Solving time: 0.22261 seconds
+plan limit 732
+current timestep 925
+num of flexible agents: 1680
+num of flexible tasks: 5680
+Optimal assignment with minimum cost:
+Solving time: 0.212786 seconds
+plan limit 741
+current timestep 926
+num of flexible agents: 1679
+num of flexible tasks: 5679
+Optimal assignment with minimum cost:
+Solving time: 0.23247 seconds
+plan limit 719
+current timestep 927
+num of flexible agents: 1699
+num of flexible tasks: 5699
+Optimal assignment with minimum cost:
+Solving time: 0.216677 seconds
+plan limit 739
+current timestep 928
+num of flexible agents: 1699
+num of flexible tasks: 5699
+Optimal assignment with minimum cost:
+Solving time: 0.231651 seconds
+plan limit 723
+current timestep 929
+num of flexible agents: 1708
+num of flexible tasks: 5708
+Optimal assignment with minimum cost:
+Solving time: 0.228864 seconds
+plan limit 727
+current timestep 930
+num of flexible agents: 1708
+num of flexible tasks: 5708
+Optimal assignment with minimum cost:
+Solving time: 0.206063 seconds
+plan limit 749
+current timestep 931
+num of flexible agents: 1710
+num of flexible tasks: 5710
+Optimal assignment with minimum cost:
+Solving time: 0.211183 seconds
+plan limit 740
+current timestep 932
+num of flexible agents: 1696
+num of flexible tasks: 5696
+Optimal assignment with minimum cost:
+Solving time: 0.227897 seconds
+plan limit 724
+current timestep 933
+num of flexible agents: 1700
+num of flexible tasks: 5700
+Optimal assignment with minimum cost:
+Solving time: 0.216555 seconds
+plan limit 739
+current timestep 934
+num of flexible agents: 1703
+num of flexible tasks: 5703
+Optimal assignment with minimum cost:
+Solving time: 0.206255 seconds
+plan limit 745
+current timestep 935
+num of flexible agents: 1712
+num of flexible tasks: 5712
+Optimal assignment with minimum cost:
+Solving time: 0.222648 seconds
+plan limit 729
+current timestep 936
+num of flexible agents: 1709
+num of flexible tasks: 5709
+Optimal assignment with minimum cost:
+Solving time: 0.215266 seconds
+plan limit 737
+current timestep 937
+num of flexible agents: 1709
+num of flexible tasks: 5709
+Optimal assignment with minimum cost:
+Solving time: 0.20889 seconds
+plan limit 742
+current timestep 938
+num of flexible agents: 1708
+num of flexible tasks: 5708
+Optimal assignment with minimum cost:
+Solving time: 0.220337 seconds
+plan limit 731
+current timestep 939
+num of flexible agents: 1710
+num of flexible tasks: 5710
+Optimal assignment with minimum cost:
+Solving time: 0.217138 seconds
+plan limit 734
+current timestep 940
+num of flexible agents: 1705
+num of flexible tasks: 5705
+Optimal assignment with minimum cost:
+Solving time: 0.231932 seconds
+plan limit 722
+current timestep 941
+num of flexible agents: 1715
+num of flexible tasks: 5715
+Optimal assignment with minimum cost:
+Solving time: 0.222713 seconds
+plan limit 733
+current timestep 942
+num of flexible agents: 1703
+num of flexible tasks: 5703
+Optimal assignment with minimum cost:
+Solving time: 0.210479 seconds
+plan limit 745
+current timestep 943
+num of flexible agents: 1704
+num of flexible tasks: 5704
+Optimal assignment with minimum cost:
+Solving time: 0.220167 seconds
+plan limit 735
+current timestep 944
+num of flexible agents: 1704
+num of flexible tasks: 5704
+Optimal assignment with minimum cost:
+Solving time: 0.233812 seconds
+plan limit 718
+current timestep 945
+num of flexible agents: 1695
+num of flexible tasks: 5695
+Optimal assignment with minimum cost:
+Solving time: 0.213975 seconds
+plan limit 742
+current timestep 946
+num of flexible agents: 1693
+num of flexible tasks: 5693
+Optimal assignment with minimum cost:
+Solving time: 0.223815 seconds
+plan limit 732
+current timestep 947
+num of flexible agents: 1690
+num of flexible tasks: 5690
+Optimal assignment with minimum cost:
+Solving time: 0.219255 seconds
+plan limit 733
+current timestep 948
+num of flexible agents: 1679
+num of flexible tasks: 5679
+Optimal assignment with minimum cost:
+Solving time: 0.212182 seconds
+plan limit 744
+current timestep 949
+num of flexible agents: 1675
+num of flexible tasks: 5675
+Optimal assignment with minimum cost:
+Solving time: 0.216223 seconds
+plan limit 735
+current timestep 950
+num of flexible agents: 1684
+num of flexible tasks: 5684
+Optimal assignment with minimum cost:
+Solving time: 0.227843 seconds
+plan limit 724
+current timestep 951
+num of flexible agents: 1689
+num of flexible tasks: 5689
+Optimal assignment with minimum cost:
+Solving time: 0.208912 seconds
+plan limit 742
+current timestep 952
+num of flexible agents: 1679
+num of flexible tasks: 5679
+Optimal assignment with minimum cost:
+Solving time: 0.210495 seconds
+plan limit 742
+current timestep 953
+num of flexible agents: 1687
+num of flexible tasks: 5687
+Optimal assignment with minimum cost:
+Solving time: 0.228308 seconds
+plan limit 724
+current timestep 954
+num of flexible agents: 1697
+num of flexible tasks: 5697
+Optimal assignment with minimum cost:
+Solving time: 0.204904 seconds
+plan limit 750
+current timestep 955
+num of flexible agents: 1686
+num of flexible tasks: 5686
+Optimal assignment with minimum cost:
+Solving time: 0.215989 seconds
+plan limit 739
+current timestep 956
+num of flexible agents: 1684
+num of flexible tasks: 5684
+Optimal assignment with minimum cost:
+Solving time: 0.230266 seconds
+plan limit 726
+current timestep 957
+num of flexible agents: 1681
+num of flexible tasks: 5681
+Optimal assignment with minimum cost:
+Solving time: 0.232998 seconds
+plan limit 720
+current timestep 958
+num of flexible agents: 1680
+num of flexible tasks: 5680
+Optimal assignment with minimum cost:
+Solving time: 0.23917 seconds
+plan limit 711
+current timestep 959
+num of flexible agents: 1688
+num of flexible tasks: 5688
+Optimal assignment with minimum cost:
+Solving time: 0.225536 seconds
+plan limit 727
+current timestep 960
+num of flexible agents: 1689
+num of flexible tasks: 5689
+Optimal assignment with minimum cost:
+Solving time: 0.213503 seconds
+plan limit 736
+current timestep 961
+num of flexible agents: 1690
+num of flexible tasks: 5690
+Optimal assignment with minimum cost:
+Solving time: 0.220038 seconds
+plan limit 736
+current timestep 962
+num of flexible agents: 1691
+num of flexible tasks: 5691
+Optimal assignment with minimum cost:
+Solving time: 0.240602 seconds
+plan limit 712
+current timestep 963
+num of flexible agents: 1685
+num of flexible tasks: 5685
+Optimal assignment with minimum cost:
+Solving time: 0.22268 seconds
+plan limit 733
+current timestep 964
+num of flexible agents: 1678
+num of flexible tasks: 5678
+Optimal assignment with minimum cost:
+Solving time: 0.229801 seconds
+plan limit 726
+current timestep 965
+num of flexible agents: 1686
+num of flexible tasks: 5686
+Optimal assignment with minimum cost:
+Solving time: 0.225394 seconds
+plan limit 726
+current timestep 966
+num of flexible agents: 1687
+num of flexible tasks: 5687
+Optimal assignment with minimum cost:
+Solving time: 0.228906 seconds
+plan limit 726
+current timestep 967
+num of flexible agents: 1689
+num of flexible tasks: 5689
+Optimal assignment with minimum cost:
+Solving time: 0.22899 seconds
+plan limit 727
+current timestep 968
+num of flexible agents: 1687
+num of flexible tasks: 5687
+Optimal assignment with minimum cost:
+Solving time: 0.241671 seconds
+plan limit 715
+current timestep 969
+num of flexible agents: 1680
+num of flexible tasks: 5680
+Optimal assignment with minimum cost:
+Solving time: 0.220238 seconds
+plan limit 734
+current timestep 970
+num of flexible agents: 1675
+num of flexible tasks: 5675
+Optimal assignment with minimum cost:
+Solving time: 0.226042 seconds
+plan limit 730
+current timestep 971
+num of flexible agents: 1672
+num of flexible tasks: 5672
+Optimal assignment with minimum cost:
+Solving time: 0.224383 seconds
+plan limit 727
+current timestep 972
+num of flexible agents: 1674
+num of flexible tasks: 5674
+Optimal assignment with minimum cost:
+Solving time: 0.242571 seconds
+plan limit 709
+current timestep 973
+num of flexible agents: 1668
+num of flexible tasks: 5668
+Optimal assignment with minimum cost:
+Solving time: 0.215815 seconds
+plan limit 736
+current timestep 974
+num of flexible agents: 1674
+num of flexible tasks: 5674
+Optimal assignment with minimum cost:
+Solving time: 0.212082 seconds
+plan limit 743
+current timestep 975
+num of flexible agents: 1677
+num of flexible tasks: 5677
+Optimal assignment with minimum cost:
+Solving time: 0.219863 seconds
+plan limit 734
+current timestep 976
+num of flexible agents: 1669
+num of flexible tasks: 5669
+Optimal assignment with minimum cost:
+Solving time: 0.201871 seconds
+plan limit 754
+current timestep 977
+num of flexible agents: 1656
+num of flexible tasks: 5656
+Optimal assignment with minimum cost:
+Solving time: 0.208909 seconds
+plan limit 747
+current timestep 978
+num of flexible agents: 1645
+num of flexible tasks: 5645
+Optimal assignment with minimum cost:
+Solving time: 0.209281 seconds
+plan limit 746
+current timestep 979
+num of flexible agents: 1652
+num of flexible tasks: 5652
+Optimal assignment with minimum cost:
+Solving time: 0.221274 seconds
+plan limit 735
+current timestep 980
+num of flexible agents: 1651
+num of flexible tasks: 5651
+Optimal assignment with minimum cost:
+Solving time: 0.216403 seconds
+plan limit 737
+current timestep 981
+num of flexible agents: 1657
+num of flexible tasks: 5657
+Optimal assignment with minimum cost:
+Solving time: 0.237904 seconds
+plan limit 718
+current timestep 982
+num of flexible agents: 1651
+num of flexible tasks: 5651
+Optimal assignment with minimum cost:
+Solving time: 0.23184 seconds
+plan limit 724
+current timestep 983
+num of flexible agents: 1642
+num of flexible tasks: 5642
+Optimal assignment with minimum cost:
+Solving time: 0.219686 seconds
+plan limit 734
+current timestep 984
+num of flexible agents: 1653
+num of flexible tasks: 5653
+Optimal assignment with minimum cost:
+Solving time: 0.226462 seconds
+plan limit 729
+current timestep 985
+num of flexible agents: 1653
+num of flexible tasks: 5653
+Optimal assignment with minimum cost:
+Solving time: 0.22947 seconds
+plan limit 726
+current timestep 986
+num of flexible agents: 1646
+num of flexible tasks: 5646
+Optimal assignment with minimum cost:
+Solving time: 0.225004 seconds
+plan limit 728
+current timestep 987
+num of flexible agents: 1658
+num of flexible tasks: 5658
+Optimal assignment with minimum cost:
+Solving time: 0.221748 seconds
+plan limit 735
+current timestep 988
+num of flexible agents: 1654
+num of flexible tasks: 5654
+Optimal assignment with minimum cost:
+Solving time: 0.218715 seconds
+plan limit 737
+current timestep 989
+num of flexible agents: 1654
+num of flexible tasks: 5654
+Optimal assignment with minimum cost:
+Solving time: 0.224781 seconds
+plan limit 730
+current timestep 990
+num of flexible agents: 1663
+num of flexible tasks: 5663
+Optimal assignment with minimum cost:
+Solving time: 0.235196 seconds
+plan limit 719
+current timestep 991
+num of flexible agents: 1673
+num of flexible tasks: 5673
+Optimal assignment with minimum cost:
+Solving time: 0.215756 seconds
+plan limit 740
+current timestep 992
+num of flexible agents: 1664
+num of flexible tasks: 5664
+Optimal assignment with minimum cost:
+Solving time: 0.203113 seconds
+plan limit 751
+current timestep 993
+num of flexible agents: 1652
+num of flexible tasks: 5652
+Optimal assignment with minimum cost:
+Solving time: 0.229593 seconds
+plan limit 721
+current timestep 994
+num of flexible agents: 1662
+num of flexible tasks: 5662
+Optimal assignment with minimum cost:
+Solving time: 0.217488 seconds
+plan limit 739
+current timestep 995
+num of flexible agents: 1653
+num of flexible tasks: 5653
+Optimal assignment with minimum cost:
+Solving time: 0.212116 seconds
+plan limit 743
+current timestep 996
+num of flexible agents: 1653
+num of flexible tasks: 5653
+Optimal assignment with minimum cost:
+Solving time: 0.230229 seconds
+plan limit 725
+current timestep 997
+num of flexible agents: 1646
+num of flexible tasks: 5646
+Optimal assignment with minimum cost:
+Solving time: 0.216888 seconds
+plan limit 739
+current timestep 998
+num of flexible agents: 1655
+num of flexible tasks: 5655
+Optimal assignment with minimum cost:
+Solving time: 0.21049 seconds
+plan limit 744
+current timestep 999
+num of flexible agents: 1641
+num of flexible tasks: 5641
+Optimal assignment with minimum cost:
+Solving time: 0.220261 seconds
+plan limit 736

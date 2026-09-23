@@ -54,6 +54,10 @@ float PortableGreedyHeapScheduler::score(SharedEnvironment* env, int agent_locat
         }
         value += flow_penalty_weight_ * task.cached_flow_penalty;
     }
+    if (age_bonus_ > 0.0f && task.revealed_timestep >= 0) {
+        const int waiting_time = std::max(0, current_timestep_ - task.revealed_timestep);
+        value -= age_bonus_ * static_cast<float>(waiting_time);
+    }
     return value;
 }
 
@@ -212,6 +216,71 @@ void PortableGreedyHeapScheduler::rebuild_candidates(
     }
 }
 
+void PortableGreedyHeapScheduler::rerank_traffic_candidates(
+    SharedEnvironment* env, const std::vector<AgentInfo>& agents,
+    const std::vector<TaskInfo>& tasks, const std::vector<Double4>& background_flow,
+    const PortableGreedyHeapConfig& config, std::chrono::steady_clock::time_point deadline)
+{
+    const int top_k = std::max(0, config.traffic_rerank_top_k);
+    const int max_steps = std::max(0, config.traffic_rerank_steps);
+    const float weight = std::max(0.0f, config.traffic_rerank_weight);
+    if (top_k <= 0 || max_steps <= 0 || weight <= 0.0f ||
+        background_flow.size() != env->map.size()) {
+        return;
+    }
+
+    auto edge_pressure = [&](int location, int next) {
+        const int direction = get_d(location - next, env);
+        const int opposite = (direction + 2) % 4;
+        int incoming = 0;
+        for (int d = 0; d < 4; ++d) incoming += background_flow[next].d[d];
+        const float contraflow = static_cast<float>((background_flow[location].d[direction] + 1) *
+                                                     background_flow[next].d[opposite]);
+        return contraflow + 0.5f * static_cast<float>(incoming);
+    };
+
+    for (int ai = 0; ai < static_cast<int>(agents.size()) &&
+                     std::chrono::steady_clock::now() < deadline; ++ai) {
+        auto& list = candidates_[ai];
+        const int limit = std::min(top_k, static_cast<int>(list.size()));
+        for (int ci = 0; ci < limit && std::chrono::steady_clock::now() < deadline; ++ci) {
+            const int task_index = list[ci].task_index;
+            if (task_index < 0 || task_index >= static_cast<int>(tasks.size())) continue;
+            const int target = tasks[task_index].start_location;
+            int location = agents[ai].location;
+            int distance = get_h(env, location, target);
+            float pressure = 0.0f;
+            int traversed = 0;
+            while (traversed < max_steps && distance > 0 &&
+                   std::chrono::steady_clock::now() < deadline) {
+                int best_next = -1;
+                int best_distance = distance;
+                float best_pressure = std::numeric_limits<float>::infinity();
+                for (const int next : global_neighbors.at(location)) {
+                    const int next_distance = get_h(env, next, target);
+                    if (next_distance >= best_distance) continue;
+                    const float candidate_pressure = edge_pressure(location, next);
+                    if (candidate_pressure < best_pressure ||
+                        (candidate_pressure == best_pressure && next_distance < best_distance)) {
+                        best_next = next;
+                        best_distance = next_distance;
+                        best_pressure = candidate_pressure;
+                    }
+                }
+                if (best_next < 0) break;
+                pressure += best_pressure;
+                location = best_next;
+                distance = best_distance;
+                ++traversed;
+            }
+            if (traversed > 0) list[ci].score += weight * pressure / static_cast<float>(traversed);
+        }
+        std::sort(list.begin(), list.end(), [](const Candidate& lhs, const Candidate& rhs) {
+            return lhs.score < rhs.score;
+        });
+    }
+}
+
 std::vector<PortableGreedyHeapScheduler::Match> PortableGreedyHeapScheduler::lazy_match(
     const std::vector<AgentInfo>& agents, const std::vector<TaskInfo>& tasks,
     std::chrono::steady_clock::time_point deadline) const
@@ -296,9 +365,72 @@ void PortableGreedyHeapScheduler::refine_lns(
     }
 }
 
+void PortableGreedyHeapScheduler::refine_local_exchanges(
+    SharedEnvironment* env, std::vector<Match>& matches, const std::vector<AgentInfo>& agents,
+    const std::vector<TaskInfo>& tasks, const PortableGreedyHeapConfig& config,
+    std::chrono::steady_clock::time_point deadline) const
+{
+    const int top_k = std::max(0, config.local_exchange_top_k);
+    if (top_k <= 0 || matches.size() < 2 || candidates_.size() != agents.size()) return;
+
+    std::unordered_map<int, int> agent_index;
+    std::unordered_map<int, int> task_index;
+    for (int i = 0; i < static_cast<int>(agents.size()); ++i) agent_index[agents[i].id] = i;
+    for (int i = 0; i < static_cast<int>(tasks.size()); ++i) task_index[tasks[i].id] = i;
+
+    // A deterministic scan covers the high-conflict pairs that random LNS is
+    // unlikely to sample when thousands of agents are simultaneously matched.
+    for (int pass = 0; pass < 2 && std::chrono::steady_clock::now() < deadline; ++pass) {
+        std::unordered_map<int, int> match_by_agent;
+        std::unordered_map<int, int> match_by_task;
+        for (int mi = 0; mi < static_cast<int>(matches.size()); ++mi) {
+            match_by_agent[matches[mi].first] = mi;
+            match_by_task[matches[mi].second] = mi;
+        }
+        bool improved = false;
+        for (int ai = 0; ai < static_cast<int>(agents.size()) &&
+                         std::chrono::steady_clock::now() < deadline; ++ai) {
+            const auto own_match = match_by_agent.find(agents[ai].id);
+            if (own_match == match_by_agent.end()) continue;
+            const int own_index = own_match->second;
+            const int own_task_id = matches[own_index].second;
+            const auto own_task = task_index.find(own_task_id);
+            if (own_task == task_index.end()) continue;
+
+            const int limit = std::min(top_k, static_cast<int>(candidates_[ai].size()));
+            for (int ci = 0; ci < limit && std::chrono::steady_clock::now() < deadline; ++ci) {
+                const int wanted_task_index = candidates_[ai][ci].task_index;
+                if (wanted_task_index < 0 || wanted_task_index >= static_cast<int>(tasks.size())) continue;
+                const int wanted_task_id = tasks[wanted_task_index].id;
+                const auto owner_match = match_by_task.find(wanted_task_id);
+                if (owner_match == match_by_task.end() || owner_match->second == own_index) continue;
+                const int other_index = owner_match->second;
+                const auto other_agent = agent_index.find(matches[other_index].first);
+                if (other_agent == agent_index.end()) continue;
+
+                const float before = score(env, agents[ai].location, tasks[own_task->second], config.dist_weight) +
+                                     score(env, agents[other_agent->second].location, tasks[wanted_task_index],
+                                           config.dist_weight);
+                const float after = score(env, agents[ai].location, tasks[wanted_task_index], config.dist_weight) +
+                                    score(env, agents[other_agent->second].location, tasks[own_task->second],
+                                          config.dist_weight);
+                if (after + 1e-4f < before) {
+                    std::swap(matches[own_index].second, matches[other_index].second);
+                    match_by_task[own_task_id] = other_index;
+                    match_by_task[wanted_task_id] = own_index;
+                    improved = true;
+                    break;
+                }
+            }
+        }
+        if (!improved) break;
+    }
+}
+
 void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& proposed_schedule,
                                            SharedEnvironment* env,
-                                           const PortableGreedyHeapConfig& config)
+                                           const PortableGreedyHeapConfig& config,
+                                           const std::vector<Double4>& background_flow)
 {
     const auto start = std::chrono::steady_clock::now();
     const auto deadline = start + std::chrono::milliseconds(std::max(0, time_limit_ms));
@@ -348,7 +480,8 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
         reassign_agents.push_back({agent, env->curr_states.at(agent).location});
         reassign_tasks.push_back({task_id, pickup,
                                   std::vector<int>(task.locations.begin() + task.idx_next_loc,
-                                                   task.locations.end())});
+                                                   task.locations.end()),
+                                  task.t_revealed});
         old_assignment[agent] = task_id;
     }
 
@@ -359,7 +492,8 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
         if (locked_tasks.count(task_id) || owner_by_task.count(task_id)) continue;
         free_tasks.push_back({task_id, task.locations.at(task.idx_next_loc),
                               std::vector<int>(task.locations.begin() + task.idx_next_loc,
-                                               task.locations.end())});
+                                               task.locations.end()),
+                              task.t_revealed});
     }
 
     // Preserve active and stable assignments, then cap only newly assigned
@@ -384,15 +518,21 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
     const auto lns_deadline = deadline - std::chrono::milliseconds(std::min(lns_ms, std::max(0, time_limit_ms)));
 
     build_opened_zone_flow(env, config);
-    if (flow_penalty_weight_ > 0.0f) {
-        // Candidate scores depend on the open-task flow snapshot at this timestep.
+    age_bonus_ = std::max(0.0f, config.age_bonus);
+    current_timestep_ = env->curr_timestep;
+    const bool traffic_rerank_enabled = config.traffic_rerank_top_k > 0 &&
+        config.traffic_rerank_steps > 0 && config.traffic_rerank_weight > 0.0f;
+    if (flow_penalty_weight_ > 0.0f || age_bonus_ > 0.0f || traffic_rerank_enabled) {
+        // Candidate scores depend on flow snapshots and task ages.
         candidates_.clear();
         candidate_agent_ids_.clear();
         candidate_agent_locations_.clear();
         candidate_task_ids_.clear();
     }
     rebuild_candidates(env, free_agents, free_tasks, config.dist_weight, config.sort_k, rebuild_deadline);
+    rerank_traffic_candidates(env, free_agents, free_tasks, background_flow, config, lns_deadline);
     std::vector<Match> matches = lazy_match(free_agents, free_tasks, lns_deadline);
+    refine_local_exchanges(env, matches, free_agents, free_tasks, config, lns_deadline);
 
     std::vector<AgentInfo> refinement_agents = free_agents;
     refinement_agents.insert(refinement_agents.end(), reassign_agents.begin(), reassign_agents.end());
@@ -418,10 +558,11 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
 
 void schedule_plan_portable_greedy_heap(int time_limit_ms, std::vector<int>& proposed_schedule,
                                         SharedEnvironment* env,
-                                        const PortableGreedyHeapConfig& config)
+                                        const PortableGreedyHeapConfig& config,
+                                        const std::vector<Double4>& background_flow)
 {
     static PortableGreedyHeapScheduler scheduler;
-    scheduler.schedule(time_limit_ms, proposed_schedule, env, config);
+    scheduler.schedule(time_limit_ms, proposed_schedule, env, config, background_flow);
 }
 
 }  // namespace DefaultPlanner

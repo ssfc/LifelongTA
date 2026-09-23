@@ -57,7 +57,8 @@ void TaskScheduler::plan(int time_limit, std::vector<int> & proposed_schedule)
     }
     else if (solver == 6)
     {
-        DefaultPlanner::schedule_plan_portable_greedy_heap(limit, proposed_schedule, env, heap_config);
+        DefaultPlanner::schedule_plan_portable_greedy_heap(limit, proposed_schedule, env, heap_config,
+                                                            background_flow);
     }
     else if (solver == 7)
     {
