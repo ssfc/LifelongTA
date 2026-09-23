@@ -72,6 +72,9 @@ int main(int argc, char **argv)
         ("heapFutureFlowWeight", po::value<float>()->default_value(0.0f), "weight of newly assigned zone future-flow penalties in greedy heap")
         ("heapFutureFlowHardCap", po::value<float>()->default_value(0.0f), "block opposing movement into zones above this dynamic flow level; 0 disables blocking")
         ("heapFutureFlowRegret", po::value<bool>()->default_value(true), "prioritize agents with high candidate regret in dynamic future-flow matching")
+        ("heapOpenedFlowZoneRows", po::value<int>()->default_value(0), "rows in the opened-task coarse-flow grid; 0 disables it")
+        ("heapOpenedFlowZoneCols", po::value<int>()->default_value(0), "columns in the opened-task coarse-flow grid; 0 disables it")
+        ("heapOpenedFlowPenaltyWeight", po::value<float>()->default_value(0.0f), "opened-task coarse-flow penalty weight in greedy heap")
         ("matcherDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for contest task matcher")
         ("matcherTopK", po::value<int>()->default_value(50), "task matcher top-K candidates in large instances")
         ("matcherMaxMatrix", po::value<int>()->default_value(2000000), "maximum task matcher cost-matrix entries")
@@ -208,6 +211,9 @@ int main(int argc, char **argv)
     heap_config.future_flow_weight = vm["heapFutureFlowWeight"].as<float>();
     heap_config.future_flow_hard_cap = vm["heapFutureFlowHardCap"].as<float>();
     heap_config.future_flow_regret_order = vm["heapFutureFlowRegret"].as<bool>();
+    heap_config.opened_flow_zone_rows = vm["heapOpenedFlowZoneRows"].as<int>();
+    heap_config.opened_flow_zone_cols = vm["heapOpenedFlowZoneCols"].as<int>();
+    heap_config.opened_flow_penalty_weight = vm["heapOpenedFlowPenaltyWeight"].as<float>();
     planner->scheduler->set_heap_config(heap_config);
     DefaultPlanner::PortableTaskMatcherConfig matcher_config;
     matcher_config.dist_weight = vm["matcherDistWeight"].as<float>();

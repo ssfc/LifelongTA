@@ -7,6 +7,7 @@
 #include <chrono>
 #include <cmath>
 #include <limits>
+#include <numeric>
 #include <queue>
 #include <random>
 #include <unordered_set>
@@ -144,6 +145,73 @@ private:
     std::vector<std::array<float, 4>> flow_;
 };
 
+class OpenedTaskFlow {
+public:
+    OpenedTaskFlow(SharedEnvironment* env, int zone_rows, int zone_cols)
+        : env_(env), zone_rows_(std::max(1, zone_rows)), zone_cols_(std::max(1, zone_cols)),
+          flow_(static_cast<size_t>(zone_rows_ * zone_cols_)) {}
+
+    void add_path(int source, const std::vector<int>& locations) {
+        int previous = source;
+        for (const int target : locations) {
+            walk(previous, target, [&](int zone, int, int direction) {
+                flow_[zone][direction] += 1.0f;
+            });
+            previous = target;
+        }
+    }
+
+    float path_penalty(const std::vector<int>& locations) const {
+        float penalty = 0.0f;
+        int steps = 0;
+        for (size_t i = 1; i < locations.size(); ++i) {
+            walk(locations[i - 1], locations[i], [&](int zone, int next_zone, int direction) {
+                const int opposite = (direction + 2) % 4;
+                const float arrival_load = std::accumulate(
+                    flow_[next_zone].begin(), flow_[next_zone].end(), 0.0f);
+                penalty += flow_[zone][direction] + flow_[next_zone][opposite] + 0.25f * arrival_load;
+                ++steps;
+            });
+        }
+        return steps > 0 ? penalty / static_cast<float>(steps) : 0.0f;
+    }
+
+private:
+    int zone_of(int location) const {
+        const int row = std::clamp(location / std::max(1, env_->cols), 0, std::max(0, env_->rows - 1));
+        const int col = std::clamp(location % std::max(1, env_->cols), 0, std::max(0, env_->cols - 1));
+        const int zone_row = std::min(zone_rows_ - 1, row * zone_rows_ / std::max(1, env_->rows));
+        const int zone_col = std::min(zone_cols_ - 1, col * zone_cols_ / std::max(1, env_->cols));
+        return zone_row * zone_cols_ + zone_col;
+    }
+
+    template <typename Visitor>
+    void walk(int source, int target, Visitor&& visit) const {
+        int row = zone_of(source) / zone_cols_;
+        int col = zone_of(source) % zone_cols_;
+        const int target_zone = zone_of(target);
+        const int target_row = target_zone / zone_cols_;
+        const int target_col = target_zone % zone_cols_;
+        while (row != target_row) {
+            const int direction = target_row > row ? 1 : 3;
+            const int next_row = row + (direction == 1 ? 1 : -1);
+            visit(row * zone_cols_ + col, next_row * zone_cols_ + col, direction);
+            row = next_row;
+        }
+        while (col != target_col) {
+            const int direction = target_col > col ? 0 : 2;
+            const int next_col = col + (direction == 0 ? 1 : -1);
+            visit(row * zone_cols_ + col, row * zone_cols_ + next_col, direction);
+            col = next_col;
+        }
+    }
+
+    SharedEnvironment* env_;
+    int zone_rows_;
+    int zone_cols_;
+    std::vector<std::array<float, 4>> flow_;
+};
+
 }  // namespace
 
 float PortableGreedyHeapScheduler::score(SharedEnvironment* env, int agent_location,
@@ -158,16 +226,49 @@ float PortableGreedyHeapScheduler::score(SharedEnvironment* env, int agent_locat
         length += get_h(env, task.locations[i - 1], task.locations[i]);
     }
     float value = config.dist_weight * static_cast<float>(distance) + static_cast<float>(length);
-    if (!config.flow_aware_spatial || background_flow.size() != env->map.size()) return value;
-
-    // This is deliberately a local proxy, not a per-pair Dijkstra: at SL scale
-    // it keeps assignment sparse while using the planner's existing flow signal.
-    float corridor_density = 0.5f * flow_density(background_flow, agent_location) +
-                             flow_density(background_flow, task.start_location);
-    for (size_t i = 1; i < task.locations.size() && i <= 3; ++i) {
-        corridor_density += 0.5f * flow_density(background_flow, task.locations[i]);
+    if (config.flow_aware_spatial && background_flow.size() == env->map.size()) {
+        // This is deliberately a local proxy, not a per-pair Dijkstra: at SL scale
+        // it keeps assignment sparse while using the planner's existing flow signal.
+        float corridor_density = 0.5f * flow_density(background_flow, agent_location) +
+                                 flow_density(background_flow, task.start_location);
+        for (size_t i = 1; i < task.locations.size() && i <= 3; ++i) {
+            corridor_density += 0.5f * flow_density(background_flow, task.locations[i]);
+        }
+        value += std::max(0.0f, config.traffic_weight) * corridor_density;
     }
-    return value + std::max(0.0f, config.traffic_weight) * corridor_density;
+    if (config.opened_flow_penalty_weight > 0.0f) {
+        const auto penalty = opened_task_flow_penalties_.find(task.id);
+        if (penalty != opened_task_flow_penalties_.end()) {
+            value += config.opened_flow_penalty_weight * penalty->second;
+        }
+    }
+    return value;
+}
+
+void PortableGreedyHeapScheduler::build_opened_task_flow_penalties(
+    SharedEnvironment* env, const std::vector<TaskInfo>& tasks,
+    const PortableGreedyHeapConfig& config)
+{
+    opened_task_flow_penalties_.clear();
+    if (config.opened_flow_penalty_weight <= 0.0f || config.opened_flow_zone_rows <= 0 ||
+        config.opened_flow_zone_cols <= 0) {
+        return;
+    }
+
+    OpenedTaskFlow flow(env, config.opened_flow_zone_rows, config.opened_flow_zone_cols);
+    for (const auto& entry : env->task_pool) {
+        const Task& task = entry.second;
+        if (task.idx_next_loc <= 0 || task.agent_assigned < 0 ||
+            task.agent_assigned >= static_cast<int>(env->curr_states.size()) ||
+            task.idx_next_loc >= static_cast<int>(task.locations.size())) {
+            continue;
+        }
+        flow.add_path(env->curr_states[task.agent_assigned].location,
+                      std::vector<int>(task.locations.begin() + task.idx_next_loc, task.locations.end()));
+    }
+    for (const TaskInfo& task : tasks) {
+        opened_task_flow_penalties_.emplace(task.id, flow.path_penalty(task.locations));
+    }
 }
 
 void PortableGreedyHeapScheduler::rebuild_candidates(
@@ -500,6 +601,17 @@ void PortableGreedyHeapScheduler::schedule(int time_limit_ms, std::vector<int>& 
     const auto rebuild_deadline = std::min(deadline, start + std::chrono::milliseconds(rebuild_ms));
     const auto lns_deadline = deadline - std::chrono::milliseconds(std::min(lns_ms, std::max(0, time_limit_ms)));
 
+    std::vector<TaskInfo> scoring_tasks = free_tasks;
+    scoring_tasks.insert(scoring_tasks.end(), reassign_tasks.begin(), reassign_tasks.end());
+    build_opened_task_flow_penalties(env, scoring_tasks, config);
+    if (config.opened_flow_penalty_weight > 0.0f) {
+        // Scores depend on the current opened-work snapshot, so old candidates
+        // cannot be reused across scheduling cycles.
+        candidates_.clear();
+        candidate_agent_ids_.clear();
+        candidate_agent_locations_.clear();
+        candidate_task_ids_.clear();
+    }
     rebuild_candidates(env, free_agents, free_tasks, config, background_flow, config.sort_k, rebuild_deadline);
     std::vector<Match> matches = config.flow_aware_spatial && config.future_flow_weight > 0.0f
         ? flow_aware_match(env, free_agents, free_tasks, config, background_flow, lns_deadline)

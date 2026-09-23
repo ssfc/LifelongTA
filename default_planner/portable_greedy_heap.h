@@ -30,6 +30,12 @@ struct PortableGreedyHeapConfig {
     float future_flow_weight = 0.0f;
     float future_flow_hard_cap = 0.0f;
     bool future_flow_regret_order = true;
+    // Coarse congestion inferred from tasks that have already been picked up.
+    // This is independent from DefaultPlanner's background_flow and is useful
+    // when the open workload itself dominates the traffic pattern.
+    int opened_flow_zone_rows = 0;
+    int opened_flow_zone_cols = 0;
+    float opened_flow_penalty_weight = 0.0f;
 };
 
 class PortableGreedyHeapScheduler {
@@ -59,10 +65,14 @@ private:
     std::vector<int> candidate_agent_ids_;
     std::vector<int> candidate_agent_locations_;
     std::vector<int> candidate_task_ids_;
+    std::unordered_map<int, float> opened_task_flow_penalties_;
 
     float score(SharedEnvironment* env, int agent_location, const TaskInfo& task,
                 const PortableGreedyHeapConfig& config,
                 const std::vector<Double4>& background_flow) const;
+    void build_opened_task_flow_penalties(SharedEnvironment* env,
+                                          const std::vector<TaskInfo>& tasks,
+                                          const PortableGreedyHeapConfig& config);
     void rebuild_candidates(SharedEnvironment* env, const std::vector<AgentInfo>& agents,
                             const std::vector<TaskInfo>& tasks,
                             const PortableGreedyHeapConfig& config,
