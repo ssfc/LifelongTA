@@ -6,6 +6,15 @@ namespace DefaultPlanner{
 
 std::vector<HeuristicTable> global_heuristictable;
 Neighbors global_neighbors;
+bool use_manhattan_heuristics = false;
+
+void set_manhattan_heuristics(bool enabled) {
+    use_manhattan_heuristics = enabled;
+}
+
+bool manhattan_heuristics_enabled() {
+    return use_manhattan_heuristics;
+}
 
 
 
@@ -91,6 +100,7 @@ int get_heuristic(HeuristicTable& ht, SharedEnvironment* env, int source, Neighb
 }
 
 int get_h(SharedEnvironment* env, int source, int target){
+	if (use_manhattan_heuristics) return manhattanDistance(source, target, env);
 	if (global_heuristictable.empty()){
 		init_heuristics(env);
 	}
@@ -105,8 +115,12 @@ int get_h(SharedEnvironment* env, int source, int target){
 
 
 void init_dist_2_path(Dist2Path& dp, SharedEnvironment* env, Traj& path){
+#ifdef LORR_TABLE3_SPARSE_DIST
+	dp.dist2path.clear();
+#else
 	if (dp.dist2path.empty())
 		dp.dist2path.resize(env->map.size(), d2p(0,-1,MAX_TIMESTEP,MAX_TIMESTEP));
+#endif
 	
 	dp.open.clear();
 	dp.label++;

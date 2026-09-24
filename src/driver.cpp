@@ -54,6 +54,7 @@ int main(int argc, char **argv)
         ("logDetailLevel,d", po::value<int>()->default_value(1), "the minimum severity level of log messages to display, 1--showing all the messages, 2--showing warnings and fatal errors, 3--showing fatal errors only")
         ("useTraffic,u", po::value<bool>()->default_value(false), "use of traffic in scheduling")
         ("flowEmitGuidePaths", po::value<bool>()->default_value(true), "export Flow-Traffic guide paths to the planner (diagnostic ablation)")
+        ("largeMapManhattanPlanner", po::value<bool>()->default_value(false), "use Manhattan estimates without whole-map per-goal tables for large-map experiments")
         ("assignNew,n", po::value<bool>()->default_value(false), "wether new agents only or allow task swapping")
         ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy, 6- greedy heap, 7- contest task matcher, 8- capped Hungarian")
         ("heapDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for greedy heap")
@@ -188,6 +189,7 @@ int main(int argc, char **argv)
     planner->scheduler->set_flow_emit_guide_paths(vm["flowEmitGuidePaths"].as<bool>());
     planner->scheduler->set_new_only(vm["assignNew"].as<bool>());
     planner->scheduler->set_solver(vm["scheduleModel"].as<int>());
+    planner->set_large_map_manhattan_planner(vm["largeMapManhattanPlanner"].as<bool>());
     DefaultPlanner::PortableGreedyHeapConfig heap_config;
     heap_config.dist_weight = vm["heapDistWeight"].as<float>();
     heap_config.max_assign_ratio = vm["heapMaxAssign"].as<float>();

@@ -11,6 +11,8 @@
 namespace DefaultPlanner{
 
 void init_heuristics(SharedEnvironment* env);
+void set_manhattan_heuristics(bool enabled);
+bool manhattan_heuristics_enabled();
 
 void init_neighbor(SharedEnvironment* env);
 

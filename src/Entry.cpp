@@ -3,12 +3,15 @@
 #include "utils.h"
 #include "heuristics.h"
 
+#include <algorithm>
+
 // The initialize function will be called by competition system at the preprocessing stage.
 // Implement the initialize functions of the planner and scheduler to load or compute auxiliary data.
 // Note that, this function runs untill preprocess_time_limit (in milliseconds) is reached.
 // This is an offline step, after it completes then evaluation begins.
 void Entry::initialize(int preprocess_time_limit)
 {
+    DefaultPlanner::set_manhattan_heuristics(large_map_manhattan_planner);
     env->past_waitings.resize(env->map.size()*5,{0,0});
     env->accu_waitings.resize(env->num_of_agents,0);
     scheduler->initialize(preprocess_time_limit);
@@ -22,51 +25,27 @@ void Entry::initialize(int preprocess_time_limit)
 //NB: the parameter time_limit is specified in milliseconds.
 void Entry::compute(int time_limit, std::vector<Action> & plan, std::vector<int> & proposed_schedule)
 {
-
-    // if (time_in_commit_window == 0)
-    // {
-         //first call task schedule
-
+    if (time_in_commit_window == 0)
+    {
         scheduler->set_flow(planner->get_flow());
         scheduler->plan(time_limit,proposed_schedule);
-
-        //then update the first unfinished errand/location of tasks for planner reference
         update_goal_locations(proposed_schedule);
-        
-        //call the planner to compute the actions
         planner->plan(time_limit,plan);
-    // }
-    // else
-    // {
-    //     //first fill the current schedule
-    //     for (int i = 0; i < env->num_of_agents; i++)
-    //     {
-    //         env->goal_locations[i].clear();
-    //         int task_id = env->curr_task_schedule[i];
-    //         if (env->task_pool.find(task_id) != env->task_pool.end())
-    //         {
-    //             proposed_schedule[i] = task_id;
-    //             int i_loc = env->task_pool[task_id].idx_next_loc;
-    //             env->goal_locations[i].push_back({env->task_pool[task_id].locations.at(i_loc), env->task_pool[task_id].t_revealed});
-    //         }
-    //         else
-    //         {
-    //             proposed_schedule[i] = -1;
-    //         }
-    //     }
-    //     //then call planner with only pibt
-    //     planner->plan_pibt(time_limit,plan);
-    // }
+    }
+    else
+    {
+        proposed_schedule.resize(env->num_of_agents, -1);
+        for (int i = 0; i < env->num_of_agents; i++)
+        {
+            int task_id = env->curr_task_schedule[i];
+            proposed_schedule[i] = env->task_pool.find(task_id) != env->task_pool.end()
+                ? task_id : -1;
+        }
+        update_goal_locations(proposed_schedule);
+        planner->plan_pibt(time_limit,plan);
+    }
 
-    // if (time_in_commit_window == commit_window-1)
-    // {
-    //     time_in_commit_window = 0;
-    // }
-    // else
-    // {
-    //     time_in_commit_window++;
-    // }
-
+    time_in_commit_window = (time_in_commit_window + 1) % std::max(1, commit_window);
 }
 
 // Set the next goal locations for each agent based on the proposed schedule

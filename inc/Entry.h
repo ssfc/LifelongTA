@@ -14,6 +14,9 @@ public:
     TaskScheduler* scheduler;
     int commit_window = 1;
     int time_in_commit_window = 0;
+    bool large_map_manhattan_planner = false;
+
+    void set_large_map_manhattan_planner(bool enabled) { large_map_manhattan_planner = enabled; }
 
 	Entry(SharedEnvironment* env): env(env)
     {

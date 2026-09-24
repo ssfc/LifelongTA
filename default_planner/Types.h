@@ -9,6 +9,7 @@
 #include <fstream>
 #include <cassert>
 #include <unordered_set>
+#include <unordered_map>
 
 
 #define MAX_TIMESTEP INT_MAX/2
@@ -95,13 +96,18 @@ namespace DefaultPlanner{
 		int id = -1;
 		int cost = -1;
 		int togo = -1;
+		d2p() = default;
 
 		d2p(int label, int id, int cost, int togo):label(label), id(id), cost(cost), togo(togo){};
 	};
 
 	struct Dist2Path{
 		int label = 0;
+#ifdef LORR_TABLE3_SPARSE_DIST
+		std::unordered_map<int,d2p> dist2path;
+#else
 		std::vector<d2p> dist2path;
+#endif
 		std::deque<d2p> open;
 		
 		bool empty(){
@@ -113,7 +119,6 @@ namespace DefaultPlanner{
 	typedef std::vector<std::vector<int>> Neighbors;
 
 }
-
 
 
 

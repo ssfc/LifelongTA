@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Set the default value of PYTHON to false
 option(PYTHON "Enable Python" OFF)
+option(LORR_TABLE3_SPARSE_DIST "Use sparse guide-path distances for ultra-large maps" OFF)
 
 option(CXX "enable C++ compilation" ON)
 
@@ -96,6 +97,9 @@ ELSE()
     target_compile_definitions(lifelong PRIVATE PYTHON=${PYTHON_FLAG})
 ENDIF()
 
+if(LORR_TABLE3_SPARSE_DIST)
+    target_compile_definitions(lifelong PRIVATE LORR_TABLE3_SPARSE_DIST)
+endif()
 
 add_custom_target(clean_all
     COMMAND ${CMAKE_BUILD_TOOL} clean
@@ -111,5 +115,3 @@ set_directory_properties(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES
      ${CMAKE_BINARY_DIR}/build;
      ${CMAKE_BINARY_DIR}/*.so"
 )
-
-
