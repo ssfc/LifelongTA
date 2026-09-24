@@ -92,16 +92,42 @@ float task_service_congestion_proxy(SharedEnvironment* env, const TaskInfo& task
 std::vector<std::vector<float>> traffic_cost_matrix(
     SharedEnvironment* env, const std::vector<AgentInfo>& agents,
     const std::vector<TaskInfo>& tasks, const PortableTaskMatcherConfig& config,
-    const std::vector<Double4>& background_flow, std::chrono::steady_clock::time_point deadline)
+    const std::vector<Double4>& background_flow, std::chrono::steady_clock::time_point deadline,
+    std::vector<std::vector<int>>* parents = nullptr,
+    const std::vector<int>* joint_vertex_load = nullptr,
+    const std::vector<std::vector<int>>* selected_paths = nullptr,
+    const std::vector<float>* delivery_wait_rates = nullptr)
 {
     std::vector<std::vector<float>> cost(agents.size(),
                                          std::vector<float>(tasks.size(), kInvalidCost));
     const int keep = std::min(std::max(1, config.traffic_top_k), static_cast<int>(tasks.size()));
     std::vector<int> lengths(tasks.size(), -2);
     std::vector<float> service_penalties(tasks.size(), -1.0F);
+    std::vector<float> observed_wait_penalties(tasks.size(), 0.0F);
+    if (delivery_wait_rates && config.observed_delivery_wait_weight > 0.0F) {
+        const int region_cols = (env->cols + 7) / 8;
+        for (size_t j = 0; j < tasks.size(); ++j) {
+            if (tasks[j].locations.size() < 2) continue;
+            const int delivery = tasks[j].locations.back();
+            const int region = (delivery / env->cols / 8) * region_cols +
+                               (delivery % env->cols / 8);
+            if (region >= 0 && region < static_cast<int>(delivery_wait_rates->size())) {
+                const int length = task_length(env, tasks[j]);
+                if (length > 0)
+                    observed_wait_penalties[j] = config.observed_delivery_wait_weight *
+                        static_cast<float>(length) * (*delivery_wait_rates)[region];
+            }
+        }
+    }
+    if (parents) parents->assign(agents.size(), std::vector<int>(env->map.size(), -1));
 
     for (int i = 0; i < static_cast<int>(agents.size()) &&
                     std::chrono::steady_clock::now() < deadline; ++i) {
+        std::vector<char> self_on_path;
+        if (joint_vertex_load && selected_paths) {
+            self_on_path.assign(env->map.size(), 0);
+            for (const int location : selected_paths->at(i)) self_on_path[location] = 1;
+        }
         std::vector<std::pair<int, int>> nearest;
         nearest.reserve(tasks.size());
         for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
@@ -139,17 +165,26 @@ std::vector<std::vector<float>> traffic_cost_matrix(
                         cost[i][task_index] = config.dist_weight * static_cast<float>(current_cost) +
                                               static_cast<float>(lengths[task_index]) +
                                               std::max(0.0F, config.traffic_service_weight) *
-                                                  service_penalties[task_index];
+                                                  service_penalties[task_index] +
+                                              observed_wait_penalties[task_index];
                     }
                 }
                 task_indices_at_location.erase(goal);
                 --remaining_goals;
             }
             for (const int next : global_neighbors.at(location)) {
-                const float next_cost = current_cost + flow_traffic_edge_cost(
+                float edge_cost = flow_traffic_edge_cost(
                     env, background_flow, location, next, config.traffic_congestion_weight);
+                if (joint_vertex_load) {
+                    edge_cost += config.joint_congestion_weight * static_cast<float>(
+                        std::max(0, joint_vertex_load->at(next) -
+                                    static_cast<int>(self_on_path[next]) -
+                                    std::max(0, config.joint_free_load)));
+                }
+                const float next_cost = current_cost + edge_cost;
                 if (next_cost < distance[next]) {
                     distance[next] = next_cost;
+                    if (parents) (*parents)[i][next] = location;
                     open.emplace(next_cost, next);
                 }
             }
@@ -301,10 +336,48 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
                                           std::vector<int>& proposed_schedule,
                                           SharedEnvironment* env,
                                           const PortableTaskMatcherConfig& config,
-                                          const std::vector<Double4>& background_flow)
+                                          const std::vector<Double4>& background_flow,
+                                          PortableTaskMatcherWaitState* wait_state)
 {
     const auto deadline = std::chrono::steady_clock::now() +
                           std::chrono::milliseconds(std::max(0, time_limit_ms));
+    std::vector<float> delivery_wait_rates;
+    if (wait_state && config.observed_delivery_wait_weight > 0.0F) {
+        const int region_cols = (env->cols + 7) / 8;
+        const int region_count = region_cols * ((env->rows + 7) / 8);
+        if (wait_state->last_timestep < 0 ||
+            static_cast<int>(wait_state->previous_locations.size()) != env->num_of_agents ||
+            static_cast<int>(wait_state->region_waits.size()) != region_count ||
+            env->curr_timestep <= wait_state->last_timestep) {
+            wait_state->previous_locations.resize(env->num_of_agents);
+            wait_state->region_waits.assign(region_count, 0.0F);
+            wait_state->region_exposures.assign(region_count, 0.0F);
+        } else if (env->curr_timestep == wait_state->last_timestep + 1) {
+            for (int region = 0; region < region_count; ++region) {
+                wait_state->region_waits[region] *= 0.98F;
+                wait_state->region_exposures[region] *= 0.98F;
+            }
+            for (int agent = 0; agent < env->num_of_agents; ++agent) {
+                if (env->curr_task_schedule[agent] < 0 ||
+                    env->goal_locations[agent].empty()) continue;
+                const int previous = wait_state->previous_locations[agent];
+                if (previous < 0 || previous >= static_cast<int>(env->map.size()) ||
+                    previous == env->goal_locations[agent].front().first) continue;
+                const int region = (previous / env->cols / 8) * region_cols +
+                                   (previous % env->cols / 8);
+                wait_state->region_exposures[region] += 1.0F;
+                if (env->curr_states[agent].location == previous)
+                    wait_state->region_waits[region] += 1.0F;
+            }
+        }
+        for (int agent = 0; agent < env->num_of_agents; ++agent)
+            wait_state->previous_locations[agent] = env->curr_states[agent].location;
+        wait_state->last_timestep = env->curr_timestep;
+        delivery_wait_rates.resize(region_count);
+        for (int region = 0; region < region_count; ++region)
+            delivery_wait_rates[region] = wait_state->region_waits[region] /
+                                          (wait_state->region_exposures[region] + 10.0F);
+    }
     std::vector<int> local = env->curr_task_schedule;
     local.resize(env->num_of_agents, -1);
     std::unordered_set<int> locked_tasks;
@@ -366,8 +439,13 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
     if (matrix_size <= std::max(1, config.max_matrix_elements) &&
         std::chrono::steady_clock::now() < deadline) {
         std::vector<std::vector<float>> cost;
+        std::vector<std::vector<int>> first_parents;
         if (config.use_traffic_cost) {
-            cost = traffic_cost_matrix(env, candidates, tasks, config, background_flow, deadline);
+            cost = traffic_cost_matrix(
+                env, candidates, tasks, config, background_flow, deadline,
+                config.joint_congestion_weight > 0.0F ? &first_parents : nullptr,
+                nullptr, nullptr,
+                delivery_wait_rates.empty() ? nullptr : &delivery_wait_rates);
         } else {
             cost.assign(candidates.size(), std::vector<float>(tasks.size(), kInvalidCost));
             for (int i = 0; i < static_cast<int>(candidates.size()) &&
@@ -377,17 +455,55 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
                 }
             }
         }
-        for (int i = 0; i < static_cast<int>(candidates.size()); ++i) {
-            for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
+        const auto add_keep_bias = [&](std::vector<std::vector<float>>& matrix) {
+            for (int i = 0; i < static_cast<int>(candidates.size()); ++i) {
                 const auto old = old_assignment.find(candidates[i].id);
-                if (old != old_assignment.end() && old->second == tasks[j].id &&
-                    cost[i][j] < kInvalidCost / 2.0F) {
-                    cost[i][j] -= config.reassign_keep_bias;
+                if (old == old_assignment.end()) continue;
+                for (int j = 0; j < static_cast<int>(tasks.size()); ++j) {
+                    if (old->second == tasks[j].id && matrix[i][j] < kInvalidCost / 2.0F)
+                        matrix[i][j] -= config.reassign_keep_bias;
                 }
             }
-        }
+        };
+        add_keep_bias(cost);
         if (std::chrono::steady_clock::now() < deadline) {
-            const std::vector<int> assignment = hungarian(cost);
+            std::vector<int> assignment = hungarian(cost);
+            if (config.use_traffic_cost && config.joint_congestion_weight > 0.0F &&
+                std::chrono::steady_clock::now() < deadline) {
+                // Estimate congestion from the first matching before repricing alternatives.
+                std::vector<int> joint_vertex_load(env->map.size(), 0);
+                std::vector<std::vector<int>> selected_paths(candidates.size());
+                for (int i = 0; i < static_cast<int>(candidates.size()); ++i) {
+                    const int j = i < static_cast<int>(assignment.size()) ? assignment[i] : -1;
+                    if (j < 0 || j >= static_cast<int>(tasks.size()) ||
+                        cost[i][j] >= kInvalidCost / 2.0F) continue;
+                    int location = tasks[j].pickup;
+                    std::vector<int> path;
+                    for (size_t step = 0; location != candidates[i].location &&
+                                          step < env->map.size(); ++step) {
+                        path.push_back(location);
+                        location = first_parents[i][location];
+                        if (location < 0) break;
+                    }
+                    if (location != candidates[i].location) continue;
+                    selected_paths[i] = std::move(path);
+                    for (const int vertex : selected_paths[i]) ++joint_vertex_load[vertex];
+                }
+                if (std::chrono::steady_clock::now() < deadline) {
+                    auto refined_cost = traffic_cost_matrix(
+                        env, candidates, tasks, config, background_flow, deadline,
+                        nullptr, &joint_vertex_load, &selected_paths,
+                        delivery_wait_rates.empty() ? nullptr : &delivery_wait_rates);
+                    if (std::chrono::steady_clock::now() < deadline) {
+                        add_keep_bias(refined_cost);
+                        auto refined_assignment = hungarian(refined_cost);
+                        if (std::chrono::steady_clock::now() < deadline) {
+                            cost = std::move(refined_cost);
+                            assignment = std::move(refined_assignment);
+                        }
+                    }
+                }
+            }
             for (int i = 0; i < static_cast<int>(candidates.size()); ++i) {
                 const int j = i < static_cast<int>(assignment.size()) ? assignment[i] : -1;
                 if (j >= 0 && j < static_cast<int>(tasks.size()) && cost[i][j] < kInvalidCost / 2.0F) {

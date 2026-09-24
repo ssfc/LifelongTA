@@ -53,6 +53,7 @@ int main(int argc, char **argv)
         ("logFile,l", po::value<std::string>()->default_value(""), "redirect stdout messages into the specified log file")
         ("logDetailLevel,d", po::value<int>()->default_value(1), "the minimum severity level of log messages to display, 1--showing all the messages, 2--showing warnings and fatal errors, 3--showing fatal errors only")
         ("useTraffic,u", po::value<bool>()->default_value(false), "use of traffic in scheduling")
+        ("flowEmitGuidePaths", po::value<bool>()->default_value(true), "export Flow-Traffic guide paths to the planner (diagnostic ablation)")
         ("assignNew,n", po::value<bool>()->default_value(false), "wether new agents only or allow task swapping")
         ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy, 6- greedy heap, 7- contest task matcher, 8- capped Hungarian")
         ("heapDistWeight", po::value<float>()->default_value(5.0f), "agent-to-pickup distance weight for greedy heap")
@@ -85,6 +86,9 @@ int main(int argc, char **argv)
         ("matcherTrafficTopK", po::value<int>()->default_value(50), "static nearest pickups rescored with traffic-aware Dijkstra per agent")
         ("matcherTrafficCongestionWeight", po::value<float>()->default_value(1.0f), "multiplier for TaskMatcher traffic congestion penalties")
         ("matcherTrafficServiceWeight", po::value<float>()->default_value(0.0f), "weight of delivery-leg congestion proxy in TaskMatcher traffic cost")
+        ("matcherJointCongestionWeight", po::value<float>()->default_value(0.0f), "weight of predicted joint pickup-route congestion in a second TaskMatcher pass")
+        ("matcherJointFreeLoad", po::value<int>()->default_value(0), "number of other predicted routes allowed per vertex before joint congestion is penalized")
+        ("matcherObservedDeliveryWaitWeight", po::value<float>()->default_value(0.0f), "weight of recently observed delivery-region wait rate in TaskMatcher")
         ("matcherReassign", po::value<bool>()->default_value(true), "enable unopened-task reassignment for task matcher")
         ("hungarianMaxAgents", po::value<int>()->default_value(256), "capped Hungarian candidate-agent limit")
         ("hungarianMaxTasks", po::value<int>()->default_value(512), "capped Hungarian candidate-task limit")
@@ -181,6 +185,7 @@ int main(int argc, char **argv)
     planner->env->file_storage_path = file_storage_path;
 
     planner->scheduler->set_use_traffic(vm["useTraffic"].as<bool>());
+    planner->scheduler->set_flow_emit_guide_paths(vm["flowEmitGuidePaths"].as<bool>());
     planner->scheduler->set_new_only(vm["assignNew"].as<bool>());
     planner->scheduler->set_solver(vm["scheduleModel"].as<int>());
     DefaultPlanner::PortableGreedyHeapConfig heap_config;
@@ -219,6 +224,9 @@ int main(int argc, char **argv)
     matcher_config.traffic_top_k = vm["matcherTrafficTopK"].as<int>();
     matcher_config.traffic_congestion_weight = vm["matcherTrafficCongestionWeight"].as<float>();
     matcher_config.traffic_service_weight = vm["matcherTrafficServiceWeight"].as<float>();
+    matcher_config.joint_congestion_weight = vm["matcherJointCongestionWeight"].as<float>();
+    matcher_config.joint_free_load = vm["matcherJointFreeLoad"].as<int>();
+    matcher_config.observed_delivery_wait_weight = vm["matcherObservedDeliveryWaitWeight"].as<float>();
     matcher_config.reassign_enabled = vm["matcherReassign"].as<bool>();
     matcher_config.reassign_keep_bias = heap_config.reassign_keep_bias;
     matcher_config.reassign_min_dist = heap_config.reassign_min_dist;

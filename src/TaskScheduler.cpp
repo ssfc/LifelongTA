@@ -39,7 +39,8 @@ void TaskScheduler::plan(int time_limit, std::vector<int> & proposed_schedule)
 
     if (solver == 1)
     {
-        DefaultPlanner::schedule_plan_flow(limit, proposed_schedule, env, background_flow, use_traffic, new_only);
+        DefaultPlanner::schedule_plan_flow(limit, proposed_schedule, env, background_flow, use_traffic, new_only,
+                                           flow_emit_guide_paths);
     }
     else if (solver == 2)
     {
@@ -65,7 +66,8 @@ void TaskScheduler::plan(int time_limit, std::vector<int> & proposed_schedule)
     else if (solver == 7)
     {
         DefaultPlanner::schedule_plan_portable_task_matcher(limit, proposed_schedule, env,
-                                                             task_matcher_config, background_flow);
+                                                             task_matcher_config, background_flow,
+                                                             &task_matcher_wait_state);
     }
     else if (solver == 8)
     {

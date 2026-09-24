@@ -19,6 +19,7 @@ class TaskScheduler
         void set_flow(std::vector<DefaultPlanner::Double4> flow);
 
         void set_use_traffic(bool use_traffic);
+        void set_flow_emit_guide_paths(bool emit) { flow_emit_guide_paths = emit; }
         void set_new_only(bool new_only);
         void set_solver(int solver);
         void set_max_matching_edges(int max_matching_edges);
@@ -30,12 +31,14 @@ class TaskScheduler
         std::vector<DefaultPlanner::Double4> background_flow;
 
         bool use_traffic = false;
+        bool flow_emit_guide_paths = true;
         bool new_only = false;
         int solver = 1; //1 matching, 2 flow
         int max_matching_edges = INT_MAX;
         DefaultPlanner::PortableGreedyHeapConfig heap_config;
         std::vector<int> heap_pickup_sites;
         DefaultPlanner::PortableTaskMatcherConfig task_matcher_config;
+        DefaultPlanner::PortableTaskMatcherWaitState task_matcher_wait_state;
         DefaultPlanner::PortableCappedHungarianConfig capped_hungarian_config;
 
 };

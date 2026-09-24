@@ -24,6 +24,18 @@ struct PortableTaskMatcherConfig {
     // Zero preserves the original traffic matcher, which only scores the
     // agent-to-pickup path with traffic.
     float traffic_service_weight = 0.0F;
+    // Reprice matched pickup routes once using their joint vertex load.
+    // Zero keeps the original one-pass matcher.
+    float joint_congestion_weight = 0.0F;
+    int joint_free_load = 0;
+    float observed_delivery_wait_weight = 0.0F;
+};
+
+struct PortableTaskMatcherWaitState {
+    std::vector<int> previous_locations;
+    std::vector<float> region_waits;
+    std::vector<float> region_exposures;
+    int last_timestep = -1;
 };
 
 struct PortableCappedHungarianConfig {
@@ -37,7 +49,8 @@ void schedule_plan_portable_task_matcher(int time_limit_ms,
                                           std::vector<int>& proposed_schedule,
                                           SharedEnvironment* env,
                                           const PortableTaskMatcherConfig& config,
-                                          const std::vector<Double4>& background_flow);
+                                          const std::vector<Double4>& background_flow,
+                                          PortableTaskMatcherWaitState* wait_state = nullptr);
 
 void schedule_plan_portable_capped_hungarian(
     int time_limit_ms, std::vector<int>& proposed_schedule, SharedEnvironment* env,
