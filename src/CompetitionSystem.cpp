@@ -75,6 +75,14 @@ void BaseSystem::plan(int & timeout_timesteps)
 
     started = true;
 
+    if (disable_entry_timeouts)
+    {
+        task_td.join();
+        started = false;
+        future.get();
+        return;
+    }
+
     while (timestep + timeout_timesteps < simulation_time)
     {
 
@@ -393,5 +401,4 @@ void BaseSystem::saveResults(const string &fileName, int screen) const
     f << std::setw(4) << js;
 
 }
-
 

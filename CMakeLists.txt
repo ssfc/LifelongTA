@@ -46,13 +46,16 @@ find_package( Boost 1.49.0 REQUIRED COMPONENTS program_options system filesystem
 
 include_directories( ${Boost_INCLUDE_DIRS} )
 
-# find gurobi
-find_package(GUROBI REQUIRED)
+# Gurobi is not used by the public flow scheduler, so do not make it a
+# mandatory dependency for reproducing the published experiments.
+find_package(GUROBI QUIET)
 
-include_directories(${GUROBI_INCLUDE_DIRS})
+if(GUROBI_FOUND)
+    include_directories(${GUROBI_INCLUDE_DIRS})
+endif()
 
 # find lemon
-find_package(LEMON REQUIRED)
+find_package(lemon CONFIG REQUIRED)
 include_directories(${LEMON_INCLUDE_DIRS})
 
 
@@ -88,10 +91,11 @@ ELSE()
     message(STATUS "Python support is disabled")
 
     
-    message(${GUROBI_CXX_LIBRARY})
-
     add_executable(lifelong ${SOURCES} )
-    target_link_libraries(lifelong ${Boost_LIBRARIES} ${GUROBI_CXX_LIBRARY} ${GUROBI_LIBRARY} ${LEMON_LIBRARIES})
+    target_link_libraries(lifelong ${Boost_LIBRARIES} ${LEMON_LIBRARIES})
+    if(GUROBI_FOUND)
+        target_link_libraries(lifelong ${GUROBI_CXX_LIBRARY} ${GUROBI_LIBRARY})
+    endif()
     target_compile_definitions(lifelong PRIVATE PYTHON=${PYTHON_FLAG})
 ENDIF()
 
@@ -110,6 +114,5 @@ set_directory_properties(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES
      ${CMAKE_BINARY_DIR}/build;
      ${CMAKE_BINARY_DIR}/*.so"
 )
-
 
 

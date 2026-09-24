@@ -55,7 +55,8 @@ int main(int argc, char **argv)
         ("useTraffic,u", po::value<bool>()->default_value(false), "use of traffic in scheduling")
         ("assignNew,n", po::value<bool>()->default_value(false), "wether new agents only or allow task swapping")
         ("scheduleModel,m", po::value<int>()->default_value(1), "scheduler model, 1- flow, 2- flow with history edge cost, 3- matching + dijkstra, 4- matching + lazily stored h, 5- greedy")
-        ("commitWindow,w", po::value<int>()->default_value(1), "commit window");
+        ("commitWindow,w", po::value<int>()->default_value(1), "commit window")
+        ("disableEntryTimeouts", po::value<bool>()->default_value(false), "do not translate planning wall-clock time into simulation waits");
     clock_t start_time = clock();
     po::store(po::parse_command_line(argc, argv, desc), vm);
 
@@ -158,6 +159,7 @@ int main(int argc, char **argv)
 
     system_ptr->set_logger(logger);
     system_ptr->set_plan_time_limit(vm["planTimeLimit"].as<int>()*vm["commitWindow"].as<int>());//times commit window
+    system_ptr->set_disable_entry_timeouts(vm["disableEntryTimeouts"].as<bool>());
     system_ptr->set_preprocess_time_limit(vm["preprocessTimeLimit"].as<int>());
 
     system_ptr->set_num_tasks_reveal(read_param_json<float>(data, "numTasksReveal", 1));
